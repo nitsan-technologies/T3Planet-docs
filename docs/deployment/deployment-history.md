@@ -4,6 +4,19 @@ Append one entry per production release.
 
 ---
 
+
+## 2026-09-25 — T3AC Feature Guide remigration
+
+- **Status:** PASS
+- **Commit:** `4a6af21` — docs: remigrate T3AC Feature Guide hub and restore Chatbot Save step
+- **Author:** Nitsan <sanjay@nitsantech.com>
+- **Remote:** origin → nitsan-technologies/T3Planet-docs (`master`)
+- **Included:** ExtNsT3AC FeatureGuide Index + Chatbot, Installation include-static image, t3-stats JSON/JS
+- **Excluded:** docs-master/, workshops/, scripts/remigration/**
+- **Validate:** mintlify validate PASS (Node 20)
+- **Live QA:** Feature Guide card hub markers present; legacy Train GPT/Sitemap/Chunk gone; Chatbot Save Configuration sentence present on live + origin
+- **Mintlify Activity dashboard:** NOT VERIFIED via MCP; inferred from live/origin content match after push
+
 ## Template
 
 ```text
