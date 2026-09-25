@@ -126,12 +126,14 @@ This CSS is injected inside the chatbot widget, so it affects only chatbot UI el
 
 ## External Embed
 
-If you would like to use this chatbot on another domain, follow these steps:
+Use the **External Embed** tab when you want this chatbot on another site — TYPO3 or any other domain.
 
 - Open the **External Embed** area in T3AC.
 - Add the allowed domain, or enable the option that allows any approved domain policy used by your project.
 - Copy the embed code.
 - Paste the code inside the `<body>` tag of your website.
+
+When you finish Configuration, Customize, General, and External Embed, click **Save Configuration** to apply the settings.
 
 For the full setup flow, see [Configuration](/en/latest/ExtNsT3AC/Configuration/Index).
 
