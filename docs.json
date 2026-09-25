@@ -7834,7 +7834,7 @@
     "404": {
       "redirect": false,
       "title": "Page not found",
-      "description": "This page does not exist in T3Planet Docs."
+      "description": "This page does not exist in T3Planet Docs. [Go to homepage](/)."
     }
   }
 }
