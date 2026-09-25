@@ -22,8 +22,8 @@ docs/deployment/**
 # Root AGENTS.md/context.md removed; full copies live under .cursor/ and docs/deployment/
 AGENTS.md
 AGENTS
-# temporarily disabled for cache overwrite: context.md
-# temporarily disabled for cache overwrite: context
+context.md
+context
 README.md
 README
 

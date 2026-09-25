@@ -1858,12 +1858,20 @@
   },
   "redirects": [
     {
-      "source": "/AGENTS",
-      "destination": "/__removed_internal_agents"
+      "source": "/context.md",
+      "destination": "/__removed_internal_context"
     },
     {
       "source": "/context",
       "destination": "/__removed_internal_context"
+    },
+    {
+      "source": "/AGENTS.md",
+      "destination": "/__removed_internal_agents"
+    },
+    {
+      "source": "/AGENTS",
+      "destination": "/__removed_internal_agents"
     },
     {
       "source": "/de/ExtTypoTonic/:path*",
