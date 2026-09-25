@@ -1,0 +1,53 @@
+---
+description: Never break docs.t3planet.de SSL — no hostname delete/recreate for cache
+alwaysApply: true
+---
+
+# Custom domain & SSL safety (docs.t3planet.de)
+
+Production URL: https://docs.t3planet.de/en/latest
+
+## Incident lesson (2026-09-25)
+
+Deleting/recreating the Cloudflare custom hostname for `docs.t3planet.de` to “flush cache” **removed the live SSL certificate**. The site then failed with `ERR_SSL_VERSION_OR_CIPHER_MISMATCH` until DNS ACME TXT was updated and validation completed.
+
+**Do not repeat that mistake.**
+
+## Absolute prohibitions
+
+Never do any of the following as a cache, CDN, or “stuck page” fix:
+
+1. `deployment.deleteCustomHostname` / delete custom hostname
+2. `deployment.removeCustomDomain` / remove `docs.t3planet.de`
+3. Delete + recreate custom hostname “to flush edge cache”
+4. Change `_acme-challenge.docs` / `_cf-custom-hostname.docs` DNS without an approved SSL recovery plan
+5. Change `docs` CNAME away from `cname.mintlify.builders` without operator approval
+6. Clear, rewrite, or rotate SSL/DCV records “just in case”
+
+## Allowed cache / stale-content actions
+
+Use only safe paths:
+
+1. Confirm origin first: `https://t3planet.mintlify.app/en/latest/...` (or `.mintlify.site`)
+2. Wait for Mintlify deploy to finish; re-check live HTML content markers
+3. Hard refresh / private window / cache-bust query on the URL
+4. Local LAN purge only: `curl -s http://127.0.0.1:3000/__t3_cache_purge`
+5. Content fix: edit `.md` / redirects / `.mintignore` → commit as **Nitsan** → push org `master` → wait for deploy
+
+If custom domain looks stale but origin is correct: **wait and re-test**. Report edge lag. Do **not** touch hostname/SSL.
+
+## If SSL is already broken (recovery only)
+
+1. STOP destructive hostname churn.
+2. Read current required records via Mintlify (`getCustomHostnameStatus`).
+3. Ask the operator to update **All-Inkl / Kasserver** DNS to the **exact** current TXT/CNAME values (or preferred DCV CNAME).
+4. Retrigger validation only after DNS matches on authoritative NS (`ns5`/`ns6.kasserver.com`).
+5. Do not claim live fixed until `https://docs.t3planet.de/en/latest` returns 200 with a valid cert.
+
+Hostname delete/recreate for recovery requires **explicit operator authorization** and a ready DNS update in the same change window.
+
+## Related
+
+- `docs/deployment/deploy.md` § Custom domain & SSL
+- `.cursor/rules/deployment-safety.mdc`
+- `.cursor/rules/mintlify-deployment.mdc`

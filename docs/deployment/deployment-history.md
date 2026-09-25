@@ -34,3 +34,10 @@ Append one entry per production release.
 - Mintlify production Git source must remain the org repo (not a personal fork)
 - Final status: documentation update (this entry)
 
+### 2026-09-25 — Incident lesson: do not delete custom hostname to flush cache
+- Cause: Cloudflare custom hostname for `docs.t3planet.de` was deleted/recreated to clear a stuck `/context.md` edge response; SSL cert invalidated; ACME DNS lagged → live HTTPS down (`ERR_SSL_VERSION_OR_CIPHER_MISMATCH`)
+- Recovery: correct `_acme-challenge.docs` / ownership TXT on Kasserver + retrigger validation; https://docs.t3planet.de/en/latest restored
+- Policy added: `.cursor/rules/custom-domain-ssl-safety.mdc` + updates to deploy SOP / deployment-safety / mintlify-deployment / t3planet-client / deploy skill checklist
+- Rule: never use hostname delete/recreate as a cache fix; prefer origin check, wait for deploy, hard refresh, content Git fix
+- Final status: LIVE RESTORED + SOP hardened
+

@@ -106,6 +106,7 @@ After edits, state clearly:
 
 - **Local** = files in this workspace; preview via **`:3000`** (LAN/fast proxy) or `:3001` (raw mint).
 - **Live** = https://docs.t3planet.de/en/latest after Mintlify deploy from **`origin`** (`nitsan-technologies/T3Planet-docs`).
+- **Never** delete/recreate the Cloudflare custom hostname for `docs.t3planet.de` to flush cache (breaks SSL — see `.cursor/rules/custom-domain-ssl-safety.mdc`).
 
 Do not say “fixed on the site” until live HTML shows the change.
 

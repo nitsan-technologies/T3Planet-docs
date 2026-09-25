@@ -26,9 +26,10 @@ Omit or remove sections like “How to open it” with generic backend navigatio
 ## Local vs live
 
 - Edits default to **local workspace** only.
-- LAN preview: `http://<LAN-IP>:3000/` (fast proxy). Purge: `curl -s http://127.0.0.1:3000/__t3_cache_purge`.
+- LAN preview: `http://<LAN-IP>:3000/` (fast proxy). Purge: `curl -s http://127.0.0.1:3000/__t3_cache_purge` (**local only** — never touch Cloudflare hostname/SSL to “purge” live).
 - **Live** is https://docs.t3planet.de/en/latest after Mintlify deploy from **`nitsan-technologies/T3Planet-docs`** (`git push origin HEAD:master`, author **Nitsan**).
 - Do **not** use a personal fork as the normal deploy remote. Emergency same-SHA sync to a fork only if Mintlify Git is still on the fork and live is blocked (see `mintlify-deployment.mdc`).
+- Do **not** delete/recreate the `docs.t3planet.de` custom hostname for cache issues (breaks SSL — see `custom-domain-ssl-safety.mdc`).
 - Tell the user clearly whether a fix is local-only or verified on live.
 
 ## Typical user requests

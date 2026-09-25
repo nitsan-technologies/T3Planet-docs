@@ -12,5 +12,7 @@
 - [ ] Push `origin HEAD:master` (no force)
 - [ ] Mintlify Activity: **org** repo + Successful build
 - [ ] Live URL shows new content (not HTTP 200 alone)
+- [ ] **No** custom-hostname delete/recreate / custom-domain remove used as a cache fix
+- [ ] If SSL issues: DNS ACME matches Mintlify status before claiming live OK
 - [ ] HTTP / nav / search / responsive / theme / latest-change QA
 - [ ] History entry + final status

@@ -80,6 +80,24 @@ If Activity still shows a personal fork while we push only to the org repo, live
 
 Do **not** change domain, org, env vars, or Git connection without explicit authorization.
 
+### Custom domain & SSL (critical — do not repeat 2026-09-25 outage)
+
+Production domain HTTPS depends on the Cloudflare custom hostname for `docs.t3planet.de`.
+
+**Never** delete, remove, or recreate that hostname / custom domain to flush CDN cache or fix a stuck URL. Doing so **invalidates the live SSL certificate** and takes https://docs.t3planet.de offline (`ERR_SSL_VERSION_OR_CIPHER_MISMATCH`) until ACME DNS is updated and validation succeeds.
+
+| Do | Do not |
+| --- | --- |
+| Verify origin: `https://t3planet.mintlify.app/en/latest/...` | `deleteCustomHostname` / remove custom domain as a cache fix |
+| Wait for Mintlify deploy; re-check content markers | Rotate `_acme-challenge.docs` “just in case” |
+| Hard refresh / private window | Change `docs` CNAME without operator approval |
+| Local purge only: `curl -s http://127.0.0.1:3000/__t3_cache_purge` | Assume DNS will “catch up” after hostname recreate |
+| Fix content via Git (Nitsan → org `master`) | Claim live fixed without HTTPS 200 on docs.t3planet.de |
+
+If SSL is already broken: read Mintlify’s current required TXT/CNAME → operator updates All-Inkl/Kasserver → retrigger validation → verify live. Hostname recreate for recovery needs **explicit operator authorization** plus DNS ready in the same window.
+
+Full agent rule: `.cursor/rules/custom-domain-ssl-safety.mdc`.
+
 ## 5. Git identity vs authentication (Nitsan)
 
 These are **different**:
@@ -287,11 +305,13 @@ Final status: PASS | PASS WITH NON-BLOCKING WARNINGS | BLOCKED | FAILED
 
 | Symptom | Check |
 | --- | --- |
-| Push OK, live stale | Mintlify Git still on fork? Activity SHA? CDN cache? |
+| Push OK, live stale | Mintlify Git still on fork? Activity SHA? CDN cache? (**Do not** delete custom hostname to flush) |
+| Custom domain SSL / `ERR_SSL_VERSION_OR_CIPHER_MISMATCH` | ACME TXT on `_acme-challenge.docs` must match Mintlify `getCustomHostnameStatus`; verify on `ns5.kasserver.com`; retrigger validation; never hostname-delete as first fix |
 | Build failed | Mintlify logs, MDX/`docs.json`, `mintlify validate` |
 | Many 404s | Nav vs files, redirects, path renames |
 | Search empty | Index lag after deploy; retry later; confirm pages in sitemap |
 | Footer / CSS missing | `custom.css` in commit? hard refresh |
+| Stuck page on custom domain, origin OK | Wait / hard refresh / content redeploy — **not** hostname recreate |
 
 ## 33. Deployment history
 

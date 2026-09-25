@@ -41,6 +41,14 @@ For normal releases:
 
 Full procedure: `docs/deployment/deploy.md` and repo `.cursor/context.md`.
 
+## Custom domain & SSL (do not break live)
+
+Production domain: **`docs.t3planet.de`** (base path `/en/latest`).
+
+**Never** delete/recreate the Cloudflare custom hostname or remove the custom domain to clear CDN/edge cache. That wiped SSL on 2026-09-25 and took the main docs URL offline (`ERR_SSL_VERSION_OR_CIPHER_MISMATCH`) until ACME DNS was updated.
+
+For stale custom-domain pages: verify origin (`t3planet.mintlify.app`), wait for deploy, hard-refresh, or fix content via Git. Full rules: `.cursor/rules/custom-domain-ssl-safety.mdc`.
+
 ## Local tooling
 
 - Node **20** for `mintlify` / `mint` (Node 25+ unsupported).

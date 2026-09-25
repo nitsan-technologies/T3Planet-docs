@@ -44,6 +44,8 @@ BACKUP (if sync risk) → DISCOVERY → VERIFY NITSAN IDENTITY
 
 Never jump from `PUSH` to `PASS`. Never force-push `master`.
 
+**Never** delete/recreate the Cloudflare custom hostname for `docs.t3planet.de` to flush cache (breaks SSL). See `.cursor/rules/custom-domain-ssl-safety.mdc`.
+
 ## Procedure
 
 1. **Backup** — if about to pull/merge/sync over dirty work, snapshot under `backup/pre-deployment-YYYYMMDD-HHMMSS/` (mintignored).

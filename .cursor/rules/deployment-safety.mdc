@@ -28,6 +28,8 @@ When deploying or when the user says **start deployment** / **deploy docs**, fol
 6. Claim PASS from GitHub push alone.
 7. Silently reconnect or rewrite Mintlify project settings.
 8. Use a personal fork as the normal production Mintlify source.
+9. **Delete, remove, or recreate** the Cloudflare custom hostname / custom domain for `docs.t3planet.de` to flush cache or fix a stuck URL (breaks SSL — see `custom-domain-ssl-safety.mdc`).
+10. Change production ACME / DCV DNS records without an approved SSL recovery plan and matching Mintlify validation values.
 
 Mintlify still on a personal fork while pushing org-only → live will lag; prefer reconnect, emergency same-SHA fork sync only if authorized and urgent (see `mintlify-deployment.mdc`).
 
