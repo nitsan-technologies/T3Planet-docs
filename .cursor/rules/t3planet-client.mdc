@@ -41,7 +41,7 @@ Omit or remove sections like “How to open it” with generic backend navigatio
 | Fix missing Card icon | Valid Lucide names (`sliders-horizontal`, `type` — not `sliders`, `text`) |
 | Fix code block UI | Replace RST `::` / `code-block` with fenced `bash` / `json` |
 | Content tab / card list | 1–2 lines per card + link to related Feature Guide page |
-| Deploy / push / live | Nitsan commit → push `origin` only → verify Activity + live content |
+| Deploy / push / live | **Only** if operator said `start the deployment process` — then Nitsan commit → push `origin` → verify Activity + live; otherwise keep local |
 | Train / improve context | Update `context.md` + this rule |
 
 ## Release discipline

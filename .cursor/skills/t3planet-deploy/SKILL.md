@@ -1,22 +1,29 @@
 ---
 name: t3planet-deploy
 description: >-
-  Production deployment for T3Planet Mintlify docs: inspect, validate, commit as
-  Nitsan, push nitsan-technologies/T3Planet-docs, verify Mintlify/live, full QA.
-  Use when the user says start deployment, start the deployment process, deploy
-  latest docs, push docs live, or release documentation.
+  Production deployment for T3Planet Mintlify docs. Trigger ONLY when the user
+  says exactly "start the deployment process". Inspect, validate, commit as
+  Nitsan, push nitsan-technologies/T3Planet-docs master, verify Mintlify/live,
+  full QA. Do not run for synonyms like deploy/push live/finish/ready.
 ---
 
 # T3Planet docs production deploy
 
-Source of truth for humans: [`docs/deployment/deploy.md`](../../../docs/deployment/deploy.md).  
-Safety guardrails: [`.cursor/rules/deployment-safety.mdc`](../../rules/deployment-safety.mdc) and [`.cursor/rules/mintlify-deployment.mdc`](../../rules/mintlify-deployment.mdc).
+Source of truth: [`docs/deployment/deploy.md`](../../../docs/deployment/deploy.md).  
+Permission gate: [`.cursor/rules/deployment-permission-gate.mdc`](../../rules/deployment-permission-gate.mdc).  
+Safety: [`.cursor/rules/deployment-safety.mdc`](../../rules/deployment-safety.mdc), [`.cursor/rules/mintlify-deployment.mdc`](../../rules/mintlify-deployment.mdc), [`.cursor/rules/custom-domain-ssl-safety.mdc`](../../rules/custom-domain-ssl-safety.mdc).
 
-## Triggers
+## Sole trigger (authorization)
 
-- start the deployment process / start deployment
-- deploy the documentation / deploy latest docs
-- push latest docs live / release the documentation
+```text
+start the deployment process
+```
+
+**Only** that exact phrase authorizes Git push + Mintlify production deployment.
+
+These do **not** authorize deploy: `start deployment`, `deploy docs`, `push live`, `release`, `finish`, `make it ready`, `commit`, passing tests, clean tree.
+
+If the phrase was **not** said: stay in local-only mode; do not push; do not ask “Should I deploy?”
 
 ## Hard exclusions (never stage/commit/push/deploy)
 
@@ -32,10 +39,10 @@ Also exclude unless explicitly requested: `scripts/remigration/**`, QA dumps, se
 
 Do not delete, reset, or stash excluded directories.
 
-## State machine
+## State machine (after authorization only)
 
 ```text
-BACKUP (if sync risk) → DISCOVERY → VERIFY NITSAN IDENTITY
+CONFIRM PHRASE → BACKUP → DISCOVERY → VERIFY NITSAN IDENTITY
 → VERIFY origin = nitsan-technologies/T3Planet-docs · master
 → FETCH / COMPARE → SAFE SYNC → CHANGE REVIEW → LOCAL VALIDATION
 → MANIFEST → STAGE → COMMIT (Nitsan) → PUSH origin master
@@ -44,15 +51,16 @@ BACKUP (if sync risk) → DISCOVERY → VERIFY NITSAN IDENTITY
 
 Never jump from `PUSH` to `PASS`. Never force-push `master`.
 
-**Never** delete/recreate the Cloudflare custom hostname for `docs.t3planet.de` to flush cache (breaks SSL). See `.cursor/rules/custom-domain-ssl-safety.mdc`.
+**Never** delete/recreate the Cloudflare custom hostname for `docs.t3planet.de` to flush cache (breaks SSL).
 
 ## Procedure
 
+0. **Authorization** — confirm the operator said exactly `start the deployment process`. If not → STOP (local only).
 1. **Backup** — if about to pull/merge/sync over dirty work, snapshot under `backup/pre-deployment-YYYYMMDD-HHMMSS/` (mintignored).
 2. **Discovery** — `git rev-parse --show-toplevel`, `remote -v`, branch, status, log.
 3. **Remote** — must be `nitsan-technologies/T3Planet-docs`. Mismatch → STOP.
-4. **Identity** — commit as **Nitsan** `<sanjay@nitsantech.com>` via env (do not rewrite git config unless asked). Verify with `git config user.name` / `user.email` and/or env. Git identity ≠ GitHub auth.
-5. **Fetch / compare** — `git fetch origin`; inspect ahead/behind; sync safely (`pull --ff-only` or merge). Preserve uncommitted work.
+4. **Identity** — commit as **Nitsan** `<sanjay@nitsantech.com>` via env. Verify name/email/env. Git identity ≠ GitHub auth.
+5. **Fetch / compare** — `git fetch origin`; inspect ahead/behind; sync safely. Preserve uncommitted work.
 6. **Classify diffs** — PRODUCTION vs EXCLUDED vs TEMPORARY.
 7. **Validate** — links/images/Supademos on changed pages; `mintlify validate` (Node 20); `compute_doc_stats.py` if nav/pages changed.
 8. **Manifest** — list Included/Excluded; stage only Included paths.

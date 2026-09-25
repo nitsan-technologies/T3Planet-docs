@@ -1,22 +1,20 @@
 ---
 title: "Templating"
-description: "Fluid templating for TonicTypes — dv namespace, variables, and predefined templates."
+description: "Fluid templates for Tonictypes — dv namespace, variables, predefined templates."
 keywords:
   - "TYPO3"
   - "T3Planet"
-  - "TonicTypes"
+  - "Tonictypes"
   - "tonictypes"
   - "tonictypes_pro"
 sidebarTitle: "Templating"
 ---
 
-TonicTypes renders records with standard TYPO3 Fluid templates.
+Tonictypes uses normal TYPO3 Fluid.
 
 ## Namespace
 
-Core registers the Fluid namespace **`dv`** automatically (`K3n\Tonictypes\ViewHelpers`). You do not need to declare it manually.
-
-For IDE autocompletion:
+Use **`dv:`** (`K3n\Tonictypes\ViewHelpers`). Registered automatically with Core.
 
 ```html
 <html
@@ -27,15 +25,17 @@ For IDE autocompletion:
 </html>
 ```
 
-## Available Variables
+## Variables
 
-- **Records** — List plugins inject `{records}` by default (name configurable via `plugin.tx_tonictypes` settings / Site Settings).
-- **Record** — Single-record context uses `{record}` by default.
-- **Field value** — `{record.fieldname}`. Type follows the field **Frontend Type Definition**.
+| Context | Default variable |
+| --- | --- |
+| List | `{records}` |
+| Detail | `{record}` |
+| One field | `{record.fieldname}` |
 
-Use `<f:debug>{record.fieldname}</f:debug>` or `<f:debug>{_all}</f:debug>` while developing.
+Debug with `<f:debug>{_all}</f:debug>` or `<f:debug>{record.fieldname}</f:debug>`.
 
-## Predefining Templates in TypoScript
+## Predefine templates in TypoScript
 
 ```typoscript
 plugin.tx_tonictypes.templates {
@@ -48,16 +48,16 @@ plugin.tx_tonictypes.templates {
 }
 ```
 
-![Predefined template shown in the TonicTypes template selector](Images/template_selection.webp)
+![Template selector](Images/template_selection.webp)
 
-*Predefined template in the selector*
+*Debug · custom path · inline Fluid · TypoScript templates*
 
 ```html
 <dv:template.render template="myTemplateIdentifier" arguments="{record:record}" />
 ```
 
-See [ViewHelpers](/en/latest/TonicTypes/ViewHelpers/Index).
+More ViewHelpers: [ViewHelpers](/en/latest/TonicTypes/ViewHelpers/Index).
 
-## Next Step
+## Next
 
-Continue with [Frontend Plugins](/en/latest/TonicTypes/FrontendPlugins/Index).
+[Frontend Plugins](/en/latest/TonicTypes/FrontendPlugins/Index)

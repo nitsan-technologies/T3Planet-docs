@@ -901,6 +901,7 @@
                 ],
                 "root": "TonicTypes/FrontendPlugins/Index"
               },
+              "TonicTypes/ExportImport/Index",
               "TonicTypes/ViewHelpers/Index",
               "TonicTypes/Screenshots/Index",
               "TonicTypes/Professional/Index",

@@ -1,10 +1,53 @@
 # T3Planet Documentation Deployment Guide
 
-Human-readable SOP for production docs releases. Cursor agents follow the same flow via `.cursor/skills/t3planet-deploy/SKILL.md` when you say **start the deployment process**, **start deployment**, or **deploy latest documentation**.
+## 🚨 DEPLOYMENT GATE — READ FIRST
+
+**ALL WORK IS LOCAL BY DEFAULT.**
+
+Do **not** `git push`, deploy to Mintlify, publish to production, or change live DNS/domain unless the operator says exactly:
+
+```text
+start the deployment process
+```
+
+Until that exact phrase is provided, keep all changes **local**. Completing a task, fixing bugs, passing tests, or preparing docs does **not** authorize push or deploy. Do not ask “Should I deploy?” — wait for the phrase.
+
+| Mode | Allowed | Forbidden |
+| --- | --- | --- |
+| **Local-only (default)** | Edit, local preview, validate, test, Playwright, screenshots, diffs, backups; commit **only** if explicitly requested | `git push`, Mintlify production deploy, live DNS/domain changes |
+| **Deployment (authorized)** | Full SOP below after the exact phrase | Force-push `master`; skip QA; hostname delete as cache fix |
+
+Production repository: `https://github.com/nitsan-technologies/T3Planet-docs.git` · branch `master` · live `https://docs.t3planet.de/en/latest`
+
+Agent rule: `.cursor/rules/deployment-permission-gate.mdc`. Skill: `.cursor/skills/t3planet-deploy/SKILL.md` (trigger = exact phrase only).
+
+---
+
+Human-readable SOP for production docs releases. Cursor agents run this flow **only** when you say **start the deployment process**.
 
 ## 1. Purpose
 
 Move **verified production documentation** from the local Git worktree → GitHub → Mintlify → [https://docs.t3planet.de/en/latest/](https://docs.t3planet.de/en/latest/), then prove the live site is healthy (HTTP, navigation, search, responsive, themes, latest-change regression). A green `git push` alone is **not** a successful deployment.
+
+**Authorization workflow (after the exact phrase):**
+
+```text
+1. Confirm deployment authorization
+2. Check Git status / branch / remote / repo
+3. Verify approved Nitsan Git identity
+4. Create/verify backup
+5. Fetch + compare local/remote master
+6. Preserve existing work; resolve divergence safely
+7. Review complete Git diff
+8. Run final local validation
+9. Create deployment commit (Nitsan)
+10. Push to nitsan-technologies/T3Planet-docs master
+11. Verify Mintlify deployment
+12. Production QA
+13. Report result
+```
+
+Do not skip steps.
 
 ## 2. Production URL
 
@@ -319,12 +362,10 @@ Append each release to [deployment-history.md](./deployment-history.md).
 
 ## Trigger phrases
 
-When the operator says any of:
+**Only** this phrase authorizes production push/deploy:
 
-- start the deployment process
-- start deployment
-- deploy the documentation / latest docs
-- push latest docs live
-- release the documentation
+- `start the deployment process`
 
-run this SOP via `.cursor/skills/t3planet-deploy/SKILL.md`.
+These do **not** authorize deployment (stay local): start deployment, deploy docs, push live, release, finish, make it ready, commit the changes, etc.
+
+When authorized, run this SOP via `.cursor/skills/t3planet-deploy/SKILL.md`.

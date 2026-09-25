@@ -1,36 +1,28 @@
 ---
 title: "Plugin configuration"
-description: "Configure TonicTypes List, Detail, Dynamic, and Plain plugins — storage, filters, sorting, templates."
+description: "Tonictypes plugin FlexForm — Startingpoint, filters, sorting, pagination, templates."
 keywords:
   - "TYPO3"
   - "T3Planet"
-  - "TonicTypes"
+  - "Tonictypes"
   - "tonictypes"
   - "tonictypes_pro"
 sidebarTitle: "Plugin configuration"
 ---
 
-This page covers FlexForm settings shared across the Core frontend plugins (**List**, **Detail**, **Dynamic**, **Plain**).
+Open the plugin content element → **Plugin** tab → **Plugin Options**.
 
-## Plugin roles
+## Must set first
 
-- **List** — Multiple records injected into `{records}` (default variable name configurable).
-- **Detail** — One fixed record selected in the plugin → `{record}`.
-- **Dynamic** — One record chosen from the URL (detail listener) → `{record}`.
-- **Plain** — Renders Fluid without loading a record. Useful for custom markup or variables only.
+| Setting | Meaning |
+| --- | --- |
+| **Datatype** | Which record type to load |
+| **Startingpoint** | Folder where those records live |
+| **Template** | How to render (debug / file / inline / TypoScript) |
 
-## Datatype
+**Record** — only for single-record plugins (e.g. **Record Detail**): pick the record.
 
-Select which Datatype's records the plugin works with.
-
-## Record
-
-Shown for single-record plugins such as **Detail**. Select the record to display.
-
-## Page for Detail View
-
-Link list items to a detail page that contains a **Dynamic** plugin.
-You can set the target page with a Fluid condition (empty or true = valid).
+**Page for Detail View** — list links to a page that has **Record Dynamic Detail**.
 
 ```html
 <dv:link.record record="{record}" pageUid="{detailPid}" additionalParams="{paramOne:'One'}">{record.title}</dv:link.record>
@@ -38,50 +30,55 @@ You can set the target page with a Fluid condition (empty or true = valid).
 
 See [ViewHelpers](/en/latest/TonicTypes/ViewHelpers/Index).
 
-## Record Storage Page
+![Startingpoint selected](Images/record_storage_page.webp)
 
-Select the page where records for this Datatype are stored.
+*Startingpoint — storage page*
 
-![Selecting the Record Storage Page](Images/record_storage_page.webp)
+## Filters
 
-*Selecting a Record Storage Page*
+**Field/Value Filter Settings** — limit which records are returned.
 
-## Field/Value Filter Settings
+![Filter settings](Images/filters.webp)
 
-- **Available Markers** — Markers available in filter Fluid, based on injected variables.
-- **Filter Condition** — Controls which records are returned (modifies the query).
-- **Condition for activating the filter (Fluid)** — Empty = always active.
+*Available markers for filter Fluid*
 
-![Example of a Field/Value Filter configuration](Images/filters.webp)
-
-*Example filter configuration*
+- **Filter Condition** — changes the query  
+- **Condition for activating the filter** — empty = always on  
 
 ## Repository Settings
 
-- **Limit** — Maximum number of records.
-- **Sorting** — One or more sort orders; each can be activated via a variable (for example a GET parameter).
-- **Condition for activating the sorting (Fluid)** — When this sorting applies.
+![Include hidden, Recursive, Limit, Sorting](Images/sorting.webp)
 
-![Example sorting configuration using a GET parameter](Images/sorting.webp)
+*Repository Settings*
 
-*Example: sorting driven by a GET parameter*
+| Option | Effect |
+| --- | --- |
+| **Include hidden** | Also load disabled records (respects FE preview rules) |
+| **Recursive** | Also load from subpages of the Startingpoint |
+| **Limit** | Max records |
+| **Sorting** | One or more sort orders (can switch via Fluid / GET) |
 
-## Template Settings
+## Pagination (Record List)
 
-- **Template Selection**
-  - **Debug Template** — Default debug output.
-  - **Select a custom template path** — Fluid file from the filesystem.
-  - **Enter custom fluid code** — Inline Fluid in the plugin.
-  - **Your configured template** — Templates predefined in TypoScript. See [Templating](/en/latest/TonicTypes/GettingStarted/Templating/Index).
-- **Render this Template without Sitetemplate** — Plugin output only.
-- **Template Switch** — Alternate template when a Fluid condition matches.
-- **Variable Injection** — Which Template Variables are injected.
+![Pagination sheet](Images/plugin_pagination.webp)
 
-## Overrides
+*Enable Pagination for automatic paging*
 
-A Template Variable can replace a plugin setting when that variable has a value.
+Without pagination, **Limit** alone caps how many records load at once.
 
-## Developer Settings
+## Templates
 
-- **Debug** — Show the SQL query above the rendered output.
-- **Custom Headers** — Set response headers (for example `Content-Type` for XML/JSON, or `Content-Disposition` for downloads).
+| Choice | Use when |
+| --- | --- |
+| **Debug Template** | First setup / debugging |
+| **Custom template path** | Fluid file on disk |
+| **Custom fluid code** | Inline Fluid in the plugin |
+| **Configured template** | Predefined in TypoScript — [Templating](/en/latest/TonicTypes/GettingStarted/Templating/Index) |
+
+Also: **Template Switch**, **Variable Injection**, **Render without Sitetemplate**.
+
+## Overrides & developer
+
+- **Overrides** — a Template Variable can replace a plugin setting when it has a value  
+- **Debug** — show SQL above the output  
+- **Custom Headers** — e.g. `Content-Type` for JSON/XML  

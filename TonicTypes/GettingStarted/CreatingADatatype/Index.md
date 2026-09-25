@@ -1,59 +1,51 @@
 ---
 title: "Creating a Datatype"
-description: "Create a TonicTypes Datatype, assign fields, generate table and classes."
+description: "Create a Tonictypes Datatype, assign fields, and publish table and classes."
 keywords:
   - "TYPO3"
   - "T3Planet"
-  - "TonicTypes"
+  - "Tonictypes"
   - "tonictypes"
   - "tonictypes_pro"
 sidebarTitle: "Creating a Datatype"
 ---
 
-A Datatype describes one record type (for example News or Event). It defines which fields the record uses and how it appears in the backend.
+A **datatype** is one record type (for example News or Event). It lists which fields belong to that type.
 
-Open the **List** module, click **Create new record**, and select **Datatype** under the **tonictypes** section.
-Create your fields first, or assign them later.
+## Create a datatype
 
-![Creating a new Datatype record in the TYPO3 list module](Images/new_datatype.webp)
+1. Open your **storage folder** in **Records**.  
+1. **Create new record** → **tonictypes** → **Datatype**.  
+1. Set **Name** (and optional description).  
+1. Open **Fields** and assign the fields (order = form order).  
+1. Save, then click **Create Table** / **Update Table**.  
+1. Click **Create Class** / **Update Class**.  
+1. Still on this folder: **Create new** → your datatype name → add records.
 
-*Creating a new Datatype record*
+![General tab of a Datatype](Images/Datatype.png)
 
-## Tab: General
+*General — name, table, and class status*
 
-![General tab of a Datatype, showing name and description](Images/datatype_description.webp)
+## Tabs overview
 
-*General tab of a Datatype*
+| Tab | What you set |
+| --- | --- |
+| **General** | Name, description, table, PHP class |
+| **Fields** | Which fields belong to this type |
+| **Tab Configuration** | Custom backend tabs / palettes |
+| **Appearance** | Icon, color, thumbnail, SEO, hide options |
 
-- **Name** — Datatype name (Movie, News, Job, Address, …).
-- **Description** — Shown when editors create or edit records of this type.
-- **Tablename** — Database table name (generated). Use **Update Table** to run the Schema Migrator when needed.
-- **According PHP Class** — Domain Model and Repository. Use **Generate Class** / **Update Class** to create or refresh them.
+### Appearance (common options)
 
-## Tab: Fields
+- **Thumbnail Field** — list thumbnail  
+- **Enable SEO Fields** — SEO fields on the record form  
+- **Cache generated TCA** — cache TCA; clear caches after structural changes  
+- **New records are disabled by default** — new records start hidden (`default_hidden`, Core 2.1+)  
 
-Assign fields to this Datatype. Assignment order is the order in the record edit form.
+## Move structures to another site
 
-## Tab: Tab Configuration
+Use free Core **System > Export / Import**: [Import / Export](/en/latest/TonicTypes/ExportImport/Index).
 
-- **Disable 'General' Tab** — Hides the default General tab (unassigned fields are hidden too).
-- **Create tabs and assign fields** — Custom tabs and palettes.
+## Next
 
-## Tab: Appearance
-
-- **Icon** — Backend icon (and page-tree icon when page behaviour uses this Datatype).
-- **Color** — Background while creating or editing a record.
-- **Hide Records of this type in list** — Useful for inline-only datatypes.
-- **Hide Button to Add new Record** — Hides the add button for this type on the selected page.
-- **Default hidden** — When enabled, new records of this Datatype start as **hidden/disabled** (`default_hidden`). Available in Core from 2.1.0.
-
-## Sharing datatypes between instances
-
-- **System > Export / Import** — Export or import datatype structures (fields, variables, table schema). This transfer module lives in **Core** from 2.1.0 (not Professional-only).
-- **Dashboard widget** — **Predefined Datatype Import** loads the bundled sample datatype.
-
-Professional-only field types in an import need `k3n/tonictypes_pro` installed on the target instance.
-
-## Next Step
-
-Continue with [Creating a Template Variable](/en/latest/TonicTypes/GettingStarted/CreatingATemplateVariable/Index), or [Templating](/en/latest/TonicTypes/GettingStarted/Templating/Index).
+[Template variables](/en/latest/TonicTypes/GettingStarted/CreatingATemplateVariable/Index) · [Templating](/en/latest/TonicTypes/GettingStarted/Templating/Index) · [Frontend Plugins](/en/latest/TonicTypes/FrontendPlugins/Index)

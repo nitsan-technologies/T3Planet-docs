@@ -1,65 +1,52 @@
 ---
 title: "Screenshots"
-description: "Screenshots of TonicTypes datatypes, fields, plugins, and record editing."
+description: "Tonictypes structure screenshots — extensions, storage, datatype, records, frontend."
 keywords:
   - "TYPO3"
   - "T3Planet"
-  - "TonicTypes"
-  - "tonictypes"
-  - "tonictypes_pro"
+  - "Tonictypes"
+  - "Screenshots"
 sidebarTitle: "Screenshots"
 ---
 
-These screenshots illustrate typical TonicTypes (Core) workflows. UI branding may show older TypoTonic labels in places; behaviour matches current `tonictypes` / `tonictypes_pro`.
+Quick visual tour. Full steps: [Introduction](/en/latest/TonicTypes/Introduction/Index).
 
-## Creating Datatypes
+**Where:** fields / datatypes / records → **Records** on a storage folder. Plugins → **Page** module → **Tonictypes**.
 
-![General tab when creating a Datatype](Images/datatype_general.webp)
+### 1. Extensions
 
-*General tab*
+![Core and Pro](../Introduction/Images/extension_list.webp)
 
-![Appearance tab when creating a Datatype](./Images/datatype_appearance.webp)
+*`tonictypes` + `tonictypes_pro`*
 
-*Appearance tab*
+### 2. Storage folder
 
-![Tab Configuration tab when creating a Datatype](Images/datatype_tab_config.webp)
+![Records, datatype, fields](../Introduction/Images/list_records.webp)
 
-*Tab Configuration tab*
+*Demo Articles · Datatype · Fields*
 
-## Field Configuration
+### 3. Datatype
 
-![Field configuration in the General tab](Images/field_configuration.webp)
+![Datatype General](Images/datatype_general.webp)
 
-*Field configuration*
+*Name, table, classes*
 
-![Selecting fields for a Datatype](Images/field_selection.webp)
+### 4. Record edit
 
-*Field selection*
+![Record form](Images/record_edit_1.webp)
 
-![Frontend Settings tab of a field](Images/field_frontend_settings.webp)
+*Form from your fields*
 
-*Frontend Settings tab*
+### 5. Frontend
 
-## Frontend plugins
+![List preview](Images/plugin_preview.webp)
 
-![TonicTypes plugin configuration](Images/plugin_display_records.webp)
+*Record List output*
 
-*Plugin configuration (List / Detail / Dynamic / Plain)*
+### 6. Pro UI
 
-![Preview of records rendered by a TonicTypes plugin](Images/plugin_preview.webp)
+Toolbar, DocHeader, Pro fields → [Tonictypes Pro](/en/latest/TonicTypes/Professional/Index)
 
-*Frontend preview*
+## Related
 
-## Editing Records
-
-![Editing a record, view one](Images/record_edit_1.webp)
-
-*Editing a record*
-
-![Editing a record, view two](Images/record_edit_2.webp)
-
-*Editing a record*
-
-![Editing a record, view three](Images/record_edit_3.webp)
-
-*Editing a record*
+[Installation](/en/latest/TonicTypes/Installation/Index) · [Getting Started](/en/latest/TonicTypes/GettingStarted/Index)

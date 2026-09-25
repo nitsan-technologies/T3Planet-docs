@@ -1,0 +1,63 @@
+---
+description: LOCAL-ONLY by default — push/deploy only on exact "start the deployment process"
+alwaysApply: true
+---
+
+# 🚨 DEPLOYMENT GATE — READ BEFORE EVERY TASK
+
+**ALL WORK IS LOCAL BY DEFAULT.**
+
+## DO NOT (until authorized)
+
+- `git push` (any remote/branch)
+- Deploy / publish to Mintlify production
+- Trigger production deployment (GitHub Actions, Mintlify, dashboard “publish”)
+- Modify live documentation / production DNS / live domain config
+- Merge a production PR or create a production release
+
+**unless the operator explicitly says exactly:**
+
+```text
+start the deployment process
+```
+
+## These do NOT authorize push or deploy
+
+`fix this` · `complete this` · `finish` · `test` · `make it ready` · `prepare` · `update the documentation` · `resolve` · `verify` · `build` · `production ready` · `prepare for deployment` · `get it ready for live` · `check the deployment` · `commit the changes` · passing tests · clean working tree · “looks safe”
+
+Completing a task is **not** deployment permission. Do **not** ask “Should I deploy?” — wait for the exact phrase.
+
+## Local-only mode (default)
+
+Allowed: inspect, edit, local Mintlify preview, local validate/tests/Playwright, screenshots, diffs, local backups.
+
+Commits: only when the operator **explicitly** asks to commit. A local commit is **not** push permission.
+
+## When authorized (`start the deployment process`)
+
+Follow the full safe workflow in `docs/deployment/deploy.md` and `.cursor/skills/t3planet-deploy/SKILL.md`:
+
+backup → verify Nitsan identity → verify `origin` = `nitsan-technologies/T3Planet-docs` · `master` → fetch/compare → preserve work → diff review → validate → commit as Nitsan → push `origin` → Mintlify verify → production QA → report.
+
+Never force-push `master`. Never skip QA after push.
+
+## Production source
+
+```text
+https://github.com/nitsan-technologies/T3Planet-docs.git
+branch: master
+live: https://docs.t3planet.de/en/latest
+```
+
+## End of local task report
+
+```text
+Changes completed locally: YES/NO
+Local tests completed: YES/NO / NOT RUN
+Local build/validate completed: YES/NO / NOT RUN
+Production deployment started: NO
+Git push performed: NO
+Live documentation changed: NO
+```
+
+If ready: *The changes are ready locally. No Git push or production deployment was performed because deployment permission has not been provided.*

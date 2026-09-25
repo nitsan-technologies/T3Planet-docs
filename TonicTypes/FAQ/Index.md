@@ -1,64 +1,62 @@
 ---
 title: "FAQ"
-description: "Frequently asked questions about TonicTypes Core and Professional."
+description: "Common Tonictypes questions — Core vs Pro, install, templates, export/import."
 keywords:
   - "TYPO3"
   - "T3Planet"
-  - "TonicTypes"
+  - "Tonictypes"
   - "tonictypes"
   - "tonictypes_pro"
 sidebarTitle: "FAQ"
 ---
 
-## General
+## What is Tonictypes?
 
-### What is TonicTypes?
+Custom record types in TYPO3 without writing a separate extension per type.
 
-TonicTypes is a TYPO3 extension (`k3n/tonictypes`, key `tonictypes`) that lets you model, manage, and render TCA-based records without creating your own extension. It integrates with FormEngine, TCA, and Workspaces. It is the successor to TypoTonic.
+| Package | Role |
+| --- | --- |
+| **Tonictypes Pro** | Premium — advanced fields, toolbar, MCP, … |
+| **Tonictypes** (Core) | Free required base — fields, datatypes, plugins, export/import |
 
-### Free vs Professional?
+Extension Manager titles: *Tonictypes* and *Tonictypes Pro: Enterprise Edition*.
 
-- **Core** — Datatypes, fields, List/Detail/Dynamic/Plain plugins, ViewHelpers, export/import, dashboard import widget, `default_hidden`.
-- **Professional** (`k3n/tonictypes_pro`) — Advanced field types, MCP tools, toolbar, DocHeader buttons, link handler, Form hooks, branding options. Requires Core plus `ns_license` and `ns_t3af`.
+## Core vs Pro?
 
-### Where do I get the free extension?
+- **Core** — Datatypes, fields, plugins, ViewHelpers, export/import, dashboard import widget. Free on [TER](https://extensions.typo3.org/extension/tonictypes).  
+- **Pro** — Repeater and other advanced fields, toolbar, DocHeader, MCP, link handler, branding. [License](/en/latest/License/Index).
 
-[https://extensions.typo3.org/extension/tonictypes](https://extensions.typo3.org/extension/tonictypes)
+## How do I install?
 
-## Installation and Compatibility
-
-### How do I install TonicTypes?
+1. License (Pro): [License docs](/en/latest/License/Index)  
+1. Composer:
 
 ```bash
 composer require k3n/tonictypes
+composer require k3n/tonictypes_pro
 ```
 
-Then add Site Set `k3n/tonictypes` or include **[Tonictypes] General Configuration**, and clear caches. Full steps: [Installation](/en/latest/TonicTypes/Installation/Index).
+1. Site Sets or static templates → clear caches  
 
-### Which TYPO3 / PHP versions are supported?
+Full steps: [Installation](/en/latest/TonicTypes/Installation/Index).
 
-TYPO3 12.4–14.9 and PHP 8.2–8.5 (Core and Professional 2.1.x).
+## Which TYPO3 / PHP?
 
-## Templates and Rendering
+TYPO3 12.4–14.9 · PHP 8.2–8.5 · packages **2.1.x**. Pro needs Core `^2.0`.
 
-### How do I use my own templates?
+## Own templates?
 
-Predefine templates under `plugin.tx_tonictypes.templates`, then select them in a plugin or render with `dv:template.render`. See [Templating](/en/latest/TonicTypes/GettingStarted/Templating/Index).
+Predefine under `plugin.tx_tonictypes.templates`, select in the plugin, or use `dv:template.render`.  
+Namespace: **`dv:`** (not old `t:`). See [Templating](/en/latest/TonicTypes/GettingStarted/Templating/Index).
 
-### Which Fluid namespace should I use?
+## Is export/import Pro-only?
 
-Use **`dv:`** (`K3n\Tonictypes\ViewHelpers`). The old `t:` / `Aix\Tonic` namespace is obsolete.
+No — Core from 2.1.0, module **System > Export / Import**. Steps: [Import / Export](/en/latest/TonicTypes/ExportImport/Index).
 
-## Features
+## “New records are disabled by default”?
 
-### Is export/import Professional-only?
+Datatype → **Appearance** (`default_hidden`): new records start hidden until an editor enables them.
 
-No. From Core 2.1.0, datatype export/import is under **System > Export / Import**.
+## More help
 
-### What does default_hidden do?
-
-On a Datatype, **Default hidden** makes newly created records start disabled until an editor enables them.
-
-## Didn't find your question?
-
-Vendor support for the extension and Professional: see [Support](/en/latest/TonicTypes/Support/Index).
+[Support](/en/latest/TonicTypes/Support/Index)

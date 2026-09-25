@@ -112,6 +112,12 @@ Do not say “fixed on the site” until live HTML shows the change.
 
 ---
 
+## 🚨 Deployment permission gate
+
+**Default = LOCAL ONLY.** No `git push` / Mintlify production deploy / live DNS changes unless the operator says exactly `start the deployment process`.
+
+See `.cursor/rules/deployment-permission-gate.mdc`. Completing a task is not authorization. Commit only when explicitly requested; commit ≠ push.
+
 ## Project identity
 
 | Item | Value |

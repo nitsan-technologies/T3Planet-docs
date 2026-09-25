@@ -1,27 +1,44 @@
 ---
 title: "Getting Started"
-description: "Getting started with TonicTypes — fields, datatypes, records, Fluid, and frontend plugins."
+description: "Create your first Tonictypes record type — fields, datatype, records, then a frontend plugin."
 keywords:
   - "TYPO3"
   - "T3Planet"
-  - "TonicTypes"
+  - "Tonictypes"
   - "tonictypes"
   - "tonictypes_pro"
 sidebarTitle: "Getting Started"
 ---
 
-Follow these steps to create your first record type with TonicTypes:
+Follow this order for the first custom record type.
 
-1. Install and configure Core ([Installation](/en/latest/TonicTypes/Installation/Index)).
-1. Create the fields your record type needs.
-1. Create a Datatype, assign fields, update the table, and generate classes.
-1. Create records.
-1. Create Fluid templates.
-1. Place a **List**, **Detail**, **Dynamic**, or **Plain** plugin on a page.
+## Checklist
 
-Optional: import a predefined sample datatype from the dashboard widget, or use **System > Export / Import** to move datatype structures between instances.
+| Step | Where | Doc |
+| --- | --- | --- |
+| 1. Install | Composer / EM | [Installation](/en/latest/TonicTypes/Installation/Index) |
+| 2. Create fields | Records on a **storage folder** | [Creating a Field](/en/latest/TonicTypes/GettingStarted/CreatingAField/Index) |
+| 3. Create datatype | Same folder → Create Table / Class | [Creating a Datatype](/en/latest/TonicTypes/GettingStarted/CreatingADatatype/Index) |
+| 4. Create records | Same folder → your datatype name | — |
+| 5. (Optional) templates | Files / TypoScript | [Templating](/en/latest/TonicTypes/GettingStarted/Templating/Index) |
+| 6. Place plugin | Page module → Tonictypes | [Frontend Plugins](/en/latest/TonicTypes/FrontendPlugins/Index) |
 
-The following pages explain each step in detail.
+**Remember:** configuration and records → **Records** module. Plugins → **Page** module.
+
+## Minimum plugin settings
+
+After you insert a plugin, set:
+
+1. **Datatype**  
+1. **Startingpoint** (the storage folder)  
+1. **Template** (start with the debug template if unsure)
+
+Then save and clear caches if the frontend is empty.
+
+## Shortcuts
+
+- Sample datatype: dashboard **Predefined Datatype Import** widget  
+- Copy structures between sites: [Import / Export](/en/latest/TonicTypes/ExportImport/Index)  
 
 <CardGroup cols={2}>
   <Card title="Creating a Field" icon="pencil" href="/en/latest/TonicTypes/GettingStarted/CreatingAField/Index" />

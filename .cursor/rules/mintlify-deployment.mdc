@@ -5,6 +5,10 @@ alwaysApply: true
 
 # Mintlify deployment (T3Planet Docs)
 
+## 🚨 Permission gate
+
+No push to GitHub and no Mintlify production publish unless the operator says exactly **`start the deployment process`**. Default is local-only. See `.cursor/rules/deployment-permission-gate.mdc`.
+
 Live site: https://docs.t3planet.de/en/latest  
 Mintlify project: **T3Planet Docs** (workspace **nitsan-81630f36**)
 

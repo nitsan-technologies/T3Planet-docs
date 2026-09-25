@@ -1,5 +1,12 @@
 # Deployment checklist (quick)
 
+## Authorization (required first)
+
+- [ ] Operator said exactly: **`start the deployment process`**
+- [ ] If not → stop; keep work local; no push / no Mintlify production deploy
+
+## After authorization
+
 - [ ] Backup if sync could overwrite local work (`backup/pre-deployment-…`, mintignored)
 - [ ] `git remote -v` → `https://github.com/nitsan-technologies/T3Planet-docs.git`
 - [ ] Branch `master`

@@ -41,3 +41,13 @@ Append one entry per production release.
 - Rule: never use hostname delete/recreate as a cache fix; prefer origin check, wait for deploy, hard refresh, content Git fix
 - Final status: LIVE RESTORED + SOP hardened
 
+### 2026-09-25 — Deployment permission gate (local-only default)
+- Policy: no `git push` / Mintlify production deploy unless operator says exactly `start the deployment process`
+- Added `.cursor/rules/deployment-permission-gate.mdc`; updated deploy SOP, skill (exact-phrase trigger only), checklist, AGENTS, README, safety rules
+- Final status: documentation update (local until authorized deploy)
+
+### 2026-09-25 — TonicTypes docs refresh + Import/Export page
+- Scope: `TonicTypes/**` content/images + new `TonicTypes/ExportImport/Index` + `docs.json` nav entry
+- Also ships local-ready deployment permission gate SOP (if included in same commit)
+- Push remote: `origin` → `nitsan-technologies/T3Planet-docs` (`master`)
+- Final status: pending live QA after push

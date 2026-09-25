@@ -1,32 +1,52 @@
 ---
 title: "Frontend Plugins"
-description: "TonicTypes frontend plugins — List, Detail, Dynamic, and Plain."
+description: "Add Tonictypes plugins — Record List, Detail, Dynamic Detail, Plain Fluid."
 keywords:
   - "TYPO3"
   - "T3Planet"
-  - "TonicTypes"
+  - "Tonictypes"
   - "tonictypes"
   - "tonictypes_pro"
 sidebarTitle: "Frontend Plugins"
 ---
 
-TonicTypes Core registers four frontend plugins under the **tonictypes** content-element group:
+Plugins show your records in the frontend. They are normal content elements — **not** created in the Records / List module.
 
-| Plugin | Purpose |
+## Plugin types
+
+| Plugin | Shows |
 | --- | --- |
-| **List** | Multiple records → typically `{records}` |
-| **Detail** | One fixed record selected in the plugin → `{record}` |
-| **Dynamic** | One record resolved from the URL → `{record}` |
-| **Plain** | Fluid only (no record load) |
+| **Record List** | Many records → `{records}` |
+| **Record Detail** | One record you pick in the plugin → `{record}` |
+| **Record Dynamic Detail** | One record from the URL (detail page) → `{record}` |
+| **Plain Fluid Template** | Custom Fluid only (no record load) |
 
-Add them via the **New content element** wizard.
+## Add a plugin
 
-![Selecting a TonicTypes plugin in the New Content Element wizard](Images/plugin_wizard.webp)
+1. Open the **page** that should show the output.  
+1. **Page** module (v14: **Content > Layout**; v12/v13: **Web > Page**).  
+1. **New content element** → **Tonictypes** group.  
+1. Choose **Record List**, **Record Detail**, **Record Dynamic Detail**, or **Plain Fluid Template**.
 
-*Selecting a TonicTypes plugin*
+![Tonictypes in the New Content Element wizard](Images/plugin_wizard.webp)
+
+*New content → Tonictypes*
+
+## Minimum settings
+
+1. Save the content element once.  
+1. **Datatype** — which record type  
+1. **Startingpoint** — storage folder with the records  
+1. **Template** — use the debug template first if unsure  
+
+Without datatype + Startingpoint, the frontend stays empty.
+
+For list → detail: put **Record Dynamic Detail** on the detail page, and set **Page for Detail View** on the **Record List**.
 
 <Note>
-Before all FlexForm fields are available, select a **Record Storage Page** and save the content element once. This refreshes the form.
+Select a **Startingpoint** and save once before all FlexForm fields appear.
 </Note>
 
-Configuration details (filters, sorting, templates, overrides): [Plugin configuration](/en/latest/TonicTypes/FrontendPlugins/DisplayRecordsPlugin/Index).
+Full FlexForm options: [Plugin configuration](/en/latest/TonicTypes/FrontendPlugins/DisplayRecordsPlugin/Index).
+
+No fields/datatype yet? Start with [Getting Started](/en/latest/TonicTypes/GettingStarted/Index).

@@ -1,15 +1,27 @@
 ---
-description: Production deploy safety — Nitsan identity, org repo only, no force push
+description: Production deploy safety — permission gate, Nitsan identity, org repo, no force push
 alwaysApply: true
 ---
 
 # Deployment safety (T3Planet Docs)
 
-When deploying or when the user says **start deployment** / **deploy docs**, follow `docs/deployment/deploy.md` and `.cursor/skills/t3planet-deploy/SKILL.md`.
+## 🚨 Permission gate (non-negotiable)
 
-## Must
+**Default = LOCAL ONLY.** No `git push`, Mintlify production deploy, live DNS/domain changes, or production publish unless the operator says exactly:
 
-1. Inspect remote, branch, identity, and full diff before commit.
+```text
+start the deployment process
+```
+
+Near-synonyms (`deploy`, `push live`, `release`, `finish`, `make it ready`, etc.) are **not** authorization. Do not ask to deploy — wait for the exact phrase.
+
+Full gate: `.cursor/rules/deployment-permission-gate.mdc`.
+
+When authorized, follow `docs/deployment/deploy.md` and `.cursor/skills/t3planet-deploy/SKILL.md`.
+
+## Must (only after authorization)
+
+1. Confirm the exact phrase was given; then inspect remote, branch, identity, and full diff.
 2. Push only to `origin` → `nitsan-technologies/T3Planet-docs` (`master`) unless operator redirects.
 3. Commit as **Nitsan** `<sanjay@nitsantech.com>` (author env OK; do not forge tokens; do not invent emails).
 4. `git fetch` + compare before push; synchronize safely; never force-push `master`.
@@ -20,16 +32,18 @@ When deploying or when the user says **start deployment** / **deploy docs**, fol
 
 ## Must not
 
-1. Force push.
-2. Expose credentials, tokens, or `.env`.
-3. Blind `git add .` / `git add -A`.
-4. Stage, commit, push, or deploy **`docs-master/`** or **`workshops/`**.
-5. Delete/reset those excluded trees.
-6. Claim PASS from GitHub push alone.
-7. Silently reconnect or rewrite Mintlify project settings.
-8. Use a personal fork as the normal production Mintlify source.
-9. **Delete, remove, or recreate** the Cloudflare custom hostname / custom domain for `docs.t3planet.de` to flush cache or fix a stuck URL (breaks SSL — see `custom-domain-ssl-safety.mdc`).
-10. Change production ACME / DCV DNS records without an approved SSL recovery plan and matching Mintlify validation values.
+1. Push or deploy without `start the deployment process`.
+2. Force push.
+3. Expose credentials, tokens, or `.env`.
+4. Blind `git add .` / `git add -A`.
+5. Stage, commit, push, or deploy **`docs-master/`** or **`workshops/`**.
+6. Delete/reset those excluded trees.
+7. Claim PASS from GitHub push alone.
+8. Silently reconnect or rewrite Mintlify project settings.
+9. Use a personal fork as the normal production Mintlify source.
+10. **Delete, remove, or recreate** the Cloudflare custom hostname / custom domain for `docs.t3planet.de` to flush cache (breaks SSL — see `custom-domain-ssl-safety.mdc`).
+11. Change production ACME / DCV DNS without an approved SSL recovery plan.
+12. Auto-commit unless the operator explicitly asked to commit (commit ≠ push ≠ deploy).
 
 Mintlify still on a personal fork while pushing org-only → live will lag; prefer reconnect, emergency same-SHA fork sync only if authorized and urgent (see `mintlify-deployment.mdc`).
 

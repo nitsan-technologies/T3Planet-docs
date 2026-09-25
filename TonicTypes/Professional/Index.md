@@ -1,29 +1,33 @@
 ---
-title: "TonicTypes Professional"
-description: "TonicTypes Professional (EXT:tonictypes_pro) — advanced fields, MCP tools, toolbar, DocHeader, link handler."
+title: "Tonictypes Pro"
+description: "Tonictypes Pro premium features — license, toolbar, advanced fields, MCP."
 keywords:
   - "TYPO3"
   - "T3Planet"
-  - "TonicTypes"
-  - "tonictypes"
+  - "Tonictypes"
   - "tonictypes_pro"
-sidebarTitle: "Professional"
+sidebarTitle: "Tonictypes Pro"
 ---
 
-TonicTypes Professional (`k3n/tonictypes_pro`, extension key `tonictypes_pro`) extends [TonicTypes Core](/en/latest/TonicTypes/Introduction/Index) with enterprise features. It is developed by Keeen GmbH and distributed for T3Planet projects with license activation via `ns_license`. T3Planet does not replace vendor support for the product itself.
+**Tonictypes Pro** is the premium package (`tonictypes_pro` / `k3n/tonictypes_pro`). Extension Manager title: *Tonictypes Pro: Enterprise Edition*.
 
-**Requires:** `k3n/tonictypes` 2.x · `nitsan/ns-license` · `nitsan/ns-t3af` · PHP 8.2–8.5 · TYPO3 12.4–14.9
+It always needs free **Tonictypes** Core (`tonictypes`).
 
-Product site: [https://www.tonictypes.com](https://www.tonictypes.com)
+**Requires:** Core `^2.0` · `nitsan/ns-license` · PHP 8.2–8.5 · TYPO3 12.4–14.9
 
-## Install and activate
+## Install
+
+1. Activate the license: [License documentation](/en/latest/License/Index)  
+1. Install Core, then Pro:
 
 ```bash
 composer require k3n/tonictypes
 composer require k3n/tonictypes_pro
 ```
 
-Site Sets:
+1. Add Site Sets (or static templates) and clear caches — [Installation](/en/latest/TonicTypes/Installation/Index)
+
+Site `config.yaml` example:
 
 ```yaml
 dependencies:
@@ -31,110 +35,83 @@ dependencies:
   - k3n/tonictypes_pro
 ```
 
-Or include static templates **[Tonictypes] General Configuration** and **[Tonictypes] Tonictypes Professional**, then clear caches.
+## What Pro adds
 
-See [Installation](/en/latest/TonicTypes/Installation/Index).
+| Feature | Notes |
+| --- | --- |
+| Backend **toolbar** | Quick create + latest records |
+| **DocHeader** create buttons | Page TSconfig |
+| Advanced fields | Content, Fluid, UserFunc, **Repeater**, Flex, Inline, … |
+| **MCP tools** | Via AI Foundation |
+| Link handler, Form hooks, branding | — |
 
-## What Professional adds
+Export / Import of datatype structures is **free Core** from 2.1.0 — see [Import / Export](/en/latest/TonicTypes/ExportImport/Index).
 
-- Backend **toolbar item** for recent records and quick create
-- **DocHeader** “Add record” buttons for selected datatype UIDs
-- **Advanced field types** (see below)
-- **MCP tools** (via AI Foundation / `ns_t3af`) for datatype, field, and record management
-- **Link handler** for TonicTypes records in the TYPO3 link browser
-- Enhanced **routing** support (`Tonictypes` enhancer / `TonictypesMapper` aspect; Core also registers enhancers — Professional Xclasses `PageRouter` for fuller access)
-- **Form** extension hooks to prefill form fields in a TonicTypes record context
-- Removes “Buy Professional” messages when licensed
-- Branding User TSconfig (custom logo / support email)
+## Screenshots
 
-Datatype **export/import** lives in **Core** from 2.1.0 (`System > Export / Import`) — not Professional-only.
+### Extensions
 
-Separate filter / sort / pagination / search **plugins** are on the vendor roadmap; Core List plugins already support FlexForm filters and sorting.
+![tonictypes and tonictypes_pro](Images/extension_list.webp)
 
-## Backend toolbar
+*Core + Pro in Extension Manager*
 
-Professional registers a toolbar item for managing latest records and creating new ones.
+### Toolbar
 
-Disable:
+![Toolbar Create Record and Latest Records](Images/toolbar_item.webp)
+
+*Create Record · Latest Records*
+
+![Toolbar in the top bar](Images/toolbar_context.webp)
+
+*Toolbar open*
 
 ```typoscript
 options.tonictypes.disableTonictypesToolbarItem = 1
 ```
 
-Related options: `customSupportEmail`, `customLogo`, `customLogoBright`, `disableSupportMessage`, `disableTonictypesLogo`.
+### List / DocHeader
 
-## DocHeader buttons
+![Storage folder with records](Images/list_records.webp)
 
-Page TSconfig:
+*Records · Datatype · Fields*
 
 ```typoscript
-tx_tonictypes.docHeaderDatatypes = 1,2,3
+tx_tonictypes.docHeaderDatatypes = 1
 ```
 
-Or select a datatype behaviour on the page. See [Installation](/en/latest/TonicTypes/Installation/Index).
+## Advanced field types (Pro only)
 
-## Link handler
+#### Content
 
-Professional registers a link handler so editors can link to TonicTypes records from the link browser (`TCEMAIN.linkHandler.tonictypes`). Loaded via the Professional Site Set / Page TSconfig.
+![Content Elements field](Images/field_content.webp)
 
-## Advanced field types (Professional)
+#### Fluid
 
-These types are declared in Professional TypoScript (`plugin.tx_tonictypes.fieldtypes`) and are **not** available in Core alone:
+![Fluid field](Images/field_fluid.webp)
 
-| Type key | Class purpose |
+#### UserFunc
+
+![UserFunc field](Images/field_user.webp)
+
+Use UserFunc only with trusted PHP.
+
+#### Repeater
+
+**Repeater** = repeatable groups of sub-fields inside one record. Create the Repeater field, configure children, assign it to a Datatype like any other field.
+
+## MCP tools
+
+| Area | Tools |
 | --- | --- |
-| `user` | UserFunc field — run custom PHP as a FormEngine field |
-| `content` | Inline TYPO3 content elements inside a record |
-| `fluid` | Generate/store Fluid-rendered HTML for titles, filters, search |
-| `flex` | FlexForm-based field |
-| `inline` | Inline related records |
-| `datatype` | Relation to another Datatype |
-| `dyninput` | DynamicInput — FlexForm-driven dynamic inputs |
-| `passthrough` | PassThrough TCA field |
-| `tca` | Raw / custom TCA configuration field |
+| Datatypes | `tonictypes_datatype_*` (list / get / create / update / delete / publish) |
+| Fields | `tonictypes_field_*` |
+| Records | `tonictypes_record_*` |
 
-### Content
+Needs AI Foundation MCP and a valid license where applicable.
 
-Page-module-like content elements inside a record (for example blog-like bodies).
+## Links
 
-![The Content field type in a TonicTypes record](Images/field_content.webp)
-
-### Fluid
-
-Combines record data into a generated field when the record is saved.
-
-![The Fluid field type in a TonicTypes record](Images/field_fluid.webp)
-
-### User (UserFunc)
-
-Runs a custom PHP user function and stores the result. Pass parameters through the field configuration.
-
-![The User field type in a TonicTypes record](Images/field_user.webp)
-
-Use UserFunc fields only with trusted PHP. Avoid exposing arbitrary code execution to untrusted editors.
-
-## MCP tools (Professional + AI Foundation)
-
-Professional registers MCP tools through `ns_t3af` (`NITSAN\NsT3AF\Contract\McpToolsExtensionCardProviderInterface`). Tools operate on datatypes, fields, and records:
-
-**Datatypes:** `tonictypes_datatype_list`, `tonictypes_datatype_get`, `tonictypes_datatype_create`, `tonictypes_datatype_update`, `tonictypes_datatype_delete`, `tonictypes_datatype_publish`
-
-**Fields:** `tonictypes_field_list`, `tonictypes_field_get`, `tonictypes_field_create`, `tonictypes_field_update`, `tonictypes_field_delete`
-
-**Records:** `tonictypes_record_list`, `tonictypes_record_get`, `tonictypes_record_create`, `tonictypes_record_update`, `tonictypes_record_delete`
-
-`tonictypes_datatype_publish` migrates the record table, generates TCA and model/repository classes, and clears caches. MCP create/update for records accepts field values as JSON (`dataJson`); some relation/file/content fields may need companion file/reference tools.
-
-Requires a working AI Foundation (`ns_t3af`) MCP setup and a valid license where applicable.
-
-## Upgrade notes (Professional 2.1.0)
-
-- PHP 8.2+
-- Pair with Core 2.1.0+ (transfer module moved to Core)
-- Clear all caches after upgrade
-
-## Vendor links
-
-- Shop / product: [https://www.tonictypes.com](https://www.tonictypes.com)
-- Free Core on TER: [https://extensions.typo3.org/extension/tonictypes](https://extensions.typo3.org/extension/tonictypes)
-- Support email: support@tonictypes.com
+- [License](/en/latest/License/Index)  
+- Product: [t3planet.de/tonictypes](https://t3planet.de/tonictypes)  
+- Core TER: [extensions.typo3.org/extension/tonictypes](https://extensions.typo3.org/extension/tonictypes)  
+- Support: [t3planet.de/support](https://t3planet.de/support)

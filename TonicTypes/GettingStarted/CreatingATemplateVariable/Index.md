@@ -1,59 +1,55 @@
 ---
 title: "Creating a Template Variable"
-description: "Inject dynamic values into TonicTypes Fluid templates with Template Variables."
+description: "Inject dynamic values into Tonictypes Fluid templates."
 keywords:
   - "TYPO3"
   - "T3Planet"
-  - "TonicTypes"
+  - "Tonictypes"
   - "tonictypes"
   - "tonictypes_pro"
 sidebarTitle: "Creating a Template Variable"
 ---
 
-Template Variables inject dynamic values into TonicTypes Fluid templates. Select them in List / Detail / Dynamic / Plain plugins.
-Use them for filters, search, sorting, or conditional template behaviour.
+A **Template Variable** puts a dynamic value into Fluid (filters, sorting, page IDs, GET params, …).
 
-![Creating a new Template Variable record](Images/new_variable.webp)
+Select it later in the plugin under **Variable Injection**.
 
-## Configuration
+![New Template Variable](Images/new_variable.webp)
 
-- **Name** — Variable name used in Fluid.
-- **Type** — Where the value comes from.
+## Create one
 
-## Available Types
+1. Storage folder → **Create new** → **Template Variable**  
+1. Set **Template Variable Name** (Fluid name)  
+1. Pick **Type** (where the value comes from)  
+1. Save · enable it on the plugin  
 
-- **Fixed Value** — Fixed text.
-- **TypoScript Value** — Parsed from TypoScript.
-- **GET Variable** / **POST Variable** — From the request.
-- **Database Value** — From a configured query.
-- **Frontend User** — Logged-in frontend user.
-- **Server Variable** — From PHP `$_SERVER`.
-- **User Session Variable** — Frontend user session.
-- **Page** — Selected page information.
-- **UserFunc** — Output of a PHP user function.
-- **Backend User** — Logged-in backend user, or `null`.
-- **Language Id** — Current language ID.
-- **TonicTypes Session Service Container** — Active filters, searches, and related session data.
+## Types (overview)
 
-## Typical Use Cases
+| Type | Value from |
+| --- | --- |
+| Fixed Value | Static text |
+| TypoScript Value | TypoScript |
+| GET / POST Variable | Request |
+| Database Value | Configured query |
+| Frontend / Backend User | Logged-in user |
+| Server / Session | PHP `$_SERVER` / FE session |
+| Page | Selected page |
+| User (UserFunc) | PHP function |
+| Language Id | Current language |
+| Dynamic Record | Record in current request |
+| Extension Configuration | Ext config |
+| TypoScript / Site Set settings | TS or Site Settings |
+| Tonictypes Session Service | Active filters / searches |
 
-- Inject dynamic values (for example the current date).
-- Inject list/back page IDs instead of hardcoding.
-- Add custom PHP values via TypoScript / UserFunc.
-- Inject the current record when several plugins share a page.
-- Drive plugin filters and sorting with GET parameters.
+## GET / POST extras
 
-## GET and POST Variables
+- Type Definition · Regular Expression · Allowed Values  
+- **Value Switch** — change the value with Fluid (first match wins)
 
-- **Type Definition** — Restrict data type.
-- **Regular Expression** — Further restrict values.
-- **Allowed Values** — Whitelist.
-- **Value Switch** — Change the value with Fluid based on a condition (first match wins).
+![Value Switch](Images/value_switch.webp)
 
-![Value Switch example for reversing a sort order parameter](Images/value_switch.webp)
+*Example: reverse a sort-order parameter*
 
-*Example: Value Switch reversing a sort-order parameter*
+## Next
 
-## Next Step
-
-Continue with [Templating](/en/latest/TonicTypes/GettingStarted/Templating/Index).
+[Templating](/en/latest/TonicTypes/GettingStarted/Templating/Index)

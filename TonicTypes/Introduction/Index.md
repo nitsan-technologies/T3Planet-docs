@@ -1,77 +1,91 @@
 ---
 title: "Introduction"
-description: "Introduction to TonicTypes Professional (EXT:tonictypes_pro) and required Core — custom TCA record types without a dedicated extension."
+description: "What Tonictypes is — custom TYPO3 record types with Core and Tonictypes Pro."
 keywords:
   - "TYPO3"
   - "T3Planet"
-  - "TonicTypes"
+  - "Tonictypes"
   - "tonictypes"
   - "tonictypes_pro"
 sidebarTitle: "Introduction"
 ---
 
-## What This Extension Does
+## Tonictypes
 
-This documentation focuses on **TonicTypes Professional** (`tonictypes_pro` / `k3n/tonictypes_pro`). Professional requires free **TonicTypes Core** (`tonictypes` / `k3n/tonictypes`).
+**Tonictypes** lets you build custom TYPO3 record types (News, Jobs, Events, Products, …) in the backend — without writing a separate extension for each type.
 
-Together they let you build your own record types directly in the TYPO3 backend. You configure fields and datatypes with TCA. There is no need to write a new extension for every content type.
+This documentation leads with **Tonictypes Pro** (`tonictypes_pro`). Free **Tonictypes** Core (`tonictypes`) is always required.
 
-TonicTypes reads your configuration and generates the database table, TCA, and Extbase domain model and repository classes. The TYPO3 Schema Migrator creates the required database structure. After that, you create, edit, and list records the same way you already do in TYPO3.
+| | |
+| --- | --- |
+| **Premium** | Tonictypes Pro — Extension Manager: *Tonictypes Pro: Enterprise Edition* |
+| **Free Core** | Tonictypes — Extension Manager: *Tonictypes* |
+| **Compatibility** | TYPO3 12.4–14.9 · PHP 8.2–8.5 · **2.1.x** |
+
+![tonictypes and tonictypes_pro in Extension Manager](Images/extension_list.webp)
+
+*Core and Pro after install (search `tonictypes`)*
+
+## What does it do?
+
+You define **fields** and a **datatype**. Tonictypes generates the database table, TCA, and PHP classes. Editors create and edit **records** like any other TYPO3 record. You output them with Fluid and the built-in **frontend plugins**.
+
+| Concept | Meaning |
+| --- | --- |
+| **Field** | One property (title, text, select, image, …) |
+| **Datatype** | One record type that groups those fields |
+| **Record** | One entry of that datatype (editable in the List / Records module) |
+| **Plugin** | Content element that lists or shows records in the frontend |
+
+![Storage folder with datatype, fields, and records](Images/list_records.webp)
+
+*Storage folder — records, datatype, and fields together*
+
+![Editing a Demo Article record](Images/record_edit.webp)
+
+*Record form generated from your fields*
+
+![Frontend Record List](Images/plugin_preview.webp)
+
+*Frontend list after datatype + Startingpoint + template*
+
+## Core and Tonictypes Pro
+
+| | Core (free) | Pro (premium) |
+| --- | --- | --- |
+| Fields, datatypes, plugins, ViewHelpers | Yes | Yes (needs Core) |
+| Export / import of datatype structures | Yes (from 2.1.0) | Yes |
+| Advanced fields (Repeater, Content, Fluid, UserFunc, …) | — | Yes |
+| Toolbar, DocHeader buttons, MCP, link handler, branding | — | Yes |
+
+![Tonictypes Pro toolbar](Images/toolbar_context.webp)
+
+*Pro toolbar — quick create and latest records*
+
+Pro details: [Tonictypes Pro](/en/latest/TonicTypes/Professional/Index).
+
+## Where you work
+
+| Task | Module |
+| --- | --- |
+| Fields, datatypes, template variables, records | **Records / List** on a **storage folder** (v14: **Content > Records**) |
+| List / detail plugins | **Page / Layout** on a normal page → New content → **Tonictypes** |
+| Site configuration | **Sites > Setup** (Site Sets) or TypoScript includes |
+
+Do not create fields or datatypes in the Page module. Do not create plugins in the Records list.
+
+## Helpful links
 
 <Note>
-**TonicTypes** is the current product name (successor to **TypoTonic** / extension keys `tonic` and `dataviewer`). This documentation uses **TonicTypes** for the free Core package (`k3n/tonictypes`) and **TonicTypes Professional** for the paid add-on (`k3n/tonictypes_pro`).
+- **Product:** [https://t3planet.de/tonictypes](https://t3planet.de/tonictypes)
+- **Free Core (TER):** [https://extensions.typo3.org/extension/tonictypes](https://extensions.typo3.org/extension/tonictypes)
+- **License (Pro):** [License documentation](/en/latest/License/Index)
+- **Support:** [https://t3planet.de/support](https://t3planet.de/support)
 </Note>
 
-## Free TonicTypes Extension
+## Next steps
 
-Download or install the free Core extension from the [TYPO3 Extension Repository (tonictypes)](https://extensions.typo3.org/extension/tonictypes).
-
-## What You Can Build
-
-Typical record types you can build instead of writing a dedicated extension:
-
-- News, jobs, addresses, events
-- Media library or product records
-- Awards, companies
-- Form answer records for frontend form submissions
-
-Because every record type lives inside one extension, you maintain TonicTypes itself rather than a separate extension per content type.
-
-## Highlights (Core)
-
-- Create custom record types and fields without writing PHP
-- Frontend plugins: **List**, **Detail**, **Dynamic**, and **Plain**
-- Extbase Domain Model / Repository injection into other extensions
-- Template variables (GET/POST, database, session, and more) for Fluid
-- Datatype export/import via **System > Export / Import** (from Core 2.1.0)
-- Predefined datatype import dashboard widget
-- Optional **default_hidden** so new records of a datatype start disabled
-- Built on TYPO3 core (TCA, FormEngine, Extbase)
-
-## How It Works
-
-1. Create the fields your record type needs.
-1. Create a Datatype and assign the fields.
-1. Update the table and generate/update PHP classes on the Datatype.
-1. Create records.
-1. Create Fluid templates (list and detail).
-1. Add a **List** / **Detail** / **Dynamic** / **Plain** plugin to a page.
-1. Optionally use [TonicTypes Professional](/en/latest/TonicTypes/Professional/Index) for advanced fields, MCP, toolbar, and related Pro features.
-
-## Core vs Professional
-
-| | TonicTypes (Core) | TonicTypes Professional |
-| --- | --- | --- |
-| Package | `k3n/tonictypes` | `k3n/tonictypes_pro` |
-| Extension key | `tonictypes` | `tonictypes_pro` |
-| Requires | PHP 8.2–8.5, TYPO3 12.4–14.9 | Core 2.x plus `ns_license` and `ns_t3af` |
-| Role | Datatypes, fields, plugins, export/import | Advanced field types, MCP tools, toolbar, DocHeader buttons, link handler, Form hooks |
-
-Professional requires Core. See [TonicTypes Professional](/en/latest/TonicTypes/Professional/Index).
-
-## Helpful Links
-
-- Free extension (TER): [https://extensions.typo3.org/extension/tonictypes](https://extensions.typo3.org/extension/tonictypes)
-- T3Planet product page: [https://t3planet.de/tonictypes](https://t3planet.de/tonictypes)
-- T3Planet support: [https://t3planet.de/support](https://t3planet.de/support)
-- License activation: [License](/en/latest/License/Index)
+1. [Installation](/en/latest/TonicTypes/Installation/Index) — install Core and Pro, activate Site Sets  
+1. [Getting Started](/en/latest/TonicTypes/GettingStarted/Index) — first field → datatype → records → plugin  
+1. [Frontend Plugins](/en/latest/TonicTypes/FrontendPlugins/Index) — show records in the frontend  
+1. [Import / Export](/en/latest/TonicTypes/ExportImport/Index) — move structures between sites  

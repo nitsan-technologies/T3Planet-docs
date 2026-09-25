@@ -179,6 +179,14 @@ Updates `_static/t3-stats.json`, `_static/t3-stats-inline.js`, and hub Markdown.
 
 ## Deploy to Mintlify
 
+### 🚨 Permission gate
+
+**Local only by default.** Do not `git push` or publish to production Mintlify until the operator says exactly:
+
+```text
+start the deployment process
+```
+
 **Live URL:** https://docs.t3planet.de/en/latest  
 **Mintlify project:** T3Planet Docs (workspace **nitsan-81630f36**)
 
@@ -192,17 +200,18 @@ Production Mintlify Git source must be the **Nitsan organization** repository:
 
 Do **not** deploy production from a personal fork.
 
-### Release steps
+### Release steps (only after authorization)
 
-1. Verify remotes/branch: `git remote -v`, `git branch --show-current` → org repo / `master`.
-2. Verify Git identity (commit metadata ≠ GitHub auth). Approved author: **Nitsan** `<sanjay@nitsantech.com>`.
-3. `git fetch origin` and synchronize safely before push (never force-push `master`).
-4. Validate locally: Node 20 + `mintlify validate`.
-5. Commit as Nitsan (env author/committer), then: `git push origin HEAD:master`.
-6. Confirm [Mintlify Activity](https://app.mintlify.com/t3planet/t3planet/activity) shows org repo + Successful build.
-7. Spot-check https://docs.t3planet.de/en/latest for the intended content (not HTTP 200 alone).
+1. Confirm the exact phrase `start the deployment process`.
+2. Verify remotes/branch: `git remote -v`, `git branch --show-current` → org repo / `master`.
+3. Verify Git identity (commit metadata ≠ GitHub auth). Approved author: **Nitsan** `<sanjay@nitsantech.com>`.
+4. `git fetch origin` and synchronize safely before push (never force-push `master`).
+5. Validate locally: Node 20 + `mintlify validate`.
+6. Commit as Nitsan (env author/committer), then: `git push origin HEAD:master`.
+7. Confirm [Mintlify Activity](https://app.mintlify.com/t3planet/t3planet/activity) shows org repo + Successful build.
+8. Spot-check https://docs.t3planet.de/en/latest for the intended content (not HTTP 200 alone).
 
-Full SOP: [`docs/deployment/deploy.md`](docs/deployment/deploy.md). Agent runbook: [`.cursor/context.md`](.cursor/context.md).
+Full SOP: [`docs/deployment/deploy.md`](docs/deployment/deploy.md). Agent gate: [`.cursor/rules/deployment-permission-gate.mdc`](.cursor/rules/deployment-permission-gate.mdc). Agent runbook: [`.cursor/context.md`](.cursor/context.md).
 
 ---
 

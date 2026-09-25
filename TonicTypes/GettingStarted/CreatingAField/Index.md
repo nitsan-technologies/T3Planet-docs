@@ -1,74 +1,66 @@
 ---
 title: "Creating a Field"
-description: "Create reusable TonicTypes fields before assigning them to a Datatype."
+description: "Create Tonictypes fields, then assign them to a Datatype."
 keywords:
   - "TYPO3"
   - "T3Planet"
-  - "TonicTypes"
+  - "Tonictypes"
   - "tonictypes"
   - "tonictypes_pro"
 sidebarTitle: "Creating a Field"
 ---
 
-Fields are the building blocks of a Datatype. Create the fields you need before you build the Datatype, or add them later.
+A **field** is one property of your records (title, body text, category, …). Create fields first, then attach them to a [Datatype](/en/latest/TonicTypes/GettingStarted/CreatingADatatype/Index).
 
-Open the **List** module, click **Create new record**, and select **Field** under the **tonictypes** section.
+## Create a field
 
-![Creating a new Field record in the TYPO3 list module](Images/new_field.webp)
+1. Open a **storage folder** in **Records** (v14: **Content > Records**; v12/v13: **Web > List**).  
+1. **Create new record** → **tonictypes** → **Field**.  
+1. Set **Type** and **Frontend Label** (this also builds the Fluid variable name).  
+1. Save. Repeat for each property.
 
-*Creating a new Field record*
+![Field type selection on the General tab](Images/type_selection.webp)
 
-## Tab: General
+*General — pick the field type*
 
-![Selecting the field type](Images/type_selection.webp)
+Core includes standard types (input, textarea, select, …). Pro types (Repeater, Content, Fluid, UserFunc, …): [Tonictypes Pro](/en/latest/TonicTypes/Professional/Index).
 
-- **Type** — Field type (for example input, textarea, select). This controls which options appear next.
-- **Field Configuration** — Type-specific options.
+## Main tabs (what they mean)
 
-Core ships standard field types. Advanced types (DynamicInput, Inline, Flex, PassThrough, Datatype, TCA, Fluid, Content, UserFunc) require [TonicTypes Professional](/en/latest/TonicTypes/Professional/Index).
+| Tab | Use for |
+| --- | --- |
+| **General** | Type + TCA options for that type |
+| **Frontend Settings** | Label, variable name (`{record.yourname}`), PHP type |
+| **Backend Settings** | Record title, path segment, search, exclude fields |
+| **Database Settings** | Column type / index (defaults are usually fine) |
+| **Field Values** | Options for select-like fields |
+| **Display Conditions** | Show/hide based on other fields |
+| **Access** | Hide / start / stop for the field itself |
+| **Advanced Settings** | Rare type-specific options |
 
-![General field configuration options](./Images/field_configuration_general.webp)
+## Field Values (select options)
 
-*General field configuration*
+![Field Values tab](Images/field_values.webp)
 
-## Tab: Frontend Settings
+*Field Values — e.g. static options*
 
-- **Frontend Label** — Label shown for the field. TonicTypes also derives a variable name from it.
-- **Custom Variable Name** — Override the generated name. Available in templates as `{record.yourvariable}`.
-- **Frontend Type Definition** — Extbase/PHP type used when mapping the stored value for the frontend and domain model.
-- **Is Object Storage** — Enable when the field stores multiple values (for example inline). Values are wrapped in an ObjectStorage.
+- **Static Value** — fixed text  
+- **Database Value** — from a query  
+- **TypoScript** — from TypoScript  
+- **Values of all records** — values already used  
 
-## Tab: Backend Settings
+## Access
 
-- **Use as record title** — Use this field as the backend record title. Combine several title fields with a **Title Divider Character** on the Datatype **Appearance** tab.
-- **Use value as path segment** — Use this field for the record URL path segment.
-- **Searchable in Backend** — Include in backend search.
-- **Exclude for non-admin users** — Hide unless admin or allowed via exclude fields.
-- **Exclude from translations** — Hide on translated records.
-- **Palette** — Group fields on one row in the edit form.
-- **Backend Description** — Help text next to the field.
+![Field Access tab](Images/field_access.webp)
 
-## Tab: Database Settings
+*Hide, Start, Stop*
 
-- **Database Type Definition** — Column type. Default **Inherit from Tca/Field Class** is usually correct.
-- **Is Index Field** — Add a DB index on the next Schema Migrator run.
+## Advanced Settings
 
-## Tab: Field Values
+![Field Advanced Settings tab](Images/field_advanced.webp)
 
-Define selectable values (for example select options):
+*Only when you need extras beyond the tabs above*
 
-- **Static Value** — Fixed text (Fluid allowed).
-- **Database Value** — Value from a configured query.
-- **TypoScript** — Value from TypoScript.
-- **Values of all records** — Existing values already used for this field.
+## Next
 
-Mark a value as **Is Default** or **Pretends to be an empty value** when needed.
-
-## Tab: Display Conditions
-
-- **Request update** — Reload the form when this field changes.
-- **Display Conditions** — For example `FIELD:2:IN:Selection 1,Selection2`, or FlexForm condition syntax.
-
-## Next Step
-
-Continue with [Creating a Datatype](/en/latest/TonicTypes/GettingStarted/CreatingADatatype/Index).
+[Creating a Datatype](/en/latest/TonicTypes/GettingStarted/CreatingADatatype/Index)
