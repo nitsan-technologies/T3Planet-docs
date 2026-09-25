@@ -1,6 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "T3Planet Docs",
+  "basePath": "/en/latest",
   "theme": "mint",
   "logo": {
     "light": "/_static/t3planet-light.svg",
@@ -7744,6 +7745,7 @@
     "library": "lucide"
   },
   "seo": {
+    "canonicalBaseUrl": "https://docs.t3planet.de",
     "indexing": "all",
     "metatags": {
       "og:site_name": "T3Planet Documentation",
@@ -7751,7 +7753,8 @@
       "og:image": "/_static/t3planet-docs-og.png",
       "twitter:card": "summary_large_image",
       "twitter:site": "@t3planetde",
-      "twitter:image": "/_static/t3planet-docs-og.png"
+      "twitter:image": "/_static/t3planet-docs-og.png",
+      "canonical": "https://docs.t3planet.de"
     }
   },
   "metadata": {
