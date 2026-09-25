@@ -1,5 +1,5 @@
 ---
-description: T3Planet Mintlify deployment — which GitHub remote updates live docs
+description: T3Planet Mintlify deployment — org repo + Nitsan identity
 alwaysApply: true
 ---
 
@@ -10,40 +10,40 @@ Mintlify project: **T3Planet Docs** (workspace **nitsan-81630f36**)
 
 ## Connected GitHub (source of live builds)
 
-**Use only the org repository** for deployment:
+**Use only the organization repository** for deployment:
 
 - Live / deploy source: **`nitsan-technologies/T3Planet-docs`** branch `master`
 - Local remote name: **`origin`** → `https://github.com/nitsan-technologies/T3Planet-docs.git`
 
-Do **not** use `markus-neumannn/T3Planet-docs` as the normal deploy target.
+Do **not** use `markus-neumannn/T3Planet-docs` (or any personal fork) as the normal deploy target.
 
-Mintlify dashboard **Git** settings must point at **`nitsan-technologies/T3Planet-docs`** (`master`). If Git settings still show the Markus fork, live will not follow `origin` pushes — reconnect Git in the Mintlify dashboard.
+Mintlify dashboard **Git** settings must point at **`nitsan-technologies/T3Planet-docs`** (`master`). If Git settings still show a fork, live will not follow `origin` pushes — reconnect Git in the Mintlify dashboard.
 
 ### Author vs repository (do not confuse)
 
-- **Commit author:** always **Markus** `<248457632+markus-neumannn@users.noreply.github.com>`
+- **Commit author:** **Nitsan** `<sanjay@nitsantech.com>`
 - **Push remote:** always **`origin`** → `nitsan-technologies/T3Planet-docs`
-- Markus **name** ≠ Markus **fork repo**
+- A personal GitHub **fork** is never the day-to-day production source
 
-### Emergency live unblock (2026-09-23 lesson)
+### Emergency live unblock
 
-If the user needs live **now** and Mintlify Activity still shows `markus-neumannn/T3Planet-docs`:
+If the operator needs live **now** and Mintlify Activity still shows a personal fork:
 
 1. Prefer reconnecting Mintlify Git to the org repo.
-2. If reconnect is blocked and live is urgent: temporarily `git remote add markus …`, `git push markus origin/master:master` (same SHA already on org), poll live until content matches, then `git remote remove markus`.
-3. Tell the user clearly this was an emergency sync because Mintlify Git was still on the fork.
+2. If reconnect is blocked and live is urgent: temporarily add the fork remote, `git push <fork-remote> origin/master:master` (same SHA already on org — no force), poll live until content matches, then remove the temporary remote.
+3. Tell the operator clearly this was an emergency sync because Mintlify Git was still on the fork.
 
 For normal releases:
 
-1. Commit as Markus (email above).
-2. `git push origin HEAD:master`
+1. Commit as **Nitsan** (email above) via env — do not invent credentials.
+2. `git fetch` / safe sync, then `git push origin HEAD:master`
 3. Confirm Mintlify **Activity** + spot-check live HTML (not HTTP 200 alone).
 
-Full procedure: see repo root `context.md`.
+Full procedure: `docs/deployment/deploy.md` and repo `.cursor/context.md`.
 
 ## Local tooling
 
 - Node **20** for `mintlify` / `mint` (Node 25+ unsupported).
 - After nav/page count changes: `python3 scripts/compute_doc_stats.py`.
 - Do not commit `RST Format */` or `scripts/remigration/*` QA dumps unless explicitly requested.
-- Do not commit or push `workshops/` or `docs-master/` (gitignore `workshops/`; `docs-master/` already ignored).
+- Do not commit or push `workshops/` or `docs-master/` (`backup/` is mintignored).

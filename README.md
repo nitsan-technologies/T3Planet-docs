@@ -184,27 +184,25 @@ Updates `_static/t3-stats.json`, `_static/t3-stats-inline.js`, and hub Markdown.
 
 ### Which GitHub repo updates live?
 
-Mintlify **Git settings** are connected to the Markus fork:
+Production Mintlify Git source must be the **Nitsan organization** repository:
 
 | Remote | Repository | Role |
 |--------|------------|------|
-| `markus` | https://github.com/markus-neumannn/T3Planet-docs | **Live Mintlify source** (`master`) |
-| `origin` | https://github.com/nitsan-technologies/T3Planet-docs | Org / official mirror |
+| `origin` | https://github.com/nitsan-technologies/T3Planet-docs | **Production Mintlify source** (`master`) |
 
-Pushing only to `origin` does **not** update live docs while Git settings point at the fork.
+Do **not** deploy production from a personal fork.
 
 ### Release steps
 
-1. Commit documentation as **Markus** (`248457632+markus-neumannn@users.noreply.github.com`).
-2. Validate locally: Node 20 + `mintlify validate` (+ preview on `:3001`).
-3. Push live source: `git push markus HEAD:master`
-4. Mirror to org when required: `git push origin HEAD:master`
-5. Confirm [Mintlify dashboard](https://dashboard.mintlify.com) → **Activity** (Successful update by Markus).
-6. Spot-check https://docs.t3planet.de/en/latest for the intended content (not HTTP 200 alone).
+1. Verify remotes/branch: `git remote -v`, `git branch --show-current` → org repo / `master`.
+2. Verify Git identity (commit metadata ≠ GitHub auth). Approved author: **Nitsan** `<sanjay@nitsantech.com>`.
+3. `git fetch origin` and synchronize safely before push (never force-push `master`).
+4. Validate locally: Node 20 + `mintlify validate`.
+5. Commit as Nitsan (env author/committer), then: `git push origin HEAD:master`.
+6. Confirm [Mintlify Activity](https://app.mintlify.com/t3planet/t3planet/activity) shows org repo + Successful build.
+7. Spot-check https://docs.t3planet.de/en/latest for the intended content (not HTTP 200 alone).
 
-If Activity does not move: use **Manual update** in the dashboard, or an empty trigger commit on **`markus`**.
-
-Full agent/runbook details: [`context.md`](./context.md).
+Full SOP: [`docs/deployment/deploy.md`](docs/deployment/deploy.md). Agent runbook: [`.cursor/context.md`](.cursor/context.md).
 
 ---
 
@@ -212,4 +210,4 @@ Full agent/runbook details: [`context.md`](./context.md).
 
 Documentation content © T3Planet / NITSAN. See repository license notice (`COPYING`).
 
-<!-- deploy: markus-only contributor history -->
+<!-- deploy: nitsan-technologies/T3Planet-docs · author Nitsan -->

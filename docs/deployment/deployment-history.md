@@ -27,3 +27,10 @@ Append one entry per production release.
 - Live URL check: markers OK (`tonictypes_em_search_free`, footer CSS rule)
 - QA: sitemap 841 routes (834×200, 7×308 redirects, 0 blank); Playwright search/responsive/theme + changed-page regression
 - Final status: PASS WITH NON-BLOCKING WARNINGS (reconnect Mintlify Git to org repo)
+
+### 2026-09-25 — Deployment SOP: Nitsan identity + org-only Mintlify source
+- Docs updated: `docs/deployment/deploy.md`, deploy skill/checklist, deployment rules, README deploy section, AGENTS stubs, context runbooks
+- Policy: production commits as **Nitsan** `<sanjay@nitsantech.com>`; push only `origin` → `nitsan-technologies/T3Planet-docs` / `master`
+- Mintlify production Git source must remain the org repo (not a personal fork)
+- Final status: documentation update (this entry)
+

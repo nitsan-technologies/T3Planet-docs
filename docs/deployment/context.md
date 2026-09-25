@@ -1,7 +1,7 @@
 # T3Planet Docs — Agent Context
 
 Last verified: 2026-09-16 (content-craft section refreshed)  
-Maintainers: T3Planet / NITSAN (internal docs team; releases often attributed to **Markus** on GitHub)
+Maintainers: T3Planet / NITSAN (internal docs team; production deployment commits use **Nitsan** on GitHub)
 
 This file is the **authoritative runbook** for AI agents working in this repository.  
 Prefer it over chat memory. When instructions conflict, **user message in the current task** wins, then this file, then `.cursor/rules/`.
@@ -70,7 +70,7 @@ Use this when creating or rewriting Feature Guide / product pages. Learned from 
 
 1. They browse **local LAN preview** or paste a **live URL** + screenshot / purple box.
 2. They ask for a **precise** edit (remove line X, rewrite sentence Y, add table Z).
-3. Expect **local-first**; deploy only when they say push / live / Markus.
+3. Expect **local-first**; deploy only when they say push / live / deploy.
 4. When they say “train yourself / improve context.md” — update this file and `.cursor/rules/` in the same turn.
 
 ### T3AA product facts agents must not contradict
@@ -92,7 +92,7 @@ Patterns observed from real tasks — follow them unless the user says otherwise
 | “Remove image on [live URL]” | Edit the matching `.md` under the product tree; confirm **local vs live** in the reply. |
 | “Add icon” on Feature Guide cards | Fix Lucide `icon=` on `<Card>` in `FeatureGuide/Index.md`; invalid names render **blank** on live. |
 | “Improve code snippet UI” | Replace RST leftovers (`::`, `.. code-block::`) with fenced blocks (` ```bash ` / ` ```json `). |
-| “Deploy / push / live” | Local QA → commit as **Markus** → **`git push origin HEAD:master`** → Activity + **live content** proof. If live stale and Mintlify Git still on fork → emergency same-SHA sync (see deploy §4). |
+| “Deploy / push / live” | Local QA → commit as **Nitsan** → **`git push origin HEAD:master`** → Activity + **live content** proof. If live stale and Mintlify Git still on a fork → emergency same-SHA sync (see `docs/deployment/deploy.md`). |
 | “Train context / deployment” | Update this `context.md` and `.cursor/rules/` so the next session does not repeat mistakes. |
 | Attached screenshot of Mintlify dashboard | Treat dashboard as source of truth for **which GitHub repo** is connected. |
 | “Start network / LAN preview” | Ensure `:3001` mint + `:3000` cache proxy; give `http://<LAN-IP>:3000/`; purge cache after edits. |
@@ -137,7 +137,7 @@ Do not say “fixed on the site” until live HTML shows the change.
 | Connected repository (required) | **`nitsan-technologies/T3Planet-docs`** |
 | Branch | **`master`** |
 | Live domain | `docs.t3planet.de/en/latest` |
-| Do not use | `markus-neumannn/T3Planet-docs` |
+| Do not use as production source | personal forks (e.g. historical `markus-neumannn/T3Planet-docs`) |
 
 ### Remotes
 
@@ -151,17 +151,17 @@ Do not configure or push a `markus` remote for live deploys.
 
 | Concept | Value |
 |---------|--------|
-| Git **author name** for releases | **Markus** (required) |
-| Git **author email** | `248457632+markus-neumannn@users.noreply.github.com` |
+| Git **author name** for releases | **Nitsan** (required) |
+| Git **author email** | `sanjay@nitsantech.com` (approved org identity; do not invent) |
 | Push **remote** | **`origin`** only → `nitsan-technologies/T3Planet-docs` |
-| Do not confuse | Markus **author** ≠ `markus-neumannn/T3Planet-docs` **fork** |
+| Do not confuse | Git **author** ≠ GitHub **auth** ≠ personal **fork** |
 
 ### Deployment rule
 
 1. **`git push origin HEAD:master`** updates the org repo and (when Mintlify Git is connected to org) triggers live.
-2. Never force-push unless explicitly authorized.
-3. Prefer Mintlify dashboard **Git** → connect **`nitsan-technologies/T3Planet-docs`** / `master` so live always follows `origin`.
-4. **Emergency live unblock (incident 2026-09-23):** if Activity still shows the Markus fork and `/new-path` is 404 on live while org already has the commit, temporarily push the **same SHA** to the fork (`git push markus origin/master:master`), poll live until content matches, then remove the `markus` remote again. Tell the user this was emergency-only.
+2. Never force-push `master` unless explicitly authorized.
+3. Mintlify dashboard **Git** must stay on **`nitsan-technologies/T3Planet-docs`** / `master` so live always follows `origin`.
+4. **Emergency live unblock:** if Activity still shows a personal fork while org already has the commit, temporarily push the **same SHA** to that fork (no force), poll live until content matches, then remove the temporary remote. Tell the user this was emergency-only.
 
 ### Never push / never deploy
 
@@ -185,14 +185,14 @@ HTTP 200 alone is **not** sufficient.
 
 | Field | Value |
 |-------|--------|
-| Name | **Markus** |
-| Email (use this; do not invent) | `248457632+markus-neumannn@users.noreply.github.com` |
+| Name | **Nitsan** |
+| Email (use this; do not invent) | `sanjay@nitsantech.com` |
 
 ```bash
-GIT_AUTHOR_NAME='Markus' \
-GIT_AUTHOR_EMAIL='248457632+markus-neumannn@users.noreply.github.com' \
-GIT_COMMITTER_NAME='Markus' \
-GIT_COMMITTER_EMAIL='248457632+markus-neumannn@users.noreply.github.com' \
+GIT_AUTHOR_NAME='Nitsan' \
+GIT_AUTHOR_EMAIL='sanjay@nitsantech.com' \
+GIT_COMMITTER_NAME='Nitsan' \
+GIT_COMMITTER_EMAIL='sanjay@nitsantech.com' \
 git commit -m "docs: …"
 ```
 
@@ -219,12 +219,12 @@ git remote -v && git branch --show-current
 git push origin HEAD:master    # only deploy remote
 ```
 
-Verify: https://github.com/nitsan-technologies/T3Planet-docs/commits/master (author Markus, files present).
+Verify: https://github.com/nitsan-technologies/T3Planet-docs/commits/master (author Nitsan, files present).
 
 ### Gate C — Mintlify
 
 Dashboard → **Git** must show **`nitsan-technologies/T3Planet-docs`** / `master`.  
-Dashboard → **Activity** → Successful update for the commit (author often Markus).  
+Dashboard → **Activity** → Successful update for the commit (org repo / `master`).  
 If stuck: **Manual update**, or emergency same-SHA sync to the fork only while Git is still on the fork (see Deployment rule §4), then reconnect Git to org.
 
 ### Gate D — Production QA
@@ -302,15 +302,15 @@ Remigration default: **local migrate + QA → stop for approval → then release
 3. **“Is it live?”** — curl/check live HTML; explain fork vs origin if mismatch.
 4. **Icons / UI** — Playwright or fetch live; show what was wrong (invalid Lucide name vs deploy lag).
 5. **Never** claim all pages tested unless crawled.
-6. **Commits** — Markus author; message style: `docs: …` or `chore: trigger Mintlify …`.
+6. **Commits** — Nitsan author; message style: `docs: …` or `chore: trigger Mintlify …`.
 
 ---
 
 ## Do not
 
 - Push without user approval (except when explicit release/deploy task).
-- Push only to `origin` and call deployment done without checking live HTML (Mintlify may still be on the Markus fork).
-- Confuse Markus **commit author** with the `markus-neumannn/T3Planet-docs` fork.
+- Push only to `origin` and call deployment done without checking live HTML (Mintlify Git may still be wrong).
+- Confuse Git **commit author** with a personal **fork**, or confuse author metadata with GitHub auth.
 - Leave `ExtTypoTonic` URLs as primary after the TonicTypes rename (use redirects only).
 - Commit `workshops/` or `docs-master/`.
 - Force-push, invent emails, commit secrets or remigration noise.
@@ -324,7 +324,7 @@ Remigration default: **local migrate + QA → stop for approval → then release
 
 - [ ] Audience-appropriate prose (TYPO3-professional, not beginner)
 - [ ] Local validate + preview OK
-- [ ] Commit author = Markus (if committing)
+- [ ] Commit author = Nitsan (if committing)
 - [ ] `git push origin HEAD:master` for live (only deploy remote)
 - [ ] Mintlify Activity Successful
 - [ ] Live URL shows intended content (specific checks, not just 200)
@@ -343,7 +343,7 @@ Remigration default: **local migrate + QA → stop for approval → then release
 
 ## Lessons learned — 2026-09-23
 
-1. **Org-only deploy policy:** day-to-day remote is `origin` (`nitsan-technologies/T3Planet-docs`). Keep local `markus` remote removed unless emergency.
+1. **Org-only deploy policy:** day-to-day remote is `origin` (`nitsan-technologies/T3Planet-docs`). Keep personal-fork remotes removed unless an authorized emergency sync.
 2. **Live lag diagnosis:** org tip can be correct while live 404s a new path — Mintlify Activity “Connected repository” is the truth for which GitHub Mintlify builds.
 3. **TonicTypes rename:** folder + nav + redirects + Pro framing shipped as `5d8e875`; live needed fork sync until Mintlify Git points at org.
 4. **Workshop PPT** lives under `workshops/` and must never be committed or deployed with docs.
