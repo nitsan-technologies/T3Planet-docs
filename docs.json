@@ -1858,6 +1858,14 @@
   },
   "redirects": [
     {
+      "source": "/AGENTS",
+      "destination": "/__removed_internal_agents"
+    },
+    {
+      "source": "/context",
+      "destination": "/__removed_internal_context"
+    },
+    {
       "source": "/de/ExtTypoTonic/:path*",
       "destination": "/TonicTypes/:path*"
     },
