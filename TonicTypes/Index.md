@@ -1,6 +1,6 @@
 ---
 title: "Tonictypes"
-description: "Tonictypes documentation — build custom TYPO3 record types with Core and Tonictypes Pro."
+description: "Tonictypes documentation: build custom TYPO3 record types such as news, jobs or events in the backend, without writing an extension for each type."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -12,13 +12,21 @@ sidebarTitle: "Tonictypes"
 
 Tonictypes lets you create custom record types (News, Jobs, Events, …) in the TYPO3 backend — without writing a separate extension for each type.
 
+Normally, every new kind of content in TYPO3 (for example a job offer with title, location and salary) needs its own extension: a database table, TCA configuration, PHP model and repository classes, and a frontend plugin. Tonictypes replaces that work with backend forms. You describe the record type once — which properties it has and how they are edited — and Tonictypes generates the table, the TCA and the PHP classes for you. Editors then maintain the records like any other TYPO3 record, and you output them with Fluid templates through ready-made frontend plugins.
+
 | | |
 | --- | --- |
 | **Product (premium)** | **Tonictypes Pro** (`tonictypes_pro`) — [License](/en/latest/License/Index) |
 | **Required free Core** | **Tonictypes** (`tonictypes`) — [TER](https://extensions.typo3.org/extension/tonictypes) |
-| **Compatibility** | TYPO3 12.4–14.9 · PHP 8.2–8.5 · **2.1.x** |
+| **Compatibility** | TYPO3 12.4–14.9 · PHP 8.2–8.5 · **2.2.x** |
 
-In Extension Manager the titles are **Tonictypes** and **Tonictypes Pro: Enterprise Edition**.
+In Extension Manager the titles are **Tonictypes - Rapid TCA & Advanced Plugins** and **Tonictypes Pro: Enterprise Edition – Full Stack**.
+
+## Who this documentation is for
+
+- **Integrators** who set up record types, templates and plugins for a site — follow the reading order below.
+- **Editors** who only maintain records — the [Introduction](/en/latest/TonicTypes/Introduction/Index) explains where records live and how the forms are built.
+- **Developers** who write Fluid templates — see [Templating](/en/latest/TonicTypes/GettingStarted/Templating/Index) and [ViewHelpers](/en/latest/TonicTypes/ViewHelpers/Index).
 
 ## Recommended reading order
 
