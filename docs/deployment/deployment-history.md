@@ -5,6 +5,18 @@ Append one entry per production release.
 ---
 
 
+## 2026-09-28 — TonicTypes 2.2.x + AI Foundation dependency
+
+- **Status:** PASS
+- **Commit:** `7680755` — docs: update TonicTypes guides for 2.2.x and AI Foundation dependency
+- **Author:** Nitsan <sanjay@nitsantech.com>
+- **Remote:** origin → nitsan-technologies/T3Planet-docs (`master`)
+- **Included:** `TonicTypes/**` (33 files: content, new Pro images dashboard_import / field_repeater / link_handler, refreshed screenshots, quickstart gif)
+- **Excluded:** docs-master/ (gitignored, 0 paths in commit), workshops/, scripts/remigration/**, unreferenced `datatype_description.png`
+- **Validate:** mintlify validate PASS (Node 20); no broken images/internal links in TonicTypes
+- **Live QA:** 16/16 TonicTypes nav pages 200 with correct titles on docs.t3planet.de; 2.2.x / ns-t3af / User TSconfig markers on live + origin; new Pro images and quickstart gif 200 via mintcdn; `/ExtTypoTonic/Index` 308 → `/TonicTypes/Index`
+- **Mintlify Activity dashboard:** NOT VERIFIED via MCP; inferred from live/origin content match after push
+
 ## 2026-09-25 — T3AC Feature Guide remigration
 
 - **Status:** PASS
