@@ -18,21 +18,25 @@ Use it for QA, demos, or first-time setup on a local DDEV instance.
 **Environment**
 TYPO3 **^13.4 || ^14.3**, PHP **>= 8.2**, `typo3/cms-workspaces` installed, `ns_t3af` enabled.
 
-Local stack (example)
+**Local stack (example)**
 
-> ddev start
-> ddev composer install
-> ddev exec typo3 cache:flush
+```bash
+ddev start
+ddev composer install
+ddev exec typo3 cache:flush
+```
 
 **Backend access**
 Log in as an admin backend user (for example `admin`).
 
-Site URL
+**Site URL**
+The MCP module derives URLs from your first site configuration. On DDEV this is typically:
 
-> `https://<project>.ddev.site/mcp`
->
->
-> The MCP module derives URLs from your first site configuration. On DDEV this is typically: replace `<project>` with your DDEV project name throughout this guide.
+```text
+https://<project>.ddev.site/mcp
+```
+
+Replace `<project>` with your DDEV project name throughout this guide.
 
 **Optional tools**
 **Node.js 18+** — MCP Inspector and `mcp-remote` **Claude Desktop** — OAuth remote setup **n8n** — MCP Client node (self-hosted or cloud) **Cursor / VS Code MCP** — for CLI or `mcp-remote` configs
@@ -50,15 +54,20 @@ Open T3AF > MCP Server.
   - MCP endpoint (`/mcp` returns **401 without auth** — that is expected and counts as online)
   - `/.well-known/oauth-authorization-server/mcp`
   - `/.well-known/oauth-protected-resource/mcp`
-4. **Quick curl smoke test** # Replace with your site URL
+4. **Quick curl smoke test**
+
+```bash
+# Replace with your site URL
 BASE=https://t3af.ddev.site
 
-curl -sS -o /dev/null -w "%&#123;http_code&#125;\n" "$BASE/mcp"
+curl -sS -o /dev/null -w "%{http_code}\n" "$BASE/mcp"
 # Expected: 401
 
 curl -sS "$BASE/.well-known/oauth-authorization-server/mcp" | head -c 200
 curl -sS "$BASE/.well-known/oauth-protected-resource/mcp" | head -c 200
 # Expected: JSON metadata (HTTP 200)
+```
+
 5. **Enable MCP** (if offline) Expand **Show advanced** → ensure **Enable MCP Server** is checked → **Save**.
 
 ## Cursor IDE — two connection methods
@@ -203,7 +212,12 @@ Default scopes (advanced settings): `mcp:read mcp:write mcp:tools`
 1. Open **Claude Desktop → Settings → Integrations**.
 2. Click **Add Integration**.
 3. Name it (for example `TYPO3 DDEV`).
-4. Paste **Server URL** from the module, e.g.: https://t3af.ddev.site/mcp
+4. Paste **Server URL** from the module, e.g.:
+
+```text
+https://t3af.ddev.site/mcp
+```
+
 5. Save. Claude starts **OAuth** automatically (browser window / system prompt).
 6. Approve access as your TYPO3 backend user.
 
@@ -264,13 +278,22 @@ Use the TYPO3 MCP tool table_schema for table "pages" and summarize the fields.
 
 **Steps:**
 
-1. Copy the pre-filled command (requires Node.js): npx @modelcontextprotocol/inspector --transport http --server-url https://t3af.ddev.site/mcp
+1. Copy the pre-filled command (requires Node.js):
+
+```bash
+npx @modelcontextprotocol/inspector --transport http --server-url https://t3af.ddev.site/mcp
+```
+
 2. Run it in your terminal.
 3. Open the Inspector UI in the browser (URL printed in the terminal).
 4. Complete **OAuth** when prompted.
-5. Use the **Tools** panel to invoke `table_schema`: &#123;
+5. Use the **Tools** panel to invoke `table_schema`:
+
+```json
+{
   "tableName": "pages"
-&#125;
+}
+```
 
 **Verify:**
 
@@ -307,17 +330,22 @@ URL tokens are as sensitive as passwords. Do not commit them to git or share in 
 
 1. Click **Create mcp-remote Token** (if none exists).
 2. Copy **Token URL** (includes `?token=…`).
-3. Copy **Example mcp-remote configuration** or build manually: &#123;
-  "mcpServers": &#123;
-    "New TYPO3 site": &#123;
+3. Copy **Example mcp-remote configuration** or build manually:
+
+```json
+{
+  "mcpServers": {
+    "New TYPO3 site": {
       "command": "npx",
       "args": [
         "mcp-remote",
         "https://t3af.ddev.site/mcp?token=YOUR_64_CHAR_TOKEN"
       ]
-    &#125;
-  &#125;
-&#125;
+    }
+  }
+}
+```
+
 4. Paste into your client’s MCP config:
   - **Claude Desktop:** `claude_desktop_config.json` → `mcpServers`
   - **Cursor:** `.cursor/mcp.json`
@@ -364,9 +392,12 @@ The short alias `mcp:server` also maps to `nst3af:mcp:serve` when TYPO3 command 
 ## Step-by-step (DDEV)
 
 1. For **Cursor**, prefer the full walkthrough in Cursor IDE — two connection methods.
-2. For other MCP clients, use DDEV from the host with an absolute `cwd`: &#123;
-  "mcpServers": &#123;
-    "TYPO3 DDEV": &#123;
+2. For other MCP clients, use DDEV from the host with an absolute `cwd`:
+
+```json
+{
+  "mcpServers": {
+    "TYPO3 DDEV": {
       "command": "ddev",
       "args": [
         "exec",
@@ -378,9 +409,11 @@ The short alias `mcp:server` also maps to `nst3af:mcp:serve` when TYPO3 command 
         "--workspace=3"
       ],
       "cwd": "/absolute/path/to/aiuniverse"
-    &#125;
-  &#125;
-&#125;
+    }
+  }
+}
+```
+
 3. **Terminal verification:** see Cursor IDE — two connection methods (pipe test and expected `initialize` JSON).
 4. CLI options:
   - **``–user`` / ``-u``** — Backend username (default `admin`).
@@ -414,16 +447,18 @@ Input: `{ "uid": 1 }` Expect: Page record (or error if uid missing).
 **`content_list`**
 Input: `{ "pid": 1, "limit": 5 }` Expect: Array of `tt_content` rows for that page.
 
-`write_table` (workspace recommended)
+**`write_table`** (workspace recommended)
+Create (use a test page pid and workspace):
 
-> &#123;
->   "action": "create",
->   "tableName": "tt_content",
->   "data": "&#123;\"pid\": 1, \"CType\": \"text\", \"header\": \"MCP test\"&#125;"
-> &#125;
->
->
-> Create (use a test page pid and workspace): Expect: JSON with `uid`, `fields`, and `ignoredFields`. Verify with `content_list` on the same `pid`. Use `action: delete` with the new `uid` to clean up.
+```json
+{
+  "action": "create",
+  "tableName": "tt_content",
+  "data": "{\"pid\": 1, \"CType\": \"text\", \"header\": \"MCP test\"}"
+}
+```
+
+Expect: JSON with `uid`, `fields`, and `ignoredFields`. Verify with `content_list` on the same `pid`. Use `action: delete` with the new `uid` to clean up.
 
 **Workspace testing**
 Select a non-live workspace in the module dropdown before issuing tokens. Repeat `content_list` / `pages_get` — draft overlays should differ from live.
@@ -510,6 +545,10 @@ Plaintext is only shown at issuance. Revoke and re-create, or use OAuth flow.
 
 1. **Revoke** test tokens in **Active OAuth Tokens** (or **Revoke All**).
 2. Remove MCP entries from `claude_desktop_config.json` / `.cursor/mcp.json`.
-3. Optional maintenance: ddev exec vendor/bin/typo3 nst3af:mcp:cleanup
+3. Optional maintenance:
+
+```bash
+ddev exec vendor/bin/typo3 nst3af:mcp:cleanup
+```
 
 See also [Configuration](/en/latest/ExtNsT3AF/Configuration/Index#ns-t3af-configuration) and [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index#ns-t3af-mcp-server).

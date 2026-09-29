@@ -85,6 +85,16 @@ After creating the extension template for the selected page, you can configure a
 
 This allows you to customize the **layout or styling of individual pages** without affecting the overall settings of the website.
 
+Steps:
+
+1. Open the **TypoScript** module.
+2. Select the page you want to configure.
+3. Click **Create an additional TypoScript record**.
+4. Open **Theme Options**.
+5. Use the **General** tab (and other tabs) to set page-wise options, such as the website logo.
+
+These page-level settings apply only to the selected page.
+
 ## Site Sets and Configuration
 
 <Note>

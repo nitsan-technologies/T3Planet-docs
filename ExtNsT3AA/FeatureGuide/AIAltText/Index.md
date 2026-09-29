@@ -105,7 +105,7 @@ Edit (TYPO3 file record).
 1. In File List, select the folder.
 2. Use **Mass AI File Meta**.
 3. Choose missing-only or override existing metadata.
-4. Select language options when offered.
+4. Select language options when offered. If you check **Generate file if translation is missing**, the translation file for that language is created automatically when it does not exist yet.
 5. Process with Scheduler or `nst3aa:bulk:metadata`.
 6. Review and approve drafts in AI Alt Text / File List.
 

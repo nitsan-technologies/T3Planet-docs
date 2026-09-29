@@ -10,4 +10,4 @@ keywords:
 sidebarTitle: "Theme Options"
 ---
 
-For theme configuration, Please follow this documentation //ExtThemes/GlobalSettingsConfiguration/Index
+For theme configuration, Please follow this documentation [Global Settings Configuration](/en/latest/ExtThemes/GlobalSettingsConfiguration/Index)

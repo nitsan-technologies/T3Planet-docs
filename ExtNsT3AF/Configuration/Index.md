@@ -21,6 +21,12 @@ This section also covers the T3AF backend modules used day to day: providers, co
 
 ![AI Features cards including Access and Notifications](./images/ai-features-cards.webp)
 
+To change a card:
+
+1. Open **T3AF** and select a site page in the page tree.
+2. Open the **AI Features** tab.
+3. Click **Configure** on the card you need, then **Save Changes**.
+
 **Extension settings** — Translation APIs, Basic Auth, notifications, and MCP switches (including `enableMcpServer`). Prefer T3AF > MCP Server > Advanced for MCP options. These keys live in T3AF settings, not the classic TYPO3 Admin Tools > Settings > Extension Configuration form.
 
 ## Minimum working setup
@@ -53,6 +59,10 @@ Where a classic Extension Configuration form is still used for optional keys, op
 - `google_api_key` — Google translation
 - `defaultModelForTranslation` — Default translation model
 
+When **AI Assistant** is installed, choose the auto-translate engine on the **AI Translation** card (Path: T3AF > AI Features → **AI Translation**):
+
+- **Default AI-Model for Auto-Translate, Re-Translate and Mass-Translate** — openai, deepl, gemini, google, claude, or mistral
+
 ### OpenAI usage statistics (optional)
 
 - `openai_admin_api_key` — Organization usage charts (not the chat API key)
@@ -77,6 +87,15 @@ Access & Notifications — Basic Auth and API quota email alerts.
 - `mcpBasePath` — HTTP endpoint (default: `/mcp`)
 - `requireAuth` — Require login (default: on)
 - `accessTokenLifetime` — OAuth token TTL
+
+In the backend, MCP options are on T3AF > MCP Server > Advanced:
+
+- **Enable MCP Server** — Master switch
+- **Require Authentication**
+- **Token Expiry (seconds)** — OAuth access token lifetime
+- **Rate Limiting**, **Log All Tool Calls**, **Anonymous Read-Only**
+
+The MCP endpoint is shown in the MCP Server status bar as **Server URL** (default path `/mcp`).
 
 Full guide: [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index)
 

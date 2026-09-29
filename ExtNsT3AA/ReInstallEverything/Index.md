@@ -90,3 +90,11 @@ After the update, ask users or project owners to confirm that:
 - **Provider setup is incomplete**: audio, metadata, or other AI actions may fail until the provider configuration is finished.
 - **Output changed after the update**: review prompts and feature settings if your project used custom wording or provider rules.
 - **A feature opens but does not complete**: clear caches and review the related AI logs.
+
+## Related Documentation
+
+- [Installation](/en/latest/ExtNsT3AA/Installation/Index)
+- [System Requirements](/en/latest/ExtNsT3AA/SystemRequirements/Index)
+- [Update Guide](/en/latest/ExtNsT3AA/UpdateGuide/Index)
+- [AI Foundation Installation](/en/latest/ExtNsT3AF/Installation/Index)
+- [AI Foundation Configuration](/en/latest/ExtNsT3AF/Configuration/Index)

@@ -35,7 +35,7 @@ Additionally, **Flux-based content elements** support translation only **after t
 </Note>
 
 
-<Important>
+<Warning>
 By default, TYPO3 prefixes translated headlines with a label such as **Translate to: [Language]**.
 This comes from TYPO3's `TCEMAIN.translateToMessage` setting, not from T3AI.
 
@@ -51,7 +51,7 @@ TCEMAIN {
     translateToMessage =
 }
 ```
-</Important>
+</Warning>
 
 ## FlexForm field keys to skip from AI translation (comma-separated)
 

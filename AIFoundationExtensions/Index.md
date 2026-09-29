@@ -30,7 +30,7 @@ sidebarTitle: "AI Extensions"
       <div className="t3-product-card-header">
         <span className="t3-icon-shell t3-product-icon-shell"><Icon icon="cpu" size={22} className="t3-product-icon" /></span>
         <div>
-          <h3 className="t3-product-name">AI Foundation</h3>
+          <h3 className="t3-product-name" noAnchor>AI Foundation</h3>
           <p className="t3-product-tagline">Shared AI engine</p>
         </div>
       </div>
@@ -44,7 +44,7 @@ sidebarTitle: "AI Extensions"
       <div className="t3-product-card-header">
         <span className="t3-icon-shell t3-product-icon-shell"><Icon icon="sparkles" size={22} className="t3-product-icon" /></span>
         <div>
-          <h3 className="t3-product-name">AI Assistant</h3>
+          <h3 className="t3-product-name" noAnchor>AI Assistant</h3>
           <p className="t3-product-tagline">Content, SEO &amp; more</p>
         </div>
       </div>
@@ -59,7 +59,7 @@ sidebarTitle: "AI Extensions"
       <div className="t3-product-card-header">
         <span className="t3-icon-shell t3-product-icon-shell"><Icon icon="message-circle" size={22} className="t3-product-icon" /></span>
         <div>
-          <h3 className="t3-product-name">AI Chatbot</h3>
+          <h3 className="t3-product-name" noAnchor>AI Chatbot</h3>
           <p className="t3-product-tagline">Chatbot</p>
         </div>
       </div>
@@ -74,7 +74,7 @@ sidebarTitle: "AI Extensions"
       <div className="t3-product-card-header">
         <span className="t3-icon-shell t3-product-icon-shell"><Icon icon="search" size={22} className="t3-product-icon" /></span>
         <div>
-          <h3 className="t3-product-name">AI Search</h3>
+          <h3 className="t3-product-name" noAnchor>AI Search</h3>
           <p className="t3-product-tagline">Search</p>
         </div>
       </div>
@@ -89,7 +89,7 @@ sidebarTitle: "AI Extensions"
       <div className="t3-product-card-header">
         <span className="t3-icon-shell t3-product-icon-shell"><Icon icon="accessibility" size={22} className="t3-product-icon" /></span>
         <div>
-          <h3 className="t3-product-name">AI Accessibility</h3>
+          <h3 className="t3-product-name" noAnchor>AI Accessibility</h3>
           <p className="t3-product-tagline">Accessibility</p>
         </div>
       </div>
@@ -104,7 +104,7 @@ sidebarTitle: "AI Extensions"
       <div className="t3-product-card-header">
         <span className="t3-icon-shell t3-product-icon-shell"><Icon icon="languages" size={22} className="t3-product-icon" /></span>
         <div>
-          <h3 className="t3-product-name">AI Localization</h3>
+          <h3 className="t3-product-name" noAnchor>AI Localization</h3>
           <p className="t3-product-tagline">Localization</p>
         </div>
       </div>
@@ -119,7 +119,7 @@ sidebarTitle: "AI Extensions"
       <div className="t3-product-card-header">
         <span className="t3-icon-shell t3-product-icon-shell"><Icon icon="blocks" size={22} className="t3-product-icon" /></span>
         <div>
-          <h3 className="t3-product-name">AI Builder</h3>
+          <h3 className="t3-product-name" noAnchor>AI Builder</h3>
           <p className="t3-product-tagline">Builder</p>
         </div>
       </div>

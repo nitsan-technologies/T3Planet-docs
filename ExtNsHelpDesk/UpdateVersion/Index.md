@@ -12,7 +12,7 @@ sidebarTitle: "Update Version"
 
 To update this premium product's version, please refer to this documentation: [Update Version](/en/latest/License/UpdateVersion/Index)
 
-<Important>
+<Warning>
 From **ns_helpdesk 14.0.0**, the dedicated Helpdesk **backend module** is removed.
 
 Global settings, form settings, and related options are no longer managed under
@@ -21,4 +21,4 @@ you include the Helpdesk TypoScript.
 
 See [Include TypoScript](/en/latest/ExtNsHelpDesk/Installation/Index#ns-helpdesk-include-typoscript) and
 [Constant Editor](/en/latest/ExtNsHelpDesk/GlobalSettings/Index#ns-helpdesk-constant-editor).
-</Important>
+</Warning>

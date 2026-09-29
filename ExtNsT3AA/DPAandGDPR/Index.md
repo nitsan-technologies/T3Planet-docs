@@ -68,7 +68,7 @@ See [AI Voiceover](/en/latest/ExtNsT3AA/FeatureGuide/AIVoiceover/Index).
    * - Activity
      - AI Foundation logs for T3AA operations
 
-See [AI Usage & Logs ](https://docs.t3planet.de/en/latest/ExtNsT3AF/Configuration/AIUsageAndLogs/Index.html).
+See [AI Usage & Logs ](/en/latest/ExtNsT3AF/Configuration/AIUsageAndLogs/Index).
 
 | **Question:** PageSpeed?
 | **Answer:** When used, the **absolute page URL** is sent from the **backend** to `https://www.googleapis.com/pagespeedonline/v5/runPagespeed`. Visitor IP and visitor queries are not part of that payload.
@@ -99,4 +99,4 @@ See [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index).
 | **Question:** MCP?
 | **Answer:** If AI Foundation MCP is enabled, T3AA tools can run accessibility and media operations through connected clients. That is backend/editor access, not public-visitor processing. Restrict MCP as an access-control topic.
 
-See [MCP Server ](https://docs.t3planet.de/en/latest/ExtNsT3AF/Integrations/MCPServer/Index.html).
+See [MCP Server ](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index).

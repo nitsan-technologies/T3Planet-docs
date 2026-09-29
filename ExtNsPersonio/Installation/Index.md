@@ -50,7 +50,7 @@ Step 4. Select [NITSAN] Personio at the field Include static (from extensions):
 
 Step 5. Include [NITSAN] Personio at the last place.
 
-[![Activate Typoscript](./images/activate_typoscript3.webp)](../../_images/activate_typoscript3.webp)
+[![Activate Typoscript](./images/activate_typoscript3.webp)](./images/activate_typoscript3.webp)
 
 ## Pre-configured Speaking URLs for Job Pages
 

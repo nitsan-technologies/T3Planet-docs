@@ -62,5 +62,5 @@ Then save and clear caches if the frontend is empty.
   <Card title="Creating a Field" icon="pencil" href="/en/latest/TonicTypes/GettingStarted/CreatingAField/Index" />
   <Card title="Creating a Datatype" icon="database" href="/en/latest/TonicTypes/GettingStarted/CreatingADatatype/Index" />
   <Card title="Creating a Template Variable" icon="braces" href="/en/latest/TonicTypes/GettingStarted/CreatingATemplateVariable/Index" />
-  <Card title="Templating" icon="file-code-2" href="/en/latest/TonicTypes/GettingStarted/Templating/Index" />
+  <Card title="Templating" icon="file-code-corner" href="/en/latest/TonicTypes/GettingStarted/Templating/Index" />
 </CardGroup>

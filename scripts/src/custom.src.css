@@ -96,17 +96,17 @@
 .dark .prose h5,
 .dark .prose h6,
 .dark .prose strong,
-.dark .prose a,
+.dark .prose a:not(.t3-cta-btn),
 .dark #content,
 .dark .mdx-content {
   color: var(--t3-text) !important;
 }
 
-.dark .prose a {
+.dark .prose a:not(.t3-cta-btn) {
   color: var(--t3-link) !important;
 }
 
-.dark .prose a:hover {
+.dark .prose a:not(.t3-cta-btn):hover {
   color: var(--t3-link-hover) !important;
 }
 
@@ -7184,7 +7184,8 @@ a.t3-docs-back {
     background: transparent !important;
     box-shadow: none !important;
     overflow: visible !important;
-    z-index: 2 !important;
+    /* Above the drawer scroll-area scrollbar (z-index 10), which otherwise swallows clicks on the moon. */
+    z-index: 11 !important;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
   }
@@ -7402,4 +7403,111 @@ footer#footer,
 
 .t3-cta-banner {
   margin-bottom: 0 !important;
+}
+
+/* === T3 404 page: center content === */
+not-found-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  min-height: calc(100dvh - 7.5rem) !important;
+  width: 100% !important;
+  max-width: 36rem !important;
+  margin: 0 auto !important;
+  padding: 2.5rem 1.5rem 3rem !important;
+  box-sizing: border-box !important;
+}
+
+not-found-status-code {
+  display: block !important;
+  text-align: center !important;
+  margin: 0 auto 0.75rem !important;
+}
+
+not-found-title {
+  text-align: center !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+not-found-description {
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 28rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+not-found-recommended-pages-list {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.65rem !important;
+  width: 100% !important;
+  margin: 1.25rem auto 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  text-align: center !important;
+}
+
+not-found-recommended-page-link {
+  display: inline-block !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+/* === Key/value summary table: wrap a 2-column Markdown table in <div className="t3-kv-table"> === */
+.t3-kv-table table thead {
+  display: none;
+}
+
+.t3-kv-table table tbody {
+  display: table;
+  width: 100%;
+}
+
+.t3-kv-table table td {
+  vertical-align: middle;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.t3-kv-table table td:first-child {
+  width: 1%;
+  background: var(--t3-table-header);
+  border-right: 1px solid var(--t3-border);
+}
+
+@media (max-width: 640px) {
+  .t3-kv-table table tr,
+  .t3-kv-table table td {
+    display: block;
+    width: auto;
+  }
+
+  .t3-kv-table table td:first-child {
+    width: auto;
+    border-right: 0;
+    border-bottom: 0;
+    padding-bottom: 0.2rem !important;
+  }
+
+  .t3-kv-table table td:last-child {
+    padding-top: 0.2rem !important;
+    white-space: normal;
+  }
+
+  .t3-kv-table table td :is(strong, code, a) {
+    white-space: nowrap;
+  }
+}
+
+/* Hide the "Was this page helpful?" rating row; pagination in the same toolbar stays */
+.feedback-toolbar > :has(#feedback-thumbs-up),
+#feedback-form {
+  display: none !important;
 }

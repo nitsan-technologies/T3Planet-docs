@@ -21,7 +21,7 @@ This documentation leads with **Tonictypes Pro** (`tonictypes_pro`). Free **Toni
 | **Premium** | Tonictypes Pro — Extension Manager: *Tonictypes Pro: Enterprise Edition – Full Stack* |
 | **Free Core** | Tonictypes — Extension Manager: *Tonictypes - Rapid TCA & Advanced Plugins* |
 | **Also required for Pro** | AI Foundation (`ns_t3af`) · License (`ns_license`) |
-| **Compatibility** | TYPO3 12.4–14.9 · PHP 8.2–8.5 · **2.2.x** |
+| **Compatibility** | TYPO3 12.4–14.9 · PHP 8.2–8.5 |
 
 ![tonictypes and tonictypes_pro in Extension Manager](Images/extension_list.webp)
 

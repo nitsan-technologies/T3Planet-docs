@@ -56,3 +56,11 @@ you configure Helpdesk in the Constant Editor.
 <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmti8d2cj1derqmctvhkyf4yv?embed_v=2&utm_source=embed" loading="lazy" title="Include ns_helpdesk TypoScript" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
 After the TypoScript is included, continue with [Global Settings](/en/latest/ExtNsHelpDesk/GlobalSettings/Index#ns-helpdesk-constant-editor).
+
+## How to Install TYPO3 Extension ns_helpdesk
+
+**Extension Installation Via without Composer mode**
+https://www.youtube.com/watch?v=SN5HoFQcDM4
+
+**Extension Via Composer**
+https://www.youtube.com/watch?v=_7ILu4lwU-k

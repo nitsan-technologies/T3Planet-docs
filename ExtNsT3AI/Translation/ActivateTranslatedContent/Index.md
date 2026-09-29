@@ -34,6 +34,12 @@ sidebarTitle: "Activate Translated Content"
 
 
 
+During each translation, the fields are automatically updated. The fields "Last translation date" and "T3AI Translated Content has not been checked" are transferred to the page object and can be used in Fluid templates.
+
+This allows you to control information and notes in the Fluid template if needed, but a TYPO3 administrator or developer must add this feature to the template first.
+
+When an editor previews a hidden page translated by T3AI, a T3AI badge will appear alongside the "Preview" badge in the upper right corner.
+
 **Backend Image**
 
 ![Backend image](../images/Backend_Image.webp)
@@ -67,20 +73,6 @@ Tired of spending time manually enabling or disabling translated content on your
 **Step 6**: Once the page is translated, simply click the “Activate Translated Content” button.
 
 With one click, all your disabled content and elements will be activated.
-
-After translation, this feature controls how hidden content elements are handled.
-
-- **Enabled:** All hidden content elements are automatically activated in every language after translation.
-- **Disabled:** Only those content elements that were active in the main language before translation are activated afterward.
-
-Follow below steps to enable this feature.
-
-![AI log](../images/activate.webp)
-
-1. Open the desired **Page** in TYPO3.
-2. Click **Edit Page Properties**.
-3. Navigate to the **T3AI** tab.
-4. Enable the **Activate All Content Elements** option.
 
 ### Auto Activate All Content Elements
 

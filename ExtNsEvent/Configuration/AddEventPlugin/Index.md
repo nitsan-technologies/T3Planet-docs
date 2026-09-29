@@ -168,6 +168,8 @@ Event detail plugin have below Configurations,
 - **Cell Align** -> Align slider
 - **Social Share** -> By enabling this you can share events in Social media from slider.
 
+### 2.2 Design
+
 ![Detail](./images/Event_detail_7.webp)
 
 - **Image Options** -> Select Where you want to set your event poster image in Detail page!

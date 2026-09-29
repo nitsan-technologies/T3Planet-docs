@@ -858,10 +858,13 @@
     // show loader immediately, then hard-reload into the product docs.
     // MUST cancel the event here — otherwise click also runs beginProductRootNav
     // (bindHardNavClicks) and the product docs appear to open twice.
+    // Touch/pen: pointerdown also starts a scroll gesture in the drawer — let the
+    // click (fired only for a real tap) navigate via bindHardNavClicks instead.
     document.addEventListener(
       "pointerdown",
       function (e) {
         if (!e || e.button) return;
+        if (e.pointerType && e.pointerType !== "mouse") return;
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
         var t = e.target;
         if (!t || !t.closest) return;
@@ -889,6 +892,7 @@
       "pointerdown",
       function (e) {
         if (!e || e.button) return;
+        if (e.pointerType && e.pointerType !== "mouse") return;
         var href = resolveProductRootFromEvent(e);
         if (!href) return;
         navigateToProductRoot(href, e);
@@ -2115,6 +2119,148 @@
     } catch (eGate) {}
   }
 
+  // Production: Mintlify's sidebar prefetches the root + first 3 pages of every
+  // top-level group on mount (~280 full RSC renders with 70 products). Its own
+  // 8-slot queue never limits because router.prefetch() returns synchronously,
+  // so a clicked link's RSC request waited 5–20s behind them (dead clicks).
+  // Background RSC fetches share a small pool and pause while a user navigation
+  // is in flight; the navigation request itself is never queued.
+  var RSC_BACKGROUND_MAX = 2;
+  var rscBackgroundActive = 0;
+  var rscBackgroundQueue = [];
+
+  function rscRequestPath(input) {
+    try {
+      var raw = typeof input === "string" ? input : input && (input.href || input.url);
+      if (!raw) return "";
+      var u = new URL(raw, location.href);
+      if (u.origin !== location.origin || !u.searchParams.has("_rsc")) return "";
+      return u.pathname;
+    } catch (eRscUrl) {
+      return "";
+    }
+  }
+
+  var routerNavPath = "";
+
+  function isUserNavRsc(path) {
+    return (
+      pathsEqualNav(path, currentPath()) ||
+      (!!pendingNavHref && pathsEqualNav(path, pendingNavHref)) ||
+      (!!routerNavPath && pathsEqualNav(path, routerNavPath))
+    );
+  }
+
+  /** Programmatic navigations (e.g. search keyboard Enter) never fire a link click. */
+  function trackRouterNav() {
+    try {
+      var router = window.next && window.next.router;
+      if (!router || router.__t3RscNavTracked) return;
+      ["push", "replace"].forEach(function (method) {
+        var orig = router[method];
+        if (typeof orig !== "function") return;
+        router[method] = function (href) {
+          try {
+            routerNavPath = new URL(String(href), location.href).pathname;
+            promoteBackgroundRsc(routerNavPath);
+          } catch (eRouterHref) {}
+          return orig.apply(this, arguments);
+        };
+      });
+      router.__t3RscNavTracked = true;
+    } catch (eRouterNav) {}
+  }
+
+  function abortReason(signal) {
+    if (signal.reason !== undefined) return signal.reason;
+    try {
+      return new DOMException("Aborted", "AbortError");
+    } catch (eDom) {
+      return new Error("Aborted");
+    }
+  }
+
+  function startBackgroundRsc(job) {
+    rscBackgroundActive++;
+    var req;
+    try {
+      req = job.fetch(job.input, job.init);
+    } catch (eStart) {
+      rscBackgroundActive--;
+      job.reject(eStart);
+      pumpBackgroundRsc();
+      return;
+    }
+    req.then(job.resolve, job.reject).then(function () {
+      rscBackgroundActive--;
+      pumpBackgroundRsc();
+    });
+  }
+
+  function pumpBackgroundRsc() {
+    trackRouterNav();
+    if (document.documentElement.classList.contains("t3-nav-busy")) return;
+    while (rscBackgroundActive < RSC_BACKGROUND_MAX && rscBackgroundQueue.length) {
+      startBackgroundRsc(rscBackgroundQueue.shift());
+    }
+  }
+
+  /** Next may reuse a queued prefetch for the page the user just opened. */
+  function promoteBackgroundRsc(href) {
+    if (!href) return;
+    for (var i = rscBackgroundQueue.length - 1; i >= 0; i--) {
+      if (pathsEqualNav(rscBackgroundQueue[i].path, href)) {
+        startBackgroundRsc(rscBackgroundQueue.splice(i, 1)[0]);
+      }
+    }
+  }
+
+  function throttleBackgroundRsc() {
+    if (throttleBackgroundRsc.done || isLocalMintDev()) return;
+    throttleBackgroundRsc.done = true;
+    try {
+      if (typeof window.fetch !== "function" || typeof Promise !== "function") return;
+      var origFetch = window.fetch;
+      var callOrig = function (input, init) {
+        return origFetch.call(window, input, init);
+      };
+      window.fetch = function (input, init) {
+        var path = rscRequestPath(input);
+        if (!path || isUserNavRsc(path)) return origFetch.apply(window, arguments);
+        return new Promise(function (resolve, reject) {
+          var job = { fetch: callOrig, input: input, init: init, path: path, resolve: resolve, reject: reject };
+          var signal = (init && init.signal) || null;
+          if (signal) {
+            if (signal.aborted) {
+              reject(abortReason(signal));
+              return;
+            }
+            signal.addEventListener(
+              "abort",
+              function () {
+                var idx = rscBackgroundQueue.indexOf(job);
+                if (idx === -1) return;
+                rscBackgroundQueue.splice(idx, 1);
+                reject(abortReason(signal));
+              },
+              { once: true }
+            );
+          }
+          rscBackgroundQueue.push(job);
+          pumpBackgroundRsc();
+        });
+      };
+      // Resume the pool as soon as nav chrome clears, whichever path clears it.
+      if (typeof MutationObserver === "function") {
+        new MutationObserver(pumpBackgroundRsc).observe(document.documentElement, {
+          attributes: true,
+          attributeFilter: ["class"],
+        });
+      }
+      trackRouterNav();
+    } catch (eThrottle) {}
+  }
+
   function gateNextRouterPrefetch() {
     if (gateNextRouterPrefetch.done) return;
     function tryPatch() {
@@ -2251,16 +2397,13 @@
     if (pathsEqualNav(target, currentPath())) return;
     // One hard navigation only. Never pushState-then-reload: Mintlify treats
     // pushState as an SPA open, then reload opens the same docs again.
+    // assign (not replace): the current page must stay in history for Back.
     var abs = target;
     try {
       abs = new URL(target, window.location.origin).href;
     } catch (eUrl) {
       abs = target;
     }
-    try {
-      window.location.replace(abs);
-      return;
-    } catch (eRep) {}
     try {
       window.location.assign(abs);
       return;
@@ -3118,6 +3261,7 @@
     if (!href) return;
     opts = opts || {};
     pendingNavHref = href;
+    promoteBackgroundRsc(href);
     prefetchGateOpen = true;
     // Keep the early-inline RSC gate in sync (it only checks __t3PrefetchGateOpen).
     try {
@@ -3521,6 +3665,7 @@
     }, 6000);
 
     window.addEventListener("popstate", function () {
+      promoteBackgroundRsc(currentPath());
       // History nav may already be mid-swap — freeze if possible, else skeleton ASAP
       progress(true);
       if (!document.documentElement.classList.contains("t3-holding")) {
@@ -3677,6 +3822,7 @@
   }
 
   gateLocalRscFetch();
+  throttleBackgroundRsc();
   gateNextRouterPrefetch();
   // Bind nav interceptor immediately — do not wait for DOMContentLoaded/init.
   // First click from home often happens before init() and was falling through

@@ -32,11 +32,11 @@ Extension Manager titles: *Tonictypes - Rapid TCA & Advanced Plugins* and *Tonic
 1. Composer packages (`k3n/tonictypes`, `nitsan/ns-t3af`, `k3n/tonictypes_pro`): [Installation → Composer](/en/latest/TonicTypes/Installation/Index#composer)  
 1. Site Sets (`config.yaml`) or static templates, then clear caches: [Installation → Activate configuration](/en/latest/TonicTypes/Installation/Index#3-activate-configuration)  
 
-Pro’s `composer.json` requires **AI Foundation** `nitsan/ns-t3af: ^1.0 || @dev` in addition to Core `^2.0` and `nitsan/ns-license`.
+Pro’s `composer.json` requires **AI Foundation** `nitsan/ns-t3af` in addition to Core and `nitsan/ns-license`.
 
 ## Which TYPO3 / PHP?
 
-TYPO3 12.4–14.9 · PHP 8.2–8.5 · packages **2.2.x**. Pro needs Core `^2.0`, `nitsan/ns-license`, and `nitsan/ns-t3af`.
+TYPO3 12.4–14.9 · PHP 8.2–8.5. Pro needs Core, `nitsan/ns-license`, and `nitsan/ns-t3af`.
 
 ## Own templates?
 

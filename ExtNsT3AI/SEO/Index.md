@@ -263,32 +263,6 @@ Use page-wise Mass SEO when you want to enable or optimize one page at a time.
 
 Use recursive Mass SEO when you want to add a parent page and all of its child pages to the queue.
 
-### Before you start
-
-- T3AI must be installed and active.
-- Shared provider and model setup must already be configured in AI Foundation.
-- Pages should contain real content so the AI has something useful to analyze.
-
-### How it works
-
-1. Add pages to the queue or open a single page in Mass Optimize SEO.
-2. Run the task manually or with the TYPO3 Scheduler.
-3. Review the generated SEO suggestions.
-4. Save the data to the page.
-
-### Scheduler
-
-Create a Scheduler task with the command `nst3ai:bulk:seo-optimize` when you want queued SEO work to run automatically.
-Use task options such as SEO fields, limits, dry-run mode, and provider/model overrides when needed.
-
-### Page wise Mass SEO
-
-Use page-wise Mass SEO when you want to enable or optimize one page at a time.
-
-### Recursive Mass SEO
-
-Use recursive Mass SEO when you want to add a parent page and all of its child pages to the queue.
-
 ## Language-wise SEO Optimization
 
 T3AI can generate and optimize SEO metadata in multiple languages.

@@ -21,9 +21,9 @@ Tonictypes is split into a free Core that contains the whole record-type engine,
 | **AI Foundation** (required for Pro) | `ns_t3af` | Free — [TER](https://extensions.typo3.org/extension/ns_t3af) · [AI Foundation docs](/en/latest/ExtNsT3AF/Index) |
 | **Tonictypes Pro** (premium) | `tonictypes_pro` / `k3n/tonictypes_pro` | License — [License docs](/en/latest/License/Index) |
 
-**Compatibility:** TYPO3 12.4–14.9 · PHP 8.2–8.5 · **2.2.x**  
+**Compatibility:** TYPO3 12.4–14.9 · PHP 8.2–8.5  
 
-Pro requires (from `k3n/tonictypes_pro` `composer.json`): Core `k3n/tonictypes: ^2.0 || @dev`, `nitsan/ns-license: >=14.2.3 <=14.9.99`, and **AI Foundation** `nitsan/ns-t3af: ^1.0 || @dev`.
+Pro requires (from `k3n/tonictypes_pro` `composer.json`): Core `k3n/tonictypes`, `nitsan/ns-license`, and **AI Foundation** `nitsan/ns-t3af`.
 
 ## 1. License (Pro only)
 
@@ -206,7 +206,7 @@ plugin.tx_tonictypes.templates {
 
 Render the same identifier inside Fluid with `dv:template.render` — see [Templating](/en/latest/TonicTypes/GettingStarted/Templating/Index).
 
-## Upgrade notes (2.2.x)
+## Upgrade notes
 
 **New in Core 2.2.0**
 
@@ -215,7 +215,7 @@ Render the same identifier inside Fluid with `dv:template.render` — see [Templ
 - A **readOnly** option in the field configuration  
 - Better TYPO3 v12–v14 compatibility for frontend authentication and the Query Builder  
 
-**Unchanged:** PHP 8.2–8.5 and TYPO3 12.4–14.9. Pro needs Core `^2.0`, `nitsan/ns-license`, and **AI Foundation** `nitsan/ns-t3af` (`^1.0 || @dev`).
+**Unchanged:** PHP 8.2–8.5 and TYPO3 12.4–14.9. Pro needs Core, `nitsan/ns-license`, and **AI Foundation** `nitsan/ns-t3af`.
 
 **Coming from 2.0.x:** Export/Import is in Core from 2.1.0, and the Pro-only field types moved out of Core in 2.1.0, so they need `k3n/tonictypes_pro`.
 

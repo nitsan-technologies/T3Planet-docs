@@ -80,8 +80,10 @@ def minify_css(text: str) -> str:
     """
     text = re.sub(r"/\*[\s\S]*?\*/", "", text)
     text = re.sub(r"\s+", " ", text)
-    # Safe separators only — never + or - (calc / custom-idents)
-    text = re.sub(r"\s*([{}:;,\>])\s*", r"\1", text)
+    # Safe separators only — never + or - (calc / custom-idents).
+    # Keep whitespace before ":" — in selectors it is a descendant combinator (`td :is(...)`).
+    text = re.sub(r"\s*([{};,\>])\s*", r"\1", text)
+    text = re.sub(r":\s+", ":", text)
     text = re.sub(r";}", "}", text)
     text = text.replace(" !important", "!important")
     return text.strip()

@@ -62,6 +62,6 @@ Use this plugin when visitors must register before creating tickets.
 
 **Step 2.** Select **Helpdesk - Front-End User Registration**.
 
-**Step 3.** Configure the plugin options, then save.
+**Step 3.** Configure the plugin options: open the **Plugin** tab and select the Helpdesk storage folder (ticket storage), then save.
 
 Set **Login Page ID** and **Registration Page ID** in [Global Settings](/en/latest/ExtNsHelpDesk/GlobalSettings/Index).

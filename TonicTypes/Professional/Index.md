@@ -15,7 +15,7 @@ It always needs free **Tonictypes** Core (`tonictypes`).
 
 Pro does not replace Core; it adds to it. Everything you build with Core keeps working, and Pro contributes extra field types, backend shortcuts for editors, a link handler, branding options and AI tools. Consider Pro when editors need repeatable groups of fields, content elements inside records, or faster access to records from anywhere in the backend.
 
-**Requires:** Core `^2.0` · `nitsan/ns-license` · **AI Foundation** (`nitsan/ns-t3af`: `^1.0 || @dev`) · PHP 8.2–8.5 · TYPO3 12.4–14.9 — full list: [Installation → What to install](/en/latest/TonicTypes/Installation/Index#what-to-install)
+**Requires:** Core · `nitsan/ns-license` · **AI Foundation** (`nitsan/ns-t3af`) · PHP 8.2–8.5 · TYPO3 12.4–14.9 — full list: [Installation → What to install](/en/latest/TonicTypes/Installation/Index#what-to-install)
 
 ## Install
 

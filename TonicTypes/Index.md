@@ -18,7 +18,7 @@ Normally, every new kind of content in TYPO3 (for example a job offer with title
 | --- | --- |
 | **Product (premium)** | **Tonictypes Pro** (`tonictypes_pro`) — [License](/en/latest/License/Index) |
 | **Required free Core** | **Tonictypes** (`tonictypes`) — [TER](https://extensions.typo3.org/extension/tonictypes) |
-| **Compatibility** | TYPO3 12.4–14.9 · PHP 8.2–8.5 · **2.2.x** |
+| **Compatibility** | TYPO3 12.4–14.9 · PHP 8.2–8.5 |
 
 In Extension Manager the titles are **Tonictypes - Rapid TCA & Advanced Plugins** and **Tonictypes Pro: Enterprise Edition – Full Stack**.
 

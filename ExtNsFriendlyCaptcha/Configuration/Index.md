@@ -21,6 +21,12 @@ You can configure all the settings of ns_friendlycaptcha as described below:
 For generating the Site and Secret key, please refer to the following link:
 [FriendlyCaptcha Documentation](https://docs.friendlycaptcha.com/#/installation?id=_1-generating-a-sitekey)
 
+**Don't have a Sitekey/Secret Key yet?**
+
+1. Sign up for a free account at [https://friendlycaptcha.com/](https://friendlycaptcha.com/)
+2. Generate your Sitekey and Secret Key by following the [FriendlyCaptcha Documentation](https://docs.friendlycaptcha.com/#/installation?id=_1-generating-a-sitekey).
+3. Paste both values into the fields above.
+
 </Note>
 
 - **Step 6:** Now, you can configure all the options which you want eg., Auto Check,Check on focus and Manual, See below screenshot.
