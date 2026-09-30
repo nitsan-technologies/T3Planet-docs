@@ -98,3 +98,14 @@ Append one entry per production release.
 - Mintlify: GitHub check "Mintlify Deployment" completed/success on `1d4f808` (org repo)
 - QA: `mintlify validate` pass; full live crawl 810/810 nav pages 200 with content, 0 soft 404; 40/40 sampled new redirects 308; content markers 11/11 on docs.t3planet.de and t3planet.mintlify.app; desktop/mobile × light/dark on changed pages (0 broken images, 0 page errors, no horizontal scroll); search finds new T3AA sections; sitemap lists new pages; TLS valid
 - Final status: PASS
+
+### 2026-09-30 — Sidebar: product page tree no longer stays open on Home
+- Authorization: operator said `start the deployment process`
+- Commit: `8537545` by Nitsan `<sanjay@nitsantech.com>` (2 files; `a16303f..8537545`)
+- Cause: Mintlify keeps sidebar group open state across client-side navigation; returning to Home (Back to all docs, browser Back, logo, footer link, back/forward) left the visited product tree expanded
+- Scope: `scripts/src/custom.src.css` + rebuilt `custom.css` — on hub context, product rows without the current page render collapsed (no JS change)
+- Excluded: `docs-master/`, `workshops/`, `backup/`, `scripts/remigration/**` (incl. new `sidebar_home_collapse_regression.py`), QA report JSON
+- Push remote: `origin` → `nitsan-technologies/T3Planet-docs` (`master`), no force
+- Mintlify: GitHub check "Mintlify Deployment" completed/success on `8537545` (org repo); new CSS on `t3planet.mintlify.app` and `docs.t3planet.de`
+- QA: `mintlify validate` pass; pre-deploy baseline 14/50 (bug on all SPA return paths); live after deploy 50/50 desktop (7 products × 7 Home methods + chevron entry), 16/16 mobile (390/375), 11/11 dark; sitemap 851 URLs, llms.txt 200, 44/44 sampled pages 200 with content; only console error is pre-existing Mintlify CDN 403 for `lucide/v1.16.0/circle-help.svg`
+- Final status: PASS WITH NON-BLOCKING WARNINGS
