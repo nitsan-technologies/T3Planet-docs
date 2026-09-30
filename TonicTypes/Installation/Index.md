@@ -18,7 +18,7 @@ Tonictypes is split into a free Core that contains the whole record-type engine,
 | Package | Key | How |
 | --- | --- | --- |
 | **Tonictypes** (Core, required) | `tonictypes` | Free — [TER](https://extensions.typo3.org/extension/tonictypes) |
-| **AI Foundation** (required for Pro) | `ns_t3af` | Free — [TER](https://extensions.typo3.org/extension/ns_t3af) · [AI Foundation docs](/en/latest/ExtNsT3AF/Index) |
+| **AI Foundation** (required for Pro) | `ns_t3af` | Free — [TER](https://extensions.typo3.org/extension/ns_t3af) · [AI Foundation docs](/en/latest/ExtNsT3AF/Introduction/Index) |
 | **Tonictypes Pro** (premium) | `tonictypes_pro` / `k3n/tonictypes_pro` | License — [License docs](/en/latest/License/Index) |
 
 **Compatibility:** TYPO3 12.4–14.9 · PHP 8.2–8.5  

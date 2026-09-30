@@ -9,7 +9,9 @@ sidebarTitle: "Content"
 ---
 
 The **Content** tab lists accessibility content jobs for the **selected page**.
-Each card starts that job; details live on the linked Feature Guide pages below.
+The audio, voiceover and simplify cards start the job. The Live Audit and
+Filemeta cards open a walkthrough and point you to the place where the work is
+done. Details are on the linked Feature Guide pages below.
 
 <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmu2a55y50md1qmrxc4adltjr?utm_source=link" loading="lazy" title="T3AA Content Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
@@ -23,18 +25,20 @@ See [Accessibility Checker using T3AA](/en/latest/ExtNsT3AA/FeatureGuide/Ckedito
 
 ## Filemeta
 
-**Create AI Filemeta** — generate alternative text and related image metadata
-(alt tags) from AI analysis for a single file.
+**Create AI Filemeta** opens a walkthrough for single-image metadata. The card
+does not generate metadata itself. Generate it in **File List** (edit the image
+metadata → **Generate file meta with T3AA**) or in **AI Alt Text**.
 
 See [AI Alt Text](/en/latest/ExtNsT3AA/FeatureGuide/AIAltText/Index).
 
 ## AI Filemeta Bulk
 
-**Create Bulk AI Filemeta** — generate and analyse alt text and metadata for
-many images in one run (queue / one-click bulk generation).
+**Create Bulk AI Filemeta** opens a walkthrough for bulk metadata. The card
+does not start a bulk job. Start it in **File List** with **Mass AI Filemeta**,
+or queue images in **AI Alt Text**.
 
 See [AI Alt Text](/en/latest/ExtNsT3AA/FeatureGuide/AIAltText/Index) (bulk / Scheduler
-and Mass AI File Meta sections).
+and Mass AI Filemeta sections).
 
 ## Create audio from a script
 

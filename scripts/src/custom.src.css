@@ -156,146 +156,13 @@
 
 /* ── Language switcher (disabled — English only) ───────────────── */
 #localization-select-trigger,
-[data-component-part="localization-select-content"],
-.t3-lang-switcher-host,
-#t3-lang-switcher,
-#t3-lang-switcher-mobile {
+[data-component-part="localization-select-content"] {
   display: none !important;
   visibility: hidden !important;
   width: 0 !important;
   height: 0 !important;
   overflow: hidden !important;
   pointer-events: none !important;
-}
-
-.t3-lang-switcher {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.1875rem;
-  border-radius: 0.625rem;
-  border: 1px solid var(--t3-border);
-  background: color-mix(in srgb, var(--t3-surface-elevated) 92%, var(--t3-primary-muted));
-  box-shadow: var(--t3-shadow);
-}
-
-.t3-lang-switcher-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.75rem;
-  height: 1.75rem;
-  margin-left: 0.125rem;
-  color: var(--t3-text-subtle);
-  flex-shrink: 0;
-}
-
-.t3-lang-switcher-track {
-  display: inline-flex;
-  align-items: stretch;
-  gap: 0.125rem;
-  padding: 0.125rem;
-  border-radius: 0.5rem;
-  background: var(--t3-surface);
-}
-
-.t3-lang-switcher-btn {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-width: 2.75rem;
-  padding: 0.3125rem 0.625rem;
-  border: none;
-  border-radius: 0.4375rem;
-  background: transparent;
-  color: var(--t3-text-muted);
-  cursor: pointer;
-  transition: background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease, transform 0.12s ease;
-}
-
-.t3-lang-switcher-btn:hover:not(.is-active) {
-  color: var(--t3-text);
-  background: var(--t3-primary-muted);
-}
-
-.t3-lang-switcher-btn:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--t3-focus-ring);
-}
-
-.t3-lang-switcher-btn.is-active {
-  color: var(--t3-on-primary) !important;
-  background: linear-gradient(180deg, var(--t3-primary-light) 0%, var(--t3-primary) 100%);
-  box-shadow: 0 1px 4px rgba(0, 82, 255, 0.28);
-}
-
-.t3-lang-switcher-label {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1;
-}
-
-.t3-lang-switcher-sublabel {
-  margin-top: 0.125rem;
-  font-size: 0.5625rem;
-  font-weight: 500;
-  line-height: 1;
-  opacity: 0.88;
-}
-
-.t3-lang-switcher--compact {
-  padding: 0.125rem;
-  gap: 0;
-  box-shadow: none;
-  border-radius: 0.5rem;
-}
-
-.t3-lang-switcher--compact .t3-lang-switcher-icon,
-.t3-lang-switcher--compact .t3-lang-switcher-sublabel {
-  display: none;
-}
-
-.t3-lang-switcher--compact .t3-lang-switcher-track {
-  padding: 0.09375rem;
-  background: transparent;
-}
-
-.t3-lang-switcher--compact .t3-lang-switcher-btn {
-  min-width: 2.125rem;
-  padding: 0.3125rem 0.4375rem;
-}
-
-.dark .t3-lang-switcher {
-  background: color-mix(in srgb, var(--t3-surface-elevated) 88%, rgba(61, 126, 255, 0.12));
-  border-color: var(--t3-border-strong);
-}
-
-.dark .t3-lang-switcher-track {
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.dark .t3-lang-switcher-btn.is-active {
-  background: linear-gradient(180deg, var(--t3-primary-light) 0%, var(--t3-primary-dark) 100%);
-  box-shadow: 0 1px 6px rgba(61, 126, 255, 0.35);
-}
-
-@media (max-width: 1023px) {
-  .t3-lang-switcher-host,
-  #t3-lang-switcher {
-    display: none !important;
-  }
-
-  .t3-lang-switcher--compact {
-    margin-right: 0.125rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  #t3-lang-switcher-mobile {
-    display: none !important;
-  }
 }
 
 /* Breadcrumbs */
@@ -591,14 +458,31 @@ pre,
 }
 
 /* ── Tables ────────────────────────────────────────────────────── */
+/* Mintlify wraps tables in its own scroll area, so the table stays a real
+   table and its rows span the full width. */
 table {
-  display: block;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  border-collapse: collapse;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0;
   width: 100%;
   border: 1px solid var(--t3-border);
   border-radius: 0.5rem;
+}
+
+table > :first-child > tr:first-child > :first-child {
+  border-top-left-radius: calc(0.5rem - 1px);
+}
+
+table > :first-child > tr:first-child > :last-child {
+  border-top-right-radius: calc(0.5rem - 1px);
+}
+
+table > :last-child > tr:last-child > :first-child {
+  border-bottom-left-radius: calc(0.5rem - 1px);
+}
+
+table > :last-child > tr:last-child > :last-child {
+  border-bottom-right-radius: calc(0.5rem - 1px);
 }
 
 table th {
@@ -738,8 +622,6 @@ main .mdx-content > svg,
   position: relative;
   box-sizing: content-box;
   max-height: 80vh;
-  width: 100%;
-  aspect-ratio: 16 / 9;
   padding: 2rem 0;
   margin: 1.25rem 0;
   background: var(--t3-embed-bg);
@@ -752,14 +634,7 @@ main .mdx-content > svg,
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
   border-radius: 0.5rem;
-}
-
-iframe {
-  max-width: 100%;
 }
 
 /* ── Product dropdown: active icon only ────────────────────────── */
@@ -819,10 +694,6 @@ button.nav-dropdown-trigger:hover {
 /* ── Navbar, search, breadcrumbs, footer ───────────────────────── */
 #navbar {
   border-bottom-color: var(--t3-border) !important;
-}
-
-.breadcrumb-item a {
-  color: var(--t3-link) !important;
 }
 
 .breadcrumb-item a:hover {
@@ -892,9 +763,6 @@ html {
 }
 
 /* Performance: contain embed layout */
-.t3-embed {
-  contain: layout style;
-}
 
 /* ── Mintlify components ───────────────────────────────────────── */
 .note,
@@ -904,11 +772,6 @@ html {
 .info,
 [data-callout] {
   margin: 1.25rem 0;
-}
-
-[data-component-part="card-group"],
-.card-group {
-  gap: 1rem;
 }
 
 
@@ -1001,37 +864,6 @@ button:focus-visible {
   padding-bottom: 2rem;
 }
 
-.t3-search-hint {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.625rem;
-  margin-top: 1.5rem;
-  padding: 0.625rem 1rem;
-  border-radius: 0.625rem;
-  border: 1px solid var(--t3-border);
-  background: var(--t3-surface-elevated);
-  font-size: 0.875rem;
-  color: var(--t3-text-muted);
-}
-
-.t3-search-hint-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 1.75rem;
-  padding: 0.125rem 0.375rem;
-  border-radius: 0.375rem;
-  border: 1px solid var(--t3-border);
-  background: var(--t3-primary-muted);
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--t3-primary-dark);
-}
-
-.dark .t3-search-hint-icon {
-  color: var(--t3-link);
-}
-
 /* Section header with view-all link */
 .t3-section-header {
   display: flex;
@@ -1096,7 +928,6 @@ button:focus-visible {
   padding: 2rem;
   border-radius: 0.875rem;
   border: 1px solid var(--t3-border);
-  background: linear-gradient(135deg, var(--t3-primary-muted) 0%, var(--t3-surface-elevated) 60%);
 }
 
 .t3-cta-title {
@@ -1158,10 +989,6 @@ button:focus-visible {
   gap: 1rem;
 }
 
-.t3-product-grid-compact {
-  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-}
-
 .t3-product-card {
   display: flex;
   flex-direction: column;
@@ -1178,10 +1005,6 @@ button:focus-visible {
 .t3-product-card:hover {
   border-color: var(--t3-primary);
   box-shadow: var(--t3-shadow);
-}
-
-.t3-product-grid-compact .t3-product-card:hover {
-  transform: none;
 }
 
 .t3-product-card-header {
@@ -1297,10 +1120,6 @@ button:focus-visible {
   background: rgba(61, 126, 255, 0.22);
 }
 
-.t3-product-card-title-only {
-  flex: 1;
-}
-
 .t3-product-name {
   font-size: 1rem;
   font-weight: 600;
@@ -1395,8 +1214,7 @@ button:focus-visible {
     padding: 1.25rem;
   }
 
-  .t3-product-grid,
-  .t3-product-grid-compact {
+  .t3-product-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1422,29 +1240,19 @@ button:focus-visible {
 
 /* Sidebar scroll performance */
 #sidebar-content {
-  scroll-behavior: smooth;
-  overscroll-behavior: contain;
   contain: layout style;
 }
 
 /* First paint: hide section lists until sidebar-nav.js finishes (prevents chevron flash) */
 /* t3-sidebar-ready FOUC gate removed: broken JS must not hide all sidebar groups permanently */
 
-html:not(.t3-sidebar-ready) #sidebar-content button[aria-expanded] > div.h-\[1lh\],
-html:not(.t3-sidebar-ready) #sidebar-content button[aria-expanded] .t3-sidebar-chevron-wrap {
+html:not(.t3-sidebar-ready) #sidebar-content button[aria-expanded] > div.h-\[1lh\] {
   position: static !important;
   transform: none !important;
 }
 
 /* Collapsed parent sections — hide children without reserving layout space */
-.t3-sidebar-group.t3-sidebar-collapsed {
-  overflow: hidden;
-}
 
-.t3-sidebar-collapsed > .t3-sidebar-group-body,
-.t3-sidebar-group.t3-sidebar-collapsed .t3-sidebar-group-body,
-.t3-sidebar-group.t3-sidebar-collapsed > ul,
-.t3-sidebar-group.t3-sidebar-collapsed > .sidebar-group,
 .sidebar-group-header[aria-expanded="false"] + ul,
 .sidebar-group-header[aria-expanded="false"] ~ ul {
   display: none !important;
@@ -1454,32 +1262,7 @@ html:not(.t3-sidebar-ready) #sidebar-content button[aria-expanded] .t3-sidebar-c
   pointer-events: none !important;
 }
 
-.t3-sidebar-group.t3-sidebar-collapsed .t3-sidebar-expand-btn,
-.t3-sidebar-group.t3-sidebar-collapsed .t3-sidebar-chevron-wrap,
-.t3-sidebar-group.t3-sidebar-collapsed .t3-sidebar-chevron {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-.t3-sidebar-group.t3-sidebar-collapsed > .sidebar-group-header {
-  margin-bottom: 0 !important;
-}
-
 /* Language switch feedback */
-html.t3-lang-switching body {
-  cursor: wait;
-}
-
-html.t3-lang-switching .t3-lang-switcher {
-  opacity: 0.65;
-  pointer-events: none;
-}
-
-html.t3-lang-switching #content-container,
-html.t3-lang-switching main {
-  opacity: 0.72;
-  transition: opacity 0.15s ease;
-}
 
 /* Content — avoid content-visibility on main area (causes nav jank) */
 
@@ -1515,17 +1298,12 @@ html.t3-lang-switching main {
 
 .t3-landing-title {
   font-size: clamp(1.875rem, 4vw, 2.5rem);
-  font-weight: 600;
-  letter-spacing: -0.025em;
   line-height: 1.15;
   color: var(--t3-text);
   margin: 0 0 1rem;
 }
 
 .t3-landing-subtitle {
-  font-size: 1.0625rem;
-  line-height: 1.6;
-  color: var(--t3-text-muted);
   margin: 0;
   max-width: 42rem;
 }
@@ -1587,14 +1365,12 @@ html.t3-lang-switching main {
 }
 
 /* ── Coinbase Developer Docs — layout & UX ─────────────────────── */
+/* Reserve the scrollbar lane so loaders that set overflow:hidden never shift
+   the layout sideways. Route changes and Back/Forward must scroll instantly;
+   in-page anchor links animate via JS (bindTocExactScroll). */
 html {
-  scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+  scrollbar-gutter: stable;
+  scroll-behavior: auto;
 }
 
 #content-area {
@@ -1692,7 +1468,6 @@ button[aria-label*="Search" i] {
 /* Breadcrumbs */
 .breadcrumb-list {
   font-size: 0.8125rem;
-  gap: 0.35rem;
 }
 
 /* Pagination bar */
@@ -1796,14 +1571,11 @@ main {
   position: relative;
   padding: 2.5rem 2rem 2rem;
   margin: 0 0 2rem;
-  border-radius: 1rem;
-  border: 1px solid var(--t3-border);
   background: var(--t3-gradient-hero);
   overflow: hidden;
 }
 
 .t3-hero-panel::before {
-  content: "";
   position: absolute;
   top: -40%;
   right: -10%;
@@ -2006,7 +1778,7 @@ main {
   font-weight: 500;
   color: var(--t3-text-muted);
   text-decoration: none;
-  transition: all 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .t3-category-nav a:hover,
@@ -2146,11 +1918,6 @@ main {
   color: var(--t3-text-subtle);
 }
 
-.t3-extension-section {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 200px;
-}
-
 /* ── Performance: reduce paint cost on large pages ───────────────── */
 .t3-product-grid .t3-product-card {
   contain: layout style;
@@ -2164,10 +1931,6 @@ main {
 .t3-product-grid {
   content-visibility: visible;
   contain-intrinsic-size: none;
-}
-
-#sidebar-content .t3-sidebar-group {
-  contain: layout style;
 }
 
 #sidebar-content a[href^="/"] {
@@ -2193,21 +1956,12 @@ main img {
   max-width: 100%;
   height: auto;
   border-radius: 0.5rem;
-  content-visibility: auto;
-  contain-intrinsic-size: 640px 360px; /* reduce CLS while dimensions decode */
 }
 
 #content img[loading="lazy"],
 .mdx-content img[loading="lazy"] {
   background: var(--t3-embed-bg);
   min-height: 1px;
-}
-
-/* Prefer GPU-cheap decoding for below-fold screenshots */
-#content img[loading="lazy"],
-.mdx-content img[loading="lazy"],
-article img[loading="lazy"] {
-  content-visibility: auto;
 }
 
 /* ── Print (light) ───────────────────────────────────────────────── */
@@ -2230,9 +1984,6 @@ article img[loading="lazy"] {
 }
 
 /* Hide legacy sidebar controls (search, filter, language footer, product dropdown) */
-.t3-sidebar-search-wrap,
-.t3-sidebar-filter-wrap,
-.t3-sidebar-footer,
 [data-t3-sidebar-search],
 [data-t3-sidebar-filter],
 [data-t3-sidebar-footer],
@@ -2242,119 +1993,6 @@ button.nav-dropdown-trigger,
 }
 
 /* ── Search + filter controls (removed from sidebar) ─────────── */
-.t3-sidebar-search-wrap,
-.t3-sidebar-filter-wrap {
-  display: none !important;
-}
-
-.t3-sidebar-search {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--t3-border);
-  background: var(--t3-surface);
-  color: var(--t3-text-muted);
-  font-size: 0.8125rem;
-  cursor: pointer;
-  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
-}
-
-.t3-sidebar-search-icon {
-  flex-shrink: 0;
-  opacity: 0.55;
-}
-
-.t3-sidebar-search:hover,
-.t3-sidebar-search:focus-visible {
-  border-color: var(--t3-primary);
-  background: var(--t3-primary-muted);
-  color: var(--t3-text);
-  outline: none;
-  box-shadow: 0 0 0 2px var(--t3-focus-ring);
-}
-
-.t3-sidebar-search-label {
-  flex: 1;
-  text-align: left;
-}
-
-.t3-sidebar-search-kbd {
-  font-size: 0.6875rem;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  padding: 0.125rem 0.375rem;
-  border-radius: 0.25rem;
-  border: 1px solid var(--t3-border);
-  background: var(--t3-surface-elevated);
-  color: var(--t3-text-subtle);
-}
-
-.t3-sidebar-filter-label {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-.t3-sidebar-filter-field {
-  display: flex;
-  align-items: center;
-  gap: 0.375rem;
-  padding: 0.4375rem 0.625rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--t3-border);
-  background: var(--t3-surface);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
-}
-
-.t3-sidebar-filter-field:focus-within {
-  border-color: var(--t3-primary);
-  box-shadow: 0 0 0 2px var(--t3-focus-ring);
-}
-
-.t3-sidebar-filter-icon {
-  flex-shrink: 0;
-  color: var(--t3-text-subtle);
-}
-
-.t3-sidebar-filter-input {
-  flex: 1;
-  min-width: 0;
-  border: 0;
-  background: transparent;
-  color: var(--t3-text);
-  font-size: 0.8125rem;
-  outline: none;
-}
-
-.t3-sidebar-filter-input::placeholder {
-  color: var(--t3-text-subtle);
-}
-
-.t3-sidebar-filter-clear {
-  flex-shrink: 0;
-  width: 1.25rem;
-  height: 1.25rem;
-  border: 0;
-  border-radius: 0.25rem;
-  background: var(--t3-primary-muted);
-  color: var(--t3-text-muted);
-  font-size: 1rem;
-  line-height: 1;
-  cursor: pointer;
-  transition: background 0.12s ease, color 0.12s ease;
-}
-
-.t3-sidebar-filter-clear:hover {
-  background: var(--t3-primary-muted);
-  color: var(--t3-text);
-}
 
 /* ── Sidebar shell ─────────────────────────────────────────────── */
 #sidebar,
@@ -2367,7 +2005,6 @@ button.nav-dropdown-trigger,
   display: flex;
   flex-direction: column;
   padding: 0.75rem 0.5rem 0.375rem 0.625rem;
-  scroll-behavior: smooth;
   min-height: 0;
 }
 
@@ -2390,23 +2027,10 @@ button.nav-dropdown-trigger,
 }
 
 /* ── Group headers (section labels) ────────────────────────────── */
-.t3-sidebar-group {
-  border-top: 1px solid var(--t3-border);
-  padding-top: 0.625rem;
-  margin-top: 0.375rem;
-}
-
-.t3-sidebar-group:first-of-type,
-#navigation-items > .t3-sidebar-group:first-child {
-  border-top: none;
-  padding-top: 0;
-  margin-top: 0;
-}
 
 #sidebar-content .sidebar-group-header,
 #sidebar-content h4,
-#sidebar-content h5,
-.t3-sidebar-group-toggle {
+#sidebar-content h5 {
   display: flex !important;
   align-items: center;
   justify-content: flex-start;
@@ -2426,14 +2050,12 @@ button.nav-dropdown-trigger,
 
 #sidebar-content .sidebar-group-header:hover,
 #sidebar-content h4:hover,
-#sidebar-content h5:hover,
-.t3-sidebar-group-toggle:hover {
+#sidebar-content h5:hover {
   color: var(--t3-text) !important;
   background: var(--t3-primary-muted);
 }
 
-#sidebar-content .sidebar-group-header:focus-visible,
-.t3-sidebar-group-toggle:focus-visible {
+#sidebar-content .sidebar-group-header:focus-visible {
   outline: none;
   box-shadow: 0 0 0 2px var(--t3-focus-ring);
 }
@@ -2450,23 +2072,8 @@ button.nav-dropdown-trigger,
   margin-left: auto;
 }
 
-.dark .t3-sidebar-chevron,
-.dark #sidebar-content .t3-sidebar-expand-btn svg {
+.dark .t3-sidebar-chevron {
   color: var(--t3-text-muted) !important;
-}
-
-.dark #sidebar-content .t3-sidebar-expand-btn:hover svg,
-.dark #sidebar-content li[data-active="true"] > .t3-sidebar-expand-btn svg {
-  color: var(--t3-link) !important;
-}
-
-#sidebar-content .t3-sidebar-expand-btn svg {
-  color: var(--t3-text-subtle);
-  transition: color 0.15s ease, transform 0.22s ease;
-}
-
-#sidebar-content .t3-sidebar-expand-btn:hover svg {
-  color: var(--t3-text-muted);
 }
 
 .sidebar-group-header .sidebar-group-icon {
@@ -2483,35 +2090,13 @@ button.nav-dropdown-trigger,
 
 
 /* ── Animated expand/collapse ──────────────────────────────────── */
-.t3-sidebar-group-body {
-  overflow: hidden;
-  max-height: 4000px;
-  opacity: 1;
-  transition: max-height 0.28s ease, opacity 0.2s ease;
-}
-
-.t3-sidebar-collapsed > .t3-sidebar-group-body,
-.t3-sidebar-group.t3-sidebar-collapsed .t3-sidebar-group-body {
-  max-height: 0;
-  opacity: 0;
-  display: none !important;
-}
 
 @media (prefers-reduced-motion: reduce) {
-  .t3-sidebar-group-body,
   .t3-sidebar-chevron,
   #sidebar,
   [data-component-part="sidebar"] {
     transition: none !important;
   }
-}
-
-.t3-sidebar-filter-empty {
-  display: none !important;
-}
-
-.t3-sidebar-filter-hidden {
-  display: none !important;
 }
 
 /* ── Nav links ─────────────────────────────────────────────────── */
@@ -2586,10 +2171,7 @@ button.nav-dropdown-trigger,
 /* Expand/collapse chevrons — match live Lucide geometry (15px box, stroke 2).
    Local Mintlify CLI still emits a legacy narrow viewBox chevron; JS replaces it.
    Keep a compact CSS fallback so the legacy glyph never looks oversized. */
-#sidebar-content .t3-sidebar-expand-btn svg,
-#sidebar-content .t3-sidebar-expand-btn .t3-sidebar-chevron,
 #sidebar-content li > button[aria-expanded]:has(svg) svg,
-#mobile-nav .t3-sidebar-expand-btn svg,
 #mobile-nav li > button[aria-expanded]:has(svg) svg {
   display: block !important;
   flex-shrink: 0;
@@ -2604,9 +2186,7 @@ button.nav-dropdown-trigger,
   overflow: visible !important;
 }
 
-#sidebar-content .t3-sidebar-expand-btn svg path,
 #sidebar-content li > button[aria-expanded]:has(svg) svg path,
-#mobile-nav .t3-sidebar-expand-btn svg path,
 #mobile-nav li > button[aria-expanded]:has(svg) svg path {
   stroke-width: 2 !important;
   vector-effect: non-scaling-stroke;
@@ -2631,16 +2211,13 @@ button.nav-dropdown-trigger,
 }
 
 /* Top-level sections (Home, Get Started, AI Universe, etc.) — no chevron */
-#sidebar-content .sidebar-group-header .t3-sidebar-chevron,
-#sidebar-content .sidebar-group-header.t3-sidebar-top-section .t3-sidebar-chevron {
+#sidebar-content .sidebar-group-header .t3-sidebar-chevron {
   display: none !important;
 }
 
 /* Fallback before sidebar-nav.js adds .t3-sidebar-expand-btn */
 #sidebar-content li > button[aria-expanded]:has(svg),
-#sidebar-content .t3-sidebar-expand-btn,
-#mobile-nav li > button[aria-expanded]:has(svg),
-#mobile-nav .t3-sidebar-expand-btn {
+#mobile-nav li > button[aria-expanded]:has(svg) {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
@@ -2667,8 +2244,7 @@ button.nav-dropdown-trigger,
   transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
-#sidebar-content li > button[aria-expanded]:has(svg) > div:first-child,
-#sidebar-content .t3-sidebar-expand-btn > div:first-child {
+#sidebar-content li > button[aria-expanded]:has(svg) > div:first-child {
   flex: 1 1 auto;
   min-width: 0;
   padding-right: 0.5rem;
@@ -2677,15 +2253,9 @@ button.nav-dropdown-trigger,
 }
 
 /* First-level section items — align with header text column */
-#sidebar-content .t3-sidebar-group > .sidebar-group > li > a {
-  padding-left: 1.5rem !important;
-}
 
 /* Coinbase-style: chevrons in a fixed right column */
-#sidebar-content li > button[aria-expanded]:has(svg) .t3-sidebar-chevron-wrap,
-#sidebar-content li > button[aria-expanded]:has(svg) > div.h-\[1lh\],
-#sidebar-content .t3-sidebar-expand-btn .t3-sidebar-chevron-wrap,
-#sidebar-content .t3-sidebar-expand-btn > div.h-\[1lh\] {
+#sidebar-content li > button[aria-expanded]:has(svg) > div.h-\[1lh\] {
   position: absolute !important;
   right: 0.375rem !important;
   top: 50% !important;
@@ -2700,38 +2270,6 @@ button.nav-dropdown-trigger,
   font-size: 15px !important;
   line-height: 15px !important;
   pointer-events: none;
-}
-
-#sidebar-content .t3-sidebar-expand-btn:hover {
-  color: var(--t3-text) !important;
-  background: rgba(0, 82, 255, 0.06) !important;
-}
-
-#sidebar-content li[data-active="true"] > .t3-sidebar-expand-btn {
-  color: var(--t3-primary-dark) !important;
-  background: rgba(0, 82, 255, 0.1) !important;
-  border-left-color: var(--t3-primary) !important;
-  font-weight: 600 !important;
-}
-
-.dark #sidebar-content li[data-active="true"] > .t3-sidebar-expand-btn {
-  color: #93c5fd !important;
-  background: rgba(61, 126, 255, 0.16) !important;
-  border-left-color: var(--t3-link) !important;
-}
-
-#sidebar-content .t3-sidebar-expand-btn[aria-expanded="false"] .t3-sidebar-chevron,
-#sidebar-content .t3-sidebar-expand-btn[aria-expanded="false"] svg {
-  transform: rotate(0deg) !important;
-}
-
-#sidebar-content .t3-sidebar-expand-btn[aria-expanded="true"] .t3-sidebar-chevron,
-#sidebar-content .t3-sidebar-expand-btn[aria-expanded="true"] svg {
-  transform: rotate(90deg) !important;
-}
-
-#sidebar-content .t3-sidebar-expand-btn[aria-expanded="true"] .t3-sidebar-chevron-wrap {
-  transform: translateY(-50%) !important;
 }
 
 #sidebar-content a:not(.t3-docs-back):not(.t3-product-root-link) {
@@ -2754,16 +2292,14 @@ button.nav-dropdown-trigger,
   hyphens: auto;
 }
 
-#sidebar-content a span,
-#sidebar-content .t3-sidebar-expand-btn span {
+#sidebar-content a span {
   overflow-wrap: anywhere;
   word-break: break-word;
   hyphens: auto;
 }
 
 /* Depth attrs are optional; UL nesting is the source of truth for indent. */
-#sidebar-content a[data-t3-depth="1"],
-#sidebar-content a.t3-sidebar-nested {
+#sidebar-content a[data-t3-depth="1"] {
   font-size: 0.78125rem;
 }
 
@@ -2801,97 +2337,8 @@ button.nav-dropdown-trigger,
 }
 
 /* ── Sidebar footer (language switcher) ───────────────────────── */
-.t3-sidebar-footer {
-  margin-top: auto;
-  padding: 0.875rem 0.5rem 0.5rem;
-  border-top: 1px solid var(--t3-border);
-  flex-shrink: 0;
-}
-
-.t3-sidebar-footer-label {
-  font-size: 0.625rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--t3-text-subtle);
-  margin-bottom: 0.5rem;
-}
-
-.t3-sidebar-version-switcher {
-  display: flex;
-  gap: 0.25rem;
-  padding: 0.1875rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--t3-border);
-  background: var(--t3-surface);
-}
-
-.t3-sidebar-lang-btn {
-  flex: 1;
-  text-align: center;
-  padding: 0.375rem 0.5rem;
-  border-radius: 0.375rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--t3-text-muted) !important;
-  text-decoration: none !important;
-  transition: background 0.15s ease, color 0.15s ease;
-}
-
-.t3-sidebar-lang-btn:hover {
-  color: var(--t3-text) !important;
-  background: var(--t3-primary-muted);
-}
-
-.t3-sidebar-lang-btn.active,
-.t3-sidebar-lang-btn[aria-current="true"] {
-  color: var(--t3-primary-dark) !important;
-  background: var(--t3-primary-muted);
-}
-
-.dark .t3-sidebar-lang-btn.active {
-  color: var(--t3-link) !important;
-}
 
 /* ── Tablet collapse toggle ────────────────────────────────────── */
-.t3-sidebar-collapse-btn {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  margin-left: 0.5rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--t3-border);
-  background: var(--t3-surface-elevated);
-  color: var(--t3-text-muted);
-  cursor: pointer;
-  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
-}
-
-.t3-sidebar-collapse-btn:hover {
-  border-color: var(--t3-primary);
-  color: var(--t3-primary);
-  background: var(--t3-primary-muted);
-}
-
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .t3-sidebar-collapse-btn {
-    display: inline-flex;
-  }
-}
-
-body.t3-sidebar-desktop-collapsed #sidebar,
-body.t3-sidebar-desktop-collapsed [data-component-part="sidebar"] {
-  transform: translateX(calc(-1 * (var(--t3-sidebar-width) + var(--t3-sidebar-gutter) + 1rem))) !important;
-  opacity: 0;
-  pointer-events: none;
-  transition: transform 0.25s ease, opacity 0.2s ease;
-}
-
-body.t3-sidebar-desktop-collapsed .t3-sidebar-collapse-btn svg {
-  transform: rotate(180deg);
-}
 
 /* Product dropdown removed — unified Coinbase-style sidebar */
 
@@ -2941,20 +2388,6 @@ body.t3-sidebar-desktop-collapsed .t3-sidebar-collapse-btn svg {
 }
 
 /* Mobile sidebar overlay */
-.t3-sidebar-backdrop {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 35;
-  background: rgba(15, 23, 42, 0.45);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.t3-sidebar-backdrop-visible {
-  display: block;
-  opacity: 1;
-}
 
 @media (max-width: 1023px) {
   :root {
@@ -2976,18 +2409,8 @@ body.t3-sidebar-desktop-collapsed .t3-sidebar-collapse-btn svg {
     padding-top: 0 !important;
   }
 
-  #content-area {
-    padding-top: 0.5rem !important;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-
   #content {
     margin-top: 0 !important;
-  }
-
-  #header {
-    margin-bottom: 0.75rem;
   }
 
   #sidebar,
@@ -3002,25 +2425,6 @@ body.t3-sidebar-desktop-collapsed .t3-sidebar-collapse-btn svg {
     transform: translateX(-105%);
     transition: transform 0.22s ease;
     box-shadow: var(--t3-shadow-lg);
-  }
-
-  .t3-sidebar-search-wrap {
-    margin-top: 3.5rem;
-  }
-
-  body.t3-sidebar-open #sidebar,
-  body.t3-sidebar-open [data-component-part="sidebar"] {
-    transform: translateX(0);
-  }
-
-  body.t3-sidebar-open {
-    overflow: hidden;
-  }
-}
-
-@media (min-width: 1024px) {
-  .t3-sidebar-backdrop {
-    display: none !important;
   }
 }
 /* === T3 DESIGN POLISH (safe) === */
@@ -3127,7 +2531,6 @@ pre,
 @media (max-width: 1023px) {
   #pagination {
     flex-wrap: wrap;
-    max-width: 100%;
   }
   #pagination a {
     min-width: 0;
@@ -3499,6 +2902,12 @@ html.t3-product-root-loading::after {
   will-change: transform, background-color, box-shadow;
 }
 
+/* The loader stays in the DOM while hidden; an infinite running animation
+   there forces a style recalc on every frame of every page. */
+#t3-nav-loader:not(.t3-nav-loader-active) .t3-dot {
+  animation-play-state: paused;
+}
+
 .t3-dot:nth-child(1) { animation-delay: -0.32s; }
 .t3-dot:nth-child(2) { animation-delay: -0.16s; }
 .t3-dot:nth-child(3) { animation-delay: 0s; }
@@ -3516,19 +2925,17 @@ html.t3-product-root-loading::after {
   }
 }
 
-html.t3-loader-on,
-html.t3-loader-on body {
-  overflow: hidden !important;
-  overscroll-behavior: none !important;
-}
-
-/* Hide legacy thin progress / content hold while new loader is the source of truth */
-#t3-nav-progress,
-#t3-page-hold.t3-page-hold-active,
-#t3-page-veil.t3-page-veil-active {
+/* Hide the legacy content hold while the nav loader is the source of truth */
+#t3-page-hold.t3-page-hold-active {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
+}
+
+/* Legacy skeleton veil: appended to <html> after <body> and unstyled once
+   inactive, so it would render below the footer after Back/Forward. */
+#t3-page-veil {
+  display: none !important;
 }
 
 @media (max-width: 480px) {
@@ -3558,19 +2965,21 @@ html.t3-loader-on body {
 }
 
 /* === T3 PERF: NAV PROGRESS + ROUTE VEIL === */
-/* Premium top progress — thin brand line, no heavy glow */
+/* Stage 1 of navigation feedback: thin brand line after 120ms, no blur.
+   The full blur loader (#t3-nav-loader) is stage 2, only for slow navigations. */
 #t3-nav-progress {
   --t3-loader-primary: #0052ff;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  z-index: 99999;
+  height: 3px;
+  z-index: 100001;
+  overflow: hidden;
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.16s ease;
+  transition: opacity 0.16s ease, visibility 0.16s ease;
 }
 
 #t3-nav-progress.t3-nav-progress-active {
@@ -3579,55 +2988,35 @@ html.t3-loader-on body {
 }
 
 #t3-nav-progress .t3-nav-progress-bar {
-  position: relative;
-  height: 100%;
-  width: 0;
-  overflow: hidden;
-  background: var(--t3-loader-primary, #0052ff);
-  transition: width 0.22s cubic-bezier(0.22, 1, 0.36, 1);
-  border-radius: 0 1px 1px 0;
-  will-change: width;
-}
-
-#t3-nav-progress .t3-nav-progress-shimmer {
   position: absolute;
-  inset: 0 auto 0 0;
-  width: 36%;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.55) 50%,
-    transparent 100%
-  );
-  transform: translateX(-120%);
-  animation: t3-progress-shimmer 1.1s ease-in-out infinite;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  border-radius: 0 2px 2px 0;
+  background: var(--t3-loader-primary);
+  transform: translateX(-100%);
 }
 
-#t3-nav-progress.t3-nav-progress-done .t3-nav-progress-bar {
-  transition: width 0.14s ease-in, opacity 0.18s ease;
-}
-
-#t3-nav-progress.t3-nav-progress-done {
-  opacity: 0;
-  transition: opacity 0.18s ease;
+/* Animate only while visible: an idle infinite animation costs a style recalc per frame. */
+#t3-nav-progress.t3-nav-progress-active .t3-nav-progress-bar {
+  animation: t3-progress-slide 1.1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .dark #t3-nav-progress {
   --t3-loader-primary: #6b9fff;
 }
 
-.dark #t3-nav-progress .t3-nav-progress-shimmer {
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.35) 50%,
-    transparent 100%
-  );
+@keyframes t3-progress-slide {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(250%); }
 }
 
-@keyframes t3-progress-shimmer {
-  0% { transform: translateX(-120%); }
-  100% { transform: translateX(320%); }
+@media (prefers-reduced-motion: reduce) {
+  #t3-nav-progress .t3-nav-progress-bar {
+    width: 100%;
+    opacity: 0.8;
+  }
 }
 
 /*
@@ -3665,31 +3054,13 @@ html.t3-loader-on body {
   pointer-events: none;
 }
 
-/* Freeze document scroll while route hold / nav busy (single scrollbar only) */
+/* Freeze document scroll only while a loader is actually painted. The
+   reserved scrollbar gutter (html { scrollbar-gutter: stable }) keeps the
+   layout width unchanged, and the scroll position is never reset. */
 html.t3-holding,
-html.t3-nav-busy,
-html.t3-route-loading,
-html.t3-scroll-locked {
+html.t3-loader-on {
   overflow: hidden !important;
   overscroll-behavior: none !important;
-}
-
-html.t3-holding body,
-html.t3-nav-busy body,
-html.t3-route-loading body,
-html.t3-scroll-locked body {
-  overflow: hidden !important;
-  overscroll-behavior: none !important;
-  /* Keep layout width stable when the scrollbar disappears */
-  padding-right: var(--t3-scrollbar-gutter, 0px);
-}
-
-html.t3-scroll-locked body {
-  position: fixed;
-  top: var(--t3-scroll-lock-top, 0px);
-  left: 0;
-  right: 0;
-  width: 100%;
 }
 
 .dark #t3-page-hold.t3-page-hold-active {
@@ -3708,23 +3079,17 @@ html.t3-scroll-locked body {
   will-change: opacity;
 }
 
-/* Hide underlying content while hold is up — prevents bleed-through */
+/* Hide underlying content only behind the hard-navigation hold. Client-side
+   navigations keep the current page painted until the next one commits —
+   hiding it on every click made the page blink. */
 html.t3-holding #content-area,
 html.t3-holding #content,
 html.t3-holding main,
 html.t3-holding [data-page-content],
-html.t3-nav-busy #content-area,
-html.t3-nav-busy #content,
-html.t3-nav-busy main,
-html.t3-nav-busy [data-page-content],
 html.t3-holding #table-of-contents,
 html.t3-holding #table-of-contents-content,
-html.t3-nav-busy #table-of-contents,
-html.t3-nav-busy #table-of-contents-content,
 html.t3-holding aside[aria-label*="table" i],
-html.t3-nav-busy aside[aria-label*="table" i],
-html.t3-holding [data-toc],
-html.t3-nav-busy [data-toc] {
+html.t3-holding [data-toc] {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
@@ -3753,52 +3118,6 @@ html.t3-nav-busy [data-toc] {
 
 
 /* Slow-path hold: brand status before skeleton */
-.t3-hold-status {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.85rem;
-  min-height: min(52vh, 28rem);
-  padding: 2rem 1.25rem;
-  text-align: center;
-  animation: t3-hold-in 0.28s ease both;
-}
-
-.t3-hold-logo {
-  height: 1.75rem;
-  width: auto;
-  opacity: 0.92;
-}
-
-.t3-hold-meter {
-  width: min(11rem, 46vw);
-  height: 2px;
-  border-radius: 999px;
-  overflow: hidden;
-  background: color-mix(in srgb, var(--t3-loader-primary, #0052ff) 16%, transparent);
-}
-
-.t3-hold-meter-bar {
-  display: block;
-  height: 100%;
-  width: 40%;
-  border-radius: inherit;
-  background: var(--t3-loader-primary, #0052ff);
-  animation: t3-hold-meter 1.05s cubic-bezier(0.45, 0, 0.2, 1) infinite;
-}
-
-.dark .t3-hold-meter-bar {
-  background: #6b9fff;
-}
-
-.t3-hold-label {
-  margin: 0;
-  font-size: 0.8125rem;
-  letter-spacing: 0.01em;
-  color: color-mix(in srgb, CanvasText 62%, transparent);
-  font-weight: 500;
-}
 
 @keyframes t3-hold-meter {
   0% { transform: translateX(-120%); }
@@ -3945,24 +3264,6 @@ html.t3-nav-busy [data-toc] {
   opacity: 0.85;
 }
 
-/* Soft enter for newly mounted content after hold releases */
-html.t3-route-enter #content-area,
-html.t3-route-enter #content,
-html.t3-route-enter main {
-  animation: t3-content-enter 0.22s ease both;
-}
-
-@keyframes t3-content-enter {
-  from {
-    opacity: 0.01;
-    transform: translateY(3px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes t3-shimmer {
   0% { background-position: 100% 0; }
   100% { background-position: -100% 0; }
@@ -3988,16 +3289,9 @@ html.t3-route-enter main {
 @media (prefers-reduced-motion: reduce) {
   #t3-nav-progress,
   #t3-nav-progress .t3-nav-progress-bar,
-  #t3-nav-progress .t3-nav-progress-shimmer,
   #t3-page-veil,
   #t3-page-hold,
   .t3-skel,
-  .t3-page-veil-spinner,
-  .t3-hold-status,
-  .t3-hold-meter-bar,
-  html.t3-route-enter #content-area,
-  html.t3-route-enter #content,
-  html.t3-route-enter main,
   .t3-page-hold-light {
     transition: none !important;
     animation: none !important;
@@ -4007,12 +3301,9 @@ html.t3-route-enter main {
 
 }
 
-/* Keep real footer visible during route loading (do not hide) */
-html.t3-nav-busy footer#footer,
+/* Keep real footer visible behind the hard-navigation hold (do not hide) */
 html.t3-holding footer#footer,
-html.t3-nav-busy #footer,
 html.t3-holding #footer,
-html.t3-nav-busy footer,
 html.t3-holding footer {
   opacity: 1 !important;
   visibility: visible !important;
@@ -4030,6 +3321,12 @@ html.t3-holding footer {
   height: auto;
 }
 
+/* Screenshots inside numbered/bulleted steps belong to that step. */
+#content-area li img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .t3-embed {
   width: 100%;
   max-width: 100%;
@@ -4043,14 +3340,6 @@ html.t3-holding footer {
   height: 100%;
   min-height: 220px;
   border: 0;
-}
-
-/* Defer offscreen content paint where supported */
-#content-area .t3-embed,
-#content-area table,
-#content-area pre {
-  content-visibility: auto;
-  contain-intrinsic-size: 240px;
 }
 
 /* Font smoothing / display swap for any local @font-face */
@@ -4118,19 +3407,15 @@ body > div.fixed.z-999 {
 
   #mobile-nav {
     --bleed: 0rem !important;
-    width: var(--t3-drawer-width) !important;
-    max-width: min(28rem, calc(100vw - 2.75rem)) !important;
     margin-inline-start: auto !important;
     border-left: 1px solid var(--t3-border) !important;
     border-right: 0 !important;
-    border-radius: 1.1rem 0 0 1.1rem !important;
     box-shadow:
       0 0 0 1px color-mix(in srgb, var(--t3-border) 70%, transparent),
       -28px 0 56px rgba(15, 23, 42, 0.22) !important;
     background: color-mix(in srgb, var(--t3-surface-elevated) 97%, transparent) !important;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
-    padding: 0.85rem var(--t3-drawer-pad-x) max(1.35rem, env(safe-area-inset-bottom)) !important;
     box-sizing: border-box !important;
     will-change: transform;
     transform: translateZ(0);
@@ -4279,7 +3564,6 @@ body > div.fixed.z-999 {
 
   /* Compact top navbar on phones */
   #navbar {
-    min-height: var(--t3-mobile-chrome);
     max-height: none;
   }
 
@@ -4293,15 +3577,10 @@ body > div.fixed.z-999 {
   button.flex.items-center.h-14.py-4.px-5.lg\:hidden,
   #content-area > button.lg\:hidden,
   main button.lg\:hidden.w-full.text-left {
-    min-height: 3rem !important;
-    height: auto !important;
-    padding-top: 0.65rem !important;
-    padding-bottom: 0.65rem !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
     border-bottom: 1px solid var(--t3-border);
     background: color-mix(in srgb, var(--t3-surface-elevated) 92%, transparent);
-    font-size: 0.8125rem;
     gap: 0.5rem;
   }
 
@@ -4316,10 +3595,6 @@ body > div.fixed.z-999 {
   .mdx-content,
   article {
     max-width: 100%;
-  }
-
-  #header {
-    margin-bottom: 0.85rem !important;
   }
 
   /* Typography — comfortable phone reading */
@@ -4338,8 +3613,6 @@ body > div.fixed.z-999 {
   .mdx-content h2 {
     font-size: clamp(1.2rem, 4.8vw, 1.4rem) !important;
     line-height: 1.3 !important;
-    margin-top: 1.75rem !important;
-    margin-bottom: 0.7rem !important;
   }
 
   article h3,
@@ -4356,11 +3629,6 @@ body > div.fixed.z-999 {
   main li {
     font-size: 0.9875rem;
     line-height: 1.7;
-  }
-
-  article p + p,
-  .mdx-content p + p {
-    margin-top: 0.95rem;
   }
 
   article ul,
@@ -4563,10 +3831,6 @@ body > div.fixed.z-999 {
   }
 
   /* Footer breathing room on phones */
-  #footer > div {
-    padding: 2rem 1rem 1.5rem !important;
-    gap: 1.5rem !important;
-  }
 
   /* Touch targets — chrome controls
      NOTE: do NOT force 44px on .theme-preference-switch-option —
@@ -4615,10 +3879,6 @@ body > div.fixed.z-999 {
 
 /* ---- Extra-narrow phones (320–374) ---- */
 @media (max-width: 374px) {
-  :root {
-    --t3-content-pad-x: 0.85rem;
-    --t3-drawer-width: calc(100vw - 2.35rem);
-  }
 
   article h1,
   main h1,
@@ -4802,10 +4062,6 @@ body > div.fixed.z-999 {
 
 /* ---- Page hold respects mobile chrome ---- */
 @media (max-width: 1023px) {
-  #t3-page-hold {
-    /* stay below fixed navbar */
-    /* top set in JS via applyOverlayBounds */
-  }
 
   .t3-skel-layout {
     grid-template-columns: minmax(0, 1fr) !important;
@@ -4884,9 +4140,7 @@ html.t3-mobile-nav-open .t3-drawer-close {
 
   /* Keep a small breath after last content / pagination */
   #pagination {
-    margin-top: 1.5rem !important;
     margin-bottom: 0 !important;
-    padding-top: 1rem !important;
     padding-bottom: 0 !important;
   }
 }
@@ -4907,11 +4161,6 @@ html.t3-mobile-nav-open .t3-drawer-close {
 
 @media (max-width: 1023px) {
   /* Landing pages: less FAB clearance (footer already provides room) */
-  .t3-home-landing,
-  .t3-hub-landing,
-  .t3-template-landing {
-    padding-bottom: var(--t3-space-5) !important;
-  }
 
   #content-area:has(.t3-home-landing),
   #content-area:has(.t3-hub-landing),
@@ -4924,10 +4173,6 @@ html.t3-mobile-nav-open .t3-drawer-close {
   }
 
   /* Category pills — compact, stay above hero */
-  .t3-category-nav {
-    margin-bottom: var(--t3-space-3);
-    gap: 0.4rem;
-  }
 
   .t3-category-nav a {
     padding: 0.35rem 0.75rem;
@@ -5068,7 +4313,6 @@ html.t3-mobile-nav-open .t3-drawer-close {
   }
 
   .t3-cta-banner {
-    margin-top: var(--t3-space-5) !important;
     gap: var(--t3-space-3) !important;
   }
 
@@ -5150,17 +4394,9 @@ html.t3-mobile-nav-open .t3-drawer-close {
     padding: 0.15rem 0 0.85rem !important;
     margin-bottom: 0.35rem !important;
     border-bottom: 1px solid color-mix(in srgb, var(--t3-border) 75%, transparent);
-    overflow: visible !important;
   }
 
   /* Logo can shrink; keep readable */
-  #mobile-nav .flex.items-center.justify-between.mb-6 > a {
-    flex: 1 1 auto !important;
-    min-width: 0 !important;
-    max-width: calc(100% - 6.75rem) !important;
-    display: inline-flex !important;
-    align-items: center !important;
-  }
 
   #mobile-nav .flex.items-center.justify-between.mb-6 > a img,
   #mobile-nav .flex.items-center.justify-between.mb-6 .nav-logo,
@@ -5179,12 +4415,6 @@ html.t3-mobile-nav-open .t3-drawer-close {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    width: 6.15rem !important;
-    min-width: 6.15rem !important;
-    max-width: 6.15rem !important;
-    height: 2.05rem !important;
-    padding: 0.2rem !important;
-    gap: 0 !important;
     margin: 0 !important;
     box-sizing: border-box !important;
     overflow: visible !important;
@@ -5204,12 +4434,6 @@ html.t3-mobile-nav-open .t3-drawer-close {
   #mobile-nav [aria-label="Theme preference"] .theme-preference-switch-option,
   #mobile-nav .theme-preference-switch-option {
     flex: 1 1 0 !important;
-    width: 1.8rem !important;
-    min-width: 1.8rem !important;
-    max-width: 1.8rem !important;
-    height: 1.8rem !important;
-    min-height: 1.8rem !important;
-    max-height: 1.8rem !important;
     padding: 0 !important;
     margin: 0 !important;
     border-radius: 999px !important;
@@ -5222,8 +4446,6 @@ html.t3-mobile-nav-open .t3-drawer-close {
   }
 
   #mobile-nav .theme-preference-switch-option svg {
-    width: 0.82rem !important;
-    height: 0.82rem !important;
     flex-shrink: 0 !important;
   }
 
@@ -5239,27 +4461,6 @@ html.t3-mobile-nav-open .t3-drawer-close {
 }
 
 @media (max-width: 360px) {
-  #mobile-nav [aria-label="Theme preference"] {
-    width: 5.55rem !important;
-    min-width: 5.55rem !important;
-    max-width: 5.55rem !important;
-    height: 1.9rem !important;
-  }
-
-  #mobile-nav [aria-label="Theme preference"] .theme-preference-switch-option,
-  #mobile-nav .theme-preference-switch-option {
-    width: 1.6rem !important;
-    min-width: 1.6rem !important;
-    max-width: 1.6rem !important;
-    height: 1.6rem !important;
-    min-height: 1.6rem !important;
-    max-height: 1.6rem !important;
-  }
-
-  #mobile-nav .theme-preference-switch-option svg {
-    width: 0.74rem !important;
-    height: 0.74rem !important;
-  }
 
   #mobile-nav .flex.items-center.justify-between.mb-6 > a {
     max-width: calc(100% - 6.15rem) !important;
@@ -5357,8 +4558,6 @@ html.t3-mobile-nav-open .t3-drawer-close {
 
   /* Drawer: roomier shell */
   #mobile-nav {
-    width: min(23.5rem, 94vw) !important;
-    max-width: min(28rem, calc(100vw - 2.25rem)) !important;
     padding: 1rem 1.05rem max(1.5rem, env(safe-area-inset-bottom)) !important;
   }
 
@@ -5402,10 +4601,6 @@ html.t3-mobile-nav-open .t3-drawer-close {
   #mobile-nav .theme-preference-switch-option svg {
     width: 0.9rem !important;
     height: 0.9rem !important;
-  }
-
-  #mobile-nav .flex.items-center.justify-between.mb-6 > a {
-    max-width: calc(100% - 7.1rem) !important;
   }
 
   /* Cards — single-column friendly spacing */
@@ -5584,31 +4779,21 @@ html.t3-mobile-nav-open .t3-drawer-close {
 /* ---- Footer responsive redesign ---- */
 @media (max-width: 1023px) {
   #footer > div {
-    padding: 2rem 1.25rem 5.75rem !important;
-    gap: 1.75rem !important;
     width: 100% !important;
-    max-width: 100% !important;
     box-sizing: border-box !important;
   }
 
   /* Always stack brand above links on tablet/phone */
   #footer .flex.flex-col.md\:flex-row {
     display: flex !important;
-    flex-direction: column !important;
     align-items: stretch !important;
-    width: 100% !important;
     max-width: 100% !important;
-    gap: 1.75rem !important;
   }
 
   /* Brand column: logo above socials — never squeeze icons into a narrow side slot */
   #footer .flex.md\:flex-col.justify-between.items-center {
-    flex-direction: column !important;
     flex-wrap: nowrap !important;
-    align-items: flex-start !important;
     justify-content: flex-start !important;
-    gap: 1rem !important;
-    width: 100% !important;
     min-width: 0 !important;
   }
 
@@ -5617,10 +4802,7 @@ html.t3-mobile-nav-open .t3-drawer-close {
 
   /* Link columns container — full width */
   #footer [class*="sm:grid"] {
-    display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 1.35rem !important;
-    width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
     flex: 1 1 auto !important;
@@ -5635,34 +4817,9 @@ html.t3-mobile-nav-open .t3-drawer-close {
     white-space: normal !important;
   }
 
-  #footer .whitespace-nowrap {
-    white-space: normal !important;
-  }
-
-  #footer .text-sm.font-semibold,
-  #footer h4,
-  #footer [class*="font-semibold"] {
-    font-size: 0.6875rem !important;
-    margin-bottom: 0.55rem !important;
-  }
-
-  #footer a:not(.select-none):not([target="_blank"].h-fit) {
-    font-size: 0.8125rem !important;
-    line-height: 1.4 !important;
-    padding: 0.12rem 0;
-  }
-
   #footer .border-t .flex.items-center.justify-between,
   #footer .flex.items-center.justify-between {
     flex-wrap: wrap !important;
-    gap: 0.75rem !important;
-  }
-}
-
-@media (min-width: 640px) and (max-width: 1023px) {
-  #footer [class*="sm:grid"] {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 1.5rem 2rem !important;
   }
 }
 
@@ -5718,13 +4875,6 @@ html.t3-mobile-nav-open .t3-drawer-close {
 
 /* FAB: bottom-RIGHT so it never covers left/stacked footer columns */
 @media (max-width: 1023px) {
-  .fixed.z-999[class*="cursor-grab"],
-  .fixed[class*="z-999"][class*="cursor-grab"],
-  body > .fixed.z-999 {
-    left: auto !important;
-    right: max(0.85rem, env(safe-area-inset-right)) !important;
-    bottom: max(0.85rem, env(safe-area-inset-bottom)) !important;
-  }
 
   #footer {
     position: relative;
@@ -6066,10 +5216,6 @@ html.t3-mobile-nav-open .t3-drawer-close {
   }
 
   /* Hide Mintlify native close inside drawer if present (we own the gap control) */
-  #mobile-nav button[aria-label*="Close navigation" i]:not([data-t3-drawer-close]),
-  #mobile-nav > button[aria-label*="Close" i] {
-    /* keep for a11y fallback but visually quiet if duplicated */
-  }
 }
 
 /* While holding + drawer open, don't leave a second ghost header from opacity:0 content */
@@ -6126,26 +5272,9 @@ html.t3-mobile-nav-closing button[class*="lg:hidden"] * {
 img, video { max-width: 100%; height: auto; }
 iframe { max-width: 100%; }
 /* Do NOT set iframe { height:auto } — breaks embed fill + fullscreen. */
-/* Do NOT content-visibility Supademo iframes — breaks fullscreen paint. */
-.t3-embed iframe:not([data-t3-supademo]):not([src*="supademo.com"]):not([data-t3-src*="supademo.com"]) {
-  content-visibility: auto;
-  contain-intrinsic-size: 400px 225px;
-}
-#content-area img { content-visibility: auto; }
-
-
-/* === Perf pack: long-doc rendering + media stability (content preserved) === */
-@supports (content-visibility: auto) {
-  /* Below-fold media only — never delay LCP candidates. */
-  .mdx-content img[loading="lazy"],
-  .mdx-content figure:has(img[loading="lazy"]),
-  .mdx-content iframe[data-t3-src],
-  .mdx-content iframe[loading="lazy"],
-  .mdx-content video[loading="lazy"] {
-    content-visibility: auto;
-    contain-intrinsic-size: 800px 450px;
-  }
-}
+/* No content-visibility:auto on in-content media, tables or code: placeholder
+   heights differ from real heights, so the page grew while scrolling and
+   anchor jumps landed in the wrong place. Lazy loading already defers work. */
 
 /* font-display hints for any face Mintlify injects remain under platform control.
    Avoid invalid bare @font-face rules here. */
@@ -6546,14 +5675,9 @@ html.t3-supademo-fs .t3-embed[data-t3-supademo-embed] {
 #sidebar-content a.t3-docs-back,
 #mobile-nav a.t3-docs-back,
 a.t3-docs-back {
-  position: sticky;
-  top: 0.35rem;
-  z-index: 30;
   display: inline-flex !important;
   align-items: center;
   gap: 0.45rem;
-  width: calc(100% - 0.5rem);
-  margin: 0.35rem 0.25rem 0.65rem;
   padding: 0.55rem 0.75rem !important;
   border-radius: 0.55rem;
   border: 1px solid rgba(15, 23, 42, 0.18);
@@ -6858,7 +5982,6 @@ a.t3-docs-back {
 
 @media (max-width: 1023px) {
   :root {
-    --t3-drawer-width: calc(100vw - 2.75rem);
     --t3-drawer-pad-x: 0.9rem;
     --t3-mobile-chrome: 3rem;
     --t3-content-pad-x: clamp(0.9rem, 4vw, 1.35rem);
@@ -6956,7 +6079,6 @@ a.t3-docs-back {
 
   .t3-category-nav {
     margin-top: 0 !important;
-    margin-bottom: 0.75rem !important;
   }
 
   .t3-hero-panel {
@@ -7060,7 +6182,6 @@ a.t3-docs-back {
 
   /* Hide desktop ⌘K affordance on touch layouts */
   .t3-search-trigger kbd,
-  .t3-search-hint kbd,
   .t3-hero-panel kbd,
   button.t3-search-trigger kbd,
   .t3-search-trigger .t3-kbd,

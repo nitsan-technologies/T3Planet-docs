@@ -24,6 +24,7 @@ In the TYPO3 backend you decide:
 * Whether the widget is shown
 * How the button and panel look (icon, size, color, position, layout)
 * Which tools and accessibility profiles are available
+* Your branding and the accessibility statement shown in the widget
 
 Settings are saved per site in `config.yaml`. It does not change page content
 in the database.
@@ -41,7 +42,8 @@ in the database.
 **Configure the widget**
 
 4. Open the T3AA dashboard and click **Accessibility Widgets**.
-5. Set widget options (icon, position, style, layout, profiles, settings).
+5. Set widget options (icon, position, style, layout, profiles, settings,
+   branding, accessibility statement).
 6. Enable or disable the accessibility tools you want visitors to see.
 7. Click **Save Settings**.
 8. Flush caches and check the frontend.
@@ -57,7 +59,9 @@ site. If it does not appear, check those first, then flush caches.
 
 ## Widget configuration
 
-Accessibility Widgets has these configuration tabs:
+Accessibility Widgets has these configuration tabs: **Widget Icon And Size**,
+**Widget Position**, **Widget Style**, **Widget Layout**, **Profile Selection**,
+**Widget Settings**, **Widget Branding** and **Accessibility Statement**.
 
 ## Widget Icon and Size
 
@@ -113,6 +117,71 @@ active at a time.
 * **Widget Tooltip** — hover help text on widget options
 * **Widget Mode** — light / dark / system for the widget UI
 
+## Widget Branding
+
+Show your own brand in the widget instead of T3Planet.
+
+Turn on **White-label Settings**, then fill in:
+
+| Field | What it does | Default |
+| --- | --- | --- |
+| **Brand Title(Name)** | Company name shown as the title in the widget panel header (max. 70 characters) | `T3Planet` |
+| **Brand Website** | Link target of the logo in the widget footer | `https://t3planet.de/` |
+| **Brand Logo URL** | Full URL of the logo image shown in the widget footer | T3Planet logo |
+
+The fields can only be edited while **White-label Settings** is on. When it is
+off, the widget shows the default panel title, the T3Planet logo and a
+**Feedback** link in the footer. The preview on the right shows the result.
+
+## Accessibility Statement
+
+Create an accessibility statement for your website and link it from the
+widget. **Website name**, **Contact email** and **Last audit date** are
+required.
+
+**Statement link in the widget**
+
+| Field | What it does |
+| --- | --- |
+| **Add Accessibility Statement to Widget** | Shows the statement link in the widget footer (enabled by default) |
+| **Link** | URL of the page on your website that contains the statement |
+| **Link Text** | Text of the link in the widget footer, for example “Accessibility Statement” |
+
+The link appears in the footer of the widget panel and opens in a new tab. It
+is shown only when **Add Accessibility Statement to Widget** is on **and**
+both **Link** and **Link Text** are filled.
+
+**Statement content**
+
+| Field | Required | What it does |
+| --- | --- | --- |
+| **Website name** | Yes | Website URL shown in the main title of the statement. Pre-filled with the site base URL. |
+| **Contact email** | Yes | E-mail address for accessibility feedback. Pre-filled with your backend user e-mail. |
+| **Contact phone** | No | Phone number for feedback |
+| **Address** | No | Postal address for feedback |
+| **Number of business days to respond** | No | Response time shown in the statement (1–30 days) |
+| **Last audit date** | Yes | Date of your last accessibility audit, shown in the statement header and audit section |
+
+The generated statement covers compliance status (WCAG), screen reader and
+keyboard support, accessibility profiles, display adjustments, the last audit
+date and your feedback contact. Check the preview on the right.
+
+**Publish the statement on your website**
+
+1. Fill in the statement fields and save.
+2. In the preview, switch between **Text** and **HTML**, then use
+   **Copy statement** or **Download** (HTML or Text).
+3. Add the statement to a page on your website, for example
+   `/accessibility-statement`.
+4. Enter that page URL in **Link** and a **Link Text**, then save.
+5. Flush caches and check the link in the widget footer.
+
+<Note>
+The statement is not published automatically. Visitors see it only on the page
+where you add it, and through the widget link once **Link** and **Link Text**
+are set.
+</Note>
+
 ## Accessibility tools
 
 Each tool is a card in Accessibility Widgets. If enabled and saved, it appears
@@ -163,27 +232,17 @@ in the frontend widget. If disabled, visitors do not see it.
 
 When a visitor selects a profile, the widget enables this tool set:
 
-   * - Profile
-     - Tools turned on
-   * - Motor Impaired
-     - Pause animations, Text magnify
-   * - Blind
-     - Screen Reader
-   * - Color Blind
-     - Contrast, high saturation, readable/dyslexia font, pause animations
-   * - Dyslexia
-     - Dyslexia-oriented font
-   * - Low Vision
-     - Bigger text, pause animations, readable font, bigger cursor, text
-       magnify, high saturation
-   * - Cognitive and Learning
-     - Contrast, bigger text, pause animations, reading guide, text magnify
-   * - Seizure and Epileptic
-     - Pause animations, low saturation
-   * - ADHD
-     - Pause animations, reading mask, low saturation
-   * - Elder
-     - Bigger text, bigger cursor
+| Profile | Tools turned on |
+| --- | --- |
+| Motor Impaired | Pause animations, Text magnify |
+| Blind | Screen Reader |
+| Color Blind | Contrast, high saturation, readable/dyslexia font, pause animations |
+| Dyslexia | Dyslexia-oriented font |
+| Low Vision | Bigger text, pause animations, readable font, bigger cursor, text magnify, high saturation |
+| Cognitive and Learning | Contrast, bigger text, pause animations, reading guide, text magnify |
+| Seizure and Epileptic | Pause animations, low saturation |
+| ADHD | Pause animations, reading mask, low saturation |
+| Elder | Bigger text, bigger cursor |
 
 Selecting another profile replaces the previous one. Visitors can also use
 individual tools without a profile.

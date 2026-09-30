@@ -10,7 +10,7 @@ sidebarTitle: "Installation"
 
 This guide helps you install **T3AA Premium** (`EXT:ns_t3aa`) on a TYPO3 project for the first time.
 
-T3AA needs **AI Foundation** (`EXT:ns_t3af`). AI Foundation connects your AI providers (API keys, models, prompts, and shared AI services). Without it, T3AA cannot run.
+T3AA needs **AI Foundation** (`EXT:ns_t3af`). AI Foundation provides AI access (AI Credits or your own API keys), models, prompts, and shared AI services. Without it, T3AA cannot run.
 
 ## Quick overview for new customers
 
@@ -20,7 +20,7 @@ You will install and activate these pieces:
 2. **T3AA** (`EXT:ns_t3aa`) — the Accessibility Assistant extension
 3. **AI Foundation** (`EXT:ns_t3af`) — shared AI engine used by T3AA
 4. **Database updates** — so TYPO3 creates the required tables
-5. **AI provider setup** — so T3AA can send AI requests
+5. **AI access** — AI Credits or your own API keys, so T3AA can send AI requests
 6. **Final check** — confirm modules load and the license is active
 
 Follow the steps below in order. Choose **either** Non-Composer **or** Composer in Step 2 — not both.
@@ -37,7 +37,7 @@ Make sure you have:
 - Backend access as an administrator
 - Your **T3AA license key** from T3Planet
 - Decided whether your project uses **Composer** or the **TYPO3 Extension Manager**
-- An AI provider account/API key ready (for example OpenAI) for Step 5
+- For Step 5: **AI Credits** (no API keys needed) or your own AI provider API key (for example OpenAI)
 
 ## Step 1 — Install the T3Planet Shop
 
@@ -150,16 +150,27 @@ After installing the extension, apply all pending database changes:
 
 Run this before using T3AA modules in the TYPO3 backend.
 
-## Step 5 — Configure the AI Provider
+## Step 5 — Configure AI Access
 
-After installation:
+In **AI Foundation → AI Providers**, choose one mode:
 
-1. Open **AI Foundation** in the TYPO3 backend.
-2. Configure your preferred AI provider.
+**AI Credits (no API keys)**
+
+1. Choose **AI Credits**.
+2. Complete **Activate** if shown.
+
+T3AA then sends all AI requests through T3Planet. You do not need your own API keys. In T3AA dialogs, **Select AI Provider** shows only **T3Planet Credits**.
+
+**Your Own API Keys**
+
+1. Choose **Your Own API Keys**.
+2. Add your provider (for example OpenAI) and its API key.
 3. Save the provider and model configuration.
 4. Verify the AI connection with a test request.
 
-T3AA will not function correctly until AI Foundation has a working AI provider configuration.
+T3AA AI features (alt text, simplified text, voiceover, Fix Hub AI Solution) do not work until one of these modes is set up. The Scanner does not need AI access.
+
+For what uses credits and how the scan page quota differs from AI credits, see [Using T3AA with AI Credits](/ExtNsT3AA/Configuration/Index#using-t3aa-with-ai-credits).
 
 ## Step 6 — Verify the Installation
 
@@ -169,7 +180,7 @@ Before handing the system to editors, verify that:
 - `EXT:ns_t3af` is installed and active.
 - The T3AA license is active.
 - Database Analyzer changes are applied.
-- The AI provider is configured in AI Foundation.
+- AI Credits is active, or an AI provider is configured, in AI Foundation.
 - TYPO3 caches are cleared.
 - T3AA backend modules load without errors.
 

@@ -95,6 +95,26 @@
     "/EXTBootstrap/Index"
   ];
 
+  // First doc page of each product; a product click opens it instead of the
+  // overview. Replaced at build time from docs.json (scripts/product_entry_pages.py).
+  var PRODUCT_ENTRY_PAGES = "__T3_PRODUCT_ENTRY_PAGES__";
+  var PRODUCT_ENTRY_BY_ROOT = {};
+  if (Array.isArray(PRODUCT_ENTRY_PAGES)) {
+    PRODUCT_ENTRY_PAGES.forEach(function (entry) {
+      PRODUCT_ENTRY_BY_ROOT["/" + entry.split("/")[1] + "/Index"] = entry;
+    });
+  }
+
+  function productEntryHref(rootHref) {
+    var entry = PRODUCT_ENTRY_BY_ROOT[normalizeSidebarPath(rootHref)];
+    if (!entry) return rootHref;
+    return rootHref.indexOf(DOCS_BASE + "/") === 0 ? DOCS_BASE + entry : entry;
+  }
+
+  HUB_ROUTES = HUB_ROUTES.map(function (route) {
+    return normalizeDocHref(productEntryHref(route));
+  });
+
   try {
     var s = localStorage.getItem("mintlify-color-scheme");
     if (s === "dark") document.documentElement.classList.add("dark");
@@ -143,10 +163,9 @@
   routePath = path || "/";
 
   var progressEl = null; // legacy alias → nav loader overlay
-  var progressBar = null;
-  var progressTimer = null;
   var progressDelay = null;
-  var progressValue = 0;
+  var loaderDelay = null;
+  var navBarEl = null;
   var loaderEl = null;
   var loaderHideTimer = null;
   var loaderSafetyTimer = null;
@@ -155,12 +174,13 @@
   var holdEl = null;
   var holdInner = null;
   var holdReleaseTimer = null;
-  var lockedScrollY = 0;
-  var scrollLocked = false;
   var navStartedAt = 0;
   var navToken = 0;
   var progressVisible = false;
+  // Stage 1 (thin top line) after 120ms; stage 2 (full blur loader) only when
+  // the navigation is still busy after 500ms, so fast navigations never flash.
   var PROGRESS_SHOW_MS = 120;
+  var LOADER_SHOW_MS = 500;
   var LOADER_MAX_MS = 12000;
   var userNavPriority = false;
   var docPrefetchControllers = [];
@@ -224,6 +244,21 @@
     if (p.indexOf("/en/latest") === 0) p = p.slice("/en/latest".length) || "/";
     if (p.length > 1 && p.charAt(p.length - 1) === "/") p = p.slice(0, -1);
     return p || "/";
+  }
+
+  // Unchanged writes still queue mutation records and style invalidation, and the
+  // sidebar passes re-run after every React commit: write only real changes.
+  function setClassState(el, cls, on) {
+    if (el && el.classList && el.classList.contains(cls) !== !!on) el.classList.toggle(cls, !!on);
+  }
+
+  function setAttrState(el, name, value) {
+    if (!el || !el.getAttribute) return;
+    if (value === null) {
+      if (el.hasAttribute(name)) el.removeAttribute(name);
+    } else if (el.getAttribute(name) !== value) {
+      el.setAttribute(name, value);
+    }
   }
 
   function isSidebarHubPath(p) {
@@ -293,10 +328,10 @@
     if (!visible) {
       if (existingWrap) existingWrap.remove();
       else if (existing) existing.remove();
-      root.classList.remove("t3-docs-back-visible");
+      setClassState(root, "t3-docs-back-visible", false);
       return;
     }
-    root.classList.add("t3-docs-back-visible");
+    setClassState(root, "t3-docs-back-visible", true);
     var href = getDocsBackHref();
     if (existing) {
       if (existing.getAttribute("href") !== href) existing.setAttribute("href", href);
@@ -309,8 +344,8 @@
         upgradeWrap.appendChild(existing);
         existingWrap = upgradeWrap;
       }
-      if (existingWrap) existingWrap.classList.remove("t3-sidebar-context-hidden");
-      existing.classList.remove("t3-sidebar-context-hidden");
+      setClassState(existingWrap, "t3-sidebar-context-hidden", false);
+      setClassState(existing, "t3-sidebar-context-hidden", false);
       return;
     }
     var wrap = document.createElement("div");
@@ -375,6 +410,31 @@
     return bestScore >= 0 ? best : null;
   }
 
+  /**
+   * Mintlify scrolls the sidebar to the active page using offsets from the
+   * unfiltered list, so after filtering the active page can end up off-screen.
+   * Correct the offset only in that case: an unconditional reset fought
+   * Mintlify's own scroll and made the sidebar jump on every navigation.
+   * Scroll only the sidebar viewport: scrollIntoView would also move the page
+   * and cancel in-page anchor scrolling.
+   */
+  function revealActiveSidebarLink(root) {
+    try {
+      var vp = root.querySelector('[data-component-part="scroll-area-viewport"]');
+      var active = root.querySelector('a[aria-current="page"]');
+      if (!vp || !active || !active.offsetParent) return;
+      var back = root.querySelector('[data-t3-docs-back-wrap="1"]');
+      var topInset = back ? back.getBoundingClientRect().height : 0;
+      var vpRect = vp.getBoundingClientRect();
+      var linkRect = active.getBoundingClientRect();
+      var above = linkRect.top < vpRect.top + topInset;
+      var below = linkRect.bottom > vpRect.bottom;
+      if (!above && !below) return;
+      var target = vp.scrollTop + (linkRect.top - vpRect.top) - topInset - Math.round(vp.clientHeight / 3);
+      vp.scrollTop = Math.max(0, target);
+    } catch (eReveal) {}
+  }
+
   function applySidebarProductContext() {
     var path = normalizeSidebarPath(currentPath());
     var roots = [];
@@ -392,7 +452,7 @@
         rememberDocsHubPath(path);
         clearSidebarProductContext(root);
         ensureDocsBackButton(root, false);
-        root.setAttribute("data-t3-sidebar-context", "hub");
+        setAttrState(root, "data-t3-sidebar-context", "hub");
         return;
       }
 
@@ -400,11 +460,11 @@
       if (!activeLi) {
         clearSidebarProductContext(root);
         ensureDocsBackButton(root, false);
-        root.setAttribute("data-t3-sidebar-context", "none");
+        setAttrState(root, "data-t3-sidebar-context", "none");
         return;
       }
 
-      root.setAttribute("data-t3-sidebar-context", "product");
+      setAttrState(root, "data-t3-sidebar-context", "product");
       var productRoot = productRootFromPath(path);
       // Hide sibling product LIs + unrelated flat hub links (match RTD focused sidebar).
       root.querySelectorAll("ul.sidebar-group > li").forEach(function (li) {
@@ -418,13 +478,12 @@
             if (productRoot && hrefRoot === productRoot) keepFlat = true;
             if (path === href || (href !== "/" && path.indexOf(href + "/") === 0)) keepFlat = true;
           });
-          if (keepFlat) li.classList.remove("t3-sidebar-context-hidden");
-          else li.classList.add("t3-sidebar-context-hidden");
+          setClassState(li, "t3-sidebar-context-hidden", !keepFlat);
           return;
         }
         if (li === activeLi || activeLi.contains(li)) {
-          li.classList.remove("t3-sidebar-context-hidden");
-          if (li === activeLi) li.setAttribute("data-t3-sidebar-active-product", "1");
+          setClassState(li, "t3-sidebar-context-hidden", false);
+          if (li === activeLi) setAttrState(li, "data-t3-sidebar-active-product", "1");
           var btn = li.querySelector(":scope > button[aria-expanded], :scope > div > button[aria-expanded]");
           if (!btn) btn = li.querySelector("button[aria-expanded]");
           if (btn && btn.getAttribute("aria-expanded") === "false") {
@@ -433,8 +492,8 @@
             } catch (eClick) {}
           }
         } else {
-          li.classList.add("t3-sidebar-context-hidden");
-          li.removeAttribute("data-t3-sidebar-active-product");
+          setClassState(li, "t3-sidebar-context-hidden", true);
+          setAttrState(li, "data-t3-sidebar-active-product", null);
         }
       });
 
@@ -449,11 +508,11 @@
           (group.classList && group.classList.contains("t3-docs-back-wrap")) ||
           (group.querySelector && group.querySelector('[data-t3-docs-back="1"]'))
         ) {
-          group.classList.remove("t3-sidebar-context-hidden");
+          setClassState(group, "t3-sidebar-context-hidden", false);
           return;
         }
         if (group === activeLi || (activeLi && group.contains(activeLi))) {
-          group.classList.remove("t3-sidebar-context-hidden");
+          setClassState(group, "t3-sidebar-context-hidden", false);
           return;
         }
         // Keep group only if it still has a visible expandable product row
@@ -463,23 +522,22 @@
           if (li.querySelector("button[aria-expanded], button[aria-controls]")) keep = true;
           if (li === activeLi) keep = true;
         });
-        if (keep) group.classList.remove("t3-sidebar-context-hidden");
-        else group.classList.add("t3-sidebar-context-hidden");
+        setClassState(group, "t3-sidebar-context-hidden", !keep);
       });
 
       ensureDocsBackButton(root, true);
-      // Keep Back button visible (Mintlify scroll-area often restores mid-scroll).
-      try {
-        var vp = root.querySelector('[data-component-part="scroll-area-viewport"]') || root;
-        if (vp && typeof vp.scrollTop === "number") vp.scrollTop = 0;
-        var backEl = root.querySelector('[data-t3-docs-back-wrap="1"]') || root.querySelector('[data-t3-docs-back="1"]');
-        if (backEl && backEl.scrollIntoView) backEl.scrollIntoView({ block: "nearest" });
-      } catch (eScroll) {}
+      revealActiveSidebarLink(root);
+    });
+    roots.forEach(function (root) {
+      root.__t3CtxPath = path;
     });
   }
 
+  var sidebarContextLateTimers = [];
+
   function scheduleSidebarProductContext() {
     if (sidebarContextTimer) clearTimeout(sidebarContextTimer);
+    sidebarContextLateTimers.forEach(clearTimeout);
     sidebarContextTimer = setTimeout(function () {
       sidebarContextTimer = null;
       try {
@@ -493,17 +551,25 @@
       } catch (eB) {}
     }, 30);
     // Mintlify often remounts sidebar shortly after route settle
-    setTimeout(function () {
-      try {
-        applySidebarProductContext();
-      } catch (eCtx2) {}
-    }, 120);
-    setTimeout(function () {
-      try {
-        applySidebarProductContext();
-      } catch (eCtx3) {}
-    }, 400);
+    sidebarContextLateTimers = [120, 400].map(function (ms) {
+      return setTimeout(function () {
+        try {
+          applySidebarProductContext();
+        } catch (eCtxLate) {}
+      }, ms);
+    });
   }
+
+  function mutationsOutsideContent(records) {
+    for (var i = 0; i < records.length; i++) {
+      var t = records[i].target;
+      var el = t && t.nodeType === 1 ? t : t && t.parentElement;
+      if (!el || !el.closest || !el.closest("#content-area, #table-of-contents, #t3-nav-loader")) return true;
+    }
+    return false;
+  }
+
+  var sidebarObsFrame = 0;
 
   function observeSidebarProductContext() {
     if (sidebarContextObs) return;
@@ -512,14 +578,27 @@
     // hydration, which disconnects observers attached only to that node.
     var target = document.body || document.documentElement;
     if (!target) return;
-    sidebarContextObs = new MutationObserver(function () {
+    sidebarContextObs = new MutationObserver(function (records) {
+      if (!mutationsOutsideContent(records)) return;
       scheduleSidebarProductContext();
-      try {
-        enhanceProductRootNav();
-      } catch (eEnhObs) {}
-      try {
-        scheduleNormalizeSidebarChevrons();
-      } catch (eChevObs) {}
+      if (sidebarObsFrame) return;
+      // One enhancement pass per frame (before paint) instead of one per
+      // React commit — each pass reads layout for every product row.
+      var run = function () {
+        sidebarObsFrame = 0;
+        // Filter before paint: a remounted sidebar must not paint unfiltered
+        // for a frame and then collapse (layout shift on every navigation).
+        try {
+          applySidebarProductContext();
+        } catch (eCtxObs) {}
+        try {
+          enhanceProductRootNav();
+        } catch (eEnhObs) {}
+        try {
+          scheduleNormalizeSidebarChevrons();
+        } catch (eChevObs) {}
+      };
+      sidebarObsFrame = typeof requestAnimationFrame === "function" ? requestAnimationFrame(run) : setTimeout(run, 16);
     });
     try {
       sidebarContextObs.observe(target, { childList: true, subtree: true });
@@ -644,6 +723,25 @@
   }
 
 
+  /**
+   * The boot waves call recovery for 5s after load. The product passes read
+   * layout for every product row, so run them only when React remounted the
+   * sidebar (our row markers or overlay links are gone) or the route changed.
+   */
+  function sidebarNeedsRecovery() {
+    if (document.getElementById("mobile-nav")) return true;
+    var sb = document.getElementById("sidebar-content");
+    if (!sb) return false;
+    if (sb.__t3CtxPath !== normalizeSidebarPath(currentPath())) return true;
+    var marked = sb.querySelectorAll("li[data-t3-root-nav='1']").length;
+    if (marked !== sb.querySelectorAll("li[data-t3-root-nav='1'] > a.t3-product-root-link").length) return true;
+    var rows = sb.querySelectorAll("li[id^='/']:not([data-t3-root-nav])");
+    for (var i = 0; i < rows.length; i++) {
+      if (rows[i].querySelector("button[aria-expanded]") && productEntryHref(productRootHrefFromLi(rows[i]))) return true;
+    }
+    return false;
+  }
+
   /** Re-apply overlays after React hydration wipes injected sidebar nodes. */
   function recoverProductRootNavAfterHydration() {
     try {
@@ -656,17 +754,23 @@
       bindSidebarChevronNormalize();
     } catch (eChevBind) {}
     try {
-      enhanceProductRootNav();
-    } catch (eEnh) {}
-    try {
-      refreshProductRootOverlayBounds();
-    } catch (eB) {}
-    try {
-      scheduleSidebarProductContext();
-    } catch (eCtx) {}
-    try {
       observeSidebarProductContext();
     } catch (eObs) {}
+    var stale = true;
+    try {
+      stale = sidebarNeedsRecovery();
+    } catch (eStale) {}
+    if (stale) {
+      try {
+        enhanceProductRootNav();
+      } catch (eEnh) {}
+      try {
+        refreshProductRootOverlayBounds();
+      } catch (eB) {}
+      try {
+        scheduleSidebarProductContext();
+      } catch (eCtx) {}
+    }
     try {
       rewriteHubExtensionLinks();
       rewriteLinksIn(document.getElementById("sidebar-content"));
@@ -689,19 +793,28 @@
     return cleanRoute(id);
   }
 
+  function ensureRelativeRow(li) {
+    if (li.style.position === "relative") return;
+    if (getComputedStyle(li).position === "static") li.style.position = "relative";
+  }
+
+  function setStyleState(el, prop, value) {
+    if (el.style[prop] !== value) el.style[prop] = value;
+  }
+
   function syncProductRootOverlayBounds(li, link, btn) {
     if (!li || !link || !btn) return;
     try {
-      if (getComputedStyle(li).position === "static") li.style.position = "relative";
+      ensureRelativeRow(li);
       var liRect = li.getBoundingClientRect();
       var btnRect = btn.getBoundingClientRect();
       var top = Math.max(0, Math.round(btnRect.top - liRect.top));
       var height = Math.max(28, Math.round(btnRect.height));
-      link.style.top = top + "px";
-      link.style.height = height + "px";
-      link.style.bottom = "auto";
-      link.style.left = "0";
-      link.style.right = "28px";
+      setStyleState(link, "top", top + "px");
+      setStyleState(link, "height", height + "px");
+      setStyleState(link, "bottom", "auto");
+      setStyleState(link, "left", "0px");
+      setStyleState(link, "right", "28px");
     } catch (eSync) {}
   }
 
@@ -745,9 +858,23 @@
     var go = normalizeDocHref(cleanRoute(href) || "");
     if (go === "/Index") go = normalizeDocHref("/");
     if (!go || go[0] !== "/") return;
-    if (pathsEqualNav(go, currentPath())) return;
-    // Always cancel Mintlify expand/SPA so product docs hard-navigate instead of
-    // expanding the row or reloading the current hub page.
+    // The click that follows a pointerdown-started client nav must not toggle
+    // the row once the route has already committed.
+    if (pathsEqualNav(go, currentPath()) && !clientRootNavRecent(go)) {
+      // Already on the product entry page: Mintlify's native row click would
+      // leave it for the overview (li root), so swallow it.
+      var rowLi = e && e.target && e.target.closest ? e.target.closest("li[id^='/']") : null;
+      if (e && rowLi && !pathsEqualNav(productRootHrefFromLi(rowLi), go)) {
+        try {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+        } catch (eSame) {}
+      }
+      return;
+    }
+    // Always cancel Mintlify expand so product rows open docs instead of
+    // only expanding the row.
     if (e) {
       try {
         e.preventDefault();
@@ -772,7 +899,7 @@
     roots.forEach(function (root) {
       if (!root || !root.querySelectorAll) return;
       Array.prototype.forEach.call(root.querySelectorAll("li[id^='/']"), function (li) {
-        var href = productRootHrefFromLi(li);
+        var href = productEntryHref(productRootHrefFromLi(li));
         if (!href) return;
         var btn = null;
         for (var c = li.firstElementChild; c; c = c.nextElementSibling) {
@@ -790,16 +917,16 @@
         }
         if (!btn) btn = li.querySelector("button[aria-expanded]");
         if (!btn) return;
-        li.setAttribute("data-t3-root-nav", "1");
-        btn.setAttribute("data-t3-product-root", href);
-        btn.setAttribute("title", "Open documentation");
+        setAttrState(li, "data-t3-root-nav", "1");
+        setAttrState(btn, "data-t3-product-root", href);
+        setAttrState(btn, "title", "Open documentation");
         var label = btn.querySelector("span");
-        if (label) label.setAttribute("data-t3-product-root-label", "1");
+        if (label) setAttrState(label, "data-t3-product-root-label", "1");
         // Real <a href> sibling overlay (label zone). Native navigation — avoids
         // Chromium aborting location.href when pointer events are cancelled.
         // Chevron stays on the button (right edge uncovered by the link).
         try {
-          if (getComputedStyle(li).position === "static") li.style.position = "relative";
+          ensureRelativeRow(li);
           var link = li.querySelector(":scope > a.t3-product-root-link");
           if (!link) {
             link = document.createElement("a");
@@ -848,14 +975,13 @@
       if (!btn || !isProductRootExpandButton(btn)) return null;
       if (clickIsOnProductChevron(btn, e)) return null;
       var li = btn.closest("li[id^='/']");
-      var href = btn.getAttribute("data-t3-product-root") || productRootHrefFromLi(li);
+      var href = btn.getAttribute("data-t3-product-root") || productEntryHref(productRootHrefFromLi(li));
       if (!href) return null;
       return href;
     }
 
     // Overlay <a.t3-product-root-link>: navigate on pointerdown.
-    // Some Mintlify handlers preventDefault on pointerdown and suppress click;
-    // show loader immediately, then hard-reload into the product docs.
+    // Some Mintlify handlers preventDefault on pointerdown and suppress click.
     // MUST cancel the event here — otherwise click also runs beginProductRootNav
     // (bindHardNavClicks) and the product docs appear to open twice.
     // Touch/pen: pointerdown also starts a scroll gesture in the drawer — let the
@@ -918,7 +1044,7 @@
         if (!btn || btn.tagName !== "BUTTON") return;
         if (!isProductRootExpandButton(btn)) return;
         var li = btn.closest("li[id^='/']");
-        var href = btn.getAttribute("data-t3-product-root") || productRootHrefFromLi(li);
+        var href = btn.getAttribute("data-t3-product-root") || productEntryHref(productRootHrefFromLi(li));
         if (!href) return;
         navigateToProductRoot(href, e, { cancelEvent: true });
       },
@@ -1555,6 +1681,21 @@
     return ensureNavLoader();
   }
 
+  function showNavBar() {
+    if (!navBarEl) {
+      navBarEl = document.createElement("div");
+      navBarEl.id = "t3-nav-progress";
+      navBarEl.setAttribute("aria-hidden", "true");
+      navBarEl.innerHTML = '<span class="t3-nav-progress-bar"></span>';
+      document.documentElement.appendChild(navBarEl);
+    }
+    setClassState(navBarEl, "t3-nav-progress-active", true);
+  }
+
+  function hideNavBar() {
+    setClassState(navBarEl, "t3-nav-progress-active", false);
+  }
+
   function showNavLoader() {
     ensureNavLoader();
     if (loaderHideTimer) {
@@ -1565,16 +1706,15 @@
     loaderEl.classList.add("t3-nav-loader-active");
     loaderEl.setAttribute("aria-hidden", "false");
     document.documentElement.classList.add("t3-loader-on");
-    lockPageScroll();
     bindHoldScrollBlock(true);
   }
 
   function hideNavLoader(immediate) {
+    hideNavBar();
     if (!loaderEl) {
       document.documentElement.classList.remove("t3-loader-on", "t3-holding", "t3-nav-busy", "t3-product-root-loading");
       document.documentElement.removeAttribute("aria-busy");
       bindHoldScrollBlock(false);
-      unlockPageScroll();
       return;
     }
     function clearUi() {
@@ -1585,7 +1725,6 @@
       document.documentElement.classList.remove("t3-loader-on", "t3-holding", "t3-nav-busy", "t3-product-root-loading");
       document.documentElement.removeAttribute("aria-busy");
       bindHoldScrollBlock(false);
-      unlockPageScroll();
     }
     if (loaderHideTimer) {
       clearTimeout(loaderHideTimer);
@@ -1605,45 +1744,6 @@
 
   function holdStatusMarkup() {
     return dotsMarkup();
-  }
-
-  function veilMarkup() {
-    return (
-      '<div class="t3-page-veil-inner">' +
-      '<div class="t3-page-veil-status">' +
-      '<span class="t3-page-veil-spinner" aria-hidden="true"></span>' +
-      '<span class="t3-page-veil-status-text">Loading page…</span>' +
-      "</div>" +
-      '<div class="t3-skel t3-skel-eyebrow"></div>' +
-      '<div class="t3-skel t3-skel-title"></div>' +
-      '<div class="t3-skel t3-skel-line"></div>' +
-      '<div class="t3-skel t3-skel-line"></div>' +
-      '<div class="t3-skel t3-skel-line t3-skel-short"></div>' +
-      '<div class="t3-skel t3-skel-hero"></div>' +
-      '<div class="t3-skel-grid">' +
-      '<div class="t3-skel t3-skel-card"></div>' +
-      '<div class="t3-skel t3-skel-card"></div>' +
-      '<div class="t3-skel t3-skel-card"></div>' +
-      "</div>" +
-      '<div class="t3-skel t3-skel-line"></div>' +
-      '<div class="t3-skel t3-skel-line t3-skel-mid"></div>' +
-      '<div class="t3-skel t3-skel-line t3-skel-short"></div>' +
-      "</div>"
-    );
-  }
-
-  function ensureVeil() {
-    if (!veilEl) {
-      veilEl = document.createElement("div");
-      veilEl.id = "t3-page-veil";
-      veilEl.setAttribute("aria-hidden", "true");
-      document.documentElement.appendChild(veilEl);
-    }
-    if (!veilEl.querySelector(".t3-page-veil-status")) {
-      veilEl.innerHTML = veilMarkup();
-    }
-    applyOverlayBounds(veilEl);
-    return veilEl;
   }
 
   function ensureHold() {
@@ -1780,26 +1880,6 @@
     return "docs";
   }
 
-  function lockPageScroll() {
-    if (scrollLocked) return;
-    scrollLocked = true;
-    lockedScrollY = window.scrollY || window.pageYOffset || 0;
-    var gutter = Math.max(0, window.innerWidth - document.documentElement.clientWidth);
-    document.documentElement.style.setProperty("--t3-scrollbar-gutter", gutter + "px");
-    document.documentElement.style.setProperty("--t3-scroll-lock-top", "-" + lockedScrollY + "px");
-    document.documentElement.classList.add("t3-scroll-locked");
-  }
-
-  function unlockPageScroll() {
-    if (!scrollLocked) return;
-    scrollLocked = false;
-    document.documentElement.classList.remove("t3-scroll-locked");
-    document.documentElement.style.removeProperty("--t3-scroll-lock-top");
-    document.documentElement.style.removeProperty("--t3-scrollbar-gutter");
-    window.scrollTo(0, lockedScrollY || 0);
-    lockedScrollY = 0;
-  }
-
   var holdScrollOpts = { passive: false, capture: true };
 
   function onHoldScrollBlock(e) {
@@ -1849,18 +1929,14 @@
     return true;
   }
 
-  function setProgressWidth(v) {
-    progressValue = Math.max(0, Math.min(99.5, v));
-  }
-
   function clearProgressTimers() {
-    if (progressTimer) {
-      clearInterval(progressTimer);
-      progressTimer = null;
-    }
     if (progressDelay) {
       clearTimeout(progressDelay);
       progressDelay = null;
+    }
+    if (loaderDelay) {
+      clearTimeout(loaderDelay);
+      loaderDelay = null;
     }
     if (veilTimer) {
       clearTimeout(veilTimer);
@@ -1876,13 +1952,6 @@
     }
     // Intentionally do NOT clear loaderHideTimer here — progress(false) settle
     // relies on the fade-out completing. progress(true) clears via hideNavLoader(true).
-  }
-
-  function showVeil() {
-    ensureVeil().classList.add("t3-page-veil-active");
-    document.documentElement.classList.add("t3-route-loading");
-    // Soften frozen page under skeleton for slow hops
-    if (holdEl) holdEl.classList.add("t3-page-hold-dim");
   }
 
   function hideVeil() {
@@ -1927,14 +1996,16 @@
       document.documentElement.classList.add("t3-nav-busy");
       document.documentElement.setAttribute("aria-busy", "true");
 
-      // Flicker guard: show full-screen blur loader only when nav is still busy.
-      var showMs = reducedMotion ? 0 : PROGRESS_SHOW_MS;
       progressDelay = setTimeout(function () {
+        if (!document.documentElement.classList.contains("t3-nav-busy")) return;
+        showNavBar();
+        announceNav("Loading page");
+      }, PROGRESS_SHOW_MS);
+      loaderDelay = setTimeout(function () {
         if (!document.documentElement.classList.contains("t3-nav-busy")) return;
         progressVisible = true;
         showNavLoader();
-        announceNav("Loading page");
-      }, showMs);
+      }, LOADER_SHOW_MS);
 
       // Hard safety: never leave blur overlay stuck.
       var tokenSafety = navToken;
@@ -1949,7 +2020,6 @@
     // Complete — wait until destination content is present, then settle UI.
     clearProgressTimers();
     var token = navToken;
-    var elapsed = Date.now() - (navStartedAt || Date.now());
     var tries = 0;
     var wasVisible = progressVisible;
 
@@ -1966,16 +2036,10 @@
       clearProductRootNavPending();
       hideVeil();
 
-      if (elapsed >= 280 && !reducedMotion) {
-        document.documentElement.classList.add("t3-route-enter");
-        setTimeout(function () {
-          document.documentElement.classList.remove("t3-route-enter");
-        }, 180);
-      }
-
       // Always force-clear loader UI. A late showNavLoader timeout / failed fade
       // previously left html.t3-loader-on + "Loading page…" stuck on some routes.
       if (!wasVisible) {
+        if (navBarEl && navBarEl.classList.contains("t3-nav-progress-active")) announceNav("Page loaded");
         progressVisible = false;
         releaseHold(true);
         hideNavLoader(true);
@@ -1986,7 +2050,8 @@
       announceNav("Page loaded");
       progressVisible = false;
       releaseHold(false);
-      hideNavLoader(true);
+      // The new content is already rendered under the blur: fade out, do not cut.
+      hideNavLoader(false);
       hideVeil();
       // Belt-and-suspenders after fade path
       setTimeout(function () {
@@ -2125,9 +2190,28 @@
   // so a clicked link's RSC request waited 5–20s behind them (dead clicks).
   // Background RSC fetches share a small pool and pause while a user navigation
   // is in flight; the navigation request itself is never queued.
+  // Every RSC payload carries the full nav tree plus custom CSS/JS (~90 KB
+  // brotli, ~620 KB decoded): letting all ~280 sidebar prefetches run cost
+  // 17 MB in the first 15 s. Only current-product routes and our own intent
+  // prefetches start; the rest stay queued until that route is opened.
   var RSC_BACKGROUND_MAX = 2;
   var rscBackgroundActive = 0;
   var rscBackgroundQueue = [];
+  var rscWantedPaths = {};
+
+  function wantBackgroundRsc(href) {
+    var p = normalizeSidebarPath(href);
+    if (rscWantedPaths[p]) return;
+    rscWantedPaths[p] = 1;
+    pumpBackgroundRsc();
+  }
+
+  function isWantedBackgroundRsc(path) {
+    var p = normalizeSidebarPath(path);
+    if (rscWantedPaths[p]) return true;
+    var product = productRootFromPath(currentPath());
+    return !!product && productRootFromPath(p) === product;
+  }
 
   function rscRequestPath(input) {
     try {
@@ -2200,8 +2284,12 @@
   function pumpBackgroundRsc() {
     trackRouterNav();
     if (document.documentElement.classList.contains("t3-nav-busy")) return;
-    while (rscBackgroundActive < RSC_BACKGROUND_MAX && rscBackgroundQueue.length) {
-      startBackgroundRsc(rscBackgroundQueue.shift());
+    for (var i = 0; i < rscBackgroundQueue.length && rscBackgroundActive < RSC_BACKGROUND_MAX; ) {
+      if (isWantedBackgroundRsc(rscBackgroundQueue[i].path)) {
+        startBackgroundRsc(rscBackgroundQueue.splice(i, 1)[0]);
+      } else {
+        i++;
+      }
     }
   }
 
@@ -2273,7 +2361,7 @@
         var orig = window.next.router.prefetch.bind(window.next.router);
         window.next.router.prefetch = function () {
           // Block Mintlify/Next viewport prefetches on local (hundreds of ?_rsc compiles).
-          // Production CDN serves prebuilt RSC — leave native prefetch alone.
+          // Production background RSC is limited in throttleBackgroundRsc().
           if (isLocalMintDev() && !prefetchGateOpen && !document.documentElement.classList.contains("t3-nav-busy")) {
             return typeof Promise !== "undefined" ? Promise.resolve() : undefined;
           }
@@ -2310,6 +2398,7 @@
     if (isLocalMintDev() && !prefetchGateOpen) return;
     if (!shouldPrefetch() && !prefetchGateOpen) return;
     prefetched[href] = 1;
+    wantBackgroundRsc(href);
     prefetchPending++;
     prefetchSessionCount++;
     var prevGate = prefetchGateOpen;
@@ -2413,9 +2502,35 @@
     } catch (eHref) {}
   }
 
+  var clientRootNav = { href: "", at: 0 };
+
+  function clientRootNavRecent(target) {
+    return !!clientRootNav.href && pathsEqualNav(clientRootNav.href, target) && Date.now() - clientRootNav.at < 2000;
+  }
+
   /**
-   * Open a product/root overview with an immediate loader that survives the
-   * hard reload (sessionStorage + early class in t3-stats-inline.js).
+   * Production: open the route in the same document via the Next.js router
+   * (no reload, no loader). Returns false before hydration or on local mint,
+   * where callers fall back to a hard navigation.
+   */
+  function clientRouterNavigate(target) {
+    if (isLocalMintDev()) return false;
+    var router = window.next && window.next.router;
+    if (!router || typeof router.push !== "function") return false;
+    try {
+      beginNavFromLink(target, { deferHold: true });
+      router.push(target);
+      clientRootNav = { href: target, at: Date.now() };
+      return true;
+    } catch (ePush) {
+      return false;
+    }
+  }
+
+  /**
+   * Open a product/root overview. Production: client router (same document).
+   * Local mint / pre-hydration: immediate loader that survives the hard reload
+   * (sessionStorage + early class in t3-stats-inline.js).
    */
   function beginProductRootNav(href, opts) {
     opts = opts || {};
@@ -2434,6 +2549,8 @@
         document.documentElement.classList.contains("t3-product-root-loading");
       if (hardInFlight && pendingNavHref && pathsEqualNav(pendingNavHref, go)) return;
     } catch (eDup) {}
+    if (clientRootNavRecent(go)) return;
+    if (clientRouterNavigate(go)) return;
     try {
       pauseBackgroundWarmForUserNav();
     } catch (ePause) {}
@@ -2695,12 +2812,6 @@
       }
       picks.slice(0, 4).forEach(function (href, n) {
         setTimeout(function () {
-          try {
-            fetch("/__t3_cache_warm?path=" + encodeURIComponent(href), {
-              credentials: "same-origin",
-              cache: "no-store",
-            }).catch(function () {});
-          } catch (e1) {}
           prefetchDocument(href);
         }, 800 + n * 900);
       });
@@ -3474,12 +3585,14 @@
           var goRoot = normalizeDocHref(a.getAttribute("data-t3-root-armed") || a.getAttribute("href") || "");
           if (goRoot === "/Index") goRoot = normalizeDocHref("/");
           if (!goRoot || goRoot[0] !== "/") return;
-          if (pathsEqualNav(goRoot, currentPath())) return;
+          // Cancel before the same-path check: a client nav started on pointerdown
+          // may already have committed, and the native default would reload it.
           e.preventDefault();
           e.stopPropagation();
           try {
             e.stopImmediatePropagation();
           } catch (eStop) {}
+          if (pathsEqualNav(goRoot, currentPath())) return;
           // Skip only if pointerdown already started the hard nav for this href.
           try {
             var rootInFlight =
@@ -3491,9 +3604,9 @@
           beginProductRootNav(goRoot, { message: "Opening documentation", immediate: true });
           return;
         }
-        // Hub product cards (AI / Templates / Extensions grids): same immediate
-        // hard-nav as sidebar product roots so Mintlify SPA cannot "reload" the hub.
-        if (a.classList && a.classList.contains("t3-product-card")) {
+        // Hub product cards / extension rows: same path as sidebar product roots
+        // (client router on production, hard nav locally).
+        if (a.classList && (a.classList.contains("t3-product-card") || a.classList.contains("t3-extension-row"))) {
           var goCard = normalizeDocHref(a.getAttribute("href") || "");
           if (goCard === "/Index") goCard = normalizeDocHref("/");
           if (!goCard || goCard[0] !== "/") return;
@@ -3666,11 +3779,9 @@
 
     window.addEventListener("popstate", function () {
       promoteBackgroundRsc(currentPath());
-      // History nav may already be mid-swap — freeze if possible, else skeleton ASAP
+      // Back/Forward is usually served from the router cache: keep the page
+      // painted and let the delayed loader appear only if it is really slow.
       progress(true);
-      if (!document.documentElement.classList.contains("t3-holding")) {
-        showVeil();
-      }
       onRouteChange();
     });
 
@@ -3733,7 +3844,7 @@
     return null;
   }
 
-  function scrollToHeadingExact(el, hash) {
+  function scrollToHeadingExact(el, hash, instant) {
     if (!el) return false;
     var offset = tocHeaderOffsetPx();
     var top = 0;
@@ -3744,7 +3855,7 @@
       return false;
     }
     if (top < 0) top = 0;
-    try { window.scrollTo({ top: top, behavior: "auto" }); }
+    try { window.scrollTo({ top: top, behavior: instant || reducedMotion ? "instant" : "smooth" }); }
     catch (eScroll) { window.scrollTo(0, top); }
     if (hash) {
       try {
@@ -3786,24 +3897,37 @@
           if (!el) return;
           e.preventDefault();
           if (e.stopPropagation) e.stopPropagation();
-          // Double-apply after Mintlify's own scroll settles
           scrollToHeadingExact(el, hash);
-          setTimeout(function () { scrollToHeadingExact(el, hash); }, 50);
-          setTimeout(function () { scrollToHeadingExact(el, hash); }, 200);
+          settleHeadingScroll(el, hash);
         },
         true
       );
+    }
+
+    // Content above the target (lazy tables, embeds, content-visibility) changes
+    // height during the smooth scroll, so land exactly once it has finished.
+    function settleHeadingScroll(el, hash) {
+      var settled = false;
+      function settle() {
+        if (settled) return;
+        settled = true;
+        window.removeEventListener("scrollend", settle);
+        scrollToHeadingExact(el, hash, true);
+        setTimeout(function () { scrollToHeadingExact(el, hash, true); }, 150);
+      }
+      window.addEventListener("scrollend", settle);
+      setTimeout(settle, 1200);
     }
 
     function applyHashFromLocation() {
       if (!location.hash || location.hash === "#") return;
       var el = findHeadingByHash(location.hash);
       if (!el) return;
-      scrollToHeadingExact(el, location.hash);
+      scrollToHeadingExact(el, location.hash, true);
       [30, 100, 250, 500, 900].forEach(function (ms) {
         setTimeout(function () {
           var again = findHeadingByHash(location.hash);
-          if (again) scrollToHeadingExact(again, location.hash);
+          if (again) scrollToHeadingExact(again, location.hash, true);
         }, ms);
       });
     }

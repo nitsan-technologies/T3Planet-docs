@@ -20,12 +20,12 @@ sidebarTitle: "TYPO3 Templates & Themes"
       <kbd>⌘K</kbd>
     </button>
   </div>
-  <div className="t3-stats-bar"><div className="t3-stat-card"><span className="t3-stat-value" data-t3-stat="pages">799</span><span className="t3-stat-label">Documentation pages</span></div><div className="t3-stat-card"><span className="t3-stat-value" data-t3-stat="products">70</span><span className="t3-stat-label">Products</span></div></div>
+  <div className="t3-stats-bar"><div className="t3-stat-card"><span className="t3-stat-value" data-t3-stat="pages">803</span><span className="t3-stat-label">Documentation pages</span></div><div className="t3-stat-card"><span className="t3-stat-value" data-t3-stat="products">70</span><span className="t3-stat-label">Products</span></div></div>
 </div>
 <section className="t3-landing-section">
   <p className="t3-landing-eyebrow">Template catalog</p>
   <div className="t3-product-grid">
-    <a className="t3-product-card" href="/en/latest/EXTKarma/Index">
+    <a className="t3-product-card" href="/en/latest/EXTKarma/Introduction/Index">
       <div className="t3-product-card-header">
         <span className="t3-icon-shell t3-product-icon-shell"><Icon icon="palette" size={22} className="t3-product-icon" /></span>
         <div>
@@ -38,7 +38,7 @@ sidebarTitle: "TYPO3 Templates & Themes"
         <span className="t3-link-pill"><Icon icon="book-open" size={14} /> View docs</span>
       </div>
     </a>
-    <a className="t3-product-card" href="/en/latest/EXTBootstrap/Index">
+    <a className="t3-product-card" href="/en/latest/EXTBootstrap/Introduction/Index">
       <div className="t3-product-card-header">
         <span className="t3-icon-shell t3-product-icon-shell"><Icon icon="grid-3x3" size={22} className="t3-product-icon" /></span>
         <div>
@@ -51,7 +51,7 @@ sidebarTitle: "TYPO3 Templates & Themes"
         <span className="t3-link-pill"><Icon icon="book-open" size={14} /> View docs</span>
       </div>
     </a>
-    <a className="t3-product-card" href="/en/latest/EXTShiva/Index">
+    <a className="t3-product-card" href="/en/latest/EXTShiva/Introduction/Index">
       <div className="t3-product-card-header">
         <span className="t3-icon-shell t3-product-icon-shell"><Icon icon="mountain" size={22} className="t3-product-icon" /></span>
         <div>
@@ -90,7 +90,7 @@ sidebarTitle: "TYPO3 Templates & Themes"
         <span className="t3-link-pill"><Icon icon="book-open" size={14} /> View docs</span>
       </div>
     </a>
-    <a className="t3-product-card" href="/en/latest/EXTAvatar/Index">
+    <a className="t3-product-card" href="/en/latest/EXTAvatar/Introduction/Index">
       <div className="t3-product-card-header">
         <span className="t3-icon-shell t3-product-icon-shell"><Icon icon="circle-user" size={22} className="t3-product-icon" /></span>
         <div>
@@ -103,7 +103,7 @@ sidebarTitle: "TYPO3 Templates & Themes"
         <span className="t3-link-pill"><Icon icon="book-open" size={14} /> View docs</span>
       </div>
     </a>
-    <a className="t3-product-card" href="/en/latest/ExtThemes/Index">
+    <a className="t3-product-card" href="/en/latest/ExtThemes/Introduction/Index">
       <div className="t3-product-card-header">
         <span className="t3-icon-shell t3-product-icon-shell"><Icon icon="layout-template" size={22} className="t3-product-icon" /></span>
         <div>
@@ -116,7 +116,7 @@ sidebarTitle: "TYPO3 Templates & Themes"
         <span className="t3-link-pill"><Icon icon="book-open" size={14} /> View docs</span>
       </div>
     </a>
-    <a className="t3-product-card" href="/en/latest/EXTAyu/Index">
+    <a className="t3-product-card" href="/en/latest/EXTAyu/Introduction/Index">
       <div className="t3-product-card-header">
         <span className="t3-icon-shell t3-product-icon-shell"><Icon icon="zap" size={22} className="t3-product-icon" /></span>
         <div>
@@ -129,7 +129,7 @@ sidebarTitle: "TYPO3 Templates & Themes"
         <span className="t3-link-pill"><Icon icon="book-open" size={14} /> View docs</span>
       </div>
     </a>
-    <a className="t3-product-card" href="/en/latest/EXTReactBootstrap/Index">
+    <a className="t3-product-card" href="/en/latest/EXTReactBootstrap/Introduction/Index">
       <div className="t3-product-card-header">
         <span className="t3-icon-shell t3-product-icon-shell"><Icon icon="square-code" size={22} className="t3-product-icon" /></span>
         <div>
@@ -142,7 +142,7 @@ sidebarTitle: "TYPO3 Templates & Themes"
         <span className="t3-link-pill"><Icon icon="book-open" size={14} /> View docs</span>
       </div>
     </a>
-    <a className="t3-product-card" href="/en/latest/EXTReva/Index">
+    <a className="t3-product-card" href="/en/latest/EXTReva/Introduction/Index">
       <div className="t3-product-card-header">
         <span className="t3-icon-shell t3-product-icon-shell"><Icon icon="sparkle" size={22} className="t3-product-icon" /></span>
         <div>
@@ -155,7 +155,7 @@ sidebarTitle: "TYPO3 Templates & Themes"
         <span className="t3-link-pill"><Icon icon="book-open" size={14} /> View docs</span>
       </div>
     </a>
-    <a className="t3-product-card" href="/en/latest/EXTShop/Index">
+    <a className="t3-product-card" href="/en/latest/EXTShop/Introduction/Index">
       <div className="t3-product-card-header">
         <span className="t3-icon-shell t3-product-icon-shell"><Icon icon="shopping-bag" size={22} className="t3-product-icon" /></span>
         <div>

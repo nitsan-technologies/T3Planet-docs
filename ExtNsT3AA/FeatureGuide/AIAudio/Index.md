@@ -26,7 +26,7 @@ page/blog and renders it with a frontend plugin.
    your setup) and start **Create audio from a script**.
 2. Choose **AI model**, **voice**, **speed**, and **output format**.
 3. Select the **target folder** for the audio file.
-4. Click **Generate AI Audio**.
+4. Click **Generate Audio**.
 5. Review and download the generated file.
 
 ## Alternative Method (via text and file)

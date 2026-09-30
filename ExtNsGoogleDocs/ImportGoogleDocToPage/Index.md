@@ -1,5 +1,6 @@
 ---
 title: "How to import Google Docs to TYPO3 Page/Blog/News?"
+description: "Import Google Docs into TYPO3 pages, blog posts and news with Google Docs (EXT:ns_googledocs) version 14."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -9,22 +10,78 @@ keywords:
 sidebarTitle: "How to import Google Docs..."
 ---
 
-Once all the Global Settings are configured properly, you are ready to import Google Docs to your TYPO3 pages or Blog or News.
+Make sure your Google account is connected ([Global Settings](/ExtNsGoogleDocs/NSGoogleDocsModule/Index#global-settings)) and your licence is active.
 
-To import Google Doc to TYPO3 Page/Blog/NEWS, perform following steps:
+## Three ways to start an import
 
-1. Select the Page/Blog/News Folder where Google Doc should be imported.
-2. Then switch to NS Google Docs Module and go to Import Google Docs tab.
+1. **Google Docs module:** select a page in the page tree, open the **Import Google Docs** tab and click **Import Now** next to a Doc.
+2. **Page or List module:** open a page and click the **Import Google Docs** button in the toolbar (DocHeader).
+3. **Page tree context menu:** right-click a page and choose **Import Google Docs**. This **creates a new subpage** named after the Doc and imports the content into it.
 
-![Import Google Doc tab](./images/import_google_docs.webp)
+![Google Docs module: Import Google Docs tab with the Import Now button next to each Doc](./images/import_tab_import_now.webp)
 
-3. Select the Google Doc to import. You can use searchbox at top-right to find the correct Google Doc.
-4. Click on Import Now button. It will open following pop-up
+## The import dialog
 
-![Import Google Doc popup](images/import_pop-up.webp)
+1. **Choose the Doc** (when you started from the toolbar button or context menu). Use the search to find it.
+2. **Wait for the sections to load.** The **Import** button stays disabled until the Doc has been read.
+3. **Review the sections.** Each [Heading 1 / Heading 2 section](/ExtNsGoogleDocs/PrepareGoogleDocWithMarkers/Index) is one row:
 
-5. Select the Content Column from drop-down. This drop-down will list all the columns available in selected TYPO3 page and Google Doc content will be imported in this column. If you have selected News folder then it will ask you to confirm to import doc to News record.
-6. If you want to override existing content elements of selected column before importing Google Doc, check the checkbox. If it is not checked then it will append new Content elements created from Google import.
-7. Click on Import Now button to start import. once it is clicked, It will display progress bar of import. Once imported successfully, it will display confirmation message at top-right.
+   | Column | Description |
+   | --- | --- |
+   | **Add Content** | Tick to import this section, untick to skip it |
+   | **Element Type** | Header, Text Element, Text & Image or Image Only (preselected from the [extension configuration](#extension-configuration), default Text & Image) |
+   | **Element Title** | The header of the element. You can edit it |
 
-Switch to Reports & Logs tab to access the Imported Page/Blog. If you have selected News then News record will created in selected folder. By default, News record will be disabled and you'll need to enable it.
+4. **Choose the content column** of the page. Only columns that accept the selected element types are offered. A page with a single column shows "Content".
+5. **Override existing column content?** Tick to replace the column's content (see the [warning below](#override-existing-column-content-warning)). Leave it unticked to add the new elements after the existing ones.
+6. Click **Import**.
+
+After a successful import you are taken to the Page module (List module for news), and the page cache is cleared, so the content appears on the frontend straight away.
+
+![Import dialog: content column, sections with Add Content, Element Type and Element Title, and the Override existing column content option](./images/import_dialog_sections.webp)
+
+## Element types
+
+| Element Type | TYPO3 content element | Title | Text | Images |
+| --- | --- | --- | --- | --- |
+| **Header** | Header | Section title | Not imported | Not imported |
+| **Text Element** | Text | Section title | Section content | Inline in the text |
+| **Text & Image** | Text & Images | Section title | Section content | Attached to the element (media field) |
+| **Image Only** | Images | Section title | Not imported | Attached to the element (media field) |
+
+The **Image Setting** values from Global Settings (alignment, enlarge on click, number of columns) are applied to Text & Image and Image Only elements. The **Publish Status** applies to every created record.
+
+## Import into blog posts (EXT:blog)
+
+Select a blog post page and import like a normal page.
+
+## Import into news (EXT:news)
+
+1. Select the **news storage folder** in the page tree.
+2. Start the import and confirm **Import News**.
+3. One news record is created per Doc: the title is the Doc name, the body text is the Doc content with its images, and the record is visible or hidden according to **Publish Status**.
+
+Importing into news requires EXT:news to be installed and active.
+
+## Override existing column content: warning
+
+<Warning>
+
+When **Override existing column content?** is ticked, **all** content elements in the selected column of that page are **permanently deleted** before the import, including elements that were not created by an import. This cannot be undone from the Recycler. Take a backup first if you are unsure.
+
+</Warning>
+
+## Images
+
+- Images from the Doc are copied to `fileadmin/ns_googledocs/`.
+- Importing the same Doc again creates new copies of its images.
+- Images that cannot be downloaded are skipped, and the import continues.
+
+## Extension configuration
+
+- TYPO3 14: **System › Settings › Extension Configuration › ns_googledocs**
+- TYPO3 12 and 13: **Admin Tools › Settings › Extension Configuration › ns_googledocs**
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| **Default content element type** (`googleDocsContentElementType`) | Element type preselected for each section in the import dialog: Header, Text Element, Text & Image or Image Only | Text & Image |

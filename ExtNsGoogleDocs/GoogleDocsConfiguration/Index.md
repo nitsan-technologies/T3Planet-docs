@@ -1,6 +1,6 @@
 ---
 title: "How to get Google Client ID, Secret Key & Refresh Token?"
-description: "How to get Google Client ID, Secret Key & Refresh Token? — T3Planet documentation."
+description: "Create the Google Client ID, Client Secret and Refresh Token that Google Docs (EXT:ns_googledocs) needs, and learn when the refresh token expires."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -10,40 +10,83 @@ keywords:
 sidebarTitle: "How to get Google Client ..."
 ---
 
-Before you can start using EXT:ns_googledocs, You need to get Google Client ID, Secret Key and Refresh Token for your Gmail account. These details will help to fetch Google Docs from your Gmail account.
+Google Docs (EXT:ns_googledocs) needs a Google Client ID, Client Secret and Refresh Token to read the Docs in your Google account. Create them once, then enter them in the [Global Settings](/ExtNsGoogleDocs/NSGoogleDocsModule/Index#global-settings) of the extension.
 
-1. To Create Google Client ID and Secret Key go to https://console.developers.google.com
-2. Create a New Project or select existing project.
+1. Open the Google Cloud console: https://console.developers.google.com
+2. Create a new project or select an existing one.
 
-![Select Project](./images/select_project.webp)
+   ![Google Cloud console: project selector at the top of APIs & Services](./images/gcloud_select_project.webp)
 
-3. Switch to Credentials. Click on Create Credentials button and Select OAuth Client ID
+3. Open **Credentials**, click **Create credentials** and choose **OAuth client ID**.
 
-![Create OAuth Client](./images/create_client.webp)
+   ![Google Cloud console: Credentials, Create credentials, OAuth client ID](./images/gcloud_create_oauth_client.webp)
 
-4. Select "Web Application" option and set Authorized redirect URIs "https://developers.google.com/oauthplayground"
+4. Select the application type **Web application** and add `https://developers.google.com/oauthplayground` under **Authorized redirect URIs**.
 
-![Create OAuth Client](./images/create_client_2.webp)
+   ![Create OAuth client ID: Application type Web application and Authorized redirect URIs](./images/gcloud_oauth_client_form.webp)
 
-5. This will generate Client ID and Client Secret Key.
+5. Google creates your **Client ID** and **Client Secret**.
 
-![Client ID & Secret Key](./images/client_id_secret_key.webp)
+   ![Client ID for Web application: Client ID and Client secret with the OAuth Playground redirect URI](./images/gcloud_client_id_secret.webp)
 
-6. Switch to Library and search for "Google Drive API". Select API and enable it.
+6. Open **Library**, search for **Google Drive API**, select it and click **Enable**.
 
-![Enable API](./images/enable_api.webp)
+   ![API Library: search for Google Drive API and select it](./images/gcloud_enable_drive_api.webp)
 
-7. Now go to https://developers.google.com/oauthplayground/
-8. Set your Client ID and Secret Key in Settings
+7. Open the OAuth 2.0 Playground: https://developers.google.com/oauthplayground/
+8. Open the settings (gear icon), tick **Use your own OAuth credentials** and enter your Client ID and Client Secret.
 
-![Set ID and Secret Key in Settings](./images/set_id_secret_key.webp)
+   ![OAuth 2.0 Playground settings: Use your own OAuth credentials with Client ID and Client secret](./images/playground_own_credentials.webp)
 
-9. Go to Step 1 section. Search & expand Drive API v3. Select all options and click on Authorize APIs button.
+9. In **Step 1**, enter this scope in **Input your own scopes** (or tick only this scope under **Drive API v3**) and click **Authorize APIs**:
 
-![Authorize APIs](./images/authorize_apis.webp)
+   ```text
+   https://www.googleapis.com/auth/drive.readonly
+   ```
 
-10. Now, go to Step 2 and there you can find your Refresh token.
+   The extension makes only two Google Drive calls: it lists the Google Docs files in your Drive and exports a Doc as HTML. Read-only access is enough, so do not select the other Drive scopes.
 
-![Refresh Token](./images/refresh_token.webp)
+   ![OAuth 2.0 Playground Step 1: Drive API v3 scope list and Authorize APIs button](./images/playground_authorize_drive_api.webp)
 
-Once you complete these steps, you will have Google Client ID, Secret Key and Refresh Token for your account. You have to set those in Global Settings of EXT:ns_googledocs.
+   Sign in with the Google account that owns or can read the Docs, and click **Allow**.
+
+10. In **Step 2**, click **Exchange authorization code for tokens**. Copy the **Refresh token** (it starts with `1//`). Do not copy the **Access token**.
+
+    ![OAuth 2.0 Playground Step 2: Refresh token after Exchange authorization code for tokens](./images/playground_refresh_token.webp)
+
+Enter the Client ID, Client Secret and Refresh Token in the [Global Settings](/ExtNsGoogleDocs/NSGoogleDocsModule/Index#global-settings) of EXT:ns_googledocs.
+
+## Refresh token validity
+
+### Access token and refresh token
+
+The OAuth Playground shows two tokens:
+
+| Token | Valid for | Do you need it? |
+| --- | --- | --- |
+| **Access token** | About **1 hour**. The Playground shows a countdown. | No. The extension requests a new access token from Google for every request. |
+| **Refresh token** | No fixed expiry (see the cases below) | Yes. Enter it in the Global Settings. |
+
+The countdown in the Playground is for the access token only. When it reaches zero, the extension keeps working. You do not need to generate a new token.
+
+### When the refresh token stops working
+
+Google stops accepting the refresh token in these cases:
+
+| Case | When the token stops working |
+| --- | --- |
+| OAuth consent screen with user type **External** and publishing status **Testing** | **7 days** after it was created |
+| Token not used | After **6 months** without use |
+| Access removed in your Google account (**Security › Third-party apps & services**) | Immediately |
+| More than 100 refresh tokens for the same Google account and Client ID | The oldest token stops working when a new one is created |
+
+To avoid the 7-day limit, set the publishing status to **In production** in the Google Cloud console (**Google Auth Platform › Audience**, in older consoles **OAuth consent screen**). The 24-hour limit mentioned in the OAuth Playground does not apply, because you use your own OAuth credentials (step 8).
+
+### Generate a new refresh token
+
+When the refresh token has stopped working, the Google Docs module lists no Docs or shows an error.
+
+1. Repeat steps 7 to 10 above to get a new refresh token.
+2. Replace the old value in **Google Refresh Token** in the [Global Settings](/ExtNsGoogleDocs/NSGoogleDocsModule/Index#global-settings) and save.
+
+Your Client ID and Client Secret stay the same.

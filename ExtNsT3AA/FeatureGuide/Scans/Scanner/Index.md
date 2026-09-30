@@ -34,6 +34,10 @@ Each page included in the run counts against your license quota when the scan
 runs. One click can cover many pages if depth is deep — check remaining pages
 first. Details: [Dashboard](/en/latest/ExtNsT3AA/FeatureGuide/Dashboard/Index).
 
+The scan page quota comes from your T3AA license. It is not your AI Credits
+balance: scans never use AI credits. See
+[Scan page quota and AI credits](/ExtNsT3AA/Configuration/Index#scan-page-quota-and-ai-credits).
+
 ## What to scan
 
 * **Site URL** — frontend base URL of the selected site

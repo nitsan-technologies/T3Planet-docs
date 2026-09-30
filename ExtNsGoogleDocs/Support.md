@@ -17,4 +17,6 @@ https://t3planet.de/support
 
 https://t3planet.de/
 
-Have an our awesome extension on your TYPO3 website!
+## Product
+
+https://t3planet.com/typo3-googledocs-extension

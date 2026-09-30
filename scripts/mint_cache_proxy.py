@@ -23,9 +23,12 @@ from http.client import HTTPConnection
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlsplit
 
+from mint_proxy_scheduler import CompileGate, WarmQueue
+
 LISTEN_HOST = os.environ.get("PROXY_HOST", "0.0.0.0")
 LISTEN_PORT = int(os.environ.get("PROXY_PORT", "3000"))
 MINT_ORIGIN = os.environ.get("MINT_ORIGIN", "http://127.0.0.1:3001")
+LIVE_BASE = "/en/latest"
 CACHE_TTL_SEC = int(os.environ.get("CACHE_TTL", "14400"))
 STALE_GRACE_SEC = int(os.environ.get("CACHE_STALE_GRACE", "3600"))
 MAX_BODY = int(os.environ.get("CACHE_MAX_BODY", str(5 * 1024 * 1024)))
@@ -136,7 +139,11 @@ _lock = threading.Lock()
 _stats = {"hits": 0, "misses": 0, "bypass": 0, "rejected_incomplete": 0}
 _conn_local = threading.local()
 # mint dev wedges under parallel MDX/RSC compiles; serialize upstream.
-_upstream_gate = threading.Semaphore(int(os.environ.get("MINT_UPSTREAM_CONCURRENCY", "1")))
+_upstream_gate = CompileGate(
+    capacity=int(os.environ.get("MINT_UPSTREAM_CONCURRENCY", "1")),
+    quiet_sec=float(os.environ.get("MINT_WARM_QUIET_SEC", "2.0")),
+)
+INFLIGHT_WAIT_SEC = 120.0
 
 
 def _origin_parts():
@@ -349,6 +356,9 @@ def _path_needs_compile_gate(path: str) -> bool:
     p = path.split("?", 1)[0]
     if p.startswith("/_next/static/") or p.startswith("/_static/"):
         return False
+    # Live-reload long-polls hold a request open ~25s; gating them starved every compile.
+    if p.startswith(("/socket.io/", "/_next/webpack-hmr", "/__nextjs")):
+        return False
     if p.startswith("/favicons/") or p.startswith("/images/"):
         return False
     lower = p.lower()
@@ -375,42 +385,41 @@ def _path_needs_compile_gate(path: str) -> bool:
     return True
 
 
-def _upstream(method: str, path: str, headers_in, body_in: bytes, *, block: bool = True):
-    """Fetch from mint. User traffic uses block=True; warm/revalidate uses block=False
-    so background compiles never queue ahead of interactive navigation.
-    Static assets skip the compile gate entirely (avoids browser connection HOL blocking).
-    """
+def _upstream_raw(method: str, path: str, headers_in, body_in: bytes):
+    """Fetch from mint without scheduling (caller owns the compile gate if needed)."""
     host, port = _origin_parts()
     headers_out = {
         k: v for k, v in headers_in.items() if k.lower() not in ("host", "connection")
     }
     headers_out["Host"] = f"{host}:{port}"
     headers_out["Connection"] = "keep-alive"
-
-    use_gate = _path_needs_compile_gate(path)
-    acquired = True
-    if use_gate:
-        acquired = _upstream_gate.acquire(blocking=block)
-        if not acquired:
-            return None  # signal caller to skip / retry later
     last_exc = None
-    try:
-        for _attempt in range(2):
-            try:
-                conn = _get_conn()
-                conn.request(method, path, body=body_in, headers=headers_out)
-                resp = conn.getresponse()
-                raw = resp.read()
-                status = resp.status
-                resp_headers = [(k, v) for k, v in resp.getheaders()]
-                return status, resp_headers, raw
-            except Exception as exc:
-                last_exc = exc
-                _reset_conn()
-    finally:
-        if use_gate and acquired:
-            _upstream_gate.release()
+    for _attempt in range(2):
+        try:
+            conn = _get_conn()
+            conn.request(method, path, body=body_in, headers=headers_out)
+            resp = conn.getresponse()
+            raw = resp.read()
+            status = resp.status
+            resp_headers = [(k, v) for k, v in resp.getheaders()]
+            return status, resp_headers, raw
+        except Exception as exc:
+            last_exc = exc
+            _reset_conn()
     raise last_exc  # type: ignore[misc]
+
+
+def _upstream(method: str, path: str, headers_in, body_in: bytes):
+    """Interactive fetch: page compiles take the gate ahead of any background warm.
+    Static assets skip the gate entirely (avoids browser connection HOL blocking).
+    """
+    if not _path_needs_compile_gate(path):
+        return _upstream_raw(method, path, headers_in, body_in)
+    _upstream_gate.acquire_user()
+    try:
+        return _upstream_raw(method, path, headers_in, body_in)
+    finally:
+        _upstream_gate.release(user=True)
 
 
 def _store(path: str, status: int, headers, raw: bytes) -> bool:
@@ -428,42 +437,31 @@ def _store(path: str, status: int, headers, raw: bytes) -> bool:
     return True
 
 
+def _is_fresh(path: str) -> bool:
+    with _lock:
+        entry = _cache.get(_key("GET", path))
+    return bool(entry and entry[0] > time.time())
+
+
+def _warm_fetch(path: str) -> None:
+    """Compile one route into the cache (runs on the warm worker, gate held)."""
+    t0 = time.time()
+    status, headers, raw = _upstream_raw("GET", path, {}, b"")
+    ok = _store(path, status, headers, raw)
+    print(f"[cache-proxy] warm {path} → {status} {len(raw)}B in {time.time() - t0:.1f}s cached={ok}", flush=True)
+
+
+_warm_queue = WarmQueue(
+    _upstream_gate,
+    _warm_fetch,
+    _is_fresh,
+    max_intent=int(os.environ.get("MINT_WARM_MAX_INTENT", "12")),
+)
+
+
 def _revalidate_async(path: str) -> None:
     """Background refresh for stale-while-revalidate hits."""
-    def run():
-        try:
-            res = _upstream("GET", path, {}, b"", block=False)
-            if res is None:
-                return  # mint busy with a user request — skip
-            status, headers, raw = res
-            _store(path, status, headers, raw)
-        except Exception as exc:
-            print(f"[cache-proxy] revalidate failed {path}: {exc}", flush=True)
-            _reset_conn()
-    threading.Thread(target=run, name=f"t3-reval-{path[:24]}", daemon=True).start()
-
-
-def _warm_one(path: str, *, retries: int = 3) -> None:
-    for attempt in range(1, retries + 1):
-        try:
-            t0 = time.time()
-            # Sequential warm may wait on the compile gate; do not skip as "busy"
-            # or hubs never get cached while interactive traffic holds the semaphore.
-            res = _upstream("GET", path, {}, b"", block=True)
-            if res is None:
-                print(f"[cache-proxy] warm skipped {path} (busy)", flush=True)
-                time.sleep(0.4 * attempt)
-                continue
-            status, headers, raw = res
-            ok = _store(path, status, headers, raw)
-            dt = time.time() - t0
-            print(f"[cache-proxy] warm {path} → {status} {len(raw)}B in {dt:.1f}s cached={ok}", flush=True)
-            time.sleep(0.15)  # let interactive traffic slip between warms
-            return
-        except Exception as exc:
-            print(f"[cache-proxy] warm failed {path} (try {attempt}/{retries}): {exc}", flush=True)
-            _reset_conn()
-            time.sleep(0.5 * attempt)
+    _warm_queue.push(path)
 
 
 def _wait_mint_ready(timeout_sec: float = 60.0) -> bool:
@@ -485,14 +483,13 @@ def _wait_mint_ready(timeout_sec: float = 60.0) -> bool:
 
 
 def _warm_paths() -> None:
-    """Compile + cache hub routes so the first human visit is already warm."""
+    """Queue hub routes so the first human visit is already warm."""
     if not _wait_mint_ready():
         print("[cache-proxy] mint not ready — skipping background warm", flush=True)
         return
-    print(f"[cache-proxy] warming {len(WARM_PATHS)} routes sequentially…", flush=True)
+    print(f"[cache-proxy] queued {len(WARM_PATHS)} hub routes for background warm", flush=True)
     for path in WARM_PATHS:
-        _warm_one(path)
-    print(f"[cache-proxy] warm done; cache_entries={len(_cache)}", flush=True)
+        _warm_queue.push(path, hub=True)
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -513,8 +510,25 @@ class Handler(BaseHTTPRequestHandler):
     def do_OPTIONS(self):  # noqa: N802
         self._proxy("OPTIONS")
 
+    def _redirect_live_base(self, method: str, path: str) -> bool:
+        """Live serves docs under /en/latest; local mint serves them at /."""
+        if method not in ("GET", "HEAD"):
+            return False
+        route, sep, query = path.partition("?")
+        if route != LIVE_BASE and not route.startswith(LIVE_BASE + "/"):
+            return False
+        location = (route[len(LIVE_BASE):] or "/") + (sep + query if sep else "")
+        self.send_response(308)
+        self.send_header("Location", location)
+        self.send_header("Cache-Control", "no-store")
+        self.send_header("Content-Length", "0")
+        self.end_headers()
+        return True
+
     def _proxy(self, method: str) -> None:
         path = self.path
+        if self._redirect_live_base(method, path):
+            return
         # Lightweight health / stats for ops (not forwarded to mint)
         
         if method == "GET" and path.split("?", 1)[0].rstrip("/") in ("/__t3_cache_purge",):
@@ -560,7 +574,8 @@ class Handler(BaseHTTPRequestHandler):
             qs = parse_qs(urlsplit(path).query or "")
             # Warm the full hub catalog in the background (used by start_fast_preview).
             if (qs.get("all") or [""])[0] in ("1", "true", "yes"):
-                threading.Thread(target=_warm_paths, daemon=True).start()
+                for hub in WARM_PATHS:
+                    _warm_queue.push(hub, hub=True)
                 import json as _json
 
                 payload = _json.dumps({"warming": "all", "count": len(WARM_PATHS)}).encode()
@@ -578,7 +593,7 @@ class Handler(BaseHTTPRequestHandler):
             if ".." in target or target.startswith("//"):
                 self.send_error(400, "bad path")
                 return
-            threading.Thread(target=_warm_one, args=(target.split("?")[0],), daemon=True).start()
+            _warm_queue.push(target.split("?")[0])
             import json as _json
             payload = _json.dumps({"warming": target.split("?")[0]}).encode()
             self.send_response(202)
@@ -593,7 +608,7 @@ class Handler(BaseHTTPRequestHandler):
             import json
 
             with _lock:
-                payload = json.dumps({**_stats, "entries": len(_cache)}).encode()
+                payload = json.dumps({**_stats, "entries": len(_cache), "warm_queue": _warm_queue.depth()}).encode()
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self.send_header("Cache-Control", "no-store")
@@ -634,6 +649,12 @@ class Handler(BaseHTTPRequestHandler):
                 if serve_stale and method == "GET" and "_rsc=" not in path:
                     _revalidate_async(path.split("?", 1)[0])
                 return
+            if "?" not in path and _warm_queue.wait_inflight(path, INFLIGHT_WAIT_SEC):
+                with _lock:
+                    entry = _cache.get(key)
+                if entry and entry[0] > time.time():
+                    _send_cached(self, entry[1], entry[2], entry[3], path, "HIT", entry[0])
+                    return
 
         length = int(self.headers.get("Content-Length") or 0)
         body_in = self.rfile.read(length) if length > 0 else b""
@@ -696,7 +717,8 @@ def main() -> None:
         f"TTL={CACHE_TTL_SEC}s  warm={len(WARM_PATHS)} hubs\n",
         flush=True,
     )
-    threading.Thread(target=_warm_paths, name="t3-warm", daemon=True).start()
+    _warm_queue.start()
+    threading.Thread(target=_warm_paths, name="t3-warm-hubs", daemon=True).start()
     try:
         server.serve_forever()
     except KeyboardInterrupt:

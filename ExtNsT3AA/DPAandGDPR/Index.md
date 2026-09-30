@@ -17,8 +17,9 @@ This page describes GDPR-related questions about accessibility features
 - Do not place the frontend accessibility widget if browser storage or
   Accesstive third-party requests must be avoided. See
   [Accessibility Widgets](/en/latest/ExtNsT3AA/FeatureGuide/AccessibilityWidgets/Index).
-- Alt text: Vision AI via T3AF, and/or **alttext.ai** if that provider is
-  configured. See [AI Alt Text](/en/latest/ExtNsT3AA/FeatureGuide/AIAltText/Index).
+- Alt text: with your own API keys, Vision AI via T3AF and/or **alttext.ai**
+  if that provider is configured. In AI Credits mode, always Vision through
+  T3Planet; alttext.ai is not used. See [AI Alt Text](/en/latest/ExtNsT3AA/FeatureGuide/AIAltText/Index).
 - Voiceover: **OpenAI** TTS and/or **ElevenLabs**. Files are stored in TYPO3
   FAL with **no automatic expiry**. See
   [AI Voiceover](/en/latest/ExtNsT3AA/FeatureGuide/AIVoiceover/Index) and
@@ -57,18 +58,14 @@ See [AI Voiceover](/en/latest/ExtNsT3AA/FeatureGuide/AIVoiceover/Index).
 | **Question:** What else does T3AA store on the server?
 | **Answer:** Ops / editor data, for example:
 
-   * - Area
-     - Examples
-   * - File metadata
-     - Alt text / title / description on `sys_file_metadata`; `t3aa_image_source_identifier`
-   * - Bulk metadata queue
-     - `tx_nst3aa_domain_model_bulkmeta`
-   * - Page flag
-     - `pages.voiceover`
-   * - Activity
-     - AI Foundation logs for T3AA operations
+| Area | Examples |
+| --- | --- |
+| File metadata | Alt text / title / description on `sys_file_metadata`; `t3aa_image_source_identifier` |
+| Bulk metadata queue | `tx_nst3aa_domain_model_bulkmeta` |
+| Page flag | `pages.voiceover` |
+| Activity | AI Foundation logs for T3AA operations |
 
-See [AI Usage & Logs ](/en/latest/ExtNsT3AF/Configuration/AIUsageAndLogs/Index).
+See [AI Usage & Logs](/en/latest/ExtNsT3AF/AIUsageAndLogs/Index).
 
 | **Question:** PageSpeed?
 | **Answer:** When used, the **absolute page URL** is sent from the **backend** to `https://www.googleapis.com/pagespeedonline/v5/runPagespeed`. Visitor IP and visitor queries are not part of that payload.
@@ -78,9 +75,10 @@ See [Lighthouse](/en/latest/ExtNsT3AA/FeatureGuide/Scans/Lighthouse/Index).
 | **Question:** Alt text processors?
 | **Answer:**
 
-- Vision via T3AF (BYOK or Credits)
-- **alttext.ai** if that adapter/provider is configured (image data goes to
-  that vendor)
+- **AI Credits mode:** Vision through T3Planet only (image data goes to
+  T3Planet and its model provider). alttext.ai is not used.
+- **Own API keys:** Vision via your T3AF provider, and **alttext.ai** if that
+  adapter/provider is configured (image data goes to that vendor)
 
 See [AI Alt Text](/en/latest/ExtNsT3AA/FeatureGuide/AIAltText/Index).
 
@@ -99,4 +97,4 @@ See [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index).
 | **Question:** MCP?
 | **Answer:** If AI Foundation MCP is enabled, T3AA tools can run accessibility and media operations through connected clients. That is backend/editor access, not public-visitor processing. Restrict MCP as an access-control topic.
 
-See [MCP Server ](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index).
+See [MCP Server](/en/latest/ExtNsT3AF/MCPServer/Index).

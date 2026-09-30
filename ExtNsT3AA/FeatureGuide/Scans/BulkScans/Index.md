@@ -36,7 +36,8 @@ Same license counters as Scanner:
 * **Pages scanned** / **Pages remaining** / **Page limit**
 
 Each queued page that is processed counts against the quota. Check remaining
-pages before adding a large scope.
+pages before adding a large scope. Bulk Scans do not use AI credits; see
+[Scan page quota and AI credits](/ExtNsT3AA/Configuration/Index#scan-page-quota-and-ai-credits).
 
 ## Queue and scope
 

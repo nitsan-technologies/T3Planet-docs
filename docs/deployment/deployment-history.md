@@ -76,3 +76,14 @@ Append one entry per production release.
 - Also ships local-ready deployment permission gate SOP (if included in same commit)
 - Push remote: `origin` → `nitsan-technologies/T3Planet-docs` (`master`)
 - Final status: pending live QA after push
+
+### 2026-09-29 — Single-link hub cards, feedback widget hidden, navigation + QA fixes
+- Authorization: operator said `start the deployment process`
+- Commit: `ccf9a51` by Nitsan `<sanjay@nitsantech.com>` (33 files; `7921c8d..ccf9a51`)
+- Scope: `noAnchor` on 18 hub card titles; `custom.css` hides "Was this page helpful?"; MCP testing guide code blocks restored; TonicTypes / T3AA / T3AI / T3AF / HelpDesk / Personio / Event / FriendlyCaptcha / Karma / Shop content fixes; `t3-docs.js` navigation fixes; CSS minifier fix
+- Excluded: `docs-master/`, `workshops/`, `backup/`, `scripts/remigration/**`, QA report JSON, unreferenced `datatype_description.png`
+- Push remote: `origin` → `nitsan-technologies/T3Planet-docs` (`master`), no force
+- Mintlify: GitHub check "Mintlify Deployment" completed/success on `ccf9a51` (org repo); live and `t3planet.mintlify.app` show the new markup
+- QA: full crawl 833 pages 200 + valid content, 0 soft 404, 7×308 known T3AA redirects, 10×404 are local-only `backup/` / `.cursor/` files (expected); React #418 gone on hubs; card HTML 7/7 + 11/11; 90/90 live card clicks; 104/104 changed-page checks (desktop/mobile × light/dark); search OK; HTTPS valid
+- Known open item: external link rot (old demo/shop/Site Kit URLs) not in this release
+- Final status: PASS WITH NON-BLOCKING WARNINGS

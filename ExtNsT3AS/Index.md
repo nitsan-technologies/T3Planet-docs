@@ -62,7 +62,7 @@ sidebarTitle: "AI Search"
   <Card title="Known Problems" icon="triangle-alert" href="/en/latest/ExtNsT3AS/KnownProblems/Index" />
   <Card title="Support" icon="life-buoy" href="/en/latest/ExtNsT3AS/Support" />
   <Card title="Get Extension" icon="shopping-cart" href="/en/latest/ExtNsT3AS/BuyNow" />
-  <Card title="T3AF" icon="layers" href="/en/latest/ExtNsT3AF/Index" />
+  <Card title="T3AF" icon="layers" href="/en/latest/ExtNsT3AF/Introduction/Index" />
   </CardGroup>
 </section>
 

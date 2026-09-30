@@ -23,10 +23,17 @@ Helpful AI Foundation references:
 
 All T3AA feature settings are managed in AI Foundation — not under **Admin Tools > Settings > Configure Extensions**.
 
-1. Go to the **TYPO3 backend**.
-2. Open **AI Foundation** → **AI Features**.
-3. Open the **T3AA** (`ns_t3aa`) feature card.
-4. Review and update the T3AA options described below.
+Open **AI Foundation** → **AI Features**. The T3AA settings are split over
+three cards with the tag **AI Accessibility**:
+
+| Card | Subtitle | What it controls |
+| --- | --- | --- |
+| **General Settings** | PageSpeed, editor | Google PageSpeed API key, licensed audit screenshots, frontend widget, simplify prompt, Live Audit for CKEditor |
+| **AI Audio** | Voiceover & storage | Audio and voiceover features, storage folder |
+| **AI File Meta** | Image metadata & alt text | AI alt text and image metadata |
+
+Use the extension filter or the search field to show only the AI Accessibility
+cards. Click **Configure** on a card to open its settings.
 
 For the shared module overview, see [AI Foundation AI Features](/en/latest/ExtNsT3AF/Configuration/AIFeatures/Index).
 
@@ -36,6 +43,9 @@ For the shared module overview, see [AI Foundation AI Features](/en/latest/ExtNs
 
 Provider credentials and shared model setup belong to AI Foundation, not to T3AA.
 Before testing T3AA, confirm that the required provider is already configured in the parent extension.
+This includes ElevenLabs: add it as a provider (adapter type **ElevenLabs**)
+with your own ElevenLabs API key. ElevenLabs is not available in T3Planet
+Credits mode.
 
 Common provider-related references:
 
@@ -44,38 +54,94 @@ Common provider-related references:
 
 ## Step 3: Feature-Specific Configuration Options
 
-In the **T3AA** card under **AI Foundation > AI Features**, review the options that control how accessibility and content-support features behave in your project.
+### General Settings
 
-**AI Audio:**
+| Option | What it does |
+| --- | --- |
+| **Google Page Speed API** | Your Google PageSpeed Insights API key. Required for [Lighthouse](/en/latest/ExtNsT3AA/FeatureGuide/Scans/Lighthouse/Index). Without a key, Lighthouse scans cannot run. The page URL is sent to Google, so Google must be able to reach it. |
+| **Include screenshots in licensed accessibility audits** | When enabled, licensed [Scanner](/en/latest/ExtNsT3AA/FeatureGuide/Scans/Scanner/Index) audits include screenshots of the findings. When disabled (default), audits run without screenshots. |
+| **Enable Assistant Widget** | Shows the frontend accessibility widget on the website. The value is saved per site (in the site configuration of the site you work on). Configure the widget itself in [Accessibility Widgets](/en/latest/ExtNsT3AA/FeatureGuide/AccessibilityWidgets/Index). |
+| **Default Content Prompts** → **Default AI Prompt for Content Simplify** | Prompt used by [Simplified Text](/en/latest/ExtNsT3AA/FeatureGuide/SimplifiedText/Index). Keep **Default (built-in)** or choose a prompt from [AI Prompts](/en/latest/ExtNsT3AF/AIPrompts/Index). |
+| **Live Audit for CKEditor** | Runs accessibility checks inside the CKEditor (RTE) while editors write. Flush the TYPO3 caches after enabling or disabling it. |
 
-- Confirm the audio-related feature is enabled for the workflows you want to use.
+### AI Audio
 
-**AI FileMeta (Alt Text & Metadata):**
+| Option | What it does |
+| --- | --- |
+| **Enable/Disable AI Audio features** | Turns the audio features on or off one by one: **AI Audio** (audio from a script), **Elevenlab AI Voiceover** and **Open AI Voiceover** (page voiceovers). All three are enabled by default. |
+| **Storage** (**Voiceover audio storage folder**) | Folder in the File List where generated audio and voiceover files are saved. |
 
-- Enable **AI Metadata for Images**
-  -> Activates the AI-powered file metadata feature.
-- Enable **Only alternative text generation**
-  -> Use this when you want alt text only.
-- Set **Default Metadata Model**
-- Enable **Metadata Generation During Uploads**
-  -> Automatically triggers metadata generation when uploading files via TYPO3 Core.
-- Choose **Alternative Text Length**
-  -> Short for brief alt text or Long for detailed alt text.
+See [AI Audio](/en/latest/ExtNsT3AA/FeatureGuide/AIAudio/Index) and
+[AI Voiceover](/en/latest/ExtNsT3AA/FeatureGuide/AIVoiceover/Index).
 
-**CKEditor:**
+### AI File Meta
 
-- Enable **Live Audit for CKEditor**
-  -> Run accessibility checks in the RTE element.
+| Option | What it does |
+| --- | --- |
+| **Activate Feature Ai-Metadata for Images** | Turns on AI file metadata for images, including the **Generate file meta with T3AA** button in the file metadata form. |
+| **Only alternative text generation** | Generates alternative text only. Title and description are not generated. |
+| **Default Ai-Filemeta generate Model** | Default generator for file metadata with your own API keys: `vision-ai` (Vision via your AI provider) or `altText-ai` (AltText.ai). In AI Credits mode this setting is ignored: T3AA always uses Vision through T3Planet Credits. |
+| **Enable AI file metadata generation when uploading files with TYPO3 Core.** | Generates metadata automatically when a new file is added through TYPO3 Core (for example an upload in the File List). It uses the **Default Ai-Filemeta generate Model**. |
+| **Alternative Text Length** | **short** (default) for brief alt text, **long** for detailed alt text. |
+| **Select Default File Metadata Feature** | Prompts used for file metadata: **Default AI Prompt for File Alt Text Short**, **Default AI Prompt for File Alt Text Long** and **Default AI Prompt for File Meta Title Description**. Keep **Default (built-in)** or choose a prompt from [AI Prompts](/en/latest/ExtNsT3AF/AIPrompts/Index). |
+
+See [AI Alt Text](/en/latest/ExtNsT3AA/FeatureGuide/AIAltText/Index).
 
 ## Step 4: Save the Configuration
 
-Click **Save** in **AI Foundation > AI Features** after reviewing the T3AA-specific options.
-
-Your settings will now be active and ready for use.
+Click **Save** in each card after you change its options.
 
 <Note>
 If a T3AA feature does not run, first check the shared provider setup in **AI Foundation > AI Providers** before changing feature settings.
 </Note>
+
+## Using T3AA with AI Credits
+
+T3AA works with both provider modes in **AI Foundation → AI Providers**:
+
+- **AI Credits** — no API keys needed. T3AA sends its AI requests to T3Planet, and each request reduces your credit balance. In T3AA dialogs, **Select AI Provider** shows only **T3Planet Credits**.
+- **Your Own API Keys** — T3AA uses the providers you add in AI Foundation. Your AI vendor bills you directly.
+
+See [AI Credits](/ExtNsT3AF/T3Planet-Credit-System/Index).
+
+### Scan page quota and AI credits
+
+These are two separate limits:
+
+| | Scan page quota | AI credits |
+| --- | --- | --- |
+| Comes from | Your T3AA license | Your AI Credits balance in AI Foundation |
+| Used by | Scanner and Bulk Scans. Each scanned page counts as one page. | T3AA AI features, only in **AI Credits** mode |
+| Shown in | T3AA Dashboard, Scanner and Bulk Scans (**Pages scanned**, **Pages remaining**, **Page limit**) | AI Foundation Dashboard and AI Providers (balance), AI Usage (each request) |
+
+Scans never use AI credits, and AI features never reduce the scan page quota.
+
+### What uses AI credits
+
+In **AI Credits** mode:
+
+| T3AA action | Uses AI credits | AI requests |
+| --- | --- | --- |
+| Image metadata ([AI Alt Text](/ExtNsT3AA/FeatureGuide/AIAltText/Index), **Generate file meta with T3AA**, **Mass AI Filemeta**, generation on upload) | Yes | One for the alternative text and one for title and description. With **Only alternative text generation**: one. |
+| [Simplified Text](/ExtNsT3AA/FeatureGuide/SimplifiedText/Index) | Yes | One per simplification |
+| [Fix Hub](/ExtNsT3AA/FeatureGuide/FixHub/Index) **AI Solution** | Yes | One per solution |
+| [AI Voiceover](/ExtNsT3AA/FeatureGuide/AIVoiceover/Index) and [AI Audio](/ExtNsT3AA/FeatureGuide/AIAudio/Index) | Yes | One per generated audio file (always OpenAI) |
+| Scanner and Bulk Scans | No | Uses the scan page quota |
+| Lighthouse | No | Uses your Google PageSpeed API key |
+| Accessibility Widgets, Live Audit for CKEditor | No | — |
+
+ElevenLabs is not available in AI Credits mode. It needs your own ElevenLabs API key.
+
+### Credit cost
+
+T3AA actions have no fixed credit price. Each request is metered: the cost depends on how much text or image data the AI model processes. For example, simplifying a long text costs more than a short one. T3Planet sets the rates. The **AI Credits** panel in **AI Foundation → AI Providers** shows the minimum charge per request.
+
+To see what an action really costs:
+
+- **AI Foundation → AI Usage** lists each request with its **Credits** value (provider `t3planet_credits`).
+- The **AI Foundation Dashboard** shows credit burn over time and spend by extension.
+
+Run an action on one record first and check AI Usage before you start bulk jobs.
 
 ## AI Features
 

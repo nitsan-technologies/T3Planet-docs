@@ -214,7 +214,7 @@ Only commit when the user asks (or an explicit release task). Stage **docs only*
 1. Working tree = source of truth; no full RST re-migration unless needed.
 2. Stage: product `Ext*` / `EXT*` trees, `License/`, hubs, `docs.json`, `custom.css`, `_static/`, `index.md`, `context.md` when requested.
 3. **Exclude** by default: `RST Format */`, `scripts/remigration/*`, `scripts/live_e2e_qa/*`, logs, JSON QA reports.
-4. Nav/page count changes → `python3 scripts/compute_doc_stats.py`.
+4. Nav/page count changes → `python3 scripts/compute_doc_stats.py` (also points hub/footer product links at each product's first page via `scripts/product_entry_pages.py`). Product added/removed → rebuild JS with `python3 scripts/build_perf_assets.py` so sidebar product rows get the same entry pages.
 5. `mintlify validate` (Node 20).
 6. Preview smoke on `:3001` for touched URLs (restart preview if 500).
 7. Review `git diff --cached`.

@@ -10,7 +10,7 @@ sidebarTitle: "Screenshots"
 
 Explore the demo for tutorials on all T3AA features.
 
-<div className="t3-embed"><iframe src="https://app.supademo.com/showcase/cm9moyq2n02y8wv0jr3dn54o5?demo=1&step=1" loading="lazy" title="T3AA feature showcase" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+<div className="t3-embed"><iframe src="https://app.supademo.com/showcase/cmrd4chbm01io230jmhoj3p4i" loading="lazy" title="T3AA feature showcase" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
 ## Backend Screenshots
 

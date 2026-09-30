@@ -27,7 +27,7 @@ sidebarTitle: "Home"
       </button>
     </div>
 
-    <div className="t3-stats-bar"><div className="t3-stat-card"><span className="t3-stat-value" data-t3-stat="pages">799</span><span className="t3-stat-label">Documentation pages</span></div><div className="t3-stat-card"><span className="t3-stat-value" data-t3-stat="products">70</span><span className="t3-stat-label">Products</span></div></div>
+    <div className="t3-stats-bar"><div className="t3-stat-card"><span className="t3-stat-value" data-t3-stat="pages">803</span><span className="t3-stat-label">Documentation pages</span></div><div className="t3-stat-card"><span className="t3-stat-value" data-t3-stat="products">70</span><span className="t3-stat-label">Products</span></div></div>
   </div>
 
   <CardGroup cols={2}>
@@ -59,13 +59,13 @@ sidebarTitle: "Home"
     </div>
 
     <CardGroup cols={3}>
-      <Card title="AI Foundation" icon="cpu" href="/en/latest/ExtNsT3AF/Index">Shared AI providers, permissions, and configuration.</Card>
-      <Card title="AI Assistant" icon="sparkles" href="/en/latest/ExtNsT3AI/Index">Generate content, translations, and SEO with AI.</Card>
-      <Card title="AI Chatbot" icon="message-circle" href="/en/latest/ExtNsT3AC/Index">AI chatbot trained on your TYPO3 content.</Card>
-      <Card title="AI Search" icon="search" href="/en/latest/ExtNsT3AS/Index">Semantic search with embeddings and custom LLM.</Card>
-      <Card title="AI Accessibility" icon="accessibility" href="/en/latest/ExtNsT3AA/Index">Alt text, voiceover, and a11y checks.</Card>
-      <Card title="AI Localization" icon="languages" href="/en/latest/ExtNsT3AL/Index">Automated translations and XLIFF workflows.</Card>
-      <Card title="AI Builder" icon="blocks" href="/en/latest/ExtNsT3AB/Index">Build content elements and forms with AI.</Card>
+      <Card title="AI Foundation" icon="cpu" href="/en/latest/ExtNsT3AF/Introduction/Index">Shared AI providers, permissions, and configuration.</Card>
+      <Card title="AI Assistant" icon="sparkles" href="/en/latest/ExtNsT3AI/Introduction/Index">Generate content, translations, and SEO with AI.</Card>
+      <Card title="AI Chatbot" icon="message-circle" href="/en/latest/ExtNsT3AC/Introduction/Index">AI chatbot trained on your TYPO3 content.</Card>
+      <Card title="AI Search" icon="search" href="/en/latest/ExtNsT3AS/Introduction/Index">Semantic search with embeddings and custom LLM.</Card>
+      <Card title="AI Accessibility" icon="accessibility" href="/en/latest/ExtNsT3AA/Introduction/Index">Alt text, voiceover, and a11y checks.</Card>
+      <Card title="AI Localization" icon="languages" href="/en/latest/ExtNsT3AL/Introduction/Index">Automated translations and XLIFF workflows.</Card>
+      <Card title="AI Builder" icon="blocks" href="/en/latest/ExtNsT3AB/Introduction/Index">Build content elements and forms with AI.</Card>
     </CardGroup>
   </section>
 
@@ -80,12 +80,12 @@ sidebarTitle: "Home"
     </div>
 
     <CardGroup cols={3}>
-      <Card title="Karma" icon="palette" href="/en/latest/EXTKarma/Index">Premium business theme with content blocks.</Card>
-      <Card title="Bootstrap" icon="grid-3x3" href="/en/latest/EXTBootstrap/Index">Bootstrap-based TYPO3 theme.</Card>
-      <Card title="Shiva" icon="mountain" href="/en/latest/EXTShiva/Index">Feature-rich React.js theme.</Card>
+      <Card title="Karma" icon="palette" href="/en/latest/EXTKarma/Introduction/Index">Premium business theme with content blocks.</Card>
+      <Card title="Bootstrap" icon="grid-3x3" href="/en/latest/EXTBootstrap/Introduction/Index">Bootstrap-based TYPO3 theme.</Card>
+      <Card title="Shiva" icon="mountain" href="/en/latest/EXTShiva/Introduction/Index">Feature-rich React.js theme.</Card>
       <Card title="Guru" icon="sparkles" href="/en/latest/EXTGuru/Index">Multipurpose TYPO3 template.</Card>
       <Card title="Shri" icon="gem" href="/en/latest/EXTShri/Index">Universal TYPO3 template with custom elements.</Card>
-      <Card title="Avatar" icon="circle-user" href="/en/latest/EXTAvatar/Index">Creative portfolio theme with Mask elements.</Card>
+      <Card title="Avatar" icon="circle-user" href="/en/latest/EXTAvatar/Introduction/Index">Creative portfolio theme with Mask elements.</Card>
     </CardGroup>
   </section>
 
@@ -100,12 +100,12 @@ sidebarTitle: "Home"
     </div>
 
     <CardGroup cols={3}>
-      <Card title="CKEditor Pack" icon="file-text" href="/en/latest/ExtRTECKEditorPack/Index">Official open-source CKEditor for TYPO3 with 40+ features, AI, and collaboration.</Card>
-      <Card title="News Comment" icon="message-circle" href="/en/latest/ExtNsNewsComments/Index">Powerful comment function for your favorite news extension.</Card>
-      <Card title="Slider Revolution" icon="images" href="/en/latest/ExtNsRevolutionSlider/Index">World's most popular slider revolution for TYPO3 websites.</Card>
-      <Card title="Site Kit by Google" icon="chart-column" href="/en/latest/ExtNsGoogleSiteKit/Index">Google Analytics and Search Console insights in TYPO3.</Card>
-      <Card title="WordPress to TYPO3 Migration" icon="arrow-right-left" href="/en/latest/ExtNsWpMigration/Index">Migrate your WordPress blog to TYPO3 with one click.</Card>
-      <Card title="Backup Plus" icon="database" href="/en/latest/ExtNsBackup/Index">All-in-one backup solution for TYPO3 websites.</Card>
+      <Card title="CKEditor Pack" icon="file-text" href="/en/latest/ExtRTECKEditorPack/Introduction/Index">Official open-source CKEditor for TYPO3 with 40+ features, AI, and collaboration.</Card>
+      <Card title="News Comment" icon="message-circle" href="/en/latest/ExtNsNewsComments/Introduction/Index">Powerful comment function for your favorite news extension.</Card>
+      <Card title="Slider Revolution" icon="images" href="/en/latest/ExtNsRevolutionSlider/Introduction/Index">World's most popular slider revolution for TYPO3 websites.</Card>
+      <Card title="Site Kit by Google" icon="chart-column" href="/en/latest/ExtNsGoogleSiteKit/Introduction/Index">Google Analytics and Search Console insights in TYPO3.</Card>
+      <Card title="WordPress to TYPO3 Migration" icon="arrow-right-left" href="/en/latest/ExtNsWpMigration/Introduction/Index">Migrate your WordPress blog to TYPO3 with one click.</Card>
+      <Card title="Backup Plus" icon="database" href="/en/latest/ExtNsBackup/Introduction/Index">All-in-one backup solution for TYPO3 websites.</Card>
     </CardGroup>
   </section>
 
@@ -125,7 +125,7 @@ sidebarTitle: "Home"
       <a className="t3-quick-link" href="/en/latest/License/HelpSupport/Index">Help & support</a>
       <a className="t3-quick-link" href="/en/latest/ExtNsT3AI/Installation/Index">Install AI Assistant</a>
       <a className="t3-quick-link" href="/en/latest/EXTKarma/Installation/Index">Install Karma</a>
-      <a className="t3-quick-link" href="/en/latest/ExtNsRevolutionSlider/Index">Revolution Slider docs</a>
+      <a className="t3-quick-link" href="/en/latest/ExtNsRevolutionSlider/Introduction/Index">Revolution Slider docs</a>
     </div>
   </section>
 

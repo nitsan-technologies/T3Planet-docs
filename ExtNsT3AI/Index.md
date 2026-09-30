@@ -59,7 +59,7 @@ sidebarTitle: "AI Assistant"
   <Card title="Releases" icon="tag" href="/en/latest/ExtNsT3AI/Releases/Index" />
   <Card title="Support" icon="life-buoy" href="/en/latest/ExtNsT3AI/Support" />
   <Card title="Get Extension" icon="shopping-cart" href="/en/latest/ExtNsT3AI/BuyNow" />
-  <Card title="T3AF" icon="layers" href="/en/latest/ExtNsT3AF/Index" />
+  <Card title="T3AF" icon="layers" href="/en/latest/ExtNsT3AF/Introduction/Index" />
   </CardGroup>
 </section>
 

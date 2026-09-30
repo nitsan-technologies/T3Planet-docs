@@ -1,65 +1,103 @@
 ---
-title: "NS Google Docs Backend Module"
-description: "Once you install the extension successfully, you will find a new Backend module for Google Docs in Sidebar."
+title: "Google Docs Backend Module"
+description: "The Google Docs backend module and its four tabs: Dashboard, Import Google Docs, Reports & Logs and Global Settings."
 keywords:
   - "TYPO3"
   - "T3Planet"
   - "ns_GoogleDocs"
-  - "NS Google Docs Backend Module"
+  - "Google Docs Backend Module"
   - "NSGoogleDocsModule"
-sidebarTitle: "NS Google Docs Backend Mo..."
+sidebarTitle: "Google Docs Backend Module"
 ---
 
-Once you install the extension successfully, you will find a new Backend module for Google Docs in Sidebar. This module will be used for all the configuration of Google Docs. This Module provides complete management of Google Docs.
+After installation you find the **Google Docs** module in the backend menu, under **Web** (TYPO3 12/13) or **Content** (TYPO3 14). Select a page in the page tree on the left to work with it.
 
-![Backend Module](./images/backend_module.webp)
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmumlc44e16jyqmfh7fl8zbpe?embed_v=2&utm_source=embed" loading="lazy" title="Import and configure Google Docs in TYPO3" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
-This Module contains 5 different tabs for all kind of Google Docs Configurations. Let's understand how each tab works one by one.
+![TYPO3 backend sidebar: Google Docs module under Content](./images/module_google_docs_sidebar.webp)
+
+The module has four tabs.
 
 ## Dashboard
 
-This is the first tab in NS Google Docs Module and as name suggest, it shows dashboard of complete module. It highlights Logs of imported Google Docs to TYPO3 pages. It also allows user to access those Google Docs and TYPO3 pages from Dashboard itself. It also defines how to import Google Docs to TYPO3 Page, Blog and NEWS.
+- Shows your latest three imports, with links to the Doc and the TYPO3 page
+- Shows the step-by-step instructions for importing into pages, blog posts and news
 
-![Dashboard](./images/dashboard.webp)
-
-## Global Setting
-
-You need to set Global settings first to use any of the features of this extension.
-
-![Global Settings](./images/global_settings.webp)
-
-- **Google Client ID** - Set Google Client ID you generated earlier.
-- **Google Secret Key** - Set Google Secret Key you generated earlier.
-- **Google Refresh Token** - Set Google Refresh Token you generated earlier.
-- **Maximum Get Files** - Here you can set how many Google Docs needs to be fetched from your Gmail account. You can change it anytime.
-- **Default Import To** - Here you can set permission for Google Docs to be imported. You can select Page, Blog and NEWS individually or all together.
-
-Once all the settings are set, click on Save Settings button.
-
-<Note>
-
-To verify that Settings are configured properly, Switch to Import Google Docs tab. If this tab lists Google Docs from your configured Gmail account then settings are done properly.
-
-</Note>
+![Google Docs module: Dashboard tab with import logs and import steps for Pages, Blog and News](./images/module_dashboard.webp)
 
 ## Import Google Docs
 
-This tab is used to import Google Docs to TYPO3 Page/Blog/NEWS. This tab lists all the Google Docs available. User can select the Google Docs and import it to selected TYPO3 Page/Blog/NEWS. It also allows user to search from all Google Docs and how many Docs to display in single page.
+- Lists the Google Docs of your connected account, with document name, last modified date, owner and size
+- **Search** (top right) finds Docs by name. It searches up to 1,000 Google Docs of the connected account
+- **View/Edit Doc** opens the Doc in Google Docs
+- **Import Now** opens the import dialog for the selected page (see [How to import Google Docs](/ExtNsGoogleDocs/ImportGoogleDocToPage/Index))
 
-![Import Google Docs](./images/import_google_docs.webp)
+The number of Docs listed and which owners are shown come from [Global Settings](#global-settings).
+
+![Google Docs module: Import Google Docs tab with the list of available Docs](./images/module_import_google_docs.webp)
 
 ## Reports & Logs
 
-This tab lists complete logs of all the Google Docs imports have taken place in the system. It will display which Google Doc is imported to which TYPO3 Page/Blog/News with Import time, importer name. It will also allow user to access the Google Docs and imported Page/Blog from this tab directly.
+- Lists every import: import type (TYPO3 Page, Blog Page, News), Doc name, target page or news folder, date and the backend user who imported
+- Search and pagination
 
-![Reports & Logs](./images/reports_and_logs.webp)
+The action buttons depend on the import type:
 
-## Figures
+| Import type | Actions |
+| --- | --- |
+| TYPO3 Page | **View Docs**, **View Page**, **Edit Page** |
+| Blog Page | **View Docs**, **View Page**, **Edit Blog** |
+| News (into a news folder) | **View Docs**, **Edit News** |
 
-![Dashboard](images/dashboard1.webp)
+The screenshot shows page imports, so only **View Docs**, **View Page** and **Edit Page** are visible.
 
-![Global Settings](images/global_settings1.webp)
+![Google Docs module: Reports & Logs tab with page imports and the actions View Docs, View Page and Edit Page](./images/module_reports_and_logs.webp)
 
-![Import Google Docs](images/import_google_docs2.webp)
+## Global Settings
 
-![Reports & Logs](images/reports_and_logs1.webp)
+Set these once before your first import. All values are saved for **your** backend user.
+
+### Google account
+
+| Field | Description |
+| --- | --- |
+| **Google Client ID** | The Client ID from your Google Cloud project |
+| **Google Secret Key** | The Client Secret from your Google Cloud project |
+| **Google Refresh Token** | The refresh token from the OAuth 2.0 Playground |
+| **Maximum Get Files** | How many Docs are listed in the Import tab: 1 to 1,000 (default 10) |
+| **Docs owned by** | Which Docs are listed: **Owned by anyone**, **Owned by me** or **Not owned by me** |
+| **Default Import To** | Which targets imports are allowed for: **TYPO3 Pages**, **Blog (EXT:blog)**, **News (EXT:news)**. Default: all three |
+
+![Google Docs module: Global Settings tab with Google account fields and import options](./images/module_global_settings_01.webp)
+
+### Record Settings
+
+| Field | Description |
+| --- | --- |
+| **Publish Status** | **Publish Now** creates visible records. **Save as Draft** creates hidden records that you enable after review. Applies to content elements, news records and new pages |
+
+### Image Setting
+
+Used for Text & Image and Image Only elements.
+
+| Field | Options |
+| --- | --- |
+| **Image Alignment** | Above, center · Above, right · Above, left · Below, center · Below, right · Below, left · In text, right · In text, left · Beside Text, Right · Beside Text, Left |
+| **Enlarge on Click** | Adds click-to-enlarge to imported images |
+| **Number of Column** | 1–6 image columns |
+
+![Google Docs module: Record Settings and Image Setting in the Global Settings tab](./images/module_global_settings_02.webp)
+
+Click **Save Settings**.
+
+<Note>
+
+The image settings are stored on the content element. How they look on the frontend depends on your site package or theme CSS for Fluid Styled Content (classes such as `ce-left`, `ce-intext`, `ce-column`).
+
+</Note>
+
+<Tip>
+
+To check your connection, open the **Import Google Docs** tab. If it lists the Docs of your Google account, the settings are correct.
+
+</Tip>

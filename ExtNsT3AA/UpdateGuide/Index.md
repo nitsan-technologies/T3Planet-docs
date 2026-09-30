@@ -1,6 +1,6 @@
 ---
 title: "Update Guide"
-description: "To update the **T3AA Premium** extension, please follow the official update documentation before upgrading your installation: https://docs.t3planet.de/en/latest/License/UpdateVersion/Index.html."
+description: "Update T3AA Premium (EXT:ns_t3aa) safely: remove the old version, update EXT:ns_license, re-activate the license, then run the Database Analyzer and check AI Foundation."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -8,8 +8,9 @@ keywords:
 sidebarTitle: "Update Guide"
 ---
 
-To update the **T3AA Premium** extension, please follow the official update documentation before upgrading your installation:
-https://docs.t3planet.de/en/latest/License/UpdateVersion/Index.html
+To update the **T3AA Premium** extension, follow the general
+[update documentation](/en/latest/License/UpdateVersion/Index) before you
+upgrade your installation.
 
 <Warning>
 **Migration Steps**
@@ -32,17 +33,17 @@ Go to **Admin Tools** → **T3Planet Shop**, remove the existing license key, en
 
 Completely remove T3AA from your project first. Then, in your `composer.json` file, update the `only` parameter in the Composer `repositories` configuration:
 
-``json
+```json
 "only": [
   "nitsan/ns-t3aa"
 ]
+```
 
 Install the latest T3AA package and update dependencies. Confirm that AI Foundation (`EXT:ns_t3af`) is installed — either with Composer or from the TYPO3 Extension Repository (TER) via **Admin Tools** → **Extensions** → **Get Extensions**.
 
-Download / TER page: https://extensions.typo3.org/extension/ns_t3af
+Download / TER page: [extensions.typo3.org/extension/ns_t3af](https://extensions.typo3.org/extension/ns_t3af)
 
-Full details:
-https://docs.t3planet.de/en/latest/License/LicenseActivation/Index.html
+Full details: [License Activation](/en/latest/License/LicenseActivation/Index)
 
 **Step 4 — Run the Database Analyzer**
 
@@ -54,11 +55,9 @@ Install and configure `EXT:ns_t3af` first. Then configure the AI Provider from A
 
 **Step 6 — Complete T3AA setup**
 
-Follow the T3AA documentation for the full setup:
-https://docs.t3planet.de/en/latest/ExtNsT3AA/Index.html
+Follow the [T3AA documentation](/en/latest/ExtNsT3AA/Index) for the full setup.
 </Warning>
 
 <Note>
 Always create a complete backup of your database, uploaded files, and project before performing an update. This helps prevent data loss and allows you to restore the previous version if any compatibility issues occur during the upgrade.
 </Note>
-``

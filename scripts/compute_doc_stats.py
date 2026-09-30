@@ -343,6 +343,10 @@ def sync_homepage_stats(*, quiet: bool = False) -> dict:
 
 def main() -> None:
     sync_homepage_stats()
+    from product_entry_pages import sync_product_links
+
+    changed = sync_product_links()
+    print("Product links -> entry pages: " + (", ".join(changed) if changed else "up to date"))
 
 
 if __name__ == "__main__":

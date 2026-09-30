@@ -17,23 +17,31 @@ You can generate AI alt text in **two ways**:
    Review missing alt text by folder, generate drafts for selected files or a
    whole folder, then approve them in one place.
 2. **File List (Media)** — open an image and generate alt text **one by one
-   image**, or use **Mass AI File Meta** for a folder (including multilingual
+   image**, or use **Mass AI Filemeta** for a folder (including multilingual
    options and Scheduler processing).
 
 Both paths write into TYPO3 file metadata. Use the module for coverage and
 review; use File List when you are already editing specific files.
 
-**AI generation** (drafts from the module, File List, or Mass AI File Meta) uses a
-configured provider under **AI Foundation → AI Providers**, with the matching
-options enabled under **AI Foundation → AI Features**. Opening the inventory and
-reviewing existing metadata does **not** call AI.
+**AI generation** (drafts from the module, File List, or Mass AI Filemeta) uses
+the AI access set in **AI Foundation → AI Providers** (AI Credits or your own
+API keys), with the matching options enabled under **AI Foundation → AI
+Features**. Opening the inventory and reviewing existing metadata does **not**
+call AI.
+
+## Which generator is used
+
+| Mode | Generator |
+| --- | --- |
+| **AI Credits** | Always **Vision** through T3Planet Credits. AltText.ai is not used, and **Select AI Provider** shows only **T3Planet Credits**. Credits are charged for the alternative text and for title and description (see [What uses AI credits](/ExtNsT3AA/Configuration/Index#what-uses-ai-credits)). |
+| **Your Own API Keys** | **Vision** via your AI provider, or **AltText.ai** if you add an AltText.ai provider in AI Foundation. The default is set in **Default Ai-Filemeta generate Model**. If AltText.ai runs out of credits or hits its quota or rate limit, T3AA falls back to Vision with your default AI provider (for example OpenAI), if one is configured. |
 
 <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmu29ippl0kqlqmrxl4pixxby?utm_source=link" loading="lazy" title="T3AA AI Alt Text Feature Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
 ## Steps — AI Alt Text module
 
-1. Configure an AI provider in **AI Foundation → AI Providers** (required for
-   **Generate** / queue processing).
+1. Set up AI access in **AI Foundation → AI Providers**: AI Credits or your
+   own API keys (required for **Generate** / queue processing).
 2. Open **AI Accessibility → AI Alt Text**.
 3. Select a `fileadmin` folder in the left tree.
 4. Check tiles such as **Missing alt text** and **Awaiting review**.
@@ -57,14 +65,14 @@ Do not mark informative photos, meaningful icons, or charts as decorative.
 
 ## Module overview
 
-## Folder and language
+### Folder and language
 
 * **Folder tree** — counts and the table follow the selected folder
 * **Language** — All languages or one language
 * **Refresh counts** — reloads metadata only (does not call AI)
 * **Queue folder for AI alt text** — queues the folder for bulk generation
 
-## Status tiles
+### Status tiles
 
 | Tile | Meaning |
 | --- | --- |
@@ -76,7 +84,7 @@ Do not mark informative photos, meaningful icons, or charts as decorative.
 | Used on pages | How many images are referenced in content |
 
 
-## Filters and bulk actions
+### Filters and bulk actions
 
 Filters: **All**, **Missing**, **Drafts**, **Decorative**, **Used only**.
 
@@ -90,11 +98,18 @@ Edit (TYPO3 file record).
 
 1. Open **File List** and select a folder.
 2. Edit an image’s metadata.
-3. Use **Generate AI Alt Metadata**, choose the generator (**TextAlt.ai** or
-   **Vision API**), then **Generate**.
-4. Review and **Save**.
+3. Click **Generate file meta with T3AA** in the top button bar of the metadata
+   form. The button is shown for image files when
+   **Activate Feature Ai-Metadata for Images** is enabled.
+4. In the **Generate file meta with T3AA** dialog, choose the provider in
+   **Select AI Provider**, then click **Generate AI Metadata**. In AI Credits
+   mode, the only option is **T3Planet Credits**.
+5. Review or edit **Alter Text**, **Title** and **Description** in the dialog.
+6. Click **Save** to write the values to the file metadata.
 
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmraryza91hd3qmhxpq8887qs?utm_source=link" loading="lazy" title="FileMeta TextAlt.ai Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+Supported file types: PNG, JPEG, WEBP and non-animated GIF.
+
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmraryza91hd3qmhxpq8887qs?utm_source=link" loading="lazy" title="FileMeta AltText.ai Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
 <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmraru0z91h11qmhxwzq9omc7?utm_source=link" loading="lazy" title="FileMeta Vision API Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
@@ -103,7 +118,7 @@ Edit (TYPO3 file record).
 <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmras49y91hl2qmhxltv9w9d6?utm_source=link" loading="lazy" title="AI Bulk Metadata Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
 1. In File List, select the folder.
-2. Use **Mass AI File Meta**.
+2. Use **Mass AI Filemeta** in the top button bar.
 3. Choose missing-only or override existing metadata.
 4. Select language options when offered. If you check **Generate file if translation is missing**, the translation file for that language is created automatically when it does not exist yet.
 5. Process with Scheduler or `nst3aa:bulk:metadata`.

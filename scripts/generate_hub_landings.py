@@ -6,7 +6,16 @@ import json
 import re
 from pathlib import Path
 
+from product_entry_pages import product_entry_pages
+
 ROOT = Path(__file__).resolve().parent.parent
+PRODUCT_ENTRY = product_entry_pages()
+
+
+def product_href(prefix: str, slug: str) -> str:
+    """Product links open the first doc page, not the overview."""
+    root = f"/{slug}/Index"
+    return prefix + PRODUCT_ENTRY.get(root, root)
 
 UPPER_WORDS = {
     "t3ai", "t3ac", "t3as", "t3al", "t3aa", "t3ab",
@@ -385,7 +394,7 @@ def _collect_product_groups(groups: list, lang: str) -> list[dict]:
                             "icon": normalize_icon(g.get("icon")),
                             "category": category,
                             "nav_path": root,
-                            "href": f"{prefix}/{slug}/Index",
+                            "href": product_href(prefix, slug),
                             "has_update": (ROOT / (f"de/{slug}" if lang == "de" else slug) / "UpdateVersion" / "Index.md").exists(),
                             "has_install": (ROOT / (f"de/{slug}" if lang == "de" else slug) / "Installation" / "Index.md").exists(),
                         }
@@ -441,7 +450,7 @@ def parse_catalog(lang: str) -> list[dict]:
                     "icon": normalize_icon(dropdown.get("icon")),
                     "category": category,
                     "nav_path": nav_path,
-                    "href": f"{prefix}/{slug}/Index",
+                    "href": product_href(prefix, slug),
                     "has_update": (ROOT / (f"de/{slug}" if lang == "de" else slug) / "UpdateVersion" / "Index.md").exists(),
                     "has_install": (ROOT / (f"de/{slug}" if lang == "de" else slug) / "Installation" / "Index.md").exists(),
                 }
@@ -591,7 +600,7 @@ def render_ai_hub(lang: str) -> str:
         features = meta[f"features_{lang}"]
         install_label = "Installation" if lang == "en" else "Installation"
         feat_html = "".join(f'<span className="t3-feature-tag">{f}</span>' for f in features)
-        doc_href = f"{prefix}/{slug}/Index"
+        doc_href = product_href(prefix, slug)
         lines.extend([
             '    <a className="t3-product-card" href="' + doc_href + '">',
             f'      <div className="t3-product-card-header">',
@@ -639,7 +648,7 @@ def render_template_hub(lang: str) -> str:
         name = meta[f"name_{lang}"]
         cat = meta[f"category_{lang}"]
         desc = meta[f"desc_{lang}"]
-        doc_href = f"{prefix}/{slug}/Index"
+        doc_href = product_href(prefix, slug)
         lines.extend([
             f'    <a className="t3-product-card" href="{doc_href}">',
             f'      <div className="t3-product-card-header">',

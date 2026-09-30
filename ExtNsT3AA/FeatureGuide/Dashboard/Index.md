@@ -34,6 +34,10 @@ At the top of the Dashboard (and on the Scanner / Bulk Scans screens) you see
 * **Page limit** — total pages allowed by the current license (or
   **Unlimited**)
 
+This quota is separate from your AI Credits balance. Scans never use AI
+credits, and AI features never reduce the scan page quota. See
+[Scan page quota and AI credits](/ExtNsT3AA/Configuration/Index#scan-page-quota-and-ai-credits).
+
 ## How it works when you run a scan
 
 1. You select a page and a **depth** (this page only, 1–3 levels, or infinite).

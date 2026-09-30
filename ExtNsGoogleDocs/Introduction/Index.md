@@ -1,6 +1,6 @@
 ---
 title: "Introduction"
-description: "Introduction — T3Planet documentation."
+description: "Google Docs (EXT:ns_googledocs) imports Google Docs into TYPO3 pages, blog posts and news records as content elements."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -9,48 +9,25 @@ keywords:
 sidebarTitle: "Introduction"
 ---
 
-## NS Googledocs
+## Google Docs
 
 ![Extension Banner](./images/ext_banner.webp)
 
 ## What does it do?
 
-EXT:ns_googledocs is the only TYPO3 extension which allows Backend user to import Google Docs to TYPO3 and convert the Google Docs content into TYPO3 Content elements.
+EXT:ns_googledocs lets a backend editor connect their own Google account and import Google Docs into TYPO3 pages, blog posts or news records.
 
-**FEATURES:**
-
-## Screenshots
-
-### Backend Screenshots
-
-**Dashboard**
-
-![Dashboard tab](./images/dashboard_updated.webp)
-
-**Import Google Docs**
-
-![Import Google Docs](./images/import_google_docs.webp)
-
-**Reports & Logs**
-
-![Reports & Logs tab](./images/reports_and_logs.webp)
-
-**Global Settings**
-
-![Global Settings Tab](./images/global_settings.webp)
+- **Heading 1** and **Heading 2** in the Doc become content elements. You choose the element type per section in the import dialog.
+- Images are saved in `fileadmin/ns_googledocs/`.
+- Imports start manually from the backend module. There is no scheduler task.
+- Imports need a valid license (EXT:ns_license) that matches your domain.
 
 ## Helpful Links
 
 <Note>
 
-- **Product:** https://t3planet.de/ns-google-docs-typo3-extension
-- **Front End Demo:** https://demo.t3planet.de//t3t-extensions/googledocs
+- **Product:** https://t3planet.com/typo3-googledocs-extension
+- **Front End Demo:** https://demo.t3planet.com/t3-extensions/googledocs
 - To make any domain-related changes or whitelist any development and staging domains, please reach our support center: https://t3planet.de/support
 
 </Note>
-
-## Figures
-
-![Extension Banner](images/ext_banner2.webp)
-
-![Import Google Docs](images/import_google_docs1.webp)
