@@ -1,0 +1,56 @@
+---
+title: "AI Accessibility FAQ"
+sidebarTitle: "FAQ"
+description: "Short answers on T3AA requirements, versions, the accessibility widget, Fix Hub, what scans cover, AI providers and data flow."
+icon: "circle-help"
+keywords:
+  - "TYPO3"
+  - "T3Planet"
+  - "T3AA"
+  - "AI Accessibility"
+  - "FAQ"
+---
+
+Short answers to common questions about AI Accessibility (T3AA). For licenses, trials, staging, Composer and support, see the [general FAQ](/en/latest/FAQ/Index).
+
+## Product and setup
+
+### Is T3AA free?
+
+No. T3AA is a premium extension with no free version, and it is not distributed through the TYPO3 Extension Repository (TER). Test it with the 30-day free trial, then buy a license.
+
+### What do I need to run T3AA?
+
+AI Foundation (`EXT:ns_t3af`, free), the T3Planet Shop module (`EXT:ns_license`) with an active T3AA license, and an AI provider configured in AI Foundation. Full list: [System Requirements](/en/latest/ExtNsT3AA/SystemRequirements/Index).
+
+### Which TYPO3 and PHP versions are supported?
+
+TYPO3 v12 to v14 with PHP 8.2 or higher, the same range as AI Foundation.
+
+### Is the accessibility widget included?
+
+Yes. The frontend accessibility widget is part of the T3AA license. There is nothing extra to buy. You set it up in [Accessibility Widgets](/en/latest/ExtNsT3AA/FeatureGuide/AccessibilityWidgets/Index).
+
+### What can T3AA do?
+
+AI alt text and image metadata, AI audio and voiceover, simplified text, an accessibility checker in CKEditor, page scans and a board to track fixes. Overview: [Feature Guide](/en/latest/ExtNsT3AA/FeatureGuide/Index).
+
+## Scans and fixes
+
+### What is Fix Hub?
+
+The board where you assign, track, verify and close accessibility work for a page. Its cards come from Scanner runs. If it is empty, run a Scanner check first. Details: [Fix Hub](/en/latest/ExtNsT3AA/FeatureGuide/FixHub/Index).
+
+### Does a good scan score mean my site meets WCAG, BITV or the BFSG?
+
+No. The Scanner and the Lighthouse score check the machine-testable part of WCAG only. Screen reader flow, keyboard use, navigation logic and form behaviour need a person to review them. To request a manual review, use [Human Expert](/en/latest/ExtNsT3AA/FeatureGuide/HumanExpertAudit/Index).
+
+## Data
+
+### Which AI model does T3AA use, and where does the data go?
+
+The provider you set up in AI Foundation. With your own API keys (the default), requests go from your server to that provider, with no T3Planet server in between. With the optional [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index), requests are routed through T3Planet to the AI providers. Details: [DPA & GDPR](/en/latest/ExtNsT3AA/DPAandGDPR/Index).
+
+### Something is not working
+
+Open a ticket at [t3planet.de/support](https://t3planet.de/support) with your TYPO3, PHP and T3AA versions and the exact error text.
