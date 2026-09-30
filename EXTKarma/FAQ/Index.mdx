@@ -1,0 +1,60 @@
+---
+title: "T3 Karma FAQ"
+sidebarTitle: "FAQ"
+description: "Short answers on installing T3 Karma, staging, supported TYPO3 versions, theme settings, updates and demo content to replace before go-live."
+icon: "circle-help"
+keywords:
+  - "TYPO3"
+  - "T3Planet"
+  - "T3 Karma"
+  - "template"
+  - "FAQ"
+---
+
+Short answers to common questions about the T3 Karma template. For licenses, trials, staging, Composer and support, see the [general FAQ](/en/latest/FAQ/Index).
+
+## Installation
+
+### Can I install T3 Karma on an existing website?
+
+We recommend a new, empty TYPO3 instance. The installation creates pages, content elements and settings, and on a site with existing data it can overwrite or remove content. If you install on an existing site, back up files and database first. See [Installation](/en/latest/EXTKarma/Installation/Index).
+
+### Can I set it up on a staging site first?
+
+Yes. Development, staging and local domains are free and do not count towards your license. You add and change them yourself, see [Register and Manage Domains](/en/latest/License/RegisterAndManageDomains/Index).
+
+### Which TYPO3 versions does T3 Karma support?
+
+The current and the previous TYPO3 LTS. Moving from v13 to v14: [Pre-Upgrade Guide](/en/latest/EXTKarma/UpgradeV13xToV14x/Index).
+
+## Settings and updates
+
+### Where do I change the logo, footer, colours and brand name?
+
+These are theme settings, not content elements. You find them in the theme options, see [Theme Options](/en/latest/EXTKarma/GlobalSettingsConfiguration/Index).
+
+### Will a theme update overwrite my settings?
+
+No. Your theme settings are stored in your site, not in the theme files, so a theme update keeps them.
+
+## Before go-live
+
+### Which demo content should I replace before going live?
+
+The template ships with demo values that stay until you replace them. Check:
+
+- **Social sharing text and image** (Open Graph and Twitter): the preview in Google, WhatsApp and LinkedIn.
+- **Social media links** in the header and footer.
+- **Home screen app title** (`apple-mobile-web-app-title`).
+- **Logos in notification emails:** move them to `fileadmin` and update the email template.
+- **Copyright year** in the footer.
+
+## Troubleshooting
+
+### The table tools in the editor or my custom styles disappeared
+
+An old version of the license extension is still installed. Update the T3Planet Shop module (`EXT:ns_license`) to the current version, then check that the update applied. See [Update Version](/en/latest/License/UpdateVersion/Index).
+
+### Something else is not working
+
+Open a ticket at [t3planet.de/support](https://t3planet.de/support) with your TYPO3 and T3 Karma versions, a staging link or screenshots, and the exact error text.

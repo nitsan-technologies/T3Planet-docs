@@ -1,0 +1,64 @@
+---
+title: "AI Chatbot FAQ"
+sidebarTitle: "FAQ"
+description: "Short answers on T3AC requirements, versions, ns_t3cs, sources, AI providers, data flow and streaming problems."
+icon: "circle-help"
+keywords:
+  - "TYPO3"
+  - "T3Planet"
+  - "T3AC"
+  - "AI Chatbot"
+  - "FAQ"
+---
+
+Short answers to common questions about the AI Chatbot (T3AC). For licenses, trials, staging, Composer and support, see the [general FAQ](/en/latest/FAQ/Index).
+
+## Product and setup
+
+### Is T3AC free?
+
+No. T3AC is a premium extension with no free version, and it is not distributed through the TYPO3 Extension Repository (TER). Test it with the 30-day free trial, then buy a license.
+
+### What do I need to run T3AC?
+
+AI Foundation (`EXT:ns_t3af`, free), the T3Planet Shop module (`EXT:ns_license`) with an active T3AC license, and an AI provider configured in AI Foundation. The full list is in the [system requirements](/en/latest/ExtNsT3AC/Introduction/Index#system-requirements), the steps are in [Installation](/en/latest/ExtNsT3AC/Installation/Index).
+
+### Which TYPO3 and PHP versions are supported?
+
+TYPO3 v12 to v14 with PHP 8.2 or higher, the same range as AI Foundation.
+
+### What is `ns_t3cs`, and why is it installed?
+
+`ns_t3cs` is the shared base that the AI Chatbot and AI Search both run on: data sources, training and usage analytics. It comes with your T3AC or T3AS license and is not sold on its own.
+
+### I have a T3AC license. Why is the AI Search tab greyed out?
+
+T3AC and T3AS share one backend module. The tab of a product you have not licensed stays visible but disabled. AI Search needs its own license.
+
+## Answers and data
+
+### Where does the chatbot get its answers from?
+
+From the content you train it on. You add pages and other sources in [Data Source](/en/latest/ExtNsT3AC/FeatureGuide/DataSource/Index) and train them in the [Training Center](/en/latest/ExtNsT3AC/FeatureGuide/TrainingCenter/Index).
+
+### Does the chatbot show its sources?
+
+Yes. Source links are on by default. You can turn them off with the **Enable Sources Links** setting.
+
+### Which AI model does the chatbot use?
+
+The provider you set up in AI Foundation: your own API keys (the default) or the optional [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index). For a custom or self-hosted model, see [Custom LLM Support](/en/latest/ExtNsT3AC/CustomLLMSupport/Index).
+
+### Where does chat data go?
+
+With your own API keys, requests go from your server to the AI provider you configured, with no T3Planet server in between. With AI Credits, requests are routed through T3Planet to the AI providers. Details: [DPA & GDPR](/en/latest/ExtNsT3AC/DPAandGDPR/Index).
+
+## Troubleshooting
+
+### The chatbot answer stays empty or only appears after a long delay
+
+On T3AC 14.2.2 or older, TYPO3 frontend compression blocks the streamed answer. Update T3AC, or set `compressionLevel` to `0`. Steps: [Known Problems](/en/latest/ExtNsT3AC/KnownProblems/Index).
+
+### Something else is not working
+
+Open a ticket at [t3planet.de/support](https://t3planet.de/support) with your TYPO3, PHP and T3AC versions and the exact error text.
