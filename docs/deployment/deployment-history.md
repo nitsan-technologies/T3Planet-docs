@@ -87,3 +87,14 @@ Append one entry per production release.
 - QA: full crawl 833 pages 200 + valid content, 0 soft 404, 7×308 known T3AA redirects, 10×404 are local-only `backup/` / `.cursor/` files (expected); React #418 gone on hubs; card HTML 7/7 + 11/11; 90/90 live card clicks; 104/104 changed-page checks (desktop/mobile × light/dark); search OK; HTTPS valid
 - Known open item: external link rot (old demo/shop/Site Kit URLs) not in this release
 - Final status: PASS WITH NON-BLOCKING WARNINGS
+
+### 2026-09-30 — Google Docs v14 remigration, T3AA Credits/quota/version fixes, perf assets
+- Authorization: operator said `start the deployment process`
+- Commits: `b717dce` (136 files) + merge `1d4f808` of 7 upstream Mintlify-editor commits (FAQ pages, Site Kit shop name); all by Nitsan `<sanjay@nitsantech.com>`; pushed `d48604b..1d4f808`
+- Scope: Google Docs — 4 new pages (GoodToKnow, Reformation, Screenshots, Troubleshooting), new screenshots, root-relative links, unreleased embed element + v15 note removed, composer `only` without ns-license; T3AA — AI Credits setup, scan quota vs AI credits, credit usage per action, generator under Credits, one version matrix, current demo showcase (ClickUp 86d4c7nmr + earlier tickets); hub/footer product entry links; 372 legacy redirects; minified `t3-docs.js` / `custom.css`
+- Merge conflicts: `ExtNsT3AA/ExtNsT3AC/ExtNsT3AS/Index.md` — kept upstream layout + FAQ card, re-applied T3AF → `ExtNsT3AF/Introduction/Index`; `docs.json` auto-merged (both nav sets present)
+- Excluded: `docs-master/`, `workshops/`, `backup/`, `scripts/remigration/**`, QA report JSON, `scripts/live_e2e_qa/`
+- Push remote: `origin` → `nitsan-technologies/T3Planet-docs` (`master`), no force
+- Mintlify: GitHub check "Mintlify Deployment" completed/success on `1d4f808` (org repo)
+- QA: `mintlify validate` pass; full live crawl 810/810 nav pages 200 with content, 0 soft 404; 40/40 sampled new redirects 308; content markers 11/11 on docs.t3planet.de and t3planet.mintlify.app; desktop/mobile × light/dark on changed pages (0 broken images, 0 page errors, no horizontal scroll); search finds new T3AA sections; sitemap lists new pages; TLS valid
+- Final status: PASS
