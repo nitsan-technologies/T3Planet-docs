@@ -1,0 +1,68 @@
+---
+title: "AI Search FAQ"
+sidebarTitle: "FAQ"
+description: "Short answers on T3AS requirements, versions, existing search setups, sources, AI providers, data flow and streaming problems."
+icon: "circle-help"
+keywords:
+  - "TYPO3"
+  - "T3Planet"
+  - "T3AS"
+  - "AI Search"
+  - "FAQ"
+---
+
+Short answers to common questions about AI Search (T3AS). For licenses, trials, staging, Composer and support, see the [general FAQ](/en/latest/FAQ/Index).
+
+## Product and setup
+
+### Is T3AS free?
+
+No. T3AS is a premium extension with no free version, and it is not distributed through the TYPO3 Extension Repository (TER). Test it with the 30-day free trial, then buy a license.
+
+### What do I need to run T3AS?
+
+AI Foundation (`EXT:ns_t3af`, free), the T3Planet Shop module (`EXT:ns_license`) with an active T3AS license, the TYPO3 Scheduler and an AI provider configured in AI Foundation. The full list is in the [introduction](/en/latest/ExtNsT3AS/Introduction/Index#system-requirements).
+
+### Which TYPO3 and PHP versions are supported?
+
+TYPO3 v12 to v14 with PHP 8.2 or higher, the same range as AI Foundation.
+
+### Do I have to replace my current search?
+
+No. T3AS works with your existing setup: site content, Solr, ke_search or indexed_search.
+
+### What is `ns_t3cs`, and why is it installed?
+
+`ns_t3cs` is the shared base that AI Search and the AI Chatbot both run on: data sources, training and usage analytics. It comes with your T3AS or T3AC license and is not sold on its own.
+
+### I have a T3AS license. Why is the AI Chatbot tab greyed out?
+
+T3AS and T3AC share one backend module. The tab of a product you have not licensed stays visible but disabled. The AI Chatbot needs its own license.
+
+## Answers and data
+
+### What do visitors get instead of a list of links?
+
+A direct answer based on the content you trained, in a short or a detailed style. Visitors can ask follow-up questions after the first answer, listen to the answer read aloud, and rate it with thumbs up or down. Ratings show up in **Usage Analytics**.
+
+### Does AI Search show its sources?
+
+Yes. Source links are on by default. You can turn them off with the **Enable Reference Links** setting.
+
+### Which AI model does AI Search use?
+
+The provider you set up in AI Foundation: your own API keys (the default) or the optional [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index). For a custom or self-hosted model, see [Custom LLM Support](/en/latest/ExtNsT3AS/CustomLLMSupport/Index).
+
+### Where does search data go?
+
+With your own API keys, requests go from your server to the AI provider you configured, with no T3Planet server in between. With AI Credits, requests are routed through T3Planet to the AI providers.
+
+## Troubleshooting
+
+### The answer stays empty or only appears after a long delay
+
+On T3AS 14.2.2 or older, TYPO3 frontend compression blocks the streamed answer. Update T3AS, or set `compressionLevel` to `0`. Steps: [Known Problems](/en/latest/ExtNsT3AS/KnownProblems/Index).
+
+### Something else is not working
+
+Open a ticket at [t3planet.de/support](https://t3planet.de/support) with your TYPO3, PHP and T3AS versions and the exact error text.

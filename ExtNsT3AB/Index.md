@@ -9,7 +9,6 @@ keywords:
 sidebarTitle: "AI Builder"
 ---
 
-
 <div className="t3-template-landing">
   <div className="t3-landing-hero">
     <p className="t3-landing-eyebrow">AI Extensions</p>
@@ -17,43 +16,55 @@ sidebarTitle: "AI Builder"
     <p className="t3-landing-subtitle">Build TYPO3 content elements, forms, and blocks with AI-assisted workflows.</p>
   </div>
 
-<section className="t3-landing-section">
-  <p className="t3-landing-eyebrow">Get started</p>
-  <h2 className="t3-landing-section-title">Installation & setup</h2>
-  <CardGroup cols={2}>
-  <Card title="Introduction" icon="book-open" href="/en/latest/ExtNsT3AB/Introduction/Index" />
-  <Card title="Installation" icon="download" href="/en/latest/ExtNsT3AB/Installation/Index" />
-  <Card title="Configuration" icon="settings" href="/en/latest/ExtNsT3AB/Configuration/Index" />
-  <Card title="Update Version" icon="refresh-cw" href="/en/latest/ExtNsT3AB/UpdateVersion/Index" />
-  </CardGroup>
-</section>
+  <section className="t3-landing-section">
+    <p className="t3-landing-eyebrow">Get started</p>
+    <h2 className="t3-landing-section-title">Installation & setup</h2>
 
-<section className="t3-landing-section">
-  <p className="t3-landing-eyebrow">Build</p>
-  <h2 className="t3-landing-section-title">Features & configuration</h2>
-  <CardGroup cols={2}>
-  <Card title="How T3AB Works" icon="book-open" href="/en/latest/ExtNsT3AB/HowT3ABWorks/Index" />
-  <Card title="AI Builder" icon="bot" href="/en/latest/ExtNsT3AB/T3ABAIBuilder/Index" />
-  <Card title="Content Blocks" icon="pen-line" href="/en/latest/ExtNsT3AB/T3ABContentBlocks/Index" />
-  <Card title="Forms" icon="file-text" href="/en/latest/ExtNsT3AB/Forms/Index" />
-  </CardGroup>
-</section>
+    <CardGroup cols={2}>
+      <Card title="Introduction" icon="book-open" href="/en/latest/ExtNsT3AB/Introduction/Index" />
 
-<section className="t3-landing-section">
-  <p className="t3-landing-eyebrow">Advanced</p>
-  <h2 className="t3-landing-section-title">Upgrades & optimization</h2>
-  <CardGroup cols={2}>
-  <Card title="Update Guide" icon="arrow-up" href="/en/latest/ExtNsT3AB/UpdateGuide/Index" />
-  </CardGroup>
-</section>
+      <Card title="Installation" icon="download" href="/en/latest/ExtNsT3AB/Installation/Index" />
 
-<section className="t3-landing-section">
-  <p className="t3-landing-eyebrow">Resources</p>
-  <h2 className="t3-landing-section-title">Help & support</h2>
-  <CardGroup cols={2}>
-  <Card title="Support" icon="life-buoy" href="/en/latest/ExtNsT3AB/Support" />
-  <Card title="Get Extension" icon="shopping-cart" href="/en/latest/ExtNsT3AB/BuyNow" />
-  </CardGroup>
-</section>
+      <Card title="Configuration" icon="settings" href="/en/latest/ExtNsT3AB/Configuration/Index" />
 
+      <Card title="Update Version" icon="refresh-cw" href="/en/latest/ExtNsT3AB/UpdateVersion/Index" />
+    </CardGroup>
+  </section>
+
+  <section className="t3-landing-section">
+    <p className="t3-landing-eyebrow">Build</p>
+    <h2 className="t3-landing-section-title">Features & configuration</h2>
+
+    <CardGroup cols={2}>
+      <Card title="How T3AB Works" icon="book-open" href="/en/latest/ExtNsT3AB/HowT3ABWorks/Index" />
+
+      <Card title="AI Builder" icon="bot" href="/en/latest/ExtNsT3AB/T3ABAIBuilder/Index" />
+
+      <Card title="Content Blocks" icon="pen-line" href="/en/latest/ExtNsT3AB/T3ABContentBlocks/Index" />
+
+      <Card title="Forms" icon="file-text" href="/en/latest/ExtNsT3AB/Forms/Index" />
+    </CardGroup>
+  </section>
+
+  <section className="t3-landing-section">
+    <p className="t3-landing-eyebrow">Advanced</p>
+    <h2 className="t3-landing-section-title">Upgrades & optimization</h2>
+
+    <CardGroup cols={2}>
+      <Card title="Update Guide" icon="arrow-up" href="/en/latest/ExtNsT3AB/UpdateGuide/Index" />
+    </CardGroup>
+  </section>
+
+  <section className="t3-landing-section">
+    <p className="t3-landing-eyebrow">Resources</p>
+    <h2 className="t3-landing-section-title">Help & support</h2>
+
+    <CardGroup cols={2}>
+      <Card title="FAQ" icon="circle-question-mark" href="/en/latest/ExtNsT3AB/FAQ/Index" />
+
+      <Card title="Support" icon="life-buoy" href="/en/latest/ExtNsT3AB/Support" />
+
+      <Card title="Get Extension" icon="shopping-cart" href="/en/latest/ExtNsT3AB/BuyNow" />
+    </CardGroup>
+  </section>
 </div>

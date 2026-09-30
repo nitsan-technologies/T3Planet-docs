@@ -285,7 +285,8 @@
                   "ExtNsT3AC/UpdateVersion/Index"
                 ],
                 "root": "ExtNsT3AC/UpdateVersion/Index"
-              }
+              },
+              "ExtNsT3AC/FAQ/Index"
             ]
           },
           {
@@ -328,7 +329,8 @@
                   "ExtNsT3AS/UpdateVersion/Index"
                 ],
                 "root": "ExtNsT3AS/UpdateVersion/Index"
-              }
+              },
+              "ExtNsT3AS/FAQ/Index"
             ]
           },
           {
@@ -383,7 +385,8 @@
                   "ExtNsT3AA/UpdateVersion/Index"
                 ],
                 "root": "ExtNsT3AA/UpdateVersion/Index"
-              }
+              },
+              "ExtNsT3AA/FAQ/Index"
             ]
           },
           {
@@ -414,7 +417,8 @@
                   "ExtNsT3AL/UpdateVersion/Index"
                 ],
                 "root": "ExtNsT3AL/UpdateVersion/Index"
-              }
+              },
+              "ExtNsT3AL/FAQ/Index"
             ]
           },
           {
@@ -444,7 +448,8 @@
                   "ExtNsT3AB/UpdateVersion/Index"
                 ],
                 "root": "ExtNsT3AB/UpdateVersion/Index"
-              }
+              },
+              "ExtNsT3AB/FAQ/Index"
             ]
           }
         ]
@@ -481,7 +486,8 @@
                   "EXTKarma/UpdateVersion/Index"
                 ],
                 "root": "EXTKarma/UpdateVersion/Index"
-              }
+              },
+              "EXTKarma/FAQ/Index"
             ]
           },
           {
