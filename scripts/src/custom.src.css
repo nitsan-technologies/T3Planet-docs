@@ -5651,6 +5651,15 @@ html.t3-supademo-fs .t3-embed[data-t3-supademo-embed] {
   display: none !important;
 }
 
+/* Hub pages: Mintlify keeps product groups open across client-side navigation,
+   and a product row on a hub can only navigate, never expand in place. */
+[data-t3-sidebar-context="hub"] li[data-t3-root-nav="1"]:not([data-active]) > ul {
+  display: none !important;
+}
+[data-t3-sidebar-context="hub"] li[data-t3-root-nav="1"]:not([data-active]) > button svg.rotate-90 {
+  rotate: none;
+}
+
 #sidebar-content li[data-t3-sidebar-active-product="1"] > button,
 #mobile-nav li[data-t3-sidebar-active-product="1"] > button {
   font-weight: 600;
