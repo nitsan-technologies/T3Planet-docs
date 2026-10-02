@@ -109,3 +109,14 @@ Append one entry per production release.
 - Mintlify: GitHub check "Mintlify Deployment" completed/success on `8537545` (org repo); new CSS on `t3planet.mintlify.app` and `docs.t3planet.de`
 - QA: `mintlify validate` pass; pre-deploy baseline 14/50 (bug on all SPA return paths); live after deploy 50/50 desktop (7 products × 7 Home methods + chevron entry), 16/16 mobile (390/375), 11/11 dark; sitemap 851 URLs, llms.txt 200, 44/44 sampled pages 200 with content; only console error is pre-existing Mintlify CDN 403 for `lucide/v1.16.0/circle-help.svg`
 - Final status: PASS WITH NON-BLOCKING WARNINGS
+
+### 2026-10-02 — T3AI / T3AF migration from legacy docs + AI Providers Supademo
+- Authorization: operator said `start the deployment process`
+- Commit: `7b58d0b` by Nitsan `<sanjay@nitsantech.com>` (29 files; `0622725..7b58d0b`)
+- Scope: 17 `ExtNsT3AI/**` + 10 `ExtNsT3AF/**` pages reconciled against legacy docs-master and extension code (ns_t3ai 14.5.0, ns_t3af 1.2.2); outdated sections removed, dead Sphinx anchors removed, "AI Foundation" naming; AI Providers Supademo moved to top of page (duplicate removed); UpdateGuide client notes (Mistral provider, News extension) preserved; `_static/t3-stats*` timestamp only (pre-commit hook, counts unchanged 803/70)
+- Excluded: `docs-master/`, `workshops/`, `backup/`, `scripts/remigration/**`, `scripts/*` QA JSON, `scripts/live_e2e_qa/`, `scripts/supademo_audit/`, `docs/migration/` audit
+- Push remote: `origin` → `nitsan-technologies/T3Planet-docs` (`master`), no force; local and origin were in sync before commit (0/0)
+- Mintlify: GitHub check "Mintlify Deployment" completed/success on `7b58d0b` (org repo); content markers on `t3planet.mintlify.app` and `docs.t3planet.de`
+- QA: `mintlify validate` pass; 0 broken internal links / 0 missing images on changed pages; live sitemap 851 URLs → 844×200 + 7×308 known T3AA redirects (all resolve 200), 0 small/blank pages; 54/54 changed-page checks (desktop light + mobile dark), 0 broken images, 0 console errors; Supademos render (AI Providers 1, SEO 14, Pages 16, Media 7, AISettings 6, …); UpdateGuide notes live; search finds AI Providers; llms.txt 200; HTTPS valid
+- Note: `ExtNsT3AF/T3Planet-Credit-System/Dashboard/Index` is an intentional one-line stub linking to AI Usage (not blank)
+- Final status: PASS
