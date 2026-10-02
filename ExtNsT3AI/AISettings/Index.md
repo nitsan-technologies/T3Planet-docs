@@ -1,284 +1,20 @@
 ---
-title: "AI Settings"
+title: "T3AI Features"
+description: "Review and configure T3AI feature groups in AI Foundation, monitor AI Logs, and set up Co-Pilot, AI scraping protection, and editor permissions."
 keywords:
   - "TYPO3"
   - "T3Planet"
   - "T3AI"
   - "AI Settings"
-sidebarTitle: "AI Settings"
+  - "T3AI Features"
+  - "AI Logs"
+sidebarTitle: "T3AI Features"
 ---
 
-You can also customize your preferences with any model or feature directly from Settings
+T3AI Features help administrators review which AI-powered capabilities are active and how they are configured for page, content, SEO, translation, media, and assistant workflows.
+Use this section after installation, after an update, or before enabling new editor workflows.
 
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp1kwdp23xb1d3nf2y9woib?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-- Navigate to the “Extension Settings” tab.
-- Verify your settings.
-- Click on “NS_AI Setting.”
-- Choose the the desired AI model and features.
-- Click on “Save Settings.”
-
-![AIpage](./images/Settingss.webp)
-
-## AI Logs
-
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmrbpsdl20frlqmo521y5if8m?utm_source=link" loading="lazy" title="T3AI AI Logs Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfnzbytm19xg1d3nv60rq329?embed_v=2&utm_source=embed" loading="lazy" title="TYPO3 AI Setup wizard" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Track all AI system activities and monitor how your backend users interact with the AI models,follow below steps to check AI log.
-
-- **Step 1** - Log in to your TYPO3 backend and navigate to the T3AI Module.
-- **Step 2** - Select the **‘AI Log’** Button showing in Corner of the T3AI Module.
-
-![AI log](./images/AI_log.webp)
-
-- **Step 3** - Simply search for the page and select all the required fields from the dropdown menu. **AI Engine** - It displays the types of AI engine logs you want to view.
-**AI Models** - Select AI Engine Model types. For i.e GPT 4.0
-**Module** - This Indicates T3AI module Logs. For SEO, Translation.
-After Selecting Your Required field Click on Filter and your AI model Logs are generated.
-
-![AI log](./images/New_log.webp)
-
-- **Step 4** - You can reset your AI model logs by clicking on the ‘Reset’ button.
-
-## Statastics
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfnzchrg19yk1d3nfyx5nru0?embed_v=2&utm_source=embed" loading="lazy" title="TYPO3 AI Setup wizard" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Access all your AI model analytics in one place with predefined AI model statistics.
-
-## Persona
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfo1ibx61e271d3ndexk4qdw?embed_v=2&utm_source=embed" loading="lazy" title="TYPO3 AI Setup wizard" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Get started with T3AI quickly and easily using our Persona ! Follow simple steps to set up T3AI on your TYPO3 site, so you can start enjoying AI-powered features in no time. The wizard guides you through the process, making installation smooth!
-
-This features help you during installtion of T3AI TYPO3 AI Extension.
-
-## Feature Toggles
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp0kk7e23451d3nu1ohify7?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Activate or deactivate features in Global Settings and use only what you need.
-
-## System AI Log
-
-Track all AI system activities and monitor how your backend users interact with the AI models.
-
-- Go to T3AI Module, now navigate to AISetting tab.
-- Open Feature Toggle Modue
-- Navigate to feature toggle tab and find “ Enable System Log Solution “ options.
-- Check the option and save changes
-- **Step 2** - Now move to System module and navigate to log tab.
-
-![AI log](./images/Log_2.webp)
-
-- **Step 3** - Go to your System log and click on AI suggestion.
-
-![AI log](./images/Log_3.webp)
-
-- **Step 4** - Click the button to have the AI suggest solutions for your system log errors.
-
-![AI log](./images/Log_4.webp)
-
-## Setting AI SEO
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp29si124pg1d3nfiuqj3mj?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Configure global AI SEO settings: metadata, OG data, schema, scores, and more.
-
-## Pages
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp2btj324qa1d3ncufn5gb3?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Configure the AI Page module globally with standard page attributes, news extensions, and blog setup.
-
-## Content
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp2e2yy24rw1d3nu6pr8z3r?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Customize AI Content settings for Rewriter, Elements, Translation, RTE Assistant, and more.
-
-## T3AI Co-Pilot
-
-The **T3AI Co-Pilot** is your easy-to-use AI assistant in TYPO3. It helps you write, improve, translate, and optimize content quickly - all directly in the backend with just a few clicks.
-
-**Step 1:** Click on Edit Page property
-
-**Step 2:** Go to tab **“Resources”**
-
-**Step 3:** Include **NS t3ai :: Config RTE Preset (ns_t3ai)** in **Include static Page TSconfig (from extensions)** and Save this.
-
-![Co-Pilot configurations](./images/Co-pilot_image.webp)
-
-![RTE Co-Pilot](./images/t3ai-co-pilot.webp)
-
-## Translation
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp2fsgn24us1d3ny6e506rn?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Configure AI Translation with glossaries, pages, metadata, TCA, XLF, and more.
-
-## Custom LLM
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp2h7n524xu1d3nmcapna1t?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Manage LLM settings, enable features, and adjust preferences in one place.
-
-## OpenAI ChatGPT
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp2jszv251o1d3nsktdojhf?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Set up OpenAI ChatGPT API with key, model, tokens, temperature, and more.
-
-## Gemini
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp2l9eh25461d3n5wsiqwrj?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Configure access to Gemini’s API, including API key, model selection, and more.
-
-## DeepL
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp2mar0257c1d3nytqfa9h8?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Configure access to DeepL’s API, including API key, API URL, and more.
-
-## Google Translate
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp2nftg259o1d3n80siqcmb?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Set up your connection to Google Translator’s API, including the API URL and other parameters.
-
-## Claude
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp2oh9225b01d3ne9yfqa7t?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Configure access to Claude’s API, including API key, model selection, and additional options.
-
-## DALL-E
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp2pimb25cw1d3nr6une6df?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Configure access to DALL-E’s API, including API key, endpoint, model selection, and more.
-
-## Stability
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp2r1fq25e21d3nfjczu8x8?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Configure access to Stability’s API, including API key, endpoint, model selection, and other options.
-
-## MidJourney
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp2sb3925f01d3njcz0t29r?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Set up access to MidJourney’s API, including API key, endpoint, model selection, and more.
-
-## Unsplash
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp2t9dp25fw1d3nmcnes1fh?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Set up Unsplash API access by configuring the access key and other settings.
-
-## Openverse
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp2u9jt25go1d3nvp7c6nej?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Configure Openverse API access, including Client ID, Client Secret, and other key parameters.
-
-## Pixabay
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp2ve1025hm1d3nl8zkprxo?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Configure Pixabay API access by setting the API key, access key, and additional options.
-
-## Pexels
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfp2wh2t25ii1d3nrduadpef?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Set up Pexels API access by configuring the access key and other customizable options.
-
-## For Integrators
-
-Are you a TYPO3 integrator looking to boost the functionality of the T3AI TYPO3 Extension? Enhance your TYPO3 integration skills with T3AI resources tailored for TYPO3 Integrators. Discover how T3AI can elevate your TYPO3 integration capabilities.
-
-## TYPO3 AI Chatbot
-
-Are you seeking help with TYPO3 code as a developer or integrator? Try our custom-made TYPO3 AI Chatbot for assistance.
-
-Explore T3AI - TYPO3 AI Chatbot
-[https://chatgpt.com/g/g-MDKrvyZk5-t3ai](https://chatgpt.com/g/g-MDKrvyZk5-t3ai)
-
-## Report an Issue
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfpg5l59022j130uk8ek60xr?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-## Suggest Features
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfpgljut032r130uobcgvex7?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-If you find any issues or want to add any custom feature contact us at [Contact](https://t3planet.de/contact)
-
-## Restrict Prompts
-
-As an integrator, If you want to restrict the prompts managers add/edit/delete data (like SEO prompts, Page prompts, etc) to editors. You can simply exclude all prompts management while configuring your editor’s users or user groups..
-
-Using your integrator-level access, You can easily manage prompts with this “Manage Prompts” guidance - [View Prompts](/en/latest/ExtNsT3AI/Prompts/Index)
-
-If you find any issues or want to add any custom feature contact us at [Contact](https://t3planet.de/contact)
-
-## Block AI Scrapping
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfph5l5q03ea130uj100dsfm?embed_v=2&utm_source=embed" loading="lazy" title="Block AI Scrapping" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Protect your website’s content from unwanted AI bots with our Block AI Scraping feature. Keep your content safe and secure with just one click!
-
-- **Step 1** - Go to site management module in your TYPO3 Backend.
-
-> Select Site tab from list
-> Navigate to tab and Edit your site configurations.
-> Go to static routes in Site configurations.
-
-![AI log](images/Scrappng.webp)
-
-**Step 2** - Prevent bots for scraping your content with customizing required confugurqationns.
-
-> Select type of files & Route Type i.e robots .txt
-> Select type of bot to prevent from AI Content scraping.
-
-![AI log](./images/Scrapping.webp)
-
-Then, click on ‘Generate AI Scraping File,’ and your web content will now be protected from AI bots.
-
-## Auto-translate-prefix
-
-Tagging for automatically translated pages is now supported with a new control option, allowing users to manage and apply tags easily, improving the organization of translated content on the website.
-
-## User Permissions
-
-You can grant editors or users access to specific features of T3ai using our custom permission settings.follow below steps to configure it.
-
-![Frontend image without preview](./images/per1.webp)
-
-- **Step 1:** Navigate to the Backend Users module in the TYPO3 backend.
-- **Step 2** Select the Backend User Group
-- **Step 3** Edit the User group
-
-![Frontend image without preview](./images/per2.webp)
-
-- **Step 4** Go to tab  **Access Rights**
-
-You can enable or restrict access to specific modules for editor users.
-
-To grant more granular control, you can also allow specific features within a particular module for editor users
-
-![Frontend image without preview](./images/per3.webp)
-
-![Frontend image without preview](./images/per4.webp)
-
-## Interactive demos
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmrabnhz30bh0qmhx012m66o5?utm_source=link" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmrabnhz30bh0qmhx012m66o5?utm_source=link" loading="lazy" title="T3AI Features" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
 ## Overview
 
@@ -303,3 +39,132 @@ T3AI feature settings are managed in AI Foundation — not under **Admin Tools >
 6. Click **Save**, then test the related T3AI modules.
 
 For the shared module overview, see [AI Foundation AI Features](/en/latest/ExtNsT3AF/Configuration/AIFeatures/Index).
+
+## Feature settings
+
+The T3AI feature card groups its settings as follows.
+
+| Group | What you configure |
+|---|---|
+| Feature toggles | Enable or disable the SEO, Page, Content, Translation, and Media feature groups, plus AI Sidebar, AI-SEO optimization, AI page creation, TCA record field generation, System Log Solution, and the maximum RTE history count |
+| SEO | Default provider and SEO feature, default SERP snippet view (Desktop or Mobile), content type for content analysis, number of suggestions per field (topic, page title, description, keywords, OG title, OG description), schema and the news detail page ID used for news schema, automatic SEO metadata for new AI pages |
+| Page | Default provider and Pages feature |
+| Content | Default provider and Content feature, tone, and type of content |
+| Translation | Default provider and Translation feature, Auto Page Translate, default model for auto-translate, re-translate, and mass translation, and the DeepL official glossary |
+| Media | Number of images, image size and style, default storage folder, items per page for stock libraries, Stability AI generate mode and format, and access keys for Unsplash, Openverse, Pixabay, and Pexels |
+
+<Note>
+API keys for AI providers — including OpenAI, Gemini, Claude, DeepL, MidJourney, and Stability AI — are configured once in [AI Foundation → AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index), not in T3AI.
+</Note>
+
+## AI Logs
+
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmrbpsdl20frlqmo521y5if8m?utm_source=link" loading="lazy" title="T3AI AI Logs Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+
+AI Logs help you monitor requests made by T3AI modules.
+Use this section to review successful and failed AI requests, identify which module initiated a request, and troubleshoot issues during development, testing, or production use.
+
+To review AI Logs:
+
+1. Open the **T3AI** module in the TYPO3 backend.
+2. Select **AI Logs**.
+3. Use the available filters, such as **AI Provider**, **Model**, or **Module**, to narrow down the results.
+4. Review individual log entries to inspect request details, responses, and possible errors.
+5. Reset the filters at any time to display the complete log history.
+
+## Statistics
+
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfnzchrg19yk1d3nfyx5nru0?embed_v=2&utm_source=embed" loading="lazy" title="T3AI Statistics" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+
+Access all your AI model analytics in one place with predefined AI model statistics.
+
+## System Log Solution
+
+Get AI suggestions for errors in the TYPO3 system log.
+
+1. In the T3AI feature card, enable **Enable System Log Solution** and save.
+2. Open the **System** module and go to **Log**.
+
+![System log](./images/Log_2.webp)
+
+3. Open a log entry and click **AI suggestion**.
+
+![AI suggestion in the system log](./images/Log_3.webp)
+
+4. Click the button to have the AI suggest solutions for the system log error.
+
+![AI solution for a system log error](./images/Log_4.webp)
+
+## T3AI Co-Pilot
+
+The **T3AI Co-Pilot** is your easy-to-use AI assistant in TYPO3. It helps you write, improve, translate, and optimize content quickly - all directly in the backend with just a few clicks.
+
+**Step 1:** Click on Edit Page property
+
+**Step 2:** Go to tab **“Resources”**
+
+**Step 3:** Include **NS t3ai :: Config RTE Preset (ns_t3ai)** in **Include static Page TSconfig (from extensions)** and Save this.
+
+![Co-Pilot configurations](./images/Co-pilot_image.webp)
+
+![RTE Co-Pilot](./images/t3ai-co-pilot.webp)
+
+## Block AI Scraping
+
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfph5l5q03ea130uj100dsfm?embed_v=2&utm_source=embed" loading="lazy" title="Block AI Scraping" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+
+Protect your website’s content from AI crawlers with ready-made `robots.txt` rules.
+
+1. Enable **Block AI Scraping/Crawling** in the T3AI settings.
+2. Open the **Sites** module, edit your site configuration, and go to **Static Routes**.
+
+![Static routes in the site configuration](images/Scrappng.webp)
+
+3. Add a static route of type **Static Text** for `robots.txt`.
+4. Pick the bots to block from the value picker: GPTBot, Claude-Web, anthropic-ai, CCBot, FacebookBot, Google-Extended, PiplBot, or all of them.
+
+![Select the AI bots to block](./images/Scrapping.webp)
+
+5. Save the site configuration.
+
+## User Permissions
+
+You can grant editors or users access to specific features of T3AI using the custom permission settings. For AI Foundation module access and per-group credit limits, see [AI Permissions](/en/latest/ExtNsT3AF/Configuration/AIPermissions/Index).
+
+![Backend user groups](./images/per1.webp)
+
+- **Step 1:** Navigate to the Backend Users module in the TYPO3 backend.
+- **Step 2:** Select the Backend User Group.
+- **Step 3:** Edit the user group.
+
+![Edit backend user group](./images/per2.webp)
+
+- **Step 4:** Go to tab **Access Rights**.
+
+You can enable or restrict access to specific modules for editor users.
+
+To grant more granular control, you can also allow specific features within a particular module for editor users.
+
+![Module access for T3AI](./images/per3.webp)
+
+![Feature access for T3AI](./images/per4.webp)
+
+## Restrict Prompts
+
+To prevent editors from adding, editing, or deleting prompts (SEO prompts, Page prompts, and so on), exclude prompt management when you configure the editor users or user groups.
+
+With integrator-level access, manage prompts as described in [Prompts](/en/latest/ExtNsT3AI/Prompts/Index).
+
+## Report an Issue
+
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfpg5l59022j130uk8ek60xr?embed_v=2&utm_source=embed" loading="lazy" title="Report an Issue" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+
+## Suggest Features
+
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfpgljut032r130uobcgvex7?embed_v=2&utm_source=embed" loading="lazy" title="Suggest Features" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+
+If you find any issues or want to add any custom feature contact us at [Contact](https://t3planet.de/contact)
+
+## TYPO3 AI Chatbot
+
+Are you seeking help with TYPO3 code as a developer or integrator? Try the custom TYPO3 AI Chatbot: [T3AI - TYPO3 AI Chatbot](https://chatgpt.com/g/g-MDKrvyZk5-t3ai)

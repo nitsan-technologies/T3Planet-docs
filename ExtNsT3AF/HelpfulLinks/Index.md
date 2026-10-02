@@ -39,10 +39,10 @@ Store keys only in AI Foundation > AI Providers. Never commit keys to Git.
 
 ## This documentation
 
-- [Introduction](/en/latest/ExtNsT3AF/Introduction/Index#ns-t3af-introduction) — Start here
-- [FAQ](/en/latest/ExtNsT3AF/Troubleshooting/FAQ/Index#ns-t3af-faq) — Common questions
-- [Known Problems](/en/latest/ExtNsT3AF/Troubleshooting/KnownProblems/Index#ns-t3af-known-problems) — Workarounds
-- [Support](/en/latest/ExtNsT3AF/Support/Index#ns-t3af-support) — Contact T3Planet
+- [Introduction](/en/latest/ExtNsT3AF/Introduction/Index) — Start here
+- [FAQ](/en/latest/ExtNsT3AF/Troubleshooting/FAQ/Index) — Common questions
+- [Known Problems](/en/latest/ExtNsT3AF/Troubleshooting/KnownProblems/Index) — Workarounds
+- [Support](/en/latest/ExtNsT3AF/Support/Index) — Contact T3Planet
 
 ## Community
 
@@ -55,6 +55,6 @@ Store keys only in AI Foundation > AI Providers. Never commit keys to Git.
 ## When to use which link
 
 - **Installing AI Foundation** — [Installation](/en/latest/ExtNsT3AF/Installation/Index). No licence key is needed.
-- **Getting API keys** — Provider portals above, then [AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index#ns-t3af-ai-providers)
-- **Developer integration** — [Developer Guide](/en/latest/ExtNsT3AF/DeveloperGuide/Index#ns-t3af-developer-guide) for `AiServiceInterface`
-- **MCP client setup** — Model Context Protocol site plus [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index#ns-t3af-mcp-server)
+- **Getting API keys** — Provider portals above, then [AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index)
+- **Developer integration** — [Developer Guide](/en/latest/ExtNsT3AF/DeveloperGuide/Index) for `AiServiceInterface`
+- **MCP client setup** — Model Context Protocol site plus [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index)

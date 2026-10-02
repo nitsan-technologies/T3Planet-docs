@@ -72,6 +72,8 @@ Ensure **scheduler cron** runs every minute on production.
 
 ## OpenAI org statistics (optional)
 
+Open T3AF > AI Usage for request counts and token volume on this TYPO3 instance. Chat API keys stay on [AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index).
+
 Set `openai_admin_api_key` in Extension Configuration for organization-level usage charts. This is **not** the chat API key. See [Configuration](/en/latest/ExtNsT3AF/Configuration/Index).
 
 ## Privacy

@@ -37,7 +37,7 @@ Buy more credits.
 
 <Note>
 If Activate fails, check that the server can reach the T3Planet API over HTTPS, then try again. See
-[Troubleshooting](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Troubleshooting/Index#t3planet-credits-troubleshooting) for common fixes.
+[Troubleshooting](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Troubleshooting/Index) for common fixes.
 </Note>
 
 ## After activation

@@ -13,7 +13,7 @@ sidebarTitle: "AI Assistant"
   <div className="t3-landing-hero">
     <p className="t3-landing-eyebrow">AI Extensions</p>
     <h1 className="t3-landing-title">AI Assistant</h1>
-    <p className="t3-landing-subtitle">Create, translate, optimize, and manage TYPO3 content with AI — pages, SEO, media, prompts, and shared T3AF providers.</p>
+    <p className="t3-landing-subtitle">Create, translate, optimize, and manage TYPO3 content with AI — pages, SEO, media, prompts, and shared AI Foundation providers.</p>
   </div>
 
 <section className="t3-landing-section">
@@ -41,7 +41,7 @@ sidebarTitle: "AI Assistant"
   <Card title="Content" icon="pen-line" href="/en/latest/ExtNsT3AI/Content/Index" />
   <Card title="Media" icon="image" href="/en/latest/ExtNsT3AI/Media/Index" />
   <Card title="Prompts" icon="message-square" href="/en/latest/ExtNsT3AI/Prompts/Index" />
-  <Card title="AI Settings" icon="sliders-horizontal" href="/en/latest/ExtNsT3AI/AISettings/Index" />
+  <Card title="T3AI Features" icon="sliders-horizontal" href="/en/latest/ExtNsT3AI/AISettings/Index" />
   </CardGroup>
 </section>
 
@@ -59,7 +59,7 @@ sidebarTitle: "AI Assistant"
   <Card title="Releases" icon="tag" href="/en/latest/ExtNsT3AI/Releases/Index" />
   <Card title="Support" icon="life-buoy" href="/en/latest/ExtNsT3AI/Support" />
   <Card title="Get Extension" icon="shopping-cart" href="/en/latest/ExtNsT3AI/BuyNow" />
-  <Card title="T3AF" icon="layers" href="/en/latest/ExtNsT3AF/Introduction/Index" />
+  <Card title="AI Foundation" icon="layers" href="/en/latest/ExtNsT3AF/Introduction/Index" />
   </CardGroup>
 </section>
 

@@ -42,15 +42,20 @@ This comes from TYPO3's `TCEMAIN.translateToMessage` setting, not from T3AI.
 If you do not want this prefix in translated titles, disable it globally on the **root page**:
 
 1. Open the TYPO3 Backend.
-2. Select the **root page**.
-3. Open **Page TSconfig**.
-4. Add:
+2. Select the **root page** of the website.
+3. Open **Page Properties**.
+4. Go to the **Resources** tab.
+5. In the **Page TSconfig** field, add:
 
 ```typoscript
 TCEMAIN {
     translateToMessage =
 }
 ```
+
+6. Save the Page Properties.
+
+Create a new translation and confirm that the **Translate to: [Language]** prefix is no longer added to the headline. This configuration at the root page level applies to all pages below it.
 </Warning>
 
 ## FlexForm field keys to skip from AI translation (comma-separated)

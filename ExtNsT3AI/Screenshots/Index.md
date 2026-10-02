@@ -13,7 +13,7 @@ Explore the demo for tutorials on all T3-AI features.
 
 ## Backend Screenshots
 
-You can view backend screenshots of the T3AI TYPO3 AI extension at [https://t3planet.de/t3ai-typo3-extension](https://t3planet.de/t3ai-typo3-extension)
+You can view backend screenshots of the T3AI TYPO3 AI extension at [https://t3planet.de/en/t3ai-typo3-extension](https://t3planet.de/en/t3ai-typo3-extension)
 
 ## Interactive demos
 

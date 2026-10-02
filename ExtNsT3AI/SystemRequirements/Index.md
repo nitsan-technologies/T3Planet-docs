@@ -12,7 +12,7 @@ sidebarTitle: "System Requirements"
 Here are the requirements to install, configure and use T3AI. T3AI follows the AI Universe range of AI Foundation.
 
 - TYPO3 v12 – v14 (12.4 LTS, 13.4 LTS, 14.x)
-- PHP 8.2 or higher
+- PHP 8.2 or higher (8.3 recommended)
 - EXT:backend
 - EXT:filelist
 - EXT:dashboard

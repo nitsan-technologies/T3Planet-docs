@@ -23,8 +23,8 @@ If you are performing a fresh installation or upgrade extension, please follow t
 
 ## Overview
 
-T3AI now runs as a child extension of T3AF (`ns_t3af`).
-If you used T3AI before the new architecture, this guide helps you move your existing setup to the shared T3AF model.
+T3AI now runs as a child extension of AI Foundation (`ns_t3af`).
+If you used T3AI before the new architecture, this guide helps you move your existing setup to the shared AI Foundation model.
 
 ## Previous Version
 
@@ -36,7 +36,7 @@ Earlier T3AI projects usually followed a simpler setup:
 
 ## New Architecture
 
-T3AI now depends on T3AF for shared providers, authentication, AI features, prompts, and core services.
+T3AI now depends on AI Foundation for shared providers, authentication, AI features, prompts, and core services.
 T3AI continues to provide the editor-facing workflows, but the shared AI setup now belongs to the parent extension.
 
 ## Before Updating
@@ -46,21 +46,21 @@ Before you update, make sure you:
 - back up your files and database
 - test the update on staging first
 - check that your TYPO3 and PHP versions are still supported
-- install or update T3AF
+- install or update AI Foundation
 - prepare access to the AI provider credentials used by your project
 
 Review these pages before you start:
 
-- [T3AF Installation](/en/latest/ExtNsT3AF/Installation/Index)
-- [T3AF Configuration](/en/latest/ExtNsT3AF/Configuration/Index)
+- [AI Foundation Installation](/en/latest/ExtNsT3AF/Installation/Index)
+- [AI Foundation Configuration](/en/latest/ExtNsT3AF/Configuration/Index)
 - [AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index)
 
 ## Migration Steps
 
 1. Back up the TYPO3 project.
-2. Install or update T3AF (`ns_t3af`).
-3. Configure the provider and model setup in T3AF.
-4. Verify that T3AF is active and can complete one test request.
+2. Install or update AI Foundation (`ns_t3af`).
+3. Configure the provider and model setup in AI Foundation.
+4. Verify that AI Foundation is active and can complete one test request.
 5. Install or update T3AI.
 6. Run the Database Analyzer and apply pending changes.
 7. Clear TYPO3 caches.
@@ -72,7 +72,7 @@ Review these pages before you start:
 After the update, confirm that:
 
 - T3AI opens correctly in the TYPO3 backend
-- the shared provider from T3AF is available
+- the shared provider from AI Foundation is available
 - prompts still produce the expected writing style
 - page, SEO, translation, or media workflows still return usable results
 - logs do not show unexpected provider or request errors
@@ -82,13 +82,13 @@ After the update, confirm that:
 - Run one page or content generation test
 - Test one SEO action if your project uses SEO automation
 - Test one translation or media action if those modules are in use
-- Review [AI Logs](/en/latest/ExtNsT3AI/AISettings/Index) for failures
+- Review [AI Logs](/en/latest/ExtNsT3AI/AISettings/Index#ai-logs) for failures
 - Re-check [AI Prompts](/en/latest/ExtNsT3AI/Prompts/Index) if the wording changed after migration
 
 ## Common Migration Issues
 
-- **T3AF is missing**: install `ns_t3af` before updating T3AI.
-- **No provider is available**: complete the shared provider setup in T3AF.
+- **AI Foundation is missing**: install `ns_t3af` before updating T3AI.
+- **No provider is available**: complete the shared provider setup in AI Foundation.
 - **Generated results look different**: review prompt rules and feature settings after the migration.
 - **Modules open but requests fail**: clear caches and check the provider credentials again.
 
@@ -97,5 +97,5 @@ After the update, confirm that:
 - [Installation](/en/latest/ExtNsT3AI/Installation/Index)
 - [System Requirements](/en/latest/ExtNsT3AI/SystemRequirements/Index)
 - [Upgrade Guide](/en/latest/ExtNsT3AI/UpgradeGuide/Index)
-- [T3AF Installation](/en/latest/ExtNsT3AF/Installation/Index)
-- [T3AF Configuration](/en/latest/ExtNsT3AF/Configuration/Index)
+- [AI Foundation Installation](/en/latest/ExtNsT3AF/Installation/Index)
+- [AI Foundation Configuration](/en/latest/ExtNsT3AF/Configuration/Index)

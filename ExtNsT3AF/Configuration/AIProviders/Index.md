@@ -9,12 +9,14 @@ keywords:
 sidebarTitle: "AI Providers"
 ---
 
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmrbo0w7i0d96qmo57ifnabvz?embed_v=2&utm_source=embed" loading="lazy" title="T3AF - Providers" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+
 Providers represent connections to AI services. Each provider stores an adapter
 type, optional endpoint, encrypted credentials, models, and capability flags.
 
 **Path:** AI Foundation > AI Providers
 
-Follow this interactive walkthrough, then continue with the details below.
+Use the interactive walkthrough above, then continue with the details below.
 
 ![AI Providers list with configured vendors, models, status, and actions](./images/provider-01.webp)
 
@@ -82,8 +84,6 @@ $GLOBALS['TYPO3_CONF_VARS']['HTTP']['proxy'] = 'http://proxy.example.com:8080';
 
 ## Editing and deleting providers
 
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmrbo0w7i0d96qmo57ifnabvz?utm_source=link" loading="lazy" title="T3AF Providers Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-
 - Click a provider row to edit its settings in the drawer.
 - Use Test connection after rotating an API key or changing the
 model.
@@ -110,7 +110,7 @@ Built-in and discovered adapters include:
 - Additional Symfony AI bridges when their Composer packages are installed
 (for example Azure, DeepSeek, xAI)
 
-Custom adapters: [Custom AI Providers](/en/latest/ExtNsT3AF/DeveloperGuide/CustomProviders/Index#ns-t3af-custom-ai-providers).
+Custom adapters: [Custom AI Providers](/en/latest/ExtNsT3AF/DeveloperGuide/CustomProviders/Index).
 
 ## Capabilities
 
@@ -128,7 +128,7 @@ validate the choice.
 **Dev and live** — Separate rows with different API keys per environment.
 
 **Cost saving** — Cheap model as global default; premium model assigned in
-[AI Features](/en/latest/ExtNsT3AF/Configuration/AIFeatures/Index#ns-t3af-ai-features) for important tasks.
+[AI Features](/en/latest/ExtNsT3AF/Configuration/AIFeatures/Index) for important tasks.
 
 **EU hosting** — Mistral or Azure in an EU region for data residency
 requirements.
@@ -233,13 +233,13 @@ HTTPS/firewall rules.
 vision).
 
 **Module works but child extension fails** — Check
-[AI Features](/en/latest/ExtNsT3AF/Configuration/AIFeatures/Index#ns-t3af-ai-features) for per-task overrides.
+[AI Features](/en/latest/ExtNsT3AF/Configuration/AIFeatures/Index) for per-task overrides.
 
 ## Security
 
 - Rotate keys every 90 days
 - Use one key per environment (dev, staging, live)
-- Restrict access via [AI Permissions](/en/latest/ExtNsT3AF/Configuration/AIPermissions/Index#ns-t3af-ai-permissions)
+- Restrict access via [AI Permissions](/en/latest/ExtNsT3AF/Configuration/AIPermissions/Index)
 - Never commit API keys to Git
 
 ## Where to get API keys
@@ -252,4 +252,4 @@ vision).
 - Azure OpenAI: [https://portal.azure.com/](https://portal.azure.com/)
 </Note>
 
-More links: [Helpful Links](/en/latest/ExtNsT3AF/HelpfulLinks/Index#ns-t3af-helpful-links)
+More links: [Helpful Links](/en/latest/ExtNsT3AF/HelpfulLinks/Index)

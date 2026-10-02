@@ -1,6 +1,6 @@
 ---
 title: "Update Guide"
-description: "To update the **T3AI Premium** extension, please follow the official update documentation before upgrading your installation: https://docs.t3planet.de/en/latest/License/UpdateVersion/Index.html"
+description: "Update T3AI Premium: remove the current version, update EXT:ns_license, re-activate the license, run the Database Analyzer, and configure AI Foundation."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -11,6 +11,14 @@ sidebarTitle: "Update Guide"
 
 To update the **T3AI Premium** extension, please follow the official update documentation before upgrading your installation:
 [https://docs.t3planet.de/en/latest/License/UpdateVersion/Index.html](/en/latest/License/UpdateVersion/Index)
+
+<Note>
+To change the existing provider, navigate to **Provider**, select the existing **OpenAI** provider, and click **Edit**. Change the provider to **Mistral**, save the updated configuration, and then use **Test Connection** to verify the connection. After the test is completed, manually check and confirm that the **Mistral** provider is connected successfully and working as expected.
+</Note>
+
+<Note>
+Before using T3AI, make sure the **News** extension is up to date and running the latest version.
+</Note>
 
 <Info>
 **Migration Steps**
@@ -39,7 +47,7 @@ Completely remove T3AI from your project first. Then, in your `composer.json` fi
 ]
 ```
 
-Install the latest T3AI package and update dependencies. Confirm that T3AF (`EXT:ns_t3af`) is installed — either with Composer or from the TYPO3 Extension Repository (TER) via **Admin Tools** → **Extensions** → **Get Extensions**.
+Install the latest T3AI package and update dependencies. Confirm that AI Foundation (`EXT:ns_t3af`) is installed — either with Composer or from the TYPO3 Extension Repository (TER) via **Admin Tools** → **Extensions** → **Get Extensions**.
 
 Download / TER page: [https://extensions.typo3.org/extension/ns_t3af](https://extensions.typo3.org/extension/ns_t3af)
 
@@ -50,9 +58,9 @@ Full details:
 
 Go to **Admin Tools** → **Maintenance** → **Database Analyzer** and apply all pending database changes.
 
-**Step 5 — Configure T3AF**
+**Step 5 — Configure AI Foundation**
 
-Install and configure `EXT:ns_t3af` first. Then configure the AI Provider from T3AF before using T3AI.
+Install and configure `EXT:ns_t3af` first. Then configure the AI Provider from AI Foundation before using T3AI.
 
 **Step 6 — Complete T3AI setup**
 

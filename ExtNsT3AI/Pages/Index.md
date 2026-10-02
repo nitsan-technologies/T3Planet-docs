@@ -1,6 +1,6 @@
 ---
 title: "Pages"
-description: "Create an AIpowered page with titles, content, meta data, AI images, and elements in a single click."
+description: "Create an AI-powered page with titles, content, meta data, AI images, and elements in a single click."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -28,8 +28,8 @@ Create an AI-powered page with titles, content, meta data, AI images, and elemen
 1. Navigate to the **‘T3AI’** tab, click **‘Pages’** and then choose **” Launch AI Page”.**
 2. Select the type of page you want to create with T3AI. Choose AI model and version, select prompt, enter keywords, set number of results, and click **Generate AI**.
 3. Select the page title and click **Generate Outline.** Check/uncheck content elements.
-- Option 1: *Create elements on existing page* → Adds AI-generated content to your current page.
-- Option 2: *Create new subpages* → Creates AI subpages under the current page.
+   - Option 1: *Create elements on existing page* → Adds AI-generated content to your current page.
+   - Option 2: *Create new subpages* → Creates AI subpages under the current page.
 4. Click **Create elements on existing page** and your page will be created with content.
 
 ---
@@ -49,8 +49,8 @@ Build an AI-powered page by selecting topics, outlining, and adding elements and
 1. Navigate to **‘T3AI’ tab → Pages → Launch AI Page.**
 2. Choose page type (Default, Blog, Product, Service), AI model, prompt, keywords, and results. Click **Generate AI**.
 3. Select page title, click **Generate Outline.** Choose which elements to include.
-- *Create elements on existing page*
-- *Create new subpages*
+   - *Create elements on existing page*
+   - *Create new subpages*
 4. Selected content is added automatically.
 
 ---

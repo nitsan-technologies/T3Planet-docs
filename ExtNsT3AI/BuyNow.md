@@ -1,6 +1,6 @@
 ---
 title: "Get This Extension"
-description: "Get the latest T3AI (EXT:ns_t3ai) version from the T3Planet product page."
+description: "T3AI (EXT:ns_t3ai) is a premium extension. Start the 30-day free trial, then activate a license for production."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -9,4 +9,4 @@ keywords:
 sidebarTitle: "Get This Extension"
 ---
 
-Get Latest Version of this extension with more-features and free-support from [https://t3planet.de/t3ai-typo3-extension](https://t3planet.de/t3ai-typo3-extension) or for free version [https://extensions.typo3.org/extension/ns_t3ai/](https://extensions.typo3.org/extension/ns_t3ai/)
+T3AI is a premium extension. There is no free version and it is not distributed via the TYPO3 Extension Repository. Evaluate it with the 30-day free trial, then activate a license for production: [https://t3planet.de/en/t3ai-typo3-extension](https://t3planet.de/en/t3ai-typo3-extension)

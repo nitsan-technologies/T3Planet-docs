@@ -17,7 +17,7 @@ The following setup is needed, to get ns_t3ai work on your table:
 
 `<extension_key>`/Configuration/TCA/Overrides/`<table_name>`.php
 
-```python
+```php
 $GLOBALS['TCA']['<table_name>']['columns']['<field_name>']['l10n_mode'] = 'prefixLangTitle';
 $GLOBALS['TCA']['<table_name>']['columns']['<field_name>']['l10n_mode'] = 'prefixLangTitle';
 ```

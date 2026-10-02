@@ -21,7 +21,7 @@ Our all-in-one TYPO3 extension is here to transform how you create, manage, and 
 Say goodbye to the traditional content management. The future of AI-powered TYPO3 is here, and it’s ready to transform the way you manage your digital presence.
 T3AI is more than just an extension; it’s your AI Assistant.
 
-T3AI now works as a child extension of T3AF (`ns_t3af`), which provides the shared AI providers, common configuration, and core AI services used by the extension.
+T3AI now works as a child extension of AI Foundation (`ns_t3af`), which provides the shared AI providers, common configuration, and core AI services used by the extension.
 
 ## Helpful Links
 

@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-description: "This guide helps you install T3AI Premium EXT:nst3ai on a TYPO3 project for the first time."
+description: "This guide helps you install T3AI Premium (EXT:ns_t3ai) on a TYPO3 project for the first time."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -39,8 +39,6 @@ Make sure you have:
 - Your **T3AI license key** from T3Planet (for Premium)
 - Decided whether your project uses **Composer** or the **TYPO3 Extension Manager**
 - An AI provider account/API key ready (for example OpenAI) for Step 5
-
-Looking for the Free version instead? Jump to [For Free Version](#t3ai-free-version) at the end of this page.
 
 ## Step 1 — Install the T3Planet Shop
 
@@ -115,7 +113,7 @@ Foundation and run AI features through those providers.
 
 **AI Credits** is T3Planet’s managed AI access for AI Foundation. It lets
 your TYPO3 site use AI features **without storing or managing your own vendor
-API keys**.
+API keys**. Your Own API Keys remains the default mode, and AI Credits pay for usage only.
 
 **Link for AI Credits:** [AI Credits Documentation](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index)
 
@@ -180,21 +178,7 @@ Before handing the system to editors, verify that:
 
 If all items above are true, installation is complete and you can start using T3AI.
 
-## For Free Version
-
-To install the free version, open the TYPO3 Extension Manager and search for `ns_t3ai`.
-
-**Step 1:** Open the **Extension Manager** module.
-
-**Step 2:** Select **Get the extension** from the dropdown.
-
-**Step 3:** Search for the extension key `ns_t3ai`.
-
-**Step 4:** Click **Retrieve/Update** to import the extension from the repository.
-
-Get the latest version from typo3.org: [ns_t3ai](https://extensions.typo3.org/extension/ns_t3ai//)
-
-## For Premium Version - License Activation
+## 30-day trial and license activation
 
 For license activation and premium installation details, see:
 [https://docs.t3planet.de/en/latest/License/Index.html](/en/latest/License/Index)

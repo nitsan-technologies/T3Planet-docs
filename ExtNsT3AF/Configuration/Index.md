@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-description: "Configuration for EXT:ns_t3af (T3AF)."
+description: "Configure AI Foundation (EXT:ns_t3af): AI providers, per-site AI Features cards, translation, Access & Notifications, MCP Server, and AI Label."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -15,7 +15,7 @@ This section also covers the T3AF backend modules used day to day: providers, co
 
 ## Two configuration areas
 
-**AI Providers** — Path: T3AF > AI Providers. API keys, models, and defaults.
+**AI Providers** — Path: T3AF > AI Providers. API keys, models, and defaults — including DeepL, Google, OpenAI, and other engines. For managed AI without your own keys, see [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index).
 
 **AI Features** — Path: T3AF > AI Features. Per-site cards for connected extensions. AI Foundation's own card is **Access & Notifications** (Basic Auth and quota email alerts). MCP options are on T3AF > MCP Server > Advanced.
 
@@ -23,7 +23,7 @@ This section also covers the T3AF backend modules used day to day: providers, co
 
 To change a card:
 
-1. Open **T3AF** and select a site page in the page tree.
+1. Open **T3AF** and select a site page in the page tree (settings are stored on the site root).
 2. Open the **AI Features** tab.
 3. Click **Configure** on the card you need, then **Save Changes**.
 
@@ -54,6 +54,8 @@ T3AF stores translation helpers, Basic Auth, notifications, and MCP switches in 
 Where a classic Extension Configuration form is still used for optional keys, open Admin Tools > Settings > Extension Configuration and select `ns_t3af`.
 
 ### Translation (optional)
+
+Translation engines are provider rows in T3AF > AI Providers (for example a DeepL Translate provider with its API key). The legacy keys below remain available as extension settings:
 
 - `deepl_api_key` — DeepL translation
 - `google_api_key` — Google translation

@@ -24,11 +24,11 @@ Before updating, back up your database to ensure its safety.
 - **Step 4:** Click on Button **Re-import data**
 
 <Warning>
-Please be aware that any custom prompts you’ve created will be overwritten during synchronization. After the process is complete, you’ll need to manually recreate your custom AI prompts. We apologize for the inconvenience
+Please be aware that any custom prompts you create will be overwritten during synchronization. After the process is complete, you must manually recreate your custom AI prompts.
 </Warning>
 
-Test the updated T3AI features to ensure everything is working properly :)
+Test the updated T3AI features to ensure everything is working properly.
 
 ## Report Problems
 
-Currently, we do not have any known problems from customers. If you encounter any issues, please report them to us at [https://t3planet.de/support](https://t3planet.de/support)
+If you encounter issues beyond the prompt synchronization workflow above, please report them to us at [https://t3planet.de/support](https://t3planet.de/support)
