@@ -120,3 +120,14 @@ Append one entry per production release.
 - QA: `mintlify validate` pass; 0 broken internal links / 0 missing images on changed pages; live sitemap 851 URLs → 844×200 + 7×308 known T3AA redirects (all resolve 200), 0 small/blank pages; 54/54 changed-page checks (desktop light + mobile dark), 0 broken images, 0 console errors; Supademos render (AI Providers 1, SEO 14, Pages 16, Media 7, AISettings 6, …); UpdateGuide notes live; search finds AI Providers; llms.txt 200; HTTPS valid
 - Note: `ExtNsT3AF/T3Planet-Credit-System/Dashboard/Index` is an intentional one-line stub linking to AI Usage (not blank)
 - Final status: PASS
+
+### 2026-10-02 — General FAQ removed, T3AF AI Providers updates, T3AC list/link fixes
+- Authorization: operator said `Start the deployment process`
+- Commit: `f4dbd2f` by Nitsan `<sanjay@nitsantech.com>` (21 files; `2e45ff8..f4dbd2f`)
+- Scope: root `FAQ/Index.mdx` removed (nav entry removed, redirect `/FAQ/Index` → `/License/Index`, general-FAQ sentence removed from 8 product FAQs); T3AF AI Providers — "Capabilities and Their Purpose" table, capabilities marked required, DeepL API-key link, `tool_use` removed, Governance and status section removed, replaced provider-02 screenshot; T3AC — nested lists restored (AI Logs, AI Statistics, Data Source, Installation, Custom LLM Prerequisites) and History cleanup link on DPA & GDPR after old-vs-new comparison; stats regenerated (803 pages / 70 products)
+- Excluded: `docs-master/`, `workshops/`, `backup/`, `scripts/remigration/**`, `scripts/*` QA JSON, `scripts/live_e2e_qa/`, `scripts/supademo_audit/`
+- Push remote: `origin` → `nitsan-technologies/T3Planet-docs` (`master`), no force; local and origin were in sync before commit (0/0)
+- Mintlify: GitHub check "Mintlify Deployment" completed/success on `f4dbd2f` (org repo)
+- QA: `mintlify validate` pass; content markers on docs.t3planet.de (capabilities table, DeepL link, Governance/tool_use gone, DPA link, nested lists); `/FAQ/Index` 308 → `/License/Index`, absent from sitemap; new screenshot 200; 84/84 live checks (7 pages × 1440/1280/1024/768/390/375 × light/dark): 0 blank, 0 overflow, 0 broken images, 0 page errors; search works; sitemap and llms.txt 200
+- Warning: `.md` export of product FAQ pages on docs.t3planet.de still served the old general-FAQ sentence right after deploy (edge cache); origin `t3planet.mintlify.app` and rendered HTML already correct
+- Final status: PASS WITH NON-BLOCKING WARNINGS
