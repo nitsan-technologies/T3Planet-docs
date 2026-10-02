@@ -55,7 +55,11 @@ sidebarTitle: "T3AC"
 - Python 3.8+ with pip
 - Docker
 - NVIDIA GPU drivers and CUDA (if GPU is used)
-- Python packages: - `torch` - `transformers` - `sentence-transformers` - Additional packages as required
+- Python packages:
+  - `torch`
+  - `transformers`
+  - `sentence-transformers`
+  - Additional packages as required
 
 ### Vector Database (Embedding/Search)
 
@@ -81,13 +85,13 @@ sidebarTitle: "T3AC"
 ## Workflow & Implementation Steps
 
 1. **Data Processing & Embedding**
-  - Pre-process and chunk data
-  - Generate semantic embeddings (Sitemap, Website, PDF, Text, Q&A).
+   - Pre-process and chunk data
+   - Generate semantic embeddings (Sitemap, Website, PDF, Text, Q&A).
 2. **Vector Database Integration**
-  - Store embeddings in ChromaDB (on-prem)
-  - Store embeddings in Pinecone (cloud, if needed)
+   - Store embeddings in ChromaDB (on-prem)
+   - Store embeddings in Pinecone (cloud, if needed)
 3. **LLM Deployment & API Layer**
 4. **Training & Handover**
-  - Admin and technical documentation
-  - Live training sessions
-  - Go-live support
+   - Admin and technical documentation
+   - Live training sessions
+   - Go-live support

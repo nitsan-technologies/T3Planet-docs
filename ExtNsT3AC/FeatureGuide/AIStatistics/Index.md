@@ -19,6 +19,6 @@ View AI API usage statistics for the current site.
 - **API Usage** summary for your chatbot activity.
 - **API Requests** count.
 - **Tokens** usage details:
-- **Total** tokens
-- **Context** tokens
-- **Generated** tokens
+  - **Total** tokens
+  - **Context** tokens
+  - **Generated** tokens

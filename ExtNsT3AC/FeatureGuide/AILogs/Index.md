@@ -22,7 +22,7 @@ View log entries for the current site, including sync, training, and error event
 - **Max rows**: Set how many rows are shown per page (default: `50`).
 - **Entry count**: The page shows a summary like *Showing up to 50 of 745 entries per page*.
 - **Log table columns**:
-- **Time**
-- **Level**
-- **User**
-- **Details**
+  - **Time**
+  - **Level**
+  - **User**
+  - **Details**

@@ -36,7 +36,6 @@ Pick a model that supports what you need. **Test connection** validates your cho
 - **Streaming** — Live response display in the backend
 - **Embeddings** — Search and similarity features
 - **Vision** — Image analysis
-- **Tool use** — MCP agent workflows
 
 ## Multiple providers — when and why
 

@@ -112,16 +112,20 @@ Built-in and discovered adapters include:
 
 Custom adapters: [Custom AI Providers](/en/latest/ExtNsT3AF/DeveloperGuide/CustomProviders/Index).
 
-## Capabilities
+## Capabilities and Their Purpose
 
 Pick a model that supports what you need. Test connection helps
 validate the choice.
 
-- **Chat** — Text generation
-- **Streaming** — Live response display in the backend
-- **Embeddings** — Search and similarity features
-- **Vision** — Image analysis
-- **Tool use** — MCP agent workflows
+| Capability | Purpose |
+| --- | --- |
+| `chat` | Normal text generation: SEO, Pages, Content, News, LLM translation, chatbot answers. This is the main flag for message-style APIs, and every `complete()` request is allowed when it is ticked. |
+| `completion` | Legacy/raw text completion. AI Foundation treats it as equivalent to `chat`: either one is enough for the `complete()` path, and text features are blocked only when both are unticked. |
+| `embeddings` | Only for `embed()`, which turns text into vectors for semantic search, RAG and similarity matching. It has no effect on normal text generation, and an embedding model should also be set on the provider. |
+| `vision` | Only needed when a request includes images (for example alt-text generation or image description). Text-only requests do not need it, but requests with images are blocked without it. |
+| `streaming` | Only for `stream()`, where the answer arrives piece by piece (for example a live chatbot). Without it, streaming calls are blocked, but normal `complete()` requests still work. |
+| `tts` | Only for text-to-speech: converting text into audio (for example audio for content elements). It is always checked strictly and must be ticked explicitly. |
+| `image_generation` | Only for creating images from a text prompt (for example the T3AI image generator). It is always checked strictly and must be ticked explicitly. |
 
 ## Multiple providers — when and why
 
@@ -177,9 +181,10 @@ Default embedding model ID when embeddings are enabled.
 
 ### Optional configuration
 
-<ResponseField name="capabilities" type="string list">
+<ResponseField name="capabilities" type="string list" required>
 Enabled capabilities: `chat`, `completion`, `embeddings`, `vision`,
-`streaming`, `tool_use`.
+`streaming`, `tts`, `image_generation`. See
+[Capabilities and Their Purpose](#capabilities-and-their-purpose).
 </ResponseField>
 
 <ResponseField name="temperature" type="float" default="0.7">
@@ -214,14 +219,6 @@ does not redact or block prompts, brand context, or documents sent to the
 AI provider.
 </ResponseField>
 
-### Governance and status
-
-Optional pricing (`pricing_input_per_1m`, `pricing_output_per_1m`,
-`pricing_currency`, `cost_center`), retention overrides, dashboard analytics
-flags, and read-only status fields (`last_status`, `last_status_at`,
-`last_status_message`, `last_used_at`) support monitoring and cost tracking.
-Status fields update after Test connection and live requests.
-
 ## Troubleshooting
 
 **Test fails** — Check the API key, model ID, endpoint URL, and outbound
@@ -250,6 +247,7 @@ vision).
 - Google Gemini: [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey)
 - Mistral: [https://console.mistral.ai/](https://console.mistral.ai/)
 - Azure OpenAI: [https://portal.azure.com/](https://portal.azure.com/)
+- DeepL Translation: [https://www.deepl.com/pro-api](https://www.deepl.com/pro-api)
 </Note>
 
 More links: [Helpful Links](/en/latest/ExtNsT3AF/HelpfulLinks/Index)

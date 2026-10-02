@@ -9,7 +9,7 @@ keywords:
 sidebarTitle: "FAQ"
 ---
 
-Short answers to common questions about the AI Assistant (T3AI). For licenses, trials, staging, Composer and support, see the [general FAQ](/en/latest/FAQ/Index).
+Short answers to common questions about the AI Assistant (T3AI).
 
 ## Product and setup
 

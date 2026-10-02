@@ -34,7 +34,7 @@ The **Save chatbot history** option is available under the AI Chatbot configurat
 - Thumbs-up/down feedback is hidden.
 - Live chat still works. The current session is kept only in a short-lived server cache (`ns_t3ac_ephemeral_chat`, about **24 hours**), not as a durable TYPO3 log.
 
-Disabling chatbot history affects **newly generated** chatbot and feedback data. Existing records are not automatically removed. Use the history cleanup scheduler to remove previously stored records.
+Disabling chatbot history affects **newly generated** chatbot and feedback data. Existing records are not automatically removed. Use the history cleanup scheduler to remove previously stored records. See [History cleanup](/en/latest/ExtNsT3AC/FeatureGuide/DataSource/Index#t3as-history-cleanup).
 
 ```bash
 vendor/bin/typo3 t3af:history:cleanup

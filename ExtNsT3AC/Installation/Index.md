@@ -184,8 +184,8 @@ T3AC and T3CS ship static TypoScript that must be included on your site.
 2. Open the **TypoScript** module and select **Edit TypoScript Record** / **Info/Modify**.
 3. Click **Edit the whole template record** and open the **Includes** tab.
 4. Under **Include static (from extensions)** / site sets, add:
-  - `AI Chatbot/Search - TYPO3 Extension [nitsan/ns-t3cs]`
-  - `AI Chatbot - TYPO3 Extension [nitsan/ns-t3ac]`
+   - `AI Chatbot/Search - TYPO3 Extension [nitsan/ns-t3cs]`
+   - `AI Chatbot - TYPO3 Extension [nitsan/ns-t3ac]`
 5. Save the template and flush TYPO3 caches.
 
 ## Step 6 — Configure the AI Provider

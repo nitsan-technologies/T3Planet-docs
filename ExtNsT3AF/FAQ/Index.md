@@ -9,7 +9,7 @@ keywords:
 sidebarTitle: "FAQ"
 ---
 
-Short answers to common questions about AI Foundation (T3AF, `ns_t3af`). For general questions about T3Planet products and support, see the [general FAQ](/en/latest/FAQ/Index).
+Short answers to common questions about AI Foundation (T3AF, `ns_t3af`).
 
 ## General
 

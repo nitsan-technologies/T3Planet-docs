@@ -83,8 +83,7 @@
               "License/HelpSupport/Index"
             ],
             "root": "License/Index"
-          },
-          "FAQ/Index"
+          }
         ]
       },
       {
@@ -1870,6 +1869,10 @@
     ]
   },
   "redirects": [
+    {
+      "source": "/FAQ/Index",
+      "destination": "/License/Index"
+    },
     {
       "source": "/context.md",
       "destination": "/__removed_internal_context"
