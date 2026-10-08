@@ -142,3 +142,14 @@ Append one entry per production release.
 - QA: `mintlify validate` pass; 30/30 changed pages on local preview and on docs.t3planet.de — HTTP 200, 0 broken images, 0 broken internal links, no `preview=true` Supademos; content markers 9/9 live; Karma Site Sets demo renders on live (desktop light + mobile dark); origin `t3planet.mintlify.app` matches; homepage 803 pages; sitemap and llms.txt 200
 - Note: local preview returned 500 after `mintlify broken-links` ran (shared cache); restarted, not a content issue
 - Final status: PASS
+
+### 2026-10-08 — T3AC/T3AS Configuration split into subpages, T3AC/T3AS/T3AF refresh
+- Authorization: operator said `Start the deployment process`
+- Commit: `b6524b6` by Nitsan `<sanjay@nitsantech.com>` (148 files; `7be078e..b6524b6`)
+- Scope: `docs.json` replaced by operator with reviewed `docs-01.json` (AI Chatbot Configuration group + 7 subpages, AI Search Configuration group + 13 subpages, AI Chatbot sidebar order, TonicTypes Pro moved up; settings and 1,839 redirects unchanged); 58 updated T3AC/T3AS/T3AF pages, 20 new pages, new screenshots; stats regenerated 803 → 823 pages / 70 products
+- Excluded: `docs-master/`, `workshops/`, `backup/`, `scripts/**` QA artifacts, `TonicTypes/ExportImport/Images/dashboard_import.jpg` (unreferenced)
+- Push remote: `origin` → `nitsan-technologies/T3Planet-docs` (`master`), no force; local and origin in sync before commit (0/0)
+- Mintlify: GitHub check "Mintlify Deployment" completed/success on `b6524b6` (org repo)
+- QA: `mintlify validate` pass; static check 75/75 pages in nav, 0 missing images, 0 broken page links; local and live browser check 75/75 pages 200 with content, 0 broken images, 0 broken internal links; live homepage 823; new subpages in sidebars (7 + 13) and sitemap; llms.txt 200; desktop light/dark + mobile, no horizontal overflow
+- Warning: 2 section links `#vector-database-embedding/search` on T3AC/T3AS `CustomLLMSupport/Index` miss their anchor (target is `#vector-database-embedding-search`; author kept the working link commented out) — page opens at top, no 404
+- Final status: PASS WITH NON-BLOCKING WARNINGS
