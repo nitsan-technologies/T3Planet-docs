@@ -9,6 +9,206 @@ keywords:
 sidebarTitle: "Installation"
 ---
 
+This guide shows you how to install AI Search on your TYPO3 website for the first time. It takes about 15 minutes.
+
+AI Search needs a second, free extension called **AI Foundation**. AI Foundation connects TYPO3 to an AI service (for example OpenAI). Keep both extensions switched on.
+
+<Info>
+Upgrading from an older version (before v14)? Follow [Reinstall After Upgrading](/en/latest/ExtNsT3AS/ReInstallEverything/Index) instead.
+</Info>
+
+<Note>
+AI Search works with **TYPO3 v12, v13 and v14**. On TYPO3 v14, **Admin Tools** is called **System**. See [TYPO3 v12, v13 and v14](/en/latest/ExtNsT3AS/Introduction/Index#typo3-versions).
+</Note>
+
+## Before you start
+
+You need:
+
+- An administrator login for the TYPO3 backend.
+- Your **AI Search license key** from T3Planet.
+- An account with an AI service (for example OpenAI) and its **API key** (a password for the AI service). No account? You can use **T3Planet Credits** instead.
+
+## Step 1 — Install the License Manager
+
+The **License Manager** (`ns_license`) unlocks T3Planet Premium extensions. Install its latest version first.
+
+## Step 2 — Activate the License
+
+1. Go to **Admin Tools → T3Planet Shop** (on TYPO3 v14: **System → T3Planet Shop**). Only system maintainers see this module.
+2. Enter your AI Search license key.
+3. Click to activate the license.
+4. Wait until AI Search is downloaded and installed.
+5. Check that **AI Foundation** was installed too. If not, see Step 3.
+
+<Accordion title="Install with Composer (for developers)">
+
+If your project is managed with Composer:
+
+1. Add `nitsan/ns-t3as` and `nitsan/ns-t3cs` to the `only` list of the T3Planet repository in `composer.json`:
+
+```json
+"only": [
+  "nitsan/ns-t3as",
+  "nitsan/ns-t3cs"
+]
+```
+
+2. Run:
+
+```bash
+composer require nitsan/ns-t3as
+```
+
+3. Check that `nitsan/ns-t3af` (AI Foundation) is installed. If not, run `composer require nitsan/ns-t3af`.
+
+Full details: [License activation](/en/latest/License/LicenseActivation/Index)
+
+</Accordion>
+
+## Step 3 — Install AI Foundation
+
+Skip this step if AI Foundation was already installed in Step 2.
+
+1. Go to **Admin Tools → Extensions** (on TYPO3 v14: **System → Extensions**).
+2. Choose **Get Extensions**.
+3. Search for **AI Foundation** (`ns_t3af`).
+4. Click install.
+5. Clear all caches.
+
+AI Foundation is free. Download page: [extensions.typo3.org/extension/ns_t3af](https://extensions.typo3.org/extension/ns_t3af)
+
+## Step 4 — Run Database Analyzer
+
+TYPO3 needs to create new database tables for AI Search.
+
+1. Go to **Admin Tools → Maintenance** (on TYPO3 v14: **System → Maintenance**).
+2. Click **Analyze Database Structure**.
+3. Apply all suggested changes.
+
+<a id="load-typoscript"></a>
+
+{/* ## Step 5 — Configure/Load required TypoScripts
+
+T3AS and T3CS ship static TypoScript that must be included on your site.
+
+1. Switch to the root page of your site.
+2. Open the **TypoScript** module and select **Edit TypoScript Record** / **Info/Modify**.
+3. Click **Edit the whole template record** and open the **Includes** tab.
+4. Under **Include static (from extensions)** / site sets, add:
+  - `AI Chatbot/Search - TYPO3 Extension [nitsan/ns-t3cs]`
+  - `T3AS - TYPO3 AI Search Extension [ns-ai-search/main]`
+5. Save the template and flush TYPO3 caches.
+
+Include the T3CS and T3AS static TypoScript sets. */}
+
+## Step 5 — Load the required TypoScript
+
+Now switch on AI Search for your website. Choose **one** of the two ways.
+
+**Option A – Site set (TYPO3 v13 and v14, recommended)**
+
+A **site set** is a package of settings you switch on for your website.
+
+1. Go to **Site Management → Sites** (on TYPO3 v14: **Sites → Setup**).
+2. Click **Edit** (pencil icon) on your website.
+3. On the **General** tab, find **Sets for this Site**.
+4. Add **AI Chatbot/Search - TYPO3 Extension**.
+5. Add **T3AS - TYPO3 AI Search Extension**.
+6. Click **Save**.
+7. Clear all caches.
+
+![Site configuration, General tab with Sets for this Site (TYPO3 v14)](images/site-sets-for-this-site.webp)
+
+{/* SUPADEMO NEEDED: Load AI Search TypoScript: site sets and Plugin PID (TYPO3 v13/v14) */}
+
+**Option B – Static templates (TYPO3 v12, or if you don't use site sets)**
+
+1. Go to **Site Management → TypoScript** (on TYPO3 v14: **Sites → TypoScript**).
+2. Select the start page of your website.
+3. Edit the TypoScript record and open the **Includes** tab.
+4. Under **Include static (from extensions)**, add **AI Chatbot/Search - TYPO3 Extension**.
+5. Add **T3AS - TYPO3 AI Search Extension**.
+6. Save and clear all caches.
+
+![Required TypoScript includes for T3AS and T3CS](images/include-static-typoscript.webp)
+
+<Note>
+Always add both entries. AI Search does not load the first one by itself.
+</Note>
+
+<Accordion title="Optional: Plugin PID">
+
+The **Plugin PID** is the ID of the page that holds your AI Search search box. Developers need it for some TypoScript setups.
+
+- With a site set: on the site, click **Edit site settings** → **Ns AI Search → Settings** → enter the **Plugin PID** → **Save**.
+- With static templates: set it in the **Constant Editor** (field **Plugin PID**).
+
+![Edit site settings: Ns AI Search, Settings, Plugin PID](images/site-settings-plugin-pid.webp)
+
+</Accordion>
+
+<a id="configure-ai-provider"></a>
+
+{/* 1. Go to **Site Management → Sites** and edit your site.
+2. Open the **Sets** field. */}
+
+{/* 1. Go to the root page of your site.
+2. Open the **TypoScript** module and edit the TypoScript record. */}
+
+## Step 6 — Configure the AI Provider
+
+Connect AI Search to your AI service.
+
+1. Go to **AI Universe → AI Foundation → AI Providers**.
+2. Click **New Provider**.
+3. Choose your AI service under **Adapter type**.
+4. Enter your **API key** and choose the models.
+5. Turn on **Provider enabled** and **Set as Default Provider**.
+6. Click **Save**.
+7. Test the connection (see [Testing a connection](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index#testing-a-connection)).
+
+<Tip>
+No own API key? Use **T3Planet Credits** instead. See [T3Planet Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index). For a guided setup, use **Quick Setup** in AI Foundation ([AI Foundation installation](/en/latest/ExtNsT3AF/Installation/Index#quick-start)).
+</Tip>
+
+{/* 1. Open **AI Foundation** in the TYPO3 backend.
+2. Configure your preferred AI provider.
+3. Save the provider and model configuration.
+4. Verify the AI connection with a test request. */}
+
+## Step 7 — Verify the Installation
+
+Check that:
+
+- **AI Universe → AI Chatbot/Search** opens without errors.
+- The license is active.
+- The AI provider test was successful.
+
+![AI Universe menu in the TYPO3 backend with AI Foundation and AI Chatbot/Search](images/ai-universe-menu.webp)
+
+Done! Next, add your content and start the training: see [Configuration](/en/latest/ExtNsT3AS/Configuration/Index).
+
+<Note>
+AI Search is a Premium extension and needs a T3Planet license. AI Foundation is free. More about licenses: [License](/en/latest/License/Index).
+</Note>
+
+
+{/* - T3AS backend modules load without errors. */}
+
+{/* If all items above are true, installation is complete. Next, add data sources and run training in the T3AS module. */}
+
+{/* After installation, you will use the T3AS backend module to: */}
+
+{/* <Info>
+If you are upgrading from an older version (**2.2.0** or earlier) to the latest release,
+follow [Reinstall After Upgrading](/en/latest/ExtNsT3AS/ReInstallEverything/Index) instead of this installation guide.
+</Info> */}
+
+{/* 1. Open **Admin tools** → **T3planet License Manager**. */}
+
+{/* Original text before the 8 Oct 2026 simplification (kept for reference):
+
 This guide helps you install **T3AS Premium** (`EXT:ns_t3as`) on a TYPO3 project for the first time.
 
 T3AS needs **AI Foundation** (`EXT:ns_t3af`). AI Foundation connects your AI providers (API keys, models, prompts, and shared AI services). Without it, T3AS cannot run.
@@ -19,7 +219,7 @@ These extensions do **not** change how your website looks on the frontend by the
 
 You will install and activate these pieces:
 
-1. **T3Planet Shop** (`EXT:ns_license`) — unlocks your Premium download
+1. **License Manager** (`EXT:ns_license`) — unlocks your Premium download
 2. **T3AS** (`EXT:ns_t3as`) — the AI Search extension (and related packages such as T3CS where required)
 3. **AI Foundation** (`EXT:ns_t3af`) — shared AI engine used by T3AS (free on TER)
 4. **Database updates** — so TYPO3 creates the required tables
@@ -29,19 +229,10 @@ You will install and activate these pieces:
 
 Follow the steps below in order. Choose **either** Non-Composer **or** Composer in Step 2 — not both.
 
-After installation, you will use the T3AS backend module to:
-
 - Manage **data sources** such as sitemaps, PDFs, TYPO3 pages, web pages, Q&A pairs, and optional index sources such as Ke Search or Solr.
 - Run a **training pipeline** that syncs content, creates embeddings, and keeps AI search up to date.
 - Configure and monitor **AI Search**.
 - View **usage analytics** for search activity.
-
-<Info>
-If you are upgrading from an older version (**2.2.0** or earlier) to the latest release,
-follow [Reinstall After Upgrading](/en/latest/ExtNsT3AS/ReInstallEverything/Index) instead of this installation guide.
-</Info>
-
-## Before you start
 
 Make sure you have:
 
@@ -50,25 +241,15 @@ Make sure you have:
 - Decided whether your project uses **Composer** or the **TYPO3 Extension Manager**
 - An AI provider account/API key ready (for example OpenAI) for Step 6
 
-## Step 1 — Install the T3Planet Shop
-
 Install the latest version of `EXT:ns_license` before continuing.
 
-The T3Planet Shop controls access to T3Planet Premium packages and is required to download and activate T3AS.
-
-## Step 2 — Activate the License
+The License Manager controls access to T3Planet Premium packages and is required to download and activate T3AS.
 
 Pick the path that matches your project.
 
 ### Non-Composer Installation
 
 Use this workflow when your project installs T3Planet extensions from the TYPO3 backend:
-
-1. Open **Admin tools** → **T3Planet Shop**.
-2. Enter your T3AS license key.
-3. Activate the license.
-4. Confirm that the latest T3AS package is downloaded.
-5. Confirm that AI Foundation (`EXT:ns_t3af`) is installed automatically or available after activation.
 
 ### Composer Installation
 
@@ -77,26 +258,13 @@ Use this workflow when your TYPO3 project is managed with Composer:
 1. Check the T3Planet Composer repository configuration.
 2. Update the `only` parameter so the project can download T3AS and T3CS:
 
-```json
-"only": [
-  "nitsan/ns-t3as",
-  "nitsan/ns-t3cs"
-]
-```
-
 3. Install the T3AS package:
-
-```bash
-composer require nitsan/ns-t3as
-```
 
 4. Verify that the installation completed successfully.
 5. Confirm that AI Foundation (`nitsan/ns-t3af` / `EXT:ns_t3af`) is installed. If it is missing, install it using **Step 3 — Install AI Foundation**.
 
 Full license activation details:
 [https://docs.t3planet.de/en/latest/License/LicenseActivation/Index.html](/en/latest/License/LicenseActivation/Index)
-
-## Step 3 — Install AI Foundation
 
 AI Foundation (`EXT:ns_t3af`) is required before T3AS can be used.
 It provides the shared AI provider configuration, models, API access, logs, and service layer used by T3AS.
@@ -120,21 +288,13 @@ Use this mode when you want to connect your own AI vendor accounts. You store
 and manage your API keys (for example OpenAI, Anthropic, Gemini) in AI
 Foundation and run AI features through those providers.
 
-**AI Credits**
-
-**AI Credits** is T3Planet’s managed AI access for AI Foundation. It lets
+**T3Planet Credits** is T3Planet’s managed AI access for AI Foundation. It lets
 your TYPO3 site use AI features **without storing or managing your own vendor
 API keys**.
 
-**Link for AI Credits:** [AI Credits Documentation](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index)
+**Link for T3Planet Credits:** [T3Planet Credits Documentation](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index)
 
 ### Option 1 — Extension Manager (TER)
-
-1. Open **Admin Tools** → **Extensions**.
-2. Select **Get Extensions**.
-3. Search for `ns_t3af` or **AI Foundation**.
-4. Install and activate the extension.
-5. Flush all TYPO3 caches.
 
 ### Option 2 — Composer
 
@@ -151,7 +311,7 @@ Helpful AI Foundation references:
 - [AI Foundation Installation](/en/latest/ExtNsT3AF/Installation/Index)
 - [AI Foundation Configuration](/en/latest/ExtNsT3AF/Configuration/Index)
 - [AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index)
-- [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index)
+- [T3Planet Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index)
 
 ## Premium Version
 
@@ -165,54 +325,13 @@ For license activation and access to premium features, see:
 Premium licensing applies to **T3AS** — not to AI Foundation.
 </Note>
 
-## Step 4 — Run Database Analyzer
-
 After installing the extension, apply all pending database changes:
-
-1. Open **Admin Tools**.
-2. Go to **Maintenance**.
-3. Open **Analyze Database Structure**.
-4. Apply all pending database schema updates.
 
 Run this before using T3AS modules in the TYPO3 backend.
 
-## Step 5 — Configure/Load required TypoScripts
-
-T3AS and T3CS ship static TypoScript that must be included on your site.
-
-1. Switch to the root page of your site.
-2. Open the **TypoScript** module and select **Edit TypoScript Record** / **Info/Modify**.
-3. Click **Edit the whole template record** and open the **Includes** tab.
-4. Under **Include static (from extensions)** / site sets, add:
-   - `AI Chatbot/Search - TYPO3 Extension [nitsan/ns-t3cs]`
-   - `T3AS - TYPO3 AI Search Extension [ns-ai-search/main]`
-5. Save the template and flush TYPO3 caches.
-
-![Required TypoScript includes for T3AS and T3CS](images/include-static-typoscript.webp)
-
-Include the T3CS and T3AS static TypoScript sets.
-
-## Step 6 — Configure the AI Provider
-
 After installation:
-
-1. Open **AI Foundation** in the TYPO3 backend.
-2. Configure your preferred AI provider.
-3. Save the provider and model configuration.
-4. Verify the AI connection with a test request.
 
 T3AS will not function correctly until AI Foundation has a working AI provider configuration.
 
-## Step 7 — Verify the Installation
-
 Before handing the system to editors, verify that:
-
-- `EXT:ns_t3as` is installed and active.
-- `EXT:ns_t3af` is installed and active.
-- The T3AS license is active.
-- Database Analyzer changes are applied.
-- The AI provider is configured in AI Foundation.
-- TYPO3 caches are cleared.
-- T3AS backend modules load without errors.
-
-If all items above are true, installation is complete. Next, add data sources and run training in the T3AS module.
+*/}

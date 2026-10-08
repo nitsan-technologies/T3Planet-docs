@@ -9,60 +9,64 @@ keywords:
 sidebarTitle: "DPA & GDPR"
 ---
 
-This page answers GDPR-related questions about visitor search data and describes **technical data-management capabilities** in T3AS.
+This page helps you answer data protection (GDPR) questions about AI Search: what is stored, what is sent to the AI service, and how to switch storage off or delete it.
+
+## In short
+
+- AI Search can store the **search question** and the **AI answer**. This is on by default.
+- It does **not** store the visitor's IP address, browser details, cookies or TYPO3 login.
+- You can switch storage off. Search keeps working.
+- The question and matching website content are sent to your AI service to write the answer.
 
 ## Save Search History
 
-T3AS allows administrators to control whether visitor search history is stored.
-
-The **Save search history** option is available under AI Search configuration (**Search** tab → **Settings**). It is site-wide (`enable_search_history`, default **on**). There is no plugin Flexform override. For this setting, see [Save search history](/en/latest/ExtNsT3AS/Configuration/Index#t3as-search-global-settings).
-
-### Backend steps
-
-1. Open the T3AS / AI Search module.
+1. Go to **AI Universe → AI Chatbot/Search**.
 2. Click the **Search** tab.
-3. In **Settings**, enable or disable **Save search history**.
+3. In **Settings**, turn **Save search history** on or off.
+4. Click **Save Configuration**.
+
+{/* 1. Open the T3AS / AI Search module. */}
 
 <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmrajjqug0tgfqmhx211jb110?embed_v=2&utm_source=embed" loading="lazy" title="T3AS Search settings — Save search history" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
-**When enabled**, T3AS can store search-related history such as visitor queries and generated answers.
+This setting applies to the whole website. The AI Search plugin has no own switch for it.
 
-**When disabled:**
+**When it is off:**
 
-- New search queries and answers are **not** written to the TYPO3 database.
-- Recent-search suggestions are hidden.
-- Thumbs-up/down feedback is hidden.
-- AI Search continues to work (retrieval and answers).
+- New questions and answers are **not** saved.
+- **Recent Search** and the thumbs up/down feedback are hidden.
+- AI Search still works.
 
-Disabling search history affects **newly generated** search and feedback data. Existing records are not automatically removed. Use the history cleanup scheduler (or Usage Analytics delete) to remove previously stored records. See [History cleanup](#history-cleanup).
+<Warning>
+Switching it off does not delete what was saved before. Delete old entries in **Usage Analytics**, or set up the automatic cleanup below.
+</Warning>
 
 ## History cleanup
+
+Old search history can be deleted automatically, for example everything older than 30 or 90 days. Ask your developer to set this up as a Scheduler task (command below), or delete entries by hand in **Usage Analytics**.
 
 ```bash
 vendor/bin/typo3 t3af:history:cleanup
 vendor/bin/typo3 t3af:history:cleanup 30
 ```
 
-The first command uses the default retention of **90** days. Passing a number (for example `30`) deletes usage history older than that many days.
+The first command deletes history older than **90** days (the default). With a number (for example `30`) it deletes history older than that many days.
 
 ## Data Processing Agreement (DPA) Considerations
 
-Administrators should consider and document:
+Write down in your privacy documentation:
 
-- Visitor search data storage (query + AI answer)
-- Data that is **not** stored (IP, User-Agent, cookies, FE user)
-- Data retention and deletion (`t3af:history:cleanup`, Usage Analytics)
-- Browser storage (`nsT3AsRecentSearches`)
-- Data sent to the AI provider (query + RAG context + system instructions)
-- BYOK vs AI Credits — see [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index)
-- Provider DPA / no model training (not controlled inside the extension)
-- Microphone / Web Speech as a separate processing topic
-
-<Note>
-This documentation describes technical data-management capabilities. It does not constitute legal advice.
-</Note>
+- that questions and AI answers can be stored, and what is **not** stored
+- how long you keep them and how you delete them
+- that recent searches are kept in the visitor's browser
+- what is sent to your AI service (question, matching website content, instructions)
+- whether you use your own AI key or T3Planet Credits – see [T3Planet Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index)
+- your AI service's own DPA (for example, whether it trains on your data – this is not controlled by the extension)
+- the microphone / voice input (handled by the visitor's browser)
 
 ## Data Processing Agreement (DPA) Questions
+
+<Accordion title="All questions and answers (for your data protection officer)">
 
 | Question | Answer |
 | --- | --- |
@@ -75,11 +79,15 @@ This documentation describes technical data-management capabilities. It does not
 | How long are records retained? | Until they are deleted — manually in Usage Analytics, or by `t3af:history:cleanup` when a Scheduler task is set up. There is no hard expiry on each row by itself. |
 | Logging via AI Foundation? | Separate from T3AS history. AI Usage stores a **SHA-256 prompt fingerprint**, tokens, and timing — not the full query or answer. Privacy level can reduce or stop AI Usage rows; it does **not** stop T3AS history. See [AI Usage & Logs](/en/latest/ExtNsT3AF/Configuration/AIUsageAndLogs/Index) and [AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index) (privacy level). |
 | Extra processors besides the LLM? | The configured AI Foundation provider (and its embedding endpoint). T3Planet is an additional processor **only if Credits is enabled**. |
-| What is the difference between BYOK and AI Credits? | **BYOK (default):** customer server → configured AI provider. T3Planet is not on this path. **Credits (optional):** billable calls go via T3Planet. Prompts/inputs may be stored in T3Planet billing records. Licence activation (`ns_license`) is separate from the AI search answer path. See [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index). |
+| What is the difference between BYOK and T3Planet Credits? | **BYOK (default):** customer server → configured AI provider. T3Planet is not on this path. **Credits (optional):** billable calls go via T3Planet. Prompts/inputs may be stored in T3Planet billing records. Licence activation (`ns_license`) is separate from the AI search answer path. See [T3Planet Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index). |
 | Microphone / Web Speech? | The search UI may use the browser **Web Speech** API. The browser may process audio via third parties. There is no product off-switch today. |
-| MCP? | If AI Foundation MCP is enabled, T3AS tools can run search and indexing operations through connected clients. That is backend/editor access, not public-visitor processing. Restrict MCP as an access-control topic. See [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index). |
+| MCP? | If the AI Foundation MCP server is on, backend users can use MCP tools to read and change search settings (`t3as_*` tools) and to manage data sources and training (`t3cs_*` tools). This is backend access for editors, not processing of visitor data. Limit who may use MCP. See [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index). |
+
+</Accordion>
 
 ### Which data is stored for each interaction?
+
+<Accordion title="Table: stored data per search">
 
 | Data | Stored? | Note |
 | --- | --- | --- |
@@ -95,10 +103,59 @@ This documentation describes technical data-management capabilities. It does not
 
 Identical queries may update `count` / `tstamp` on an existing root row instead of always inserting a new row.
 
+</Accordion>
+
 ### Are there other places that still store the search query?
+
+<Accordion title="Table: other places">
 
 | Place | What is stored |
 | --- | --- |
 | Browser local storage (`nsT3AsRecentSearches`) | Recent search terms (up to 5). With Save search history off, the Recent Search **UI is hidden**, but **writes can still occur** in the browser. This is **not** in the TYPO3 database. |
 | T3AS `session_id` | Written on the history row only when Save search history is on. Not sent to the AI provider. |
 | T3AS chatbot mode | Follow-ups use the **same** Save search history switch |
+
+</Accordion>
+
+
+{/* Old table row, replaced above:
+| MCP? | If AI Foundation MCP is enabled, T3AS tools can run search and indexing operations through connected clients. That is backend/editor access, not public-visitor processing. Restrict MCP as an access-control topic. See [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index). | */}
+
+{/* Original text before the 8 Oct 2026 simplification (kept for reference):
+
+This page answers GDPR-related questions about visitor search data and describes **technical data-management capabilities** in T3AS.
+
+T3AS allows administrators to control whether visitor search history is stored.
+
+The **Save search history** option is available under AI Search configuration (**Search** tab → **Settings**). It is site-wide (`enable_search_history`, default **on**). There is no plugin Flexform override. For this setting, see [Save search history](/en/latest/ExtNsT3AS/Configuration/Search/Index).
+
+### Backend steps
+
+**When enabled**, T3AS can store search-related history such as visitor queries and generated answers.
+
+**When disabled:**
+
+- New search queries and answers are **not** written to the TYPO3 database.
+- Recent-search suggestions are hidden.
+- Thumbs-up/down feedback is hidden.
+- AI Search continues to work (retrieval and answers).
+
+Disabling search history affects **newly generated** search and feedback data. Existing records are not automatically removed. Use the history cleanup scheduler (or Usage Analytics delete) to remove previously stored records. See [History cleanup](#history-cleanup).
+
+The first command uses the default retention of **90** days. Passing a number (for example `30`) deletes usage history older than that many days.
+
+Administrators should consider and document:
+
+- Visitor search data storage (query + AI answer)
+- Data that is **not** stored (IP, User-Agent, cookies, FE user)
+- Data retention and deletion (`t3af:history:cleanup`, Usage Analytics)
+- Browser storage (`nsT3AsRecentSearches`)
+- Data sent to the AI provider (query + RAG context + system instructions)
+- BYOK vs T3Planet Credits — see [T3Planet Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index)
+- Provider DPA / no model training (not controlled inside the extension)
+- Microphone / Web Speech as a separate processing topic
+
+<Note>
+This documentation describes technical data-management capabilities. It does not constitute legal advice.
+</Note>
+*/}

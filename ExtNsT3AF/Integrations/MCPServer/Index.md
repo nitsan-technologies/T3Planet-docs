@@ -19,7 +19,7 @@ Connect external AI agents to TYPO3 through the **Model Context Protocol (MCP)**
 
 Follow this interactive walkthrough, then continue with the details below.
 
-![MCP Server status bar, connection methods, and Remote OAuth setup](./images/mcp-server-01.webp)
+![MCP Server status bar, connection methods and Remote (OAuth) setup](./images/mcp-server.webp)
 
 MCP Server — online status, connection methods, and Remote OAuth endpoint details.
 

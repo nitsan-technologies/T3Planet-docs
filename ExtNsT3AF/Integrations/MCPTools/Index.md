@@ -19,7 +19,7 @@ The **MCP Tools** screen lists every tool an AI agent can call against your TYPO
 
 Follow this interactive walkthrough, then continue with the details below.
 
-![MCP Tools catalog with TYPO3 Core tools and extension skill cards](./images/mcp-tool.webp)
+![MCP Tools with Tools & Resources and extension skill cards](./images/mcp-tools.webp)
 
 MCP Tools — Core catalog, extension cards, and tool statistics.
 

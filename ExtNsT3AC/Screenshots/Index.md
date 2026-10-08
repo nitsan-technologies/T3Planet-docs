@@ -11,7 +11,9 @@ Explore the demo for tutorials on all T3AC features.
 
 # Backend Screenshots
 
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmjcu8emc4kj6f6zp7ej6d5d8?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+{/* <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmjcu8emc4kj6f6zp7ej6d5d8?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div> */}
+
+{/* SUPADEMO NEEDED: AI Chatbot backend tour (current UI) */}
 
 You can view backend screenshots of the T3AC TYPO3 AI extension at:
 

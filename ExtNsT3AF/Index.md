@@ -42,6 +42,28 @@ sidebarTitle: "AI Foundation"
 </section>
 
 <section className="t3-landing-section">
+  <p className="t3-landing-eyebrow">More modules</p>
+  <h2 className="t3-landing-section-title">Labels, tasks and credits</h2>
+  <CardGroup cols={2}>
+  <Card title="AI Label" icon="tag" href="/ExtNsT3AF/Configuration/AILabel/Index" />
+  <Card title="Scheduler & CLI" icon="clock" href="/ExtNsT3AF/Configuration/Index#scheduler-and-cli" />
+  <Card title="For Developers" icon="code" href="/ExtNsT3AF/Configuration/Index#for-developers" />
+  <Card title="T3Planet Credits" icon="coins" href="/ExtNsT3AF/T3Planet-Credit-System/Index" />
+  <Card title="Quick Setup" icon="wand-sparkles" href="/ExtNsT3AF/Installation/Index#quick-start" />
+  <Card title="All modules at a glance" icon="list" href="/ExtNsT3AF/Introduction/Index#all-ai-foundation-modules" />
+  </CardGroup>
+</section>
+
+<section className="t3-landing-section">
+  <p className="t3-landing-eyebrow">Used by</p>
+  <h2 className="t3-landing-section-title">AI extensions on AI Foundation</h2>
+  <CardGroup cols={2}>
+  <Card title="AI Chatbot" icon="bot" href="/ExtNsT3AC/Index" />
+  <Card title="AI Search" icon="search" href="/ExtNsT3AS/Index" />
+  </CardGroup>
+</section>
+
+<section className="t3-landing-section">
   <p className="t3-landing-eyebrow">Integrate</p>
   <h2 className="t3-landing-section-title">MCP and agents</h2>
   <CardGroup cols={2}>

@@ -11,6 +11,34 @@ sidebarTitle: "DatabaseChunking"
 
 ## Overview
 
+When AI Search reads a lot of content, it works in small portions (chunks) instead of all at once. This keeps your server from running out of memory or stopping halfway.
+
+The default is **1000** records per portion. Most websites never need to change it.
+
+## Configuration Steps
+
+1. Go to **AI Universe → AI Foundation → AI Features**.
+2. Open the **Training** card.
+3. Change **Chunk Size** if needed (see the table below).
+4. Optional: change **Batch Size** and **Retention Days**.
+5. Click **Save Changes**.
+
+![Training drawer in AI Foundation with Chunk Size, Batch Size and Retention Days](./images/training-settings.webp)
+
+## Recommendations
+
+| Your website | Chunk Size |
+| --- | --- |
+| Small (fewer than 10,000 records) | 1000 (default) or 500–800 |
+| Medium (10,000–50,000 records) | 1000–1500 |
+| Large (more than 50,000 records) | 1500–2000 – ask your hosting to watch memory use |
+
+<Tip>
+Training stops with a memory error? Make the **Chunk Size** smaller. Training is very slow and your server has plenty of memory? Make it bigger.
+</Tip>
+
+{/* Original text before the 8 Oct 2026 simplification (kept for reference):
+
 This feature provides configurable database chunking to efficiently process large datasets while maintaining optimal performance and stability. Instead of loading all records in a single query, data is fetched and processed in smaller chunks, reducing memory usage and preventing execution timeouts.
 
 The chunk size is configurable via the T3AF feature settings, allowing administrators to adjust it according to server capacity and dataset size.
@@ -21,19 +49,13 @@ By default, database chunking is enabled with a chunk size of **1000 records**.
 
 If required, this value can be modified in **T3AF → AI Features → Training** to better suit the execution environment.
 
-## Configuration Steps
-
 1. Open **T3AF** in the TYPO3 backend.
 2. Go to **AI Features**.
 3. Open the **Training** card (Embeddings pipeline).
 4. Adjust **Chunk Size**, **Batch Size**, and **Retention Days** as needed.
 5. Click **Save Changes**.
 
-![Configurable database chunking in T3AF Training settings](./images/configurable-database-chunking1.webp)
-
 Configure **Chunk Size**, **Batch Size**, and **Retention Days** under **T3AF → AI Features → Training**.
-
-## Recommendations
 
 **Chunk Size Guidelines:**
 
@@ -51,3 +73,4 @@ Adjusting the chunk size can significantly impact performance. Smaller chunks us
 - **Prevents Timeouts:** Smaller batches reduce the risk of PHP execution timeouts
 - **Better Performance:** Optimized chunk sizes can improve overall processing speed
 - **Flexible Configuration:** Administrators can adjust settings based on their specific environment
+*/}

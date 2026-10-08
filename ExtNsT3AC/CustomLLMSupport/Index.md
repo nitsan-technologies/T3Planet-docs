@@ -14,17 +14,30 @@ Custom LLM Support provides a complete and scalable solution for integrating AI 
 - [T3AC — Prerequisites Custom LLM](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index)
 - [Recommended AI Models Matrix](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#recommended-ai-models-matrix)
 - [Supported AI Providers and Models](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#supported-ai-providers-and-models)
-- [Prerequisites of Hardware & Software](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#prerequisites-of-hardware-software)
+{/* - [Prerequisites of Hardware & Software](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#prerequisites-of-hardware-software) */}
+
+- [Prerequisites of Hardware & Software](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#prerequisites-of-hardware-&-software)
 - [Server Requirements](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#server-requirements)
 - [System Access](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#system-access)
 - [TYPO3 Access](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#typo3-access)
-- [Network & Security](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#network-security)
+{/* - [Network & Security](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#network-security) */}
+
+- [Network & Security](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#network-&-security)
 - [Required Software](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#required-software)
-- [Vector Database (Embedding/Search)](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#vector-database-embedding-search)
-- [T3AC – Scope of Work (SOW) Custom AI LLM Integration](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#t3ac-scope-of-work-sow-custom-ai-llm-integration)
+
+{/* - [Vector Database (Embedding/Search)](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#vector-database-embedding-search) */}
+
+- [Vector Database (Embedding/Search)](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#vector-database-embedding/search)
+{/* - [T3AC – Scope of Work (SOW) Custom AI LLM Integration](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#t3ac-scope-of-work-sow-custom-ai-llm-integration) */}
+
+- [T3AC – Scope of Work (SOW) Custom AI LLM Integration](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#t3ac-–-scope-of-work-sow-custom-ai-llm-integration)
 - [Scope Overview](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#scope-overview)
-- [Workflow & Implementation Steps](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#workflow-implementation-steps)
+{/* - [Workflow & Implementation Steps](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#workflow-implementation-steps) */}
+
+- [Workflow & Implementation Steps](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index#workflow-&-implementation-steps)
 - [T3AC Hosting Policy for Custom LLM](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACHostingPolicyforCustomLLM/Index)
-- [Part 1: Hosting on T3Planet’s Server](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACHostingPolicyforCustomLLM/Index#part-1-hosting-on-t3planets-server)
+{/* - [Part 1: Hosting on T3Planet’s Server](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACHostingPolicyforCustomLLM/Index#part-1-hosting-on-t3planets-server) */}
+
+- [Part 1: Hosting on T3Planet’s Server](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACHostingPolicyforCustomLLM/Index#part-1-hosting-on-t3planet’s-server)
 - [Part 2: Hosting on Your Own Server](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACHostingPolicyforCustomLLM/Index#part-2-hosting-on-your-own-server)
 - [Minimum Recommended Server Requirements](/en/latest/ExtNsT3AC/CustomLLMSupport/T3ACHostingPolicyforCustomLLM/Index#minimum-recommended-server-requirements)

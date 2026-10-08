@@ -1,38 +1,53 @@
 ---
-title: "T3AS Search Plugin"
+# old title: "T3AS Search Plugin"
+title: "AI Search plugin"
 keywords:
   - "TYPO3"
   - "T3Planet"
   - "T3AS"
   - "T3AS Search Plugin"
-sidebarTitle: "T3AS Search Plugin"
+# old sidebarTitle: "T3AS Search Plugin"
+sidebarTitle: "AI Search plugin"
 ---
 
 ## Overview
 
+The **AI Search** plugin puts an AI search box on one page of your website. Use it when you want a search page, or when one page needs different settings (for example other colours) than the rest of the website.
 
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmf40ewn21x4v39ozrnrdxqmm" loading="lazy" title="AI FileMeta Overview Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-The **T3AS Search** plugin places an AI search box on your TYPO3 frontend. Visitors type a question in plain language and get an answer based on content you have trained in T3AS.
+Settings for the whole website are on the [Search tab](/en/latest/ExtNsT3AS/Configuration/Search/Index). The plugin settings only apply to the page where you add it.
 
-You can set colours, layout, suggested questions, chatbot follow-ups, voiceover, and feedback for each page. Site-wide defaults are in **T3AS → Search** (see [5. Search tab](/en/latest/ExtNsT3AS/Configuration/Index#t3as-search-global-settings)).
+{/* <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmf40ewn21x4v39ozrnrdxqmm" loading="lazy" title="AI FileMeta Overview Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div> */}
+
+{/* The **T3AS Search** plugin places an AI search box on your TYPO3 frontend. Visitors type a question in plain language and get an answer based on content you have trained in T3AS.
+
+You can set colours, layout, suggested questions, chatbot follow-ups, voiceover, and feedback for each page. Site-wide defaults are in **T3AS → Search** (see [5. Search tab](/en/latest/ExtNsT3AS/Configuration/Search/Index)). */}
 
 ## Interactive Demo
 
-
 <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmrak5f4u0vicqmhxqgs1cufg?utm_source=link" loading="lazy" title="T3AS Search Plugin Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+
+{/* SUPADEMO NEEDED: Add the AI Search plugin (General, Search Box, Search Results, Enable dark mode) */}
+
 ## Add the Plugin to a Page
 
-**Step 1:** Open the page in the **Page** module.
+1. Open the page in the page module (**Web → Page**, on TYPO3 v14 **Content → Layout**).
+2. Click **+ Content**.
+3. Open the **Plugins** tab.
+4. Choose **AI Search**. (It is currently listed as **AI Search Search**.)
+5. Open the **Plugin** tab of the new content element.
+6. Set up the tabs **General**, **Search Box** and **Search Results** (see below).
+7. Click **Save**.
+8. Open the page on your website and try a search.
 
-**Step 2:** Click **Create new content** and choose a container — for example **Accordion** for Q&A-style layouts.
+{/* **Step 2:** Click **Create new content** and choose a container — for example **Accordion** for Q&A-style layouts.
 
 **Step 3:** Inside the container, add the **T3AS Search** plugin.
 
 **Step 4:** Configure the **Plugin**, **Search Box**, and **Search Results** tabs.
 
-**Step 5:** Click **Save and close** or **Save and refresh**, then check the frontend.
+**Step 5:** Click **Save and close** or **Save and refresh**, then check the frontend. */}
 
-## Plugin Tab
+{/* ## Plugin Tab
 
 Controls the look of the search box on this page.
 
@@ -67,15 +82,67 @@ Controls how AI answers are displayed on this page.
 - **Enable Search Feedback** — Thumbs up/down on answers; saved in **Usage Analytics**
 - **Enable Voiceover** — Play button to hear the answer read aloud
 - **Result Style** — **Summarize** (short) or **Long Answer** (detailed)
-- **Reference Links** — Source links for this plugin instance
+- **Reference Links** — Source links for this plugin instance */}
+
+## General
+
+How the search box looks.
+
+- **Title** – a heading above the search box.
+- **Select Style** – **Default** uses your website design. **Customized Style** uses the colours you pick here.
+- **Box Layout** – **Box** or **Full** (full width).
+- **Search Icon**, **Select Loader** (loading animation), **Border Radius** (corners).
+- **Primary Color**, **Secondary Color**, **Text Color** – only used with **Customized Style**.
+- **Button Class** / **Input Class** – optional style names from your website design. Ask your developer; only used with **Default**.
+
+## Search Box
+
+The input field and example questions.
+
+- **Search Form Type** – **Default** or **With Button**.
+- **Button Type** – **Search Icon** or **With Label**. With a label, enter the **Search Button Text**.
+- **Search Input Placeholder** – the grey hint text in the field.
+- **Recent Search** – show the visitor's last searches. **Recent Search Title** is the heading above them.
+- **Predefined Questions** – show clickable example questions.
+- **Question Position**, **No. of questions limit**, **Questions storage folder(s)** – where they show, how many, and the folder that holds them.
+
+## Search Results
+
+How answers look.
+
+- **Enable Reference Links** – links to the pages or files the answer comes from.
+- **Enable chatbot mode** – visitors can ask follow-up questions.
+- **Enable search feedback (thumbs)** – visitors rate answers; you see the ratings in **Usage Analytics**.
+- **Enable voiceover** – a play button reads the answer aloud.
+- **Enable dark mode** – adds a light/dark switch to the answer area.
+- **Result Style** – **Summarize**, **Short Answer** or **Long Answer**.
 
 <Note>
-Plugin settings apply to this content element only. For site-wide defaults, use **T3AS → Search**.
+These settings only apply to this content element. For the whole website, use **AI Universe → AI Chatbot/Search → Search**.
 </Note>
+
+{/* <Note>
+Plugin settings apply to this content element only. For site-wide defaults, use **T3AS → Search**.
+</Note> */}
 
 ## Tips
 
-- Use **Default Style** unless this page needs its own brand colours
-- Enable **Chatbot Mode** on help, docs, or FAQ pages
-- Show 3–5 predefined questions to keep the interface clean
-- After saving, refresh the frontend and test a real search query
+- Keep **Default** style unless the page needs its own colours.
+- Turn on **Enable chatbot mode** on help or FAQ pages.
+- Show 3–5 example questions, not more.
+- After saving, test a real question on the website.
+
+{/* - Enable **Chatbot Mode** on help, docs, or FAQ pages */}
+
+## Related
+
+- [Search tab](/en/latest/ExtNsT3AS/Configuration/Search/Index) – site-wide defaults for every page
+- [Search widget](/en/latest/ExtNsT3AS/Configuration/Search/Index#search-widget) – the floating search button
+- [AI answers in ke_search, indexed_search or Solr](/en/latest/ExtNsT3AS/InjectingAISearchResults/Index)
+- [AI Chatbot](/en/latest/ExtNsT3AC/Introduction/Index) – a chat window that uses the same trained content
+
+{/* Original text before the 8 Oct 2026 simplification (kept for reference):
+
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmrak5f4u0vicqmhxqgs1cufg?utm_source=link" loading="lazy" title="T3AS Search Plugin Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+## Add the Plugin to a Page
+*/}

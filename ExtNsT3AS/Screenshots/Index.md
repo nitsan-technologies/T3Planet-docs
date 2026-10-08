@@ -8,19 +8,25 @@ keywords:
 sidebarTitle: "Screenshots"
 ---
 
-Interactive demos for the T3AS backend module and frontend search plugin.
+{/* Interactive demos for the T3AS backend module and frontend search plugin. */}
+
+Interactive demos for AI Search in the backend (**AI Universe → AI Chatbot/Search**) and for the AI Search plugin.
 
 ## T3AS Overview
 
 
 <div className="t3-embed"><iframe src="https://app.supademo.com/showcase/cmf3sjz7x01qpxy0i7npmk8qh?utm_source=link" loading="lazy" title="T3AS Showcase EN" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Overview of the T3AS backend module — dashboard, data sources, training, and search settings.
+{/* Overview of the T3AS backend module — dashboard, data sources, training, and search settings. */}
+
+Overview of AI Search in the backend — Dashboard, Data Source, Training Center and Search settings.
+
+{/* SUPADEMO NEEDED: AI Search backend overview showcase (current UI) */}
 
 ## Search Global Settings
 
 
 <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmrajjqug0tgfqmhx211jb110?embed_v=2&utm_source=embed" loading="lazy" title="T3AS - Search Functionality" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Configure AI search, widget style, and predefined questions for the whole site. Full guide: [5. Search tab](/en/latest/ExtNsT3AS/Configuration/Index#t3as-search-global-settings).
+Configure AI search, widget style, and predefined questions for the whole site. Full guide: [5. Search tab](/en/latest/ExtNsT3AS/Configuration/Search/Index).
 
 ## T3AS Search Plugin
 

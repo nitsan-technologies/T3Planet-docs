@@ -245,28 +245,24 @@
               "ExtNsT3AC/Screenshots/Index",
               "ExtNsT3AC/Installation/Index",
               "ExtNsT3AC/ReInstallEverything/Index",
-              "ExtNsT3AC/Configuration/Index",
-              "ExtNsT3AC/DPAandGDPR/Index",
-              "ExtNsT3AC/UpdateGuide/Index",
-              "ExtNsT3AC/KnownProblems/Index",
-              "ExtNsT3AC/Support",
-              "ExtNsT3AC/BuyNow",
               {
-                "group": "Custom LLM",
+                "group": "Configuration",
+                "root": "ExtNsT3AC/Configuration/Index",
                 "expanded": false,
                 "pages": [
-                  "ExtNsT3AC/CustomLLMSupport/Index",
-                  "ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index",
-                  "ExtNsT3AC/CustomLLMSupport/T3ACHostingPolicyforCustomLLM/Index",
-                  "ExtNsT3AC/RetrievalConfidenceThreshold/Index"
-                ],
-                "root": "ExtNsT3AC/CustomLLMSupport/Index"
+                  "ExtNsT3AC/Configuration/AIFeatures/Index",
+                  "ExtNsT3AC/Configuration/DisableChatbotOnPage/Index",
+                  "ExtNsT3AC/Configuration/ExternalEmbed/Index",
+                  "ExtNsT3AC/Configuration/Permissions/Index",
+                  "ExtNsT3AC/Configuration/MCPTools/Index",
+                  "ExtNsT3AC/Configuration/WhereToFindIt/Index",
+                  "ExtNsT3AC/Configuration/ForDevelopers/Index"
+                ]
               },
               {
                 "group": "Features",
                 "expanded": false,
                 "pages": [
-                  "ExtNsT3AC/FeatureGuide/Index",
                   "ExtNsT3AC/FeatureGuide/Dashboard/Index",
                   "ExtNsT3AC/FeatureGuide/DataSource/Index",
                   "ExtNsT3AC/FeatureGuide/TrainingCenter/Index",
@@ -278,14 +274,22 @@
                 "root": "ExtNsT3AC/FeatureGuide/Index"
               },
               {
-                "group": "Updates",
+                "group": "Custom LLM",
                 "expanded": false,
                 "pages": [
-                  "ExtNsT3AC/UpdateVersion/Index"
+                  "ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index",
+                  "ExtNsT3AC/CustomLLMSupport/T3ACHostingPolicyforCustomLLM/Index",
+                  "ExtNsT3AC/RetrievalConfidenceThreshold/Index"
                 ],
-                "root": "ExtNsT3AC/UpdateVersion/Index"
+                "root": "ExtNsT3AC/CustomLLMSupport/Index"
               },
-              "ExtNsT3AC/FAQ/Index"
+              "ExtNsT3AC/DPAandGDPR/Index",
+              "ExtNsT3AC/UpdateVersion/Index",
+              "ExtNsT3AC/UpdateGuide/Index",
+              "ExtNsT3AC/KnownProblems/Index",
+              "ExtNsT3AC/FAQ/Index",
+              "ExtNsT3AC/Support",
+              "ExtNsT3AC/BuyNow"
             ]
           },
           {
@@ -297,7 +301,26 @@
               "ExtNsT3AS/Screenshots/Index",
               "ExtNsT3AS/Installation/Index",
               "ExtNsT3AS/ReInstallEverything/Index",
-              "ExtNsT3AS/Configuration/Index",
+              {
+                "group": "Configuration",
+                "root": "ExtNsT3AS/Configuration/Index",
+                "expanded": false,
+                "pages": [
+                  "ExtNsT3AS/Configuration/AIFeatures/Index",
+                  "ExtNsT3AS/Configuration/Dashboard/Index",
+                  "ExtNsT3AS/Configuration/DataSource/Index",
+                  "ExtNsT3AS/Configuration/TrainingCenter/Index",
+                  "ExtNsT3AS/Configuration/Search/Index",
+                  "ExtNsT3AS/Configuration/ExternalEmbed/Index",
+                  "ExtNsT3AS/Configuration/SearchExtensions/Index",
+                  "ExtNsT3AS/Configuration/UsageAnalytics/Index",
+                  "ExtNsT3AS/Configuration/AIUsageAndLogs/Index",
+                  "ExtNsT3AS/Configuration/Permissions/Index",
+                  "ExtNsT3AS/Configuration/MCPTools/Index",
+                  "ExtNsT3AS/Configuration/WhereToFindIt/Index",
+                  "ExtNsT3AS/Configuration/ForDevelopers/Index"
+                ]
+              },
               "ExtNsT3AS/DPAandGDPR/Index",
               "ExtNsT3AS/BasicAuthentication/Index",
               "ExtNsT3AS/FrontendPlugin/Index",
@@ -886,11 +909,11 @@
             "pages": [
               "TonicTypes/Introduction/Index",
               "TonicTypes/Installation/Index",
+              "TonicTypes/Professional/Index",
               {
                 "group": "Getting Started",
                 "expanded": false,
                 "pages": [
-                  "TonicTypes/GettingStarted/Index",
                   "TonicTypes/GettingStarted/CreatingAField/Index",
                   "TonicTypes/GettingStarted/CreatingADatatype/Index",
                   "TonicTypes/GettingStarted/CreatingATemplateVariable/Index",
@@ -902,7 +925,6 @@
                 "group": "Frontend Plugins",
                 "expanded": false,
                 "pages": [
-                  "TonicTypes/FrontendPlugins/Index",
                   "TonicTypes/FrontendPlugins/DisplayRecordsPlugin/Index"
                 ],
                 "root": "TonicTypes/FrontendPlugins/Index"
@@ -910,7 +932,6 @@
               "TonicTypes/ExportImport/Index",
               "TonicTypes/ViewHelpers/Index",
               "TonicTypes/Screenshots/Index",
-              "TonicTypes/Professional/Index",
               "TonicTypes/FAQ/Index",
               "TonicTypes/Support/Index"
             ]

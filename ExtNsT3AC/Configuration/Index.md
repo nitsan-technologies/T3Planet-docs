@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-description: "T3AC uses AI Foundation for provider setup, model selection, shared prompts, and core AI services. Complete the AI Foundation setup first, then return to T3AC for chatbot-specific configuration."
+description: "T3AC uses T3AF for provider setup, model selection, shared prompts, and core AI services. Complete the T3AF setup first, then return to T3AC for chatbot-specific configuration."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -9,40 +9,77 @@ keywords:
 sidebarTitle: "Configuration"
 ---
 
-T3AC uses AI Foundation for provider setup, model selection, shared prompts, and core AI services.
-Complete the AI Foundation setup first, then return to T3AC for chatbot-specific configuration.
+This page shows you how to set up AI Chatbot after installation: check the AI settings, design the chatbot and put it on your website.
 
-Helpful AI Foundation references:
+With AI Chatbot you control how the chatbot answers, what it learns and where it is shown – on your website or on other websites.
 
-- [AI Foundation Configuration](/en/latest/ExtNsT3AF/Configuration/Index)
+**The basic idea in 4 steps**
+
+1. Connect an AI service in **AI Foundation** (done during installation).
+2. Add your content in **Data Source** and let the chatbot learn it (see [Data Source](/en/latest/ExtNsT3AC/FeatureGuide/DataSource/Index)).
+3. Set up the chatbot on the **Chatbot** tab (see [Chatbot Features](/en/latest/ExtNsT3AC/FeatureGuide/Chatbot/Index#quick-setup)).
+4. Check the chatbot on your website.
+
+**Follow the pages in this order.** Pages 1–5 are the basic setup. The others are optional or for later. Dashboard, Data Source, Training Center, Chatbot, Usage Analytics and AI Logs are described on the [Features](/en/latest/ExtNsT3AC/FeatureGuide/Index) pages.
+
+<CardGroup cols={2}>
+  <Card title="1. AI Features & provider" icon="sparkles" href="/en/latest/ExtNsT3AC/Configuration/AIFeatures/Index">
+    Shared settings in AI Foundation and the AI service the chatbot uses.
+  </Card>
+  <Card title="2. Dashboard" icon="layout-dashboard" href="/en/latest/ExtNsT3AC/FeatureGuide/Dashboard/Index">
+    Check at a glance if everything is set up and working.
+  </Card>
+  <Card title="3. Data Source" icon="database" href="/en/latest/ExtNsT3AC/FeatureGuide/DataSource/Index">
+    Add pages, PDFs, Q&A and text. Use source groups per page.
+  </Card>
+  <Card title="4. Training Center & Scheduler" icon="graduation-cap" href="/en/latest/ExtNsT3AC/FeatureGuide/TrainingCenter/Index">
+    Watch the training. The Scheduler runs it automatically.
+  </Card>
+  <Card title="5. Chatbot: Configuration, Customize, General" icon="message-circle" href="/en/latest/ExtNsT3AC/FeatureGuide/Chatbot/Index">
+    Switch the chatbot on, design it, choose the pages and the widget position.
+  </Card>
+  <Card title="6. Quick replies" icon="reply" href="/en/latest/ExtNsT3AC/FeatureGuide/Chatbot/Index#quick-replies">
+    Up to 5 buttons with prepared answers under the welcome message.
+  </Card>
+  <Card title="7. Hide the chatbot on a page" icon="eye-off" href="/en/latest/ExtNsT3AC/Configuration/DisableChatbotOnPage/Index">
+    A switch in the page properties.
+  </Card>
+  <Card title="8. External Embed" icon="code" href="/en/latest/ExtNsT3AC/Configuration/ExternalEmbed/Index">
+    Show the chatbot on another website (+ .htaccess / CORS).
+  </Card>
+  <Card title="9. Usage Analytics" icon="chart-column" href="/en/latest/ExtNsT3AC/FeatureGuide/UsageAnalytics/Index">
+    Visitor conversations and their feedback.
+  </Card>
+  <Card title="10. AI Usage & AI Logs" icon="scroll-text" href="/en/latest/ExtNsT3AC/FeatureGuide/AILogs/Index">
+    How much AI was used, and error messages.
+  </Card>
+  <Card title="11. Permissions" icon="shield" href="/en/latest/ExtNsT3AC/Configuration/Permissions/Index">
+    Who may see or change the chatbot and the chats.
+  </Card>
+  <Card title="12. Providers & MCP Tools" icon="plug" href="/en/latest/ExtNsT3AC/Configuration/MCPTools/Index">
+    The AI provider, and MCP for AI assistants.
+  </Card>
+  <Card title="13. Upgrading? Where your old settings moved" icon="map" href="/en/latest/ExtNsT3AC/Configuration/WhereToFindIt/Index">
+    Only if you upgrade from an older version: where the old site settings are now.
+  </Card>
+  <Card title="14. For developers" icon="terminal" href="/en/latest/ExtNsT3AC/Configuration/ForDevelopers/Index">
+    Chatbot ID, events, page types, upgrade wizard.
+  </Card>
+</CardGroup>
+
+{/* Original text before the 8 Oct 2026 simplification (kept for reference):
+
+T3AC uses T3AF for provider setup, model selection, shared prompts, and core AI services.
+Complete the T3AF setup first, then return to T3AC for chatbot-specific configuration.
+
+Helpful T3AF references:
+
+- [T3AF Configuration](/en/latest/ExtNsT3AF/Configuration/Index)
 - [AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index)
 - [AI Features](/en/latest/ExtNsT3AF/Configuration/AIFeatures/Index)
 - [AI Prompts](/en/latest/ExtNsT3AF/Configuration/AIPrompts/Index)
 
-## Step 1: Open AI Features in AI Foundation
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmrabse4l0btvqmhx59tvn83q?utm_source=link" loading="lazy" title="AI FileMeta Overview Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Shared AI settings for T3AC are managed in AI Foundation — not under **Admin Tools > Settings > Configure Extensions**.
-
-1. Go to the **TYPO3 backend**.
-2. Open **AI Foundation** → **AI Features**.
-3. Open the **T3AC** (`ns_t3ac`) feature card.
-4. Configure provider/model overrides and feature options used for chatbot and training workflows.
-5. Click **Save**.
-6. Return to the **T3AC** module for chatbot, data source, and training-specific settings.
-
-For the shared module overview, see [AI Foundation AI Features](/en/latest/ExtNsT3AF/Configuration/AIFeatures/Index).
-
-## Step 2: Add Required API Keys
-
-Ensure that the required provider API keys are configured in AI Foundation.
-
-- **OpenAI** — [Create an API key](https://platform.openai.com/api-keys) in your OpenAI account. For full technical details, see the [OpenAI API reference](https://platform.openai.com/docs/api-reference/introduction).
-
-## AI Chatbot Features
-
-T3AC focuses on chatbot-related AI workflows built on top of the shared AI Foundation setup.
+T3AC focuses on chatbot-related AI workflows built on top of the shared T3AF setup.
 Use these features when you want to control how the chatbot answers questions, how data is trained, and how the chatbot is shown on your site or external websites.
 
 Key T3AC capabilities include:
@@ -52,68 +89,9 @@ Key T3AC capabilities include:
 - Dashboard, logs, and analytics for chatbot activity
 - External embed support for approved domains
 
-For shared model routing and central AI behavior, see [AI Foundation AI Features](/en/latest/ExtNsT3AF/Configuration/AIFeatures/Index).
-
-## Step 4: Chatbot Configuration
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmjcy43b44pnzf6zpnlmzp7nj?embed_v=2&utm_source=embed" loading="lazy" title="AI FileMeta Overview Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-
-- **Show and Hide Chatbot on Specific Pages**
-
-![Chatbot General configuration with page visibility and live preview](./images/chatbot-general-configuration.webp)
-
-Configure page visibility, source links, and custom CSS under **Chatbot → General**, with Live Preview on the right.
-
-- **Show Chatbot on Specific Pages**
-  - Enter the Page IDs where the chatbot should be visible (e.g., 10, 22, 35).
-- **Hide Chatbot on Specific Pages**
-  - Enter the Page IDs where the chatbot should be hidden, even if it is enabled globally (e.g., 45, 60, 72).
-- **Internal CSS Configuration**
-- **Custom CSS**
-  - Use your own styles to customize the chatbot appearance.
-
-<Note>
-Make sure your CSS files are available inside the public directory, and the path should start with `fileadmin/`.
-</Note>
-
-## Step 5: External Chatbot Configuration
-
-To configure chatbot embedding for external domains:
-
-1. Go to the **T3AC** module.
-2. Navigate to **Chatbot > External Embed**.
-
-Available options:
-
-- **Custom CSS**
-Use your own styles to customize the chatbot appearance.
-- **Allowed Domains for Embedding**
-Specify the domains where the chatbot can be embedded, e.g. `example.com`, `trusted-domain.com`.
-- **Allow Any Domain**
-Enable this option to permit embedding on any domain without restrictions.
-
-## Providers & MCP Tools
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmrabygkm0chzqmhx3nanm13o?utm_source=link" loading="lazy" title="T3AC Providers and MCP Tools Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-T3AC uses AI Foundation for provider selection and any shared MCP-based integrations.
-Review this setup when you want to confirm the active provider, available models, and connected MCP tools that support chatbot workflows.
-
-See also:
+For shared model routing and central AI behavior, see [T3AF AI Features](/en/latest/ExtNsT3AF/Configuration/AIFeatures/Index).
 
 - [AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index)
 - [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index)
 - [MCP Tools](/en/latest/ExtNsT3AF/Integrations/MCPTools/Index)
-
-### Chatbot visibility examples
-
-![Enable chatbot globally](./images/Enable_chatbot_globally.webp)
-
-![Show chatbot](./images/Show_chatbot.webp)
-
-### CSS examples
-
-![Internal CSS](./images/Internal_css.webp)
-
-![External chatbot](./images/External-chatbot.webp)
-
+*/}

@@ -11,7 +11,7 @@ sidebarTitle: "Architecture"
 
 ## Overview
 
-![For Developers tab showing T3AF architecture at a glance](./images/for-developers.webp)
+![For Developers tab with Architecture at a glance](./images/for-developers.webp)
 
 Architecture at a glance — extensions call T3AF, which routes to AI providers and MCP clients.
 
