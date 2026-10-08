@@ -32,12 +32,12 @@ Alternatively, use [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Inde
 1. Open AI Foundation > AI Providers.
 2. Click Add provider.
 3. Fill in the required fields:
-  - **Display name** — Friendly label for your team (for example `OpenAI
-  production`).
-  - **Adapter type** — Vendor protocol (OpenAI, Anthropic, Gemini, Azure,
-  Mistral, DeepSeek, xAI, Ollama, or custom OpenAI-compatible).
-  - **API key** — Cloud vendors need a key. Leave empty for local Ollama.
-  - **Model ID** — Completion model (for example `gpt-4o-mini`).
+   - **Display name** — Friendly label for your team (for example `OpenAI
+   production`).
+   - **Adapter type** — Vendor protocol (OpenAI, Anthropic, Gemini, Azure,
+   Mistral, DeepSeek, xAI, Ollama, or custom OpenAI-compatible).
+   - **API key** — Cloud vendors need a key. Leave empty for local Ollama.
+   - **Model ID** — Completion model (for example `gpt-4o-mini`).
 4. Optionally set the endpoint URL, embedding model, capabilities, temperature,
 and pricing fields.
 5. Click Save.

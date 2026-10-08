@@ -61,7 +61,7 @@ sidebarTitle: "T3AC"
   - `sentence-transformers`
   - Additional packages as required
 
-### Vector Database (Embedding/Search)
+### Vector Database (Embedding/Search) {#vector-database-embedding-search}
 
 - **Local:** ChromaDB (recommended)
 - **Cloud-managed:** Pinecone (recommended for large-scale setups)

@@ -26,7 +26,7 @@ extension, and period KPIs.
 - **KPI cards** — requests, tokens, credits used, success rate
 - **Recent requests** — the latest AI requests from the local request log
 for the current period filter (not a fixed “last hour” window). See
-[AI Usage](#t3planet-credits-ai-usage-section) below for the full
+[AI Usage](#ai-usage) below for the full
 filterable history.
 
 <Tip>

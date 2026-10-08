@@ -47,13 +47,13 @@ Open T3AF > MCP Server.
 
 1. **Workspace** - Use the **WORKSPACE** dropdown (top right). - If you see a yellow “create workspace” notice, click **Create MCP workspace** (requires permission) or pick **Live** for read-only smoke tests.
 2. **Status bar** (top card) Verify:
-  - **Server Status** → **Online**
-  - **OAuth Endpoints** → both `oauth-authorization-server` and `oauth-protected-resource` show green checks
-  - **Server URL** → copy your `https://…/mcp` URL
+   - **Server Status** → **Online**
+   - **OAuth Endpoints** → both `oauth-authorization-server` and `oauth-protected-resource` show green checks
+   - **Server URL** → copy your `https://…/mcp` URL
 3. **Endpoint health** (Remote MCP Setup tab) Under **MCP endpoint status**, all three rows should be green:
-  - MCP endpoint (`/mcp` returns **401 without auth** — that is expected and counts as online)
-  - `/.well-known/oauth-authorization-server/mcp`
-  - `/.well-known/oauth-protected-resource/mcp`
+   - MCP endpoint (`/mcp` returns **401 without auth** — that is expected and counts as online)
+   - `/.well-known/oauth-authorization-server/mcp`
+   - `/.well-known/oauth-protected-resource/mcp`
 4. **Quick curl smoke test**
 
 ```bash
@@ -70,7 +70,7 @@ curl -sS "$BASE/.well-known/oauth-protected-resource/mcp" | head -c 200
 
 5. **Enable MCP** (if offline) Expand **Show advanced** → ensure **Enable MCP Server** is checked → **Save**.
 
-## Cursor IDE — two connection methods
+## Cursor IDE — two connection methods {#cursor-ide-two-connection-methods}
 
 Cursor can connect to the TYPO3 MCP server in two ways. Use **one** method per server entry — do not mix stdio and URL for the same logical connection.
 
@@ -90,14 +90,14 @@ Cursor can connect to the TYPO3 MCP server in two ways. Use **one** method per s
 
 ## Method A — Project stdio via DDEV
 
-Create or edit **``.cursor/mcp.json``** in the **project root** (same directory as `.ddev/`). Cursor spawns `ddev exec … nst3af:mcp:serve` when you open this project.
+Create or edit **`.cursor/mcp.json`** in the **project root** (same directory as `.ddev/`). Cursor spawns `ddev exec … nst3af:mcp:serve` when you open this project.
 
 **Important:**
 
 - **`cwd`** must be the **absolute path** to the DDEV project root. Without it, `ddev` may fail with *could not find a project*.
 - Use the full command name **`nst3af:mcp:serve`** (alias `mcp:server` works only after TYPO3 caches are warm).
-- **`–no-startup-message`** keeps diagnostics off stdout (stdio MCP reserves stdout for JSON-RPC).
-- Adjust **`–user`** and **`–workspace``** to match your backend user and workspace UID from the MCP module dropdown.
+- **`--no-startup-message`** keeps diagnostics off stdout (stdio MCP reserves stdout for JSON-RPC).
+- Adjust **`--user`** and **`--workspace`** to match your backend user and workspace UID from the MCP module dropdown.
 
 ```json
 {
@@ -242,10 +242,10 @@ Use the TYPO3 MCP tool table_schema for table "pages" and summarize the fields.
 2. Copy the **Bearer token** immediately (full value is only shown once; the UI stores it in the browser session for copy).
 3. In n8n, add an **MCP Client** node to a workflow.
 4. Configure the MCP Client node:
-  - **Endpoint** — `https://t3af.ddev.site/mcp`
-  - **Server Transport** — HTTP Streamable
-  - **Authentication** — Bearer Auth
-  - **Bearer Token** — paste the token from step 2
+   - **Endpoint** — `https://t3af.ddev.site/mcp`
+   - **Server Transport** — HTTP Streamable
+   - **Authentication** — Bearer Auth
+   - **Bearer Token** — paste the token from step 2
 5. Save and **Execute workflow**.
 
 **Verify:**
@@ -264,10 +264,10 @@ Use the TYPO3 MCP tool table_schema for table "pages" and summarize the fields.
 1. Click **Create manus token** and copy the Bearer token.
 2. In Manus, add a new **MCP server** connection.
 3. Configure the connection:
-  - **Server Name** — your TYPO3 site name
-  - **Transport** — HTTP
-  - **Server URL** — `https://t3af.ddev.site/mcp`
-  - **Authorization** — header `Authorization: Bearer <token>`
+   - **Server Name** — your TYPO3 site name
+   - **Transport** — HTTP
+   - **Server URL** — `https://t3af.ddev.site/mcp`
+   - **Authorization** — header `Authorization: Bearer <token>`
 4. Save the connection.
 
 **Verify:** Same as n8n — tool calls succeed and token appears in **Active OAuth Tokens**.
@@ -311,7 +311,7 @@ Generic checklist:
 3. **Transport:** HTTP Streamable (when available).
 4. **Auth:** OAuth 2.1 + PKCE if supported; otherwise create a Bearer token under the **n8n** or **Manus** tabs.
 
-**Cursor:** see Cursor IDE — two connection methods for project stdio (DDEV) and global URL (OAuth) setup, plus terminal verification.
+**Cursor:** see [Cursor IDE — two connection methods](#cursor-ide-two-connection-methods) for project stdio (DDEV) and global URL (OAuth) setup, plus terminal verification.
 
 ## Method 2 — Local Setup (mcp-remote)
 
@@ -347,9 +347,9 @@ URL tokens are as sensitive as passwords. Do not commit them to git or share in 
 ```
 
 4. Paste into your client’s MCP config:
-  - **Claude Desktop:** `claude_desktop_config.json` → `mcpServers`
-  - **Cursor:** `.cursor/mcp.json`
-  - **VS Code:** MCP extension settings
+   - **Claude Desktop:** `claude_desktop_config.json` → `mcpServers`
+   - **Cursor:** `.cursor/mcp.json`
+   - **VS Code:** MCP extension settings
 5. Restart the client so it spawns `npx mcp-remote …`.
 
 **Verify:**
@@ -391,7 +391,7 @@ The short alias `mcp:server` also maps to `nst3af:mcp:serve` when TYPO3 command 
 
 ## Step-by-step (DDEV)
 
-1. For **Cursor**, prefer the full walkthrough in Cursor IDE — two connection methods.
+1. For **Cursor**, prefer the full walkthrough in [Cursor IDE — two connection methods](#cursor-ide-two-connection-methods).
 2. For other MCP clients, use DDEV from the host with an absolute `cwd`:
 
 ```json
@@ -414,12 +414,12 @@ The short alias `mcp:server` also maps to `nst3af:mcp:serve` when TYPO3 command 
 }
 ```
 
-3. **Terminal verification:** see Cursor IDE — two connection methods (pipe test and expected `initialize` JSON).
+3. **Terminal verification:** see [Cursor IDE — two connection methods](#cursor-ide-two-connection-methods) (pipe test and expected `initialize` JSON).
 4. CLI options:
-  - **``–user`` / ``-u``** — Backend username (default `admin`).
-  - **``–workspace`` / ``-w``** — Workspace UID (`0` = live).
-  - **``–no-startup-message``** — Suppress stderr banner (recommended for MCP).
-  - **``-v`` / ``-vv``** — Verbose stderr diagnostics.
+   - **`--user` / `-u`** — Backend username (default `admin`).
+   - **`--workspace` / `-w`** — Workspace UID (`0` = live).
+   - **`--no-startup-message`** — Suppress stderr banner (recommended for MCP).
+   - **`-v` / `-vv`** — Verbose stderr diagnostics.
 
 **Verify:**
 
@@ -507,33 +507,33 @@ Use this checklist when regression-testing a release:
 - `--user` and `--workspace` match your backend user.
 - Tool invocation succeeds.
 
-**Cursor URL (``~/.cursor/mcp.json``)**
+**Cursor URL (`~/.cursor/mcp.json`)**
 
 - OAuth at `/mcp` completes.
 - Token appears in the connections table.
 
 ## Troubleshooting
 
-**Server Status **Offline****
+**Server Status: Offline**
 Enable MCP in **Show advanced**. Run `ddev exec typo3 cache:flush`.
 
-**`/mcp` returns **503****
+**`/mcp` returns 503**
 `enableMcpServer` is off (MCP Server → Advanced, or T3AF MCP settings).
 
-**`/mcp` returns **401** without token**
+**`/mcp` returns 401 without token**
 **Expected** — proves middleware is reachable. Authenticate with OAuth or Bearer.
 
-**OAuth metadata checks **red****
+**OAuth metadata checks are red**
 Verify site base URL, HTTPS, and that `config/sites/*/config.yaml` routes exist. Flush caches.
 
-**Bearer / URL token **Authentication failed****
+**Bearer / URL token: Authentication failed**
 Token revoked, expired, or wrong workspace. Create a new token in the module.
 
 **`mcp-remote` client shows no tools**
 Confirm Node.js is installed, URL includes valid `?token=`, restart client.
 
-**CLI **Backend user not found****
-Pass `--user= <../existing-be-username>`.
+**CLI: Backend user not found**
+Pass `--user=<existing-be-username>`.
 
 **Tool returns empty / wrong data**
 Check **WORKSPACE** dropdown and token workspace pin.

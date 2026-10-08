@@ -18,7 +18,7 @@ Tonictypes is split into a free Core that contains the whole record-type engine,
 | Package | Key | How |
 | --- | --- | --- |
 | **Tonictypes** (Core, required) | `tonictypes` | Free — [TER](https://extensions.typo3.org/extension/tonictypes) |
-| **AI Foundation** (required for Pro) | `ns_t3af` | Free — [TER](https://extensions.typo3.org/extension/ns_t3af) · [AI Foundation docs](/en/latest/ExtNsT3AF/Introduction/Index) |
+| **AI Foundation** (required for Pro) | `ns_t3af` | Free — [TER](https://extensions.typo3.org/extension/ns_t3af) · [AI Foundation docs](/en/latest/ExtNsT3AF/Index) |
 | **Tonictypes Pro** (premium) | `tonictypes_pro` / `k3n/tonictypes_pro` | License — [License docs](/en/latest/License/Index) |
 
 **Compatibility:** TYPO3 12.4–14.9 · PHP 8.2–8.5  
@@ -59,9 +59,12 @@ Generic install videos (any extension): [Non-Composer](https://www.youtube.com/w
 
 After install, the flow is: create a datatype → add fields → create records → place a **Record List** plugin. Full steps: [Getting Started](/en/latest/TonicTypes/GettingStarted/Index). Product overview: [t3planet.de/tonictypes](https://t3planet.de/tonictypes).
 
+{/* Walkthrough GIF shows the FAQ repeater, which is planned for 2.2.0 (in development, not released). Restore with the release:
+
 ![Tonictypes quickstart — datatype, field values, FAQ repeater, plugin](Images/tonictypes_quickstart.gif)
 
 *Datatype → field values → FAQ repeater on a record → then the frontend Record List output*
+*/}
 
 ## 3. Activate configuration
 

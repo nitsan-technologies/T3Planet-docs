@@ -277,4 +277,4 @@ By adjusting prompts, you can influence tone, structure, wording style, and how 
 - Start with small prompt changes and test one workflow at a time.
 - Keep instructions simple and specific.
 - Reuse prompts for repeated editorial tasks.
-- Review the shared prompt options in AI Foundation AI Prompts when you want to manage prompt behavior from the parent extension.
+- Review the shared prompt options in [AI Foundation AI Prompts](/en/latest/ExtNsT3AF/Configuration/AIPrompts/Index) when you want to manage prompt behavior from the parent extension.

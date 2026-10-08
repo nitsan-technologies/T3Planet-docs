@@ -24,7 +24,7 @@ Extension Manager titles: *Tonictypes - Rapid TCA & Advanced Plugins* and *Tonic
 ## Core vs Pro?
 
 - **Core** — Datatypes, fields, plugins, ViewHelpers, export/import, dashboard import widget. Free on [TER](https://extensions.typo3.org/extension/tonictypes).  
-- **Pro** — FlexForm / Repeater and other advanced fields, toolbar, DocHeader, MCP, link handler, branding. Needs Core, `ns_license`, and **AI Foundation** (`ns_t3af`). [License](/en/latest/License/Index).
+- **Pro** — FlexForm and other advanced fields, toolbar, DocHeader, MCP, link handler, branding. Needs Core, `ns_license`, and **AI Foundation** (`ns_t3af`). [License](/en/latest/License/Index).
 
 ## How do I install?
 

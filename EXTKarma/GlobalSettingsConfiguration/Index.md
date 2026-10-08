@@ -108,7 +108,7 @@ Site Sets provide a more structured and organized way to manage TYPO3 configurat
 Instead of handling everything manually, you can group configurations into reusable sets. This makes your setup cleaner and easier to maintain.
 
 <div className="t3-embed">
-  <iframe src="https://app.supademo.com/embed/cmniqpv2812claburo4qx4t52?preview=true&step=1" loading="lazy" title="Editor Guide" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen ></iframe>
+  <iframe src="https://app.supademo.com/embed/cmniqpv2812claburo4qx4t52?utm_source=link" loading="lazy" title="Site Sets Configuration" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen ></iframe>
 </div>
 
 With Site Sets:

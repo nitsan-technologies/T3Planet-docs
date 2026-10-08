@@ -241,8 +241,9 @@ With this T3AI feature, you can easily translate your page content elements with
 - **Step 1** - Go to your T3AI module and select the **‘Page’** module.
   - Choose the page from your page tree and navigate to it.
 - **Step 2** - Edit Your Content Element and Select Transalte with the T3AI button.
-- **Step 3** - Select your AI model and language. Click on the **‘Translate Record’** button.
-Your content element will be translated
+- **Step 3** - Select your AI model and language.
+  - Click on the **‘Translate Record’** button.
+  - Your content element will be translated.
 
 ## Content Fields
 

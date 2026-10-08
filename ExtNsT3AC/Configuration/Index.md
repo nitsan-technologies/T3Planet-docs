@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-description: "T3AC uses T3AF for provider setup, model selection, shared prompts, and core AI services. Complete the T3AF setup first, then return to T3AC for chatbot-specific configuration."
+description: "T3AC uses AI Foundation for provider setup, model selection, shared prompts, and core AI services. Complete the AI Foundation setup first, then return to T3AC for chatbot-specific configuration."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -9,40 +9,40 @@ keywords:
 sidebarTitle: "Configuration"
 ---
 
-T3AC uses T3AF for provider setup, model selection, shared prompts, and core AI services.
-Complete the T3AF setup first, then return to T3AC for chatbot-specific configuration.
+T3AC uses AI Foundation for provider setup, model selection, shared prompts, and core AI services.
+Complete the AI Foundation setup first, then return to T3AC for chatbot-specific configuration.
 
-Helpful T3AF references:
+Helpful AI Foundation references:
 
-- [T3AF Configuration](/en/latest/ExtNsT3AF/Configuration/Index)
+- [AI Foundation Configuration](/en/latest/ExtNsT3AF/Configuration/Index)
 - [AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index)
 - [AI Features](/en/latest/ExtNsT3AF/Configuration/AIFeatures/Index)
 - [AI Prompts](/en/latest/ExtNsT3AF/Configuration/AIPrompts/Index)
 
-## Step 1: Open AI Features in T3AF
+## Step 1: Open AI Features in AI Foundation
 
 
 <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmrabse4l0btvqmhx59tvn83q?utm_source=link" loading="lazy" title="AI FileMeta Overview Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Shared AI settings for T3AC are managed in T3AF — not under **Admin Tools > Settings > Configure Extensions**.
+Shared AI settings for T3AC are managed in AI Foundation — not under **Admin Tools > Settings > Configure Extensions**.
 
 1. Go to the **TYPO3 backend**.
-2. Open **T3AF** → **AI Features**.
+2. Open **AI Foundation** → **AI Features**.
 3. Open the **T3AC** (`ns_t3ac`) feature card.
 4. Configure provider/model overrides and feature options used for chatbot and training workflows.
 5. Click **Save**.
 6. Return to the **T3AC** module for chatbot, data source, and training-specific settings.
 
-For the shared module overview, see [T3AF AI Features](/en/latest/ExtNsT3AF/Configuration/AIFeatures/Index).
+For the shared module overview, see [AI Foundation AI Features](/en/latest/ExtNsT3AF/Configuration/AIFeatures/Index).
 
 ## Step 2: Add Required API Keys
 
-Ensure that the required provider API keys are configured in T3AF.
+Ensure that the required provider API keys are configured in AI Foundation.
 
 - **OpenAI** — [Create an API key](https://platform.openai.com/api-keys) in your OpenAI account. For full technical details, see the [OpenAI API reference](https://platform.openai.com/docs/api-reference/introduction).
 
 ## AI Chatbot Features
 
-T3AC focuses on chatbot-related AI workflows built on top of the shared T3AF setup.
+T3AC focuses on chatbot-related AI workflows built on top of the shared AI Foundation setup.
 Use these features when you want to control how the chatbot answers questions, how data is trained, and how the chatbot is shown on your site or external websites.
 
 Key T3AC capabilities include:
@@ -52,7 +52,7 @@ Key T3AC capabilities include:
 - Dashboard, logs, and analytics for chatbot activity
 - External embed support for approved domains
 
-For shared model routing and central AI behavior, see [T3AF AI Features](/en/latest/ExtNsT3AF/Configuration/AIFeatures/Index).
+For shared model routing and central AI behavior, see [AI Foundation AI Features](/en/latest/ExtNsT3AF/Configuration/AIFeatures/Index).
 
 ## Step 4: Chatbot Configuration
 
@@ -96,7 +96,7 @@ Enable this option to permit embedding on any domain without restrictions.
 
 
 <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmrabygkm0chzqmhx3nanm13o?utm_source=link" loading="lazy" title="T3AC Providers and MCP Tools Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-T3AC uses T3AF for provider selection and any shared MCP-based integrations.
+T3AC uses AI Foundation for provider selection and any shared MCP-based integrations.
 Review this setup when you want to confirm the active provider, available models, and connected MCP tools that support chatbot workflows.
 
 See also:

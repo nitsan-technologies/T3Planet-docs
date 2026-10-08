@@ -121,7 +121,7 @@ Use stable tool names such as `myext_action_name`. This keeps tools predictable 
 
 ## Debugging
 
-**Tool does not appear in ``tools/list``**
+**Tool does not appear in `tools/list`**
 
 - Confirm the service is registered in the container.
 - Confirm it is tagged with `mcp.tool`.

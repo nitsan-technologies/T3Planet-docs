@@ -1,6 +1,6 @@
 ---
 title: "Tonictypes Pro"
-description: "What Tonictypes Pro adds to Core: FlexForm repeater and other advanced fields, backend toolbar, DocHeader buttons, link handler, branding and MCP tools."
+description: "What Tonictypes Pro adds to Core: FlexForm and other advanced fields, backend toolbar, DocHeader buttons, link handler, branding and MCP tools."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -13,7 +13,7 @@ sidebarTitle: "Tonictypes Pro"
 
 It always needs free **Tonictypes** Core (`tonictypes`).
 
-Pro does not replace Core; it adds to it. Everything you build with Core keeps working, and Pro contributes extra field types, backend shortcuts for editors, a link handler, branding options and AI tools. Consider Pro when editors need repeatable groups of fields, content elements inside records, or faster access to records from anywhere in the backend.
+Pro does not replace Core; it adds to it. Everything you build with Core keeps working, and Pro contributes extra field types, backend shortcuts for editors, a link handler, branding options and AI tools. Consider Pro when editors need structured FlexForm input, content elements inside records, or faster access to records from anywhere in the backend.
 
 **Requires:** Core · `nitsan/ns-license` · **AI Foundation** (`nitsan/ns-t3af`) · PHP 8.2–8.5 · TYPO3 12.4–14.9 — full list: [Installation → What to install](/en/latest/TonicTypes/Installation/Index#what-to-install)
 
@@ -27,7 +27,8 @@ License activation, Composer packages ([Composer](/en/latest/TonicTypes/Installa
 | --- | --- |
 | Backend **toolbar** | Quick create + latest records — editors can add a record or open a recent one from any module, without first navigating to the storage folder |
 | **DocHeader** create buttons | One-click "create" buttons for chosen datatypes in the module header of a page — [Page TSconfig](/en/latest/TonicTypes/Installation/Index#page-tsconfig) |
-| **FlexForm Field (Repeater)** | Repeatable FlexForm sections (structure from a FlexForm file or inline XML) |
+| **FlexForm Field** | A whole FlexForm stored in one record field (structure from a FlexForm file or inline XML) |
+{/* | **FlexForm Field (Repeater)** | Repeatable FlexForm sections — Repeater is planned for 2.2.0 (in development, not released) | */}
 | Other advanced fields | Content, Fluid, UserFunc, Inline, … — see [Other advanced fields](#other-advanced-fields) |
 | **MCP tools** | Let an AI assistant list, create and update datatypes, fields and records — via AI Foundation |
 | **Link handler** | Link to Tonictypes records from the link browser, e.g. from the rich-text editor |
@@ -35,9 +36,13 @@ License activation, Composer packages ([Composer](/en/latest/TonicTypes/Installa
 
 Datatype **Export / Import** is free Core from 2.1.0 — [Import / Export](/en/latest/TonicTypes/ExportImport/Index).
 
-## FlexForm Field (Repeater)
+## FlexForm Field
 
-The Pro field type **FlexForm Field (Pro)** stores a whole FlexForm inside one record column (`mediumtext`). With FlexForm **sections** (`<section>1</section>`) editors get repeatable rows — the "Repeater".
+The Pro field type **FlexForm Field (Pro)** stores a whole FlexForm inside one record column (`mediumtext`). The editor sees the FlexForm's fields inside the record form; the structure is defined by a FlexForm data structure that you provide.
+
+{/* Repeater — planned for 2.2.0 (in development, not released). Original text, restore with the release:
+With FlexForm **sections** (`<section>1</section>`) editors get repeatable rows — the "Repeater".
+*/}
 
 ### Where the structure comes from
 
@@ -60,6 +65,28 @@ If several values exist, the one marked **Is Default** wins, otherwise the first
 | **Icon + Text + Link** | Icon, short text, and link per row |
 | **Custom FlexForm file** | Your own FlexForm XML |
 */}
+
+### Example: FlexForm Field
+
+1. **Create new record** → **Field** → Type **FlexForm Field (Pro)**, Frontend Label `Details`.
+1. **Field Values** → add a **Static Value** with `FILE:EXT:my_sitepackage/Configuration/FlexForms/Details.xml`.
+1. Assign the field to your Datatype and **Update Table** / **Update Class**.
+
+```xml
+<T3DataStructure>
+  <ROOT>
+    <type>array</type>
+    <el>
+      <headline><label>Headline</label><config><type>input</type></config></headline>
+      <teaser><label>Teaser</label><config><type>text</type></config></teaser>
+    </el>
+  </ROOT>
+</T3DataStructure>
+```
+
+In Fluid, convert the stored XML with `dv:format.flexFormToArray` (`<f:debug>` the result first to see the exact array path).
+
+{/* Repeater example — planned for 2.2.0 (in development, not released). Original text and image, restore with the release:
 
 ### Example: FAQ repeater
 
@@ -97,6 +124,7 @@ In Fluid, convert the stored XML with `dv:format.flexFormToArray` and loop over 
 ![FlexForm Field (Pro) used as FAQ repeater on a record](Images/field_repeater.webp)
 
 *FlexForm Field (Pro) — FAQ repeater with two rows on a Demo Article record*
+*/}
 
 ## Other advanced fields
 
@@ -108,7 +136,7 @@ All Pro field types are chosen in the field's **Type** selector like the Core ty
 | **Fluid Code (Pro)** | Renders the Fluid from the field's **Field Values** inside the record form — for previews or computed information for editors |
 | **UserFunc Field (Pro)** | Calls a PHP function to render the form element (trusted code only) |
 | **Inline Elements (Pro)** / **Inline Relation Datatype (Pro)** | Child records edited inline inside the parent record, e.g. several contact persons per company |
-| **FlexForm Field (Pro)** / **Dynamic Input Fields (Pro)** | Structured or repeatable input stored as FlexForm — see [FlexForm Field (Repeater)](#flexform-field-repeater) |
+| **FlexForm Field (Pro)** / **Dynamic Input Fields (Pro)** | Structured input stored as FlexForm — see [FlexForm Field](#flexform-field) |
 | **Passthrough (Pro)** / **TCA XML (Pro)** | A column without a visible form element (for values set by code) / a field configured directly with TCA |
 
 #### Content
@@ -132,14 +160,6 @@ Toolbar screenshot and the `disableTonictypesToolbarItem` snippet: [Installation
 ![Toolbar in the top bar](Images/toolbar_context.webp)
 
 *Pro toolbar open*
-
-## Dashboard import widget
-
-Core ships the **Predefined Datatype Import** dashboard widget (sample datatype). Useful for demos; for moving custom types between projects use [Import / Export](/en/latest/TonicTypes/ExportImport/Index).
-
-![Predefined Datatype Import dashboard widget](Images/dashboard_import.webp)
-
-*Dashboard — Predefined Datatype Import*
 
 ## Link handler
 

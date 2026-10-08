@@ -56,7 +56,7 @@ Also confirm `scheduler` and `workspaces` are available. See [Installation](/en/
 
 **HTTP 401 / 403 when fetching a protected URL**
 
-If you use the Basic Auth helper in Extension Configuration (`ns_t3af`):
+If you use the Basic Auth helper in T3AF > AI Features > Access & Notifications:
 
 - Enable `basicAuthEnabled`.
 - Set `basicAuthUsername` and `basicAuthPassword`.
@@ -66,7 +66,7 @@ If you use the Basic Auth helper in Extension Configuration (`ns_t3af`):
 
 **MCP client cannot connect**
 
-- Confirm the MCP server is enabled in Extension Configuration.
+- Confirm the MCP server is enabled in T3AF > MCP Server > Advanced.
 - Prefer HTTPS on the site base URL.
 - For Cursor and similar clients, follow [MCP Testing](/en/latest/ExtNsT3AF/Integrations/MCPTesting/Index).
 - For stdio setups, keep the working directory and user/workspace flags correct.

@@ -22,7 +22,7 @@ For the shared setup, see:
 
 - [T3AF Installation](/en/latest/ExtNsT3AF/Installation/Index)
 - [T3AF Configuration](/en/latest/ExtNsT3AF/Configuration/Index)
-- [T3AF System Requirements](/en/latest/ExtNsT3AF/Installation/Index#ns-t3af-system-requirements)
+- [T3AF System Requirements](/en/latest/ExtNsT3AF/Installation/Index#requirements)
 
 ### System Requirements
 

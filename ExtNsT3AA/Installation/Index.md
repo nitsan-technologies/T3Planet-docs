@@ -128,7 +128,9 @@ API keys**.
 
 If AI Foundation is not already present after installing T3AA, install it with:
 
-   composer require nitsan/ns-t3af
+```bash
+composer require nitsan/ns-t3af
+```
 
 Then flush all TYPO3 caches.
 

@@ -55,12 +55,12 @@ Then save and clear caches if the frontend is empty.
 
 ## Shortcuts
 
-- Sample datatype: dashboard **Predefined Datatype Import** widget — imports a bundled, ready-made datatype into a storage folder you choose, useful to explore a working setup  
+- Sample datatype: dashboard **Predefined Datatype Import** widget ([details](/en/latest/TonicTypes/ExportImport/Index#dashboard-widget-predefined-datatype-import)) — imports a bundled, ready-made datatype into a storage folder you choose, useful to explore a working setup  
 - Copy structures between sites: [Import / Export](/en/latest/TonicTypes/ExportImport/Index)  
 
 <CardGroup cols={2}>
   <Card title="Creating a Field" icon="pencil" href="/en/latest/TonicTypes/GettingStarted/CreatingAField/Index" />
   <Card title="Creating a Datatype" icon="database" href="/en/latest/TonicTypes/GettingStarted/CreatingADatatype/Index" />
   <Card title="Creating a Template Variable" icon="braces" href="/en/latest/TonicTypes/GettingStarted/CreatingATemplateVariable/Index" />
-  <Card title="Templating" icon="file-code-corner" href="/en/latest/TonicTypes/GettingStarted/Templating/Index" />
+  <Card title="Templating" icon="file-code-2" href="/en/latest/TonicTypes/GettingStarted/Templating/Index" />
 </CardGroup>

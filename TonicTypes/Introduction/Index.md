@@ -76,10 +76,11 @@ Two more terms appear throughout the documentation:
 | --- | --- | --- |
 | Fields, datatypes, plugins, ViewHelpers | Yes | Yes (needs Core) |
 | Export / import of datatype structures | Yes (from 2.1.0) | Yes |
-| Advanced fields (Repeater, Content, Fluid, UserFunc, …) | — | Yes |
+| Advanced fields (FlexForm, Content, Fluid, UserFunc, …) | — | Yes |
+{/* | Repeater (FlexForm sections) | — | Yes — planned for 2.2.0, in development, not released | */}
 | Toolbar, DocHeader buttons, MCP, link handler, branding | — | Yes |
 
-Core is enough for classic record types built from standard fields (input, text, select, date, image, relations, …). Choose Pro when editors need repeatable groups of fields, embedded content elements, computed Fluid output, quick access from the backend toolbar, or links to records from the rich-text editor.
+Core is enough for classic record types built from standard fields (input, text, select, date, image, relations, …). Choose Pro when editors need structured FlexForm input, embedded content elements, computed Fluid output, quick access from the backend toolbar, or links to records from the rich-text editor.
 
 ![Tonictypes Pro toolbar](Images/toolbar_context.webp)
 

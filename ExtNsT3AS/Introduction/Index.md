@@ -47,7 +47,7 @@ Instead of only showing a list of links, visitors get a clear answer with option
 
 See also:
 
-- [T3AF System Requirements](/en/latest/ExtNsT3AF/Installation/Index#ns-t3af-system-requirements)
+- [T3AF System Requirements](/en/latest/ExtNsT3AF/Installation/Index#requirements)
 - [T3AF Installation](/en/latest/ExtNsT3AF/Installation/Index)
 
 ## Helpful Links

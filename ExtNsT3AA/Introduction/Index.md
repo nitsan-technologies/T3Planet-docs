@@ -27,5 +27,7 @@ For the shared setup, see:
 
 ## Helpful Links
 
-    - Product Page: https://t3planet.de/en/t3aa-typo3-extension
-    - Support Portal: https://t3planet.de/support
+<Note>
+- Product Page: [https://t3planet.de/en/t3aa-typo3-extension](https://t3planet.de/en/t3aa-typo3-extension)
+- Support Portal: [https://t3planet.de/support](https://t3planet.de/support)
+</Note>

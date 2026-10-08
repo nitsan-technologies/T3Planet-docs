@@ -44,8 +44,7 @@ Use it to split templates into reusable parts — for example one "teaser" templ
 | `cacheIdentifier` | string | — | Custom cache identifier |
 
 ```html
-{dv:template.render(template:'movieMini',arguments:'{record:record}')}
-
+<dv:template.render template="movieMini" arguments="{record:record}" />
 <dv:template.render template="movieMini" arguments="{record:record}" variables="{0:12,1:35}" />
 <dv:template.render template="fileadmin/templates/tonictypes/movies/mini.html" arguments="{record:record}" pid="12" />
 ```
@@ -128,13 +127,24 @@ Typical uses are an A–Z index, records grouped by category, or events grouped 
 | `multiple` | bool | `false` | Property holds multiple comma-separated values |
 
 ```html
-{dv:group.recordsByProperty(records:records,property:'propertyName',returnOnlyGroups:0)}
+<f:variable name="groups">
+    <dv:group.recordsByProperty records="{records}" property="propertyName" returnOnlyGroups="0" />
+</f:variable>
+
+<f:for each="{groups}" as="groupRecords" key="groupName">
+    <h2>{groupName}</h2>
+    <f:for each="{groupRecords}" as="record">
+        <p>{record.title}</p>
+    </f:for>
+</f:for>
 ```
+
+The `f:variable` tag keeps the returned array, so the `f:for` loops can use it.
 
 ## Also available
 
 `dv:backend.*`, `dv:format.*`, string/array helpers, `dv:typo3.isVersion`.
 
-The `dv:format.*` group includes `dv:format.flexFormToArray`, which turns the XML of a FlexForm field into an array (see [Tonictypes Pro → FlexForm Field](/en/latest/TonicTypes/Professional/Index#flexform-field-repeater)). `dv:typo3.isVersion` lets one template support several TYPO3 versions.
+The `dv:format.*` group includes `dv:format.flexFormToArray`, which turns the XML of a FlexForm field into an array (see [Tonictypes Pro → FlexForm Field](/en/latest/TonicTypes/Professional/Index#flexform-field)). `dv:typo3.isVersion` lets one template support several TYPO3 versions.
 
 Predefined templates: [Templating](/en/latest/TonicTypes/GettingStarted/Templating/Index).

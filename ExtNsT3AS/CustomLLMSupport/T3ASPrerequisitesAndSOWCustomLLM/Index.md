@@ -57,7 +57,7 @@ sidebarTitle: "T3AS"
 - NVIDIA GPU drivers + CUDA (if GPU used)
 - Python packages: - torch - transformers - sentence-transformers - others as required
 
-### Vector Database (Embedding/Search)
+### Vector Database (Embedding/Search) {#vector-database-embedding-search}
 
 - **Local:** ChromaDB (recommended)
 - **Cloud-managed:** Pinecone (recommended for large scale)
@@ -83,7 +83,7 @@ sidebarTitle: "T3AS"
 1. **Automated Ingestion** - Retrieve content from TYPO3 Database - Schedule recurring updates
 2. **Data Processing & Embedding** - Pre-process and chunk data - Generate semantic embeddings
 3. **Vector Database Integration** - Store embeddings in:
-  - ChromaDB (on-prem)
-  - Pinecone (cloud, if needed)
+   - ChromaDB (on-prem)
+   - Pinecone (cloud, if needed)
 4. **LLM Deployment & API Layer**
 5. **Training & Handover** - Admin/technical guide - Live training - Go-live support

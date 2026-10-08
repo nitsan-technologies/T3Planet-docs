@@ -22,7 +22,7 @@ Easily import existing XLIFF files or export updated ones with just a few clicks
 
 **Step 4:** To import or export a file, simply click the “📥” or “📤” icon—and you’re all set!
 
-![T3AL_Improt_and_Export](./images/import-and-export.webp)
+![T3AL XLIFF import and export icons](./images/import-and-export.webp)
 
 ## Import
 
@@ -32,6 +32,6 @@ Easily import existing XLIFF files or export updated ones with just a few clicks
 
 **Step 3:** Click on Button “Upload files”
 
-![T3AL_Improt_and_Export](./images/import.webp)
+![T3AL XLIFF import upload dialog](./images/import.webp)
 
 That’s it! With T3AL, managing TYPO3 localization becomes faster, smarter, and easier. Now you can focus more on quality content and less on manual translation work.

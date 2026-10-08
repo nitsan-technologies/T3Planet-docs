@@ -54,7 +54,7 @@ After you select a group, the wizard walks through five steps:
 1. **Modules** — Toggle T3AF admin modules and installed child extensions (for example AI Assistant, AI Search Hub, and other registered suite modules).
 2. **Features** — Grant fine-grained feature permissions for the modules you enabled.
 3. **Records** — Set record-level read or read/write access for catalog records those modules manage.
-4. **Limits** — Set per-group credit limits, daily request caps, bulk/page batch limits, workspace enforcement, and audit/logging options (shown in the matrix under Credits, Workspace, and Audit).
+4. **Limits** — Set per-group credit limits, daily request caps, bulk/page batch limits, workspace enforcement, and audit/logging options (shown in the matrix under Credits, Workspace, and Audit). See [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index) for how credits are billed and used.
 5. **Review** — Preview the merged `be_groups` values, then apply.
 
 Use Back / Next in the wizard footer. On Review, confirm the preview, then apply and flush caches before testing with an editor account.

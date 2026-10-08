@@ -51,7 +51,7 @@ A field only appears in a datatype's **Fields** selector if it is on the same st
 | **Code Editor** | Code snippets with syntax highlighting |
 | **Color Picker** | A colour value |
 
-Pro types (FlexForm / Repeater, Content, Fluid, UserFunc, …): [Tonictypes Pro](/en/latest/TonicTypes/Professional/Index).
+Pro types (FlexForm, Content, Fluid, UserFunc, …): [Tonictypes Pro](/en/latest/TonicTypes/Professional/Index).
 
 Developers can register their own field types under `plugin.tx_tonictypes.fieldtypes` in TypoScript (class, icon, label, FlexForm) — the Core setup contains a commented `customfieldtype` example.
 

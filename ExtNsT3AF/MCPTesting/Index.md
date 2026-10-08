@@ -88,7 +88,7 @@ curl -sS "$BASE/.well-known/oauth-protected-resource/mcp" | head -c 200
 5. **Enable MCP** (if offline)
 Expand **Show advanced** → ensure **Enable MCP Server** is checked → **Save**.
 
-## Cursor IDE — two connection methods
+## Cursor IDE — two connection methods {#cursor-ide-two-connection-methods}
 
 Cursor can connect to the TYPO3 MCP server in two ways. Use **one** method per
 server entry — do not mix stdio and URL for the same logical connection.
@@ -358,7 +358,7 @@ Generic checklist:
 4. **Auth:** OAuth 2.1 + PKCE if supported; otherwise create a Bearer token
 under the **n8n** or **Manus** tabs.
 
-**Cursor:** see [Cursor IDE — two connection methods](#cursor-ide--two-connection-methods) for project stdio (DDEV) and
+**Cursor:** see [Cursor IDE — two connection methods](#cursor-ide-two-connection-methods) for project stdio (DDEV) and
 global URL (OAuth) setup, plus terminal verification.
 
 ## Method 2 — Local Setup (mcp-remote)
@@ -448,7 +448,7 @@ TYPO3 command caches are up to date.
 
 ## Step-by-step (DDEV)
 
-1. For **Cursor**, prefer the full walkthrough in [Cursor IDE — two connection methods](#cursor-ide--two-connection-methods).
+1. For **Cursor**, prefer the full walkthrough in [Cursor IDE — two connection methods](#cursor-ide-two-connection-methods).
 2. For other MCP clients, use DDEV from the host with an absolute `cwd`:
 
 ```json
@@ -471,7 +471,7 @@ TYPO3 command caches are up to date.
 }
 ```
 
-3. **Terminal verification:** see [Cursor IDE — two connection methods](#cursor-ide--two-connection-methods) (pipe test
+3. **Terminal verification:** see [Cursor IDE — two connection methods](#cursor-ide-two-connection-methods) (pipe test
 and expected `initialize` JSON).
 
 4. CLI options:
@@ -576,27 +576,27 @@ Use this checklist when regression-testing a release:
 
 ## Troubleshooting
 
-**Server Status **Offline****
+**Server Status: Offline**
 Enable MCP in **Show advanced**. Run `ddev exec typo3 cache:flush`.
 
-**`/mcp` returns **503****
+**`/mcp` returns 503**
 `enableMcpServer` is off in extension configuration.
 
-**`/mcp` returns **401** without token**
+**`/mcp` returns 401 without token**
 **Expected** — proves middleware is reachable. Authenticate with OAuth or Bearer.
 
-**OAuth metadata checks **red****
+**OAuth metadata checks are red**
 Verify site base URL, HTTPS, and that `config/sites/*/config.yaml` routes exist.
 Flush caches.
 
-**Bearer / URL token **Authentication failed****
+**Bearer / URL token: Authentication failed**
 Token revoked, expired, or wrong workspace. Create a new token in the module.
 
 **`mcp-remote` client shows no tools**
 Confirm Node.js is installed, URL includes valid `?token=`, restart client.
 
-**CLI **Backend user not found****
-Pass `--user= <../existing-be-username>`.
+**CLI: Backend user not found**
+Pass `--user=<existing-be-username>`.
 
 **Tool returns empty / wrong data**
 Check **WORKSPACE** dropdown and token workspace pin.

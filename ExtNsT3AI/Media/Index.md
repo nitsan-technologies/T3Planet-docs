@@ -43,9 +43,10 @@ Generate images from a text prompt with DALL-E. Results appear in the dialog so 
 2. Click **Create AI Image**.
 3. Select the target folder in the folder tree.
 4. Enter your prompt in the image prompt field.
-5. Click **Explore Images**.
-6. Review the results, then click **Save** to store the selected image in the folder.
-7. Close the dialog with **Cancel** when you are finished.
+5. Optionally choose a **Style** (None, Realistic, Painting, Sketch, Abstract, Photorealistic), a **Size** (1024x1024, 1024x1792, 1792x1024), and the **Number of Images** (1, 3, or 5).
+6. Click **Explore Images**.
+7. Review the results, then click **Save** to store the selected image in the folder.
+8. Close the dialog with **Cancel** when you are finished.
 
 ### Demo
 
