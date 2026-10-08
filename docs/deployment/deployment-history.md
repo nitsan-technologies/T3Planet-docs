@@ -131,3 +131,14 @@ Append one entry per production release.
 - QA: `mintlify validate` pass; content markers on docs.t3planet.de (capabilities table, DeepL link, Governance/tool_use gone, DPA link, nested lists); `/FAQ/Index` 308 → `/License/Index`, absent from sitemap; new screenshot 200; 84/84 live checks (7 pages × 1440/1280/1024/768/390/375 × light/dark): 0 blank, 0 overflow, 0 broken images, 0 page errors; search works; sitemap and llms.txt 200
 - Warning: `.md` export of product FAQ pages on docs.t3planet.de still served the old general-FAQ sentence right after deploy (edge cache); origin `t3planet.mintlify.app` and rendered HTML already correct
 - Final status: PASS WITH NON-BLOCKING WARNINGS
+
+### 2026-10-08 — Karma Site Sets Supademo, AI extensions remigration, TonicTypes updates
+- Authorization: operator said `Start the deployment process`
+- Commit: `f0ef27a` by Nitsan `<sanjay@nitsantech.com>` (33 files; `c4ebaf3..f0ef27a`)
+- Scope: EXTKarma Theme Options — Site Sets Supademo switched from `?preview=true&step=1` (File Not Found for logged-out visitors) to public `?utm_source=link`; T3AI/T3AC/T3AS/T3AA/T3AL/T3AF remigration (missing content restored, flattened lists/anchors/code blocks fixed, 21 pages); TonicTypes — Predefined Datatype Import dashboard widget + `dashboard_import.webp`, FlexForm Field example, Repeater marked as planned for 2.2.0 (8 pages); `_static/t3-stats*` timestamp only (803 pages / 70 products)
+- Excluded: `docs-master/`, `workshops/`, `backup/`, `scripts/**` QA artifacts, `docs/migration/` report, `dashboard_import.jpg` (unreferenced source)
+- Push remote: `origin` → `nitsan-technologies/T3Planet-docs` (`master`), no force; local and origin in sync before commit (0/0)
+- Mintlify: GitHub check "Mintlify Deployment" completed/success on `f0ef27a` (org repo)
+- QA: `mintlify validate` pass; 30/30 changed pages on local preview and on docs.t3planet.de — HTTP 200, 0 broken images, 0 broken internal links, no `preview=true` Supademos; content markers 9/9 live; Karma Site Sets demo renders on live (desktop light + mobile dark); origin `t3planet.mintlify.app` matches; homepage 803 pages; sitemap and llms.txt 200
+- Note: local preview returned 500 after `mintlify broken-links` ran (shared cache); restarted, not a content issue
+- Final status: PASS
