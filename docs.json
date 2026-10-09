@@ -9363,5 +9363,9 @@
       "title": "Page not found",
       "description": "This page does not exist in T3Planet Docs. [Go to homepage](/)."
     }
+  },
+  "banner": {
+    "content": "Free for TYPO3 teams: the [Upgrade Playbook](https://t3planet.de/en/typo3-upgrade-playbook?slot=docs&utm_source=docs&utm_medium=banner&utm_campaign=gd-guides), the [EU AI Act Playbook](https://t3planet.de/en/typo3-ai-act-playbook?slot=docs&utm_source=docs&utm_medium=banner&utm_campaign=gd-guides) and the [Accessibility Playbook](https://t3planet.de/en/typo3-accessibility-playbook?slot=docs&utm_source=docs&utm_medium=banner&utm_campaign=gd-guides), each with an Excel worksheet.",
+    "dismissible": true
   }
 }
