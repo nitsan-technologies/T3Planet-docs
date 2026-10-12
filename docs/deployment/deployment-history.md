@@ -153,3 +153,13 @@ Append one entry per production release.
 - QA: `mintlify validate` pass; static check 75/75 pages in nav, 0 missing images, 0 broken page links; local and live browser check 75/75 pages 200 with content, 0 broken images, 0 broken internal links; live homepage 823; new subpages in sidebars (7 + 13) and sitemap; llms.txt 200; desktop light/dark + mobile, no horizontal overflow
 - Warning: 2 section links `#vector-database-embedding/search` on T3AC/T3AS `CustomLLMSupport/Index` miss their anchor (target is `#vector-database-embedding-search`; author kept the working link commented out) — page opens at top, no 404
 - Final status: PASS WITH NON-BLOCKING WARNINGS
+
+### 2026-10-12 — AI Foundation Ask AI Agent section, .html first-visit 404 fix
+- Authorization: operator said `Start the deployment process`
+- Commit: `150e6cd` by Nitsan `<sanjay@nitsantech.com>` (40 files; `b291c1f..150e6cd`)
+- Scope: new `ExtNsT3AF/AskAiAgent` section (17 pages, 14 WebP images) migrated from the ns_t3af 2.0.0 RST source, nav group "Ask AI Agent" under AI Foundation; `docs.json` +1,256 exact redirects (`/<page>/Index.html`, folder `.html`, lowercase `/<page>/index.html`, legacy Sphinx `AskAiAgent/*.html` names) — insert-only, no duplicates; `scripts/src/t3-docs.js` + `_static/t3-docs.min.js`: `.html` URL reaching the 404 page now loads the clean URL; stats regenerated 823 → 840 pages / 70 products
+- Excluded: `docs-master/` (RST master copy), `workshops/`, `backup/`, `scripts/**` QA artifacts, `TonicTypes/ExportImport/Images/dashboard_import.jpg` (unreferenced)
+- Push remote: `origin` → `nitsan-technologies/T3Planet-docs` (`master`), no force; local and origin in sync before commit (0/0)
+- Mintlify: GitHub check "Mintlify Deployment" completed/success on `150e6cd` (org repo)
+- QA: `mintlify validate` pass; 17/17 new pages 200 with content markers on docs.t3planet.de and t3planet.mintlify.app; first visit to `/ExtNsT3AF/DeveloperGuide/Index.html` and `/index.html` opens Developer Guide (no 404); legacy `AskAiAgent/WhereOpens.html` and `TabsOverview.html` redirect correctly; WhereOpens 9/9 images, 5 tabs, 0 page errors; mobile dark no overflow; homepage 840; banner preserved; sitemap 17/17; `_llms` T3AF index 17/17; regression pages (Karma, T3AC, TonicTypes, T3AI) 200
+- Final status: PASS
