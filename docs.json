@@ -140,6 +140,37 @@
                 "root": "ExtNsT3AF/Integrations/Index"
               },
               {
+                "group": "Ask AI Agent",
+                "expanded": false,
+                "pages": [
+                  "ExtNsT3AF/AskAiAgent/Index",
+                  "ExtNsT3AF/AskAiAgent/WhereOpens/Index",
+                  "ExtNsT3AF/AskAiAgent/AtAGlance/Index",
+                  "ExtNsT3AF/AskAiAgent/HowItWorks/Index",
+                  "ExtNsT3AF/AskAiAgent/BeforeYouStart/Index",
+                  "ExtNsT3AF/AskAiAgent/StepByStep/Index",
+                  "ExtNsT3AF/AskAiAgent/ExampleRequests/Index",
+                  "ExtNsT3AF/AskAiAgent/KeyboardShortcuts/Index",
+                  "ExtNsT3AF/AskAiAgent/Conversations/Index",
+                  {
+                    "group": "AI Agent module tabs",
+                    "expanded": false,
+                    "pages": [
+                      "ExtNsT3AF/AskAiAgent/AiAgentModule/Index",
+                      "ExtNsT3AF/AskAiAgent/AiAgentModule/Overview/Index",
+                      "ExtNsT3AF/AskAiAgent/AiAgentModule/SeverityPolicy/Index",
+                      "ExtNsT3AF/AskAiAgent/AiAgentModule/Governance/Index",
+                      "ExtNsT3AF/AskAiAgent/AiAgentModule/Audit/Index",
+                      "ExtNsT3AF/AskAiAgent/AiAgentModule/DemandSignals/Index"
+                    ],
+                    "root": "ExtNsT3AF/AskAiAgent/AiAgentModule/Index"
+                  },
+                  "ExtNsT3AF/AskAiAgent/FeatureSettings/Index",
+                  "ExtNsT3AF/AskAiAgent/Troubleshooting/Index"
+                ],
+                "root": "ExtNsT3AF/AskAiAgent/Index"
+              },
+              {
                 "group": "User Guide",
                 "expanded": false,
                 "pages": [
@@ -1890,6 +1921,3790 @@
     ]
   },
   "redirects": [
+    {
+      "source": "/de/ExtTypoTonic/TypoTonicProfessional/index.html",
+      "destination": "/TonicTypes/Professional/Index"
+    },
+    {
+      "source": "/ExtTypoTonic/index.html",
+      "destination": "/TonicTypes/Index"
+    },
+    {
+      "source": "/ExtTypoTonic/TypoTonicProfessional/index.html",
+      "destination": "/TonicTypes/Professional/Index"
+    },
+    {
+      "source": "/AIUniverseExtensions/index.html",
+      "destination": "/AIFoundationExtensions/Index"
+    },
+    {
+      "source": "/AIUniverse/AIContext/index.html",
+      "destination": "/ExtNsT3AF/AIContext/Index"
+    },
+    {
+      "source": "/AIUniverse/AIFeatures/index.html",
+      "destination": "/ExtNsT3AF/AIFeatures/Index"
+    },
+    {
+      "source": "/AIUniverse/AIPrompts/index.html",
+      "destination": "/ExtNsT3AF/AIPrompts/Index"
+    },
+    {
+      "source": "/AIUniverse/AIProviders/index.html",
+      "destination": "/ExtNsT3AF/AIProviders/Index"
+    },
+    {
+      "source": "/AIUniverse/AIUsageAndLogs/index.html",
+      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/AIUniverse/Appendix/index.html",
+      "destination": "/ExtNsT3AF/Appendix/Index"
+    },
+    {
+      "source": "/AIUniverse/Configuration/index.html",
+      "destination": "/ExtNsT3AF/Configuration/Index"
+    },
+    {
+      "source": "/AIUniverse/Dashboard/index.html",
+      "destination": "/ExtNsT3AF/Dashboard/Index"
+    },
+    {
+      "source": "/AIUniverse/FAQ/index.html",
+      "destination": "/ExtNsT3AF/FAQ/Index"
+    },
+    {
+      "source": "/AIUniverse/GetThisExtension/index.html",
+      "destination": "/ExtNsT3AF/GetThisExtension/Index"
+    },
+    {
+      "source": "/AIUniverse/HelpfulLinks/index.html",
+      "destination": "/ExtNsT3AF/HelpfulLinks/Index"
+    },
+    {
+      "source": "/AIUniverse/index.html",
+      "destination": "/ExtNsT3AF/Index"
+    },
+    {
+      "source": "/AIUniverse/Installation/index.html",
+      "destination": "/ExtNsT3AF/Installation/Index"
+    },
+    {
+      "source": "/AIUniverse/Introduction/index.html",
+      "destination": "/ExtNsT3AF/Introduction/Index"
+    },
+    {
+      "source": "/AIUniverse/KnownProblems/index.html",
+      "destination": "/ExtNsT3AF/KnownProblems/Index"
+    },
+    {
+      "source": "/AIUniverse/MCPServer/index.html",
+      "destination": "/ExtNsT3AF/MCPServer/Index"
+    },
+    {
+      "source": "/AIUniverse/MCPTools/index.html",
+      "destination": "/ExtNsT3AF/MCPTools/Index"
+    },
+    {
+      "source": "/AIUniverse/Screenshots/index.html",
+      "destination": "/ExtNsT3AF/Screenshots/Index"
+    },
+    {
+      "source": "/AIUniverse/SetupWizard/index.html",
+      "destination": "/ExtNsT3AF/SetupWizard/Index"
+    },
+    {
+      "source": "/AIUniverse/Support/index.html",
+      "destination": "/ExtNsT3AF/Support/Index"
+    },
+    {
+      "source": "/AIUniverse/SystemRequirements/index.html",
+      "destination": "/ExtNsT3AF/SystemRequirements/Index"
+    },
+    {
+      "source": "/AIUniverse/T3PlanetCredits/index.html",
+      "destination": "/ExtNsT3AF/T3PlanetCredits/Index"
+    },
+    {
+      "source": "/AIUniverse/UpdateVersion/index.html",
+      "destination": "/ExtNsT3AF/UpdateVersion/Index"
+    },
+    {
+      "source": "/AIUniverse/UpgradeGuide/index.html",
+      "destination": "/ExtNsT3AF/UpgradeGuide/Index"
+    },
+    {
+      "source": "/AIUniverse/VideoTutorials/index.html",
+      "destination": "/ExtNsT3AF/VideoTutorials/Index"
+    },
+    {
+      "source": "/AIUniverse/WhatDoesItDo/index.html",
+      "destination": "/ExtNsT3AF/WhatDoesItDo/Index"
+    },
+    {
+      "source": "/AIUniverse/GovernanceAndAccess/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/AIUniverse/Configuration/GovernanceAndAccess/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/AIUniverse/DPAandGDPR/index.html",
+      "destination": "/ExtNsT3AF/DPAandGDPR/Index"
+    },
+    {
+      "source": "/de/AIUniverseExtensions/index.html",
+      "destination": "/AIFoundationExtensions/Index"
+    },
+    {
+      "source": "/de/AIUniverse/AIContext/index.html",
+      "destination": "/ExtNsT3AF/AIContext/Index"
+    },
+    {
+      "source": "/de/AIUniverse/AIFeatures/index.html",
+      "destination": "/ExtNsT3AF/AIFeatures/Index"
+    },
+    {
+      "source": "/de/AIUniverse/AIPrompts/index.html",
+      "destination": "/ExtNsT3AF/AIPrompts/Index"
+    },
+    {
+      "source": "/de/AIUniverse/AIProviders/index.html",
+      "destination": "/ExtNsT3AF/AIProviders/Index"
+    },
+    {
+      "source": "/de/AIUniverse/AIUsageAndLogs/index.html",
+      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/de/AIUniverse/Appendix/index.html",
+      "destination": "/ExtNsT3AF/Appendix/Index"
+    },
+    {
+      "source": "/de/AIUniverse/Configuration/index.html",
+      "destination": "/ExtNsT3AF/Configuration/Index"
+    },
+    {
+      "source": "/de/AIUniverse/Dashboard/index.html",
+      "destination": "/ExtNsT3AF/Dashboard/Index"
+    },
+    {
+      "source": "/de/AIUniverse/FAQ/index.html",
+      "destination": "/ExtNsT3AF/FAQ/Index"
+    },
+    {
+      "source": "/de/AIUniverse/GetThisExtension/index.html",
+      "destination": "/ExtNsT3AF/GetThisExtension/Index"
+    },
+    {
+      "source": "/de/AIUniverse/HelpfulLinks/index.html",
+      "destination": "/ExtNsT3AF/HelpfulLinks/Index"
+    },
+    {
+      "source": "/de/AIUniverse/index.html",
+      "destination": "/ExtNsT3AF/Index"
+    },
+    {
+      "source": "/de/AIUniverse/Installation/index.html",
+      "destination": "/ExtNsT3AF/Installation/Index"
+    },
+    {
+      "source": "/de/AIUniverse/Introduction/index.html",
+      "destination": "/ExtNsT3AF/Introduction/Index"
+    },
+    {
+      "source": "/de/AIUniverse/KnownProblems/index.html",
+      "destination": "/ExtNsT3AF/KnownProblems/Index"
+    },
+    {
+      "source": "/de/AIUniverse/MCPServer/index.html",
+      "destination": "/ExtNsT3AF/MCPServer/Index"
+    },
+    {
+      "source": "/de/AIUniverse/MCPTools/index.html",
+      "destination": "/ExtNsT3AF/MCPTools/Index"
+    },
+    {
+      "source": "/de/AIUniverse/Screenshots/index.html",
+      "destination": "/ExtNsT3AF/Screenshots/Index"
+    },
+    {
+      "source": "/de/AIUniverse/SetupWizard/index.html",
+      "destination": "/ExtNsT3AF/SetupWizard/Index"
+    },
+    {
+      "source": "/de/AIUniverse/Support/index.html",
+      "destination": "/ExtNsT3AF/Support/Index"
+    },
+    {
+      "source": "/de/AIUniverse/SystemRequirements/index.html",
+      "destination": "/ExtNsT3AF/SystemRequirements/Index"
+    },
+    {
+      "source": "/de/AIUniverse/T3PlanetCredits/index.html",
+      "destination": "/ExtNsT3AF/T3PlanetCredits/Index"
+    },
+    {
+      "source": "/de/AIUniverse/UpdateVersion/index.html",
+      "destination": "/ExtNsT3AF/UpdateVersion/Index"
+    },
+    {
+      "source": "/de/AIUniverse/UpgradeGuide/index.html",
+      "destination": "/ExtNsT3AF/UpgradeGuide/Index"
+    },
+    {
+      "source": "/de/AIUniverse/VideoTutorials/index.html",
+      "destination": "/ExtNsT3AF/VideoTutorials/Index"
+    },
+    {
+      "source": "/de/AIUniverse/WhatDoesItDo/index.html",
+      "destination": "/ExtNsT3AF/WhatDoesItDo/Index"
+    },
+    {
+      "source": "/de/AIUniverse/GovernanceAndAccess/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/de/AIUniverse/Configuration/GovernanceAndAccess/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/de/AIUniverse/DPAandGDPR/index.html",
+      "destination": "/ExtNsT3AF/DPAandGDPR/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AIContext/index.html",
+      "destination": "/ExtNsT3AF/AIContext/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AIFeatures/index.html",
+      "destination": "/ExtNsT3AF/AIFeatures/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AIPrompts/index.html",
+      "destination": "/ExtNsT3AF/AIPrompts/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AIProviders/index.html",
+      "destination": "/ExtNsT3AF/AIProviders/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AIUsageAndLogs/index.html",
+      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Appendix/index.html",
+      "destination": "/ExtNsT3AF/Appendix/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/index.html",
+      "destination": "/ExtNsT3AF/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Dashboard/index.html",
+      "destination": "/ExtNsT3AF/Dashboard/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/FAQ/index.html",
+      "destination": "/ExtNsT3AF/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/GetThisExtension/index.html",
+      "destination": "/ExtNsT3AF/GetThisExtension/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/HelpfulLinks/index.html",
+      "destination": "/ExtNsT3AF/HelpfulLinks/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/index.html",
+      "destination": "/ExtNsT3AF/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Installation/index.html",
+      "destination": "/ExtNsT3AF/Installation/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Introduction/index.html",
+      "destination": "/ExtNsT3AF/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/KnownProblems/index.html",
+      "destination": "/ExtNsT3AF/KnownProblems/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/MCPServer/index.html",
+      "destination": "/ExtNsT3AF/MCPServer/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/MCPTools/index.html",
+      "destination": "/ExtNsT3AF/MCPTools/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Screenshots/index.html",
+      "destination": "/ExtNsT3AF/Screenshots/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/SetupWizard/index.html",
+      "destination": "/ExtNsT3AF/SetupWizard/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Support/index.html",
+      "destination": "/ExtNsT3AF/Support/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/SystemRequirements/index.html",
+      "destination": "/ExtNsT3AF/SystemRequirements/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3PlanetCredits/index.html",
+      "destination": "/ExtNsT3AF/T3PlanetCredits/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/UpdateVersion/index.html",
+      "destination": "/ExtNsT3AF/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/UpgradeGuide/index.html",
+      "destination": "/ExtNsT3AF/UpgradeGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/VideoTutorials/index.html",
+      "destination": "/ExtNsT3AF/VideoTutorials/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/WhatDoesItDo/index.html",
+      "destination": "/ExtNsT3AF/WhatDoesItDo/Index"
+    },
+    {
+      "source": "/AIFoundationExtensions/index.html",
+      "destination": "/AIFoundationExtensions/Index"
+    },
+    {
+      "source": "/AllExtensions/index.html",
+      "destination": "/AllExtensions/Index"
+    },
+    {
+      "source": "/AllTemplates/index.html",
+      "destination": "/AllTemplates/Index"
+    },
+    {
+      "source": "/EXTAvatar/Customization/index.html",
+      "destination": "/EXTAvatar/Customization/Index"
+    },
+    {
+      "source": "/EXTAvatar/EditorGuide/index.html",
+      "destination": "/EXTAvatar/EditorGuide/Index"
+    },
+    {
+      "source": "/EXTAvatar/GlobalSettingsConfiguration/index.html",
+      "destination": "/EXTAvatar/GlobalSettingsConfiguration/Index"
+    },
+    {
+      "source": "/EXTAvatar/HelpSupport/index.html",
+      "destination": "/EXTAvatar/HelpSupport/Index"
+    },
+    {
+      "source": "/EXTAvatar/HelpfulLinks/index.html",
+      "destination": "/EXTAvatar/HelpfulLinks/Index"
+    },
+    {
+      "source": "/EXTAvatar/index.html",
+      "destination": "/EXTAvatar/Index"
+    },
+    {
+      "source": "/EXTAvatar/Installation/index.html",
+      "destination": "/EXTAvatar/Installation/Index"
+    },
+    {
+      "source": "/EXTAvatar/Introduction/index.html",
+      "destination": "/EXTAvatar/Introduction/Index"
+    },
+    {
+      "source": "/EXTAvatar/Localization/index.html",
+      "destination": "/EXTAvatar/Localization/Index"
+    },
+    {
+      "source": "/EXTAvatar/MaskElements/index.html",
+      "destination": "/EXTAvatar/MaskElements/Index"
+    },
+    {
+      "source": "/EXTAvatar/SEO/index.html",
+      "destination": "/EXTAvatar/SEO/Index"
+    },
+    {
+      "source": "/EXTAvatar/SpeedPerformance/index.html",
+      "destination": "/EXTAvatar/SpeedPerformance/Index"
+    },
+    {
+      "source": "/EXTAvatar/TemplatesLayouts/index.html",
+      "destination": "/EXTAvatar/TemplatesLayouts/Index"
+    },
+    {
+      "source": "/EXTAvatar/UpdateVersion/index.html",
+      "destination": "/EXTAvatar/UpdateVersion/Index"
+    },
+    {
+      "source": "/EXTAvatar/UpgradeGuide/index.html",
+      "destination": "/EXTAvatar/UpgradeGuide/Index"
+    },
+    {
+      "source": "/EXTAyu/CustomElements/index.html",
+      "destination": "/EXTAyu/CustomElements/Index"
+    },
+    {
+      "source": "/EXTAyu/Customization/index.html",
+      "destination": "/EXTAyu/Customization/Index"
+    },
+    {
+      "source": "/EXTAyu/DemoSite/index.html",
+      "destination": "/EXTAyu/DemoSite/Index"
+    },
+    {
+      "source": "/EXTAyu/FAQ/index.html",
+      "destination": "/EXTAyu/FAQ/Index"
+    },
+    {
+      "source": "/EXTAyu/GlobalSettingsConfiguration/index.html",
+      "destination": "/EXTAyu/GlobalSettingsConfiguration/Index"
+    },
+    {
+      "source": "/EXTAyu/HelpSupport/index.html",
+      "destination": "/EXTAyu/HelpSupport/Index"
+    },
+    {
+      "source": "/EXTAyu/index.html",
+      "destination": "/EXTAyu/Index"
+    },
+    {
+      "source": "/EXTAyu/InstallationT3AyuReactjs/index.html",
+      "destination": "/EXTAyu/InstallationT3AyuReactjs/Index"
+    },
+    {
+      "source": "/EXTAyu/InstallationT3AyuTheme/index.html",
+      "destination": "/EXTAyu/InstallationT3AyuTheme/Index"
+    },
+    {
+      "source": "/EXTAyu/Introduction/index.html",
+      "destination": "/EXTAyu/Introduction/Index"
+    },
+    {
+      "source": "/EXTAyu/Localization/index.html",
+      "destination": "/EXTAyu/Localization/Index"
+    },
+    {
+      "source": "/EXTAyu/PreviewFeature/index.html",
+      "destination": "/EXTAyu/PreviewFeature/Index"
+    },
+    {
+      "source": "/EXTAyu/UpdateVersion/index.html",
+      "destination": "/EXTAyu/UpdateVersion/Index"
+    },
+    {
+      "source": "/EXTBootstrap/CustomElements/index.html",
+      "destination": "/EXTBootstrap/CustomElements/Index"
+    },
+    {
+      "source": "/EXTBootstrap/Customization/index.html",
+      "destination": "/EXTBootstrap/Customization/Index"
+    },
+    {
+      "source": "/EXTBootstrap/FlexFormtoContentBlockMigration/index.html",
+      "destination": "/EXTBootstrap/FlexFormtoContentBlockMigration/Index"
+    },
+    {
+      "source": "/EXTBootstrap/GlobalSettingsConfiguration/index.html",
+      "destination": "/EXTBootstrap/GlobalSettingsConfiguration/Index"
+    },
+    {
+      "source": "/EXTBootstrap/HelpSupport/index.html",
+      "destination": "/EXTBootstrap/HelpSupport/Index"
+    },
+    {
+      "source": "/EXTBootstrap/HelpfulLinks/index.html",
+      "destination": "/EXTBootstrap/HelpfulLinks/Index"
+    },
+    {
+      "source": "/EXTBootstrap/index.html",
+      "destination": "/EXTBootstrap/Index"
+    },
+    {
+      "source": "/EXTBootstrap/Installation/index.html",
+      "destination": "/EXTBootstrap/Installation/Index"
+    },
+    {
+      "source": "/EXTBootstrap/Introduction/index.html",
+      "destination": "/EXTBootstrap/Introduction/Index"
+    },
+    {
+      "source": "/EXTBootstrap/Localization/index.html",
+      "destination": "/EXTBootstrap/Localization/Index"
+    },
+    {
+      "source": "/EXTBootstrap/SEO/index.html",
+      "destination": "/EXTBootstrap/SEO/Index"
+    },
+    {
+      "source": "/EXTBootstrap/SpeedPerformance/index.html",
+      "destination": "/EXTBootstrap/SpeedPerformance/Index"
+    },
+    {
+      "source": "/EXTBootstrap/TemplatesLayouts/index.html",
+      "destination": "/EXTBootstrap/TemplatesLayouts/Index"
+    },
+    {
+      "source": "/EXTBootstrap/UpdateVersion/index.html",
+      "destination": "/EXTBootstrap/UpdateVersion/Index"
+    },
+    {
+      "source": "/EXTBootstrap/UpgradeGuide/index.html",
+      "destination": "/EXTBootstrap/UpgradeGuide/Index"
+    },
+    {
+      "source": "/EXTKarma/CaptchaConfiguration/index.html",
+      "destination": "/EXTKarma/CaptchaConfiguration/Index"
+    },
+    {
+      "source": "/EXTKarma/ContentBlockElements/index.html",
+      "destination": "/EXTKarma/ContentBlockElements/Index"
+    },
+    {
+      "source": "/EXTKarma/Customization/index.html",
+      "destination": "/EXTKarma/Customization/Index"
+    },
+    {
+      "source": "/EXTKarma/EditorGuide/index.html",
+      "destination": "/EXTKarma/EditorGuide/Index"
+    },
+    {
+      "source": "/EXTKarma/GlobalSettingsConfiguration/index.html",
+      "destination": "/EXTKarma/GlobalSettingsConfiguration/Index"
+    },
+    {
+      "source": "/EXTKarma/HelpSupport/index.html",
+      "destination": "/EXTKarma/HelpSupport/Index"
+    },
+    {
+      "source": "/EXTKarma/HelpfulLinks/index.html",
+      "destination": "/EXTKarma/HelpfulLinks/Index"
+    },
+    {
+      "source": "/EXTKarma/index.html",
+      "destination": "/EXTKarma/Index"
+    },
+    {
+      "source": "/EXTKarma/Installation/index.html",
+      "destination": "/EXTKarma/Installation/Index"
+    },
+    {
+      "source": "/EXTKarma/Introduction/index.html",
+      "destination": "/EXTKarma/Introduction/Index"
+    },
+    {
+      "source": "/EXTKarma/Localization/index.html",
+      "destination": "/EXTKarma/Localization/Index"
+    },
+    {
+      "source": "/EXTKarma/SEO/index.html",
+      "destination": "/EXTKarma/SEO/Index"
+    },
+    {
+      "source": "/EXTKarma/SpeedPerformance/index.html",
+      "destination": "/EXTKarma/SpeedPerformance/Index"
+    },
+    {
+      "source": "/EXTKarma/TemplatesLayouts/index.html",
+      "destination": "/EXTKarma/TemplatesLayouts/Index"
+    },
+    {
+      "source": "/EXTKarma/UpdateVersion/index.html",
+      "destination": "/EXTKarma/UpdateVersion/Index"
+    },
+    {
+      "source": "/EXTKarma/UpgradeGuideForContainer/index.html",
+      "destination": "/EXTKarma/UpgradeGuideForContainer/Index"
+    },
+    {
+      "source": "/EXTKarma/UpgradeV13xToV14x/index.html",
+      "destination": "/EXTKarma/UpgradeV13xToV14x/Index"
+    },
+    {
+      "source": "/EXTNsZohoCrm/Configuration/index.html",
+      "destination": "/EXTNsZohoCrm/Configuration/Index"
+    },
+    {
+      "source": "/EXTNsZohoCrm/index.html",
+      "destination": "/EXTNsZohoCrm/Index"
+    },
+    {
+      "source": "/EXTNsZohoCrm/Installation/index.html",
+      "destination": "/EXTNsZohoCrm/Installation/Index"
+    },
+    {
+      "source": "/EXTNsZohoCrm/Introduction/index.html",
+      "destination": "/EXTNsZohoCrm/Introduction/Index"
+    },
+    {
+      "source": "/EXTNsZohoCrm/UpdateVersion/index.html",
+      "destination": "/EXTNsZohoCrm/UpdateVersion/Index"
+    },
+    {
+      "source": "/EXTReactBootstrap/CustomElements/index.html",
+      "destination": "/EXTReactBootstrap/CustomElements/Index"
+    },
+    {
+      "source": "/EXTReactBootstrap/Customization/index.html",
+      "destination": "/EXTReactBootstrap/Customization/Index"
+    },
+    {
+      "source": "/EXTReactBootstrap/FAQ/index.html",
+      "destination": "/EXTReactBootstrap/FAQ/Index"
+    },
+    {
+      "source": "/EXTReactBootstrap/GlobalSettingsConfiguration/index.html",
+      "destination": "/EXTReactBootstrap/GlobalSettingsConfiguration/Index"
+    },
+    {
+      "source": "/EXTReactBootstrap/HelpSupport/index.html",
+      "destination": "/EXTReactBootstrap/HelpSupport/Index"
+    },
+    {
+      "source": "/EXTReactBootstrap/index.html",
+      "destination": "/EXTReactBootstrap/Index"
+    },
+    {
+      "source": "/EXTReactBootstrap/InstallationT3ReactBootstrapTheme/index.html",
+      "destination": "/EXTReactBootstrap/InstallationT3ReactBootstrapTheme/Index"
+    },
+    {
+      "source": "/EXTReactBootstrap/InstallationT3ReactBootstrapjs/index.html",
+      "destination": "/EXTReactBootstrap/InstallationT3ReactBootstrapjs/Index"
+    },
+    {
+      "source": "/EXTReactBootstrap/Introduction/index.html",
+      "destination": "/EXTReactBootstrap/Introduction/Index"
+    },
+    {
+      "source": "/EXTReactBootstrap/Localization/index.html",
+      "destination": "/EXTReactBootstrap/Localization/Index"
+    },
+    {
+      "source": "/EXTReactBootstrap/PreviewFeature/index.html",
+      "destination": "/EXTReactBootstrap/PreviewFeature/Index"
+    },
+    {
+      "source": "/EXTReactBootstrap/UpdateVersion/index.html",
+      "destination": "/EXTReactBootstrap/UpdateVersion/Index"
+    },
+    {
+      "source": "/EXTReva/CustomElements/index.html",
+      "destination": "/EXTReva/CustomElements/Index"
+    },
+    {
+      "source": "/EXTReva/Customization/index.html",
+      "destination": "/EXTReva/Customization/Index"
+    },
+    {
+      "source": "/EXTReva/DemoSite/index.html",
+      "destination": "/EXTReva/DemoSite/Index"
+    },
+    {
+      "source": "/EXTReva/FAQ/index.html",
+      "destination": "/EXTReva/FAQ/Index"
+    },
+    {
+      "source": "/EXTReva/GlobalSettingsConfiguration/index.html",
+      "destination": "/EXTReva/GlobalSettingsConfiguration/Index"
+    },
+    {
+      "source": "/EXTReva/HelpSupport/index.html",
+      "destination": "/EXTReva/HelpSupport/Index"
+    },
+    {
+      "source": "/EXTReva/index.html",
+      "destination": "/EXTReva/Index"
+    },
+    {
+      "source": "/EXTReva/InstallationT3RevaReactjs/index.html",
+      "destination": "/EXTReva/InstallationT3RevaReactjs/Index"
+    },
+    {
+      "source": "/EXTReva/InstallationT3RevaTheme/index.html",
+      "destination": "/EXTReva/InstallationT3RevaTheme/Index"
+    },
+    {
+      "source": "/EXTReva/Introduction/index.html",
+      "destination": "/EXTReva/Introduction/Index"
+    },
+    {
+      "source": "/EXTReva/Localization/index.html",
+      "destination": "/EXTReva/Localization/Index"
+    },
+    {
+      "source": "/EXTReva/PreviewFeature/index.html",
+      "destination": "/EXTReva/PreviewFeature/Index"
+    },
+    {
+      "source": "/EXTReva/UpdateVersion/index.html",
+      "destination": "/EXTReva/UpdateVersion/Index"
+    },
+    {
+      "source": "/EXTShiva/CustomElements/index.html",
+      "destination": "/EXTShiva/CustomElements/Index"
+    },
+    {
+      "source": "/EXTShiva/Customization/index.html",
+      "destination": "/EXTShiva/Customization/Index"
+    },
+    {
+      "source": "/EXTShiva/DemoSite/index.html",
+      "destination": "/EXTShiva/DemoSite/Index"
+    },
+    {
+      "source": "/EXTShiva/FAQ/index.html",
+      "destination": "/EXTShiva/FAQ/Index"
+    },
+    {
+      "source": "/EXTShiva/GlobalSettingsConfiguration/index.html",
+      "destination": "/EXTShiva/GlobalSettingsConfiguration/Index"
+    },
+    {
+      "source": "/EXTShiva/HelpSupport/index.html",
+      "destination": "/EXTShiva/HelpSupport/Index"
+    },
+    {
+      "source": "/EXTShiva/index.html",
+      "destination": "/EXTShiva/Index"
+    },
+    {
+      "source": "/EXTShiva/InstallationT3ShivaReactjs/index.html",
+      "destination": "/EXTShiva/InstallationT3ShivaReactjs/Index"
+    },
+    {
+      "source": "/EXTShiva/InstallationT3ShivaTheme/index.html",
+      "destination": "/EXTShiva/InstallationT3ShivaTheme/Index"
+    },
+    {
+      "source": "/EXTShiva/Introduction/index.html",
+      "destination": "/EXTShiva/Introduction/Index"
+    },
+    {
+      "source": "/EXTShiva/Localization/index.html",
+      "destination": "/EXTShiva/Localization/Index"
+    },
+    {
+      "source": "/EXTShiva/PreviewFeature/index.html",
+      "destination": "/EXTShiva/PreviewFeature/Index"
+    },
+    {
+      "source": "/EXTShiva/UpdateVersion/index.html",
+      "destination": "/EXTShiva/UpdateVersion/Index"
+    },
+    {
+      "source": "/EXTShop/DemoSite/index.html",
+      "destination": "/EXTShop/DemoSite/Index"
+    },
+    {
+      "source": "/EXTShop/HelpSupport/index.html",
+      "destination": "/EXTShop/HelpSupport/Index"
+    },
+    {
+      "source": "/EXTShop/index.html",
+      "destination": "/EXTShop/Index"
+    },
+    {
+      "source": "/EXTShop/Installation/index.html",
+      "destination": "/EXTShop/Installation/Index"
+    },
+    {
+      "source": "/EXTShop/Introduction/index.html",
+      "destination": "/EXTShop/Introduction/Index"
+    },
+    {
+      "source": "/EXTShop/ShopConfiguration/index.html",
+      "destination": "/EXTShop/ShopConfiguration/Index"
+    },
+    {
+      "source": "/EXTShop/ThemeConfiguration/index.html",
+      "destination": "/EXTShop/ThemeConfiguration/Index"
+    },
+    {
+      "source": "/EXTShop/UpdateVersion/index.html",
+      "destination": "/EXTShop/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNitsanHellobar/Configuration/index.html",
+      "destination": "/ExtNitsanHellobar/Configuration/Index"
+    },
+    {
+      "source": "/ExtNitsanHellobar/index.html",
+      "destination": "/ExtNitsanHellobar/Index"
+    },
+    {
+      "source": "/ExtNitsanHellobar/Installation/index.html",
+      "destination": "/ExtNitsanHellobar/Installation/Index"
+    },
+    {
+      "source": "/ExtNitsanHellobar/Introduction/index.html",
+      "destination": "/ExtNitsanHellobar/Introduction/Index"
+    },
+    {
+      "source": "/ExtNitsanHellobar/UpdateVersion/index.html",
+      "destination": "/ExtNitsanHellobar/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNitsanMaintenance/Configuration/index.html",
+      "destination": "/ExtNitsanMaintenance/Configuration/Index"
+    },
+    {
+      "source": "/ExtNitsanMaintenance/index.html",
+      "destination": "/ExtNitsanMaintenance/Index"
+    },
+    {
+      "source": "/ExtNitsanMaintenance/Installation/index.html",
+      "destination": "/ExtNitsanMaintenance/Installation/Index"
+    },
+    {
+      "source": "/ExtNitsanMaintenance/Introduction/index.html",
+      "destination": "/ExtNitsanMaintenance/Introduction/Index"
+    },
+    {
+      "source": "/ExtNitsanMaintenance/UpdateVersion/index.html",
+      "destination": "/ExtNitsanMaintenance/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsAllChat/Configuration/index.html",
+      "destination": "/ExtNsAllChat/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsAllChat/index.html",
+      "destination": "/ExtNsAllChat/Index"
+    },
+    {
+      "source": "/ExtNsAllChat/Installation/index.html",
+      "destination": "/ExtNsAllChat/Installation/Index"
+    },
+    {
+      "source": "/ExtNsAllChat/Introduction/index.html",
+      "destination": "/ExtNsAllChat/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsAllChat/UpdateVersion/index.html",
+      "destination": "/ExtNsAllChat/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsAllLightbox/Configuration/index.html",
+      "destination": "/ExtNsAllLightbox/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsAllLightbox/index.html",
+      "destination": "/ExtNsAllLightbox/Index"
+    },
+    {
+      "source": "/ExtNsAllLightbox/Installation/index.html",
+      "destination": "/ExtNsAllLightbox/Installation/Index"
+    },
+    {
+      "source": "/ExtNsAllLightbox/Introduction/index.html",
+      "destination": "/ExtNsAllLightbox/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsAllLightbox/UpdateVersion/index.html",
+      "destination": "/ExtNsAllLightbox/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsAllSliders/Configuration/index.html",
+      "destination": "/ExtNsAllSliders/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsAllSliders/index.html",
+      "destination": "/ExtNsAllSliders/Index"
+    },
+    {
+      "source": "/ExtNsAllSliders/Installation/index.html",
+      "destination": "/ExtNsAllSliders/Installation/Index"
+    },
+    {
+      "source": "/ExtNsAllSliders/Introduction/index.html",
+      "destination": "/ExtNsAllSliders/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsAllSliders/UpdateVersion/index.html",
+      "destination": "/ExtNsAllSliders/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsBackup/ConnectClouds/index.html",
+      "destination": "/ExtNsBackup/ConnectClouds/Index"
+    },
+    {
+      "source": "/ExtNsBackup/DownloadsLogsHistory/index.html",
+      "destination": "/ExtNsBackup/DownloadsLogsHistory/Index"
+    },
+    {
+      "source": "/ExtNsBackup/GlobalSettings/index.html",
+      "destination": "/ExtNsBackup/GlobalSettings/Index"
+    },
+    {
+      "source": "/ExtNsBackup/index.html",
+      "destination": "/ExtNsBackup/Index"
+    },
+    {
+      "source": "/ExtNsBackup/Installation/index.html",
+      "destination": "/ExtNsBackup/Installation/Index"
+    },
+    {
+      "source": "/ExtNsBackup/Introduction/index.html",
+      "destination": "/ExtNsBackup/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsBackup/ScheduleBackup/index.html",
+      "destination": "/ExtNsBackup/ScheduleBackup/Index"
+    },
+    {
+      "source": "/ExtNsBackup/StartOneClickBackup/index.html",
+      "destination": "/ExtNsBackup/StartOneClickBackup/Index"
+    },
+    {
+      "source": "/ExtNsBackup/SystemRequirement/index.html",
+      "destination": "/ExtNsBackup/SystemRequirement/Index"
+    },
+    {
+      "source": "/ExtNsBackup/UpdateVersion/index.html",
+      "destination": "/ExtNsBackup/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsCacheWebhook/Configuration/index.html",
+      "destination": "/ExtNsCacheWebhook/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsCacheWebhook/index.html",
+      "destination": "/ExtNsCacheWebhook/Index"
+    },
+    {
+      "source": "/ExtNsCacheWebhook/Installation/index.html",
+      "destination": "/ExtNsCacheWebhook/Installation/Index"
+    },
+    {
+      "source": "/ExtNsCacheWebhook/Introduction/index.html",
+      "destination": "/ExtNsCacheWebhook/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsCacheWebhook/Usage/index.html",
+      "destination": "/ExtNsCacheWebhook/Usage/Index"
+    },
+    {
+      "source": "/ExtNsCloudflare/Configuration/index.html",
+      "destination": "/ExtNsCloudflare/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsCloudflare/index.html",
+      "destination": "/ExtNsCloudflare/Index"
+    },
+    {
+      "source": "/ExtNsCloudflare/Installation/index.html",
+      "destination": "/ExtNsCloudflare/Installation/Index"
+    },
+    {
+      "source": "/ExtNsCloudflare/Introduction/index.html",
+      "destination": "/ExtNsCloudflare/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsCloudflare/UpdateVersion/index.html",
+      "destination": "/ExtNsCloudflare/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsComments/CommentModeration/index.html",
+      "destination": "/ExtNsComments/CommentModeration/Index"
+    },
+    {
+      "source": "/ExtNsComments/CommentPluginSettings/index.html",
+      "destination": "/ExtNsComments/CommentPluginSettings/Index"
+    },
+    {
+      "source": "/ExtNsComments/GlobalConfiguration/index.html",
+      "destination": "/ExtNsComments/GlobalConfiguration/Index"
+    },
+    {
+      "source": "/ExtNsComments/index.html",
+      "destination": "/ExtNsComments/Index"
+    },
+    {
+      "source": "/ExtNsComments/Installation/index.html",
+      "destination": "/ExtNsComments/Installation/Index"
+    },
+    {
+      "source": "/ExtNsComments/Introduction/index.html",
+      "destination": "/ExtNsComments/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsComments/UpdateVersion/index.html",
+      "destination": "/ExtNsComments/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsCookieYes/Configuration/index.html",
+      "destination": "/ExtNsCookieYes/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsCookieYes/index.html",
+      "destination": "/ExtNsCookieYes/Index"
+    },
+    {
+      "source": "/ExtNsCookieYes/Installation/index.html",
+      "destination": "/ExtNsCookieYes/Installation/Index"
+    },
+    {
+      "source": "/ExtNsCookieYes/Introduction/index.html",
+      "destination": "/ExtNsCookieYes/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsCookieYes/UpdateVersion/index.html",
+      "destination": "/ExtNsCookieYes/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsCookiebot/Configuration/index.html",
+      "destination": "/ExtNsCookiebot/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsCookiebot/index.html",
+      "destination": "/ExtNsCookiebot/Index"
+    },
+    {
+      "source": "/ExtNsCookiebot/Installation/index.html",
+      "destination": "/ExtNsCookiebot/Installation/Index"
+    },
+    {
+      "source": "/ExtNsCookiebot/Introduction/index.html",
+      "destination": "/ExtNsCookiebot/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsCookiebot/UpdateVersion/index.html",
+      "destination": "/ExtNsCookiebot/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsCookiesHint/Configuration/ConfigureCookiesHintPlugin/index.html",
+      "destination": "/ExtNsCookiesHint/Configuration/ConfigureCookiesHintPlugin/Index"
+    },
+    {
+      "source": "/ExtNsCookiesHint/Configuration/index.html",
+      "destination": "/ExtNsCookiesHint/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsCookiesHint/index.html",
+      "destination": "/ExtNsCookiesHint/Index"
+    },
+    {
+      "source": "/ExtNsCookiesHint/Installation/index.html",
+      "destination": "/ExtNsCookiesHint/Installation/Index"
+    },
+    {
+      "source": "/ExtNsCookiesHint/Introduction/index.html",
+      "destination": "/ExtNsCookiesHint/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsCookiesHint/UpdateVersion/index.html",
+      "destination": "/ExtNsCookiesHint/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsDisqusComment/Configuration/index.html",
+      "destination": "/ExtNsDisqusComment/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsDisqusComment/index.html",
+      "destination": "/ExtNsDisqusComment/Index"
+    },
+    {
+      "source": "/ExtNsDisqusComment/Installation/index.html",
+      "destination": "/ExtNsDisqusComment/Installation/Index"
+    },
+    {
+      "source": "/ExtNsDisqusComment/Introduction/index.html",
+      "destination": "/ExtNsDisqusComment/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsDisqusComment/UpdateVersion/index.html",
+      "destination": "/ExtNsDisqusComment/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsEvent/Configuration/AddEventPlugin/index.html",
+      "destination": "/ExtNsEvent/Configuration/AddEventPlugin/Index"
+    },
+    {
+      "source": "/ExtNsEvent/Configuration/AddEvents/index.html",
+      "destination": "/ExtNsEvent/Configuration/AddEvents/Index"
+    },
+    {
+      "source": "/ExtNsEvent/Configuration/index.html",
+      "destination": "/ExtNsEvent/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsEvent/GlobalConfiguration/index.html",
+      "destination": "/ExtNsEvent/GlobalConfiguration/Index"
+    },
+    {
+      "source": "/ExtNsEvent/index.html",
+      "destination": "/ExtNsEvent/Index"
+    },
+    {
+      "source": "/ExtNsEvent/Installation/index.html",
+      "destination": "/ExtNsEvent/Installation/Index"
+    },
+    {
+      "source": "/ExtNsEvent/Introduction/index.html",
+      "destination": "/ExtNsEvent/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsEvent/UpdateVersion/index.html",
+      "destination": "/ExtNsEvent/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsExtCompatibility/ActionResults/index.html",
+      "destination": "/ExtNsExtCompatibility/ActionResults/Index"
+    },
+    {
+      "source": "/ExtNsExtCompatibility/Configuration/index.html",
+      "destination": "/ExtNsExtCompatibility/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsExtCompatibility/index.html",
+      "destination": "/ExtNsExtCompatibility/Index"
+    },
+    {
+      "source": "/ExtNsExtCompatibility/Installation/index.html",
+      "destination": "/ExtNsExtCompatibility/Installation/Index"
+    },
+    {
+      "source": "/ExtNsExtCompatibility/Introduction/index.html",
+      "destination": "/ExtNsExtCompatibility/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsExtCompatibility/UpdateVersion/index.html",
+      "destination": "/ExtNsExtCompatibility/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsFAQ/FAQModeration/index.html",
+      "destination": "/ExtNsFAQ/FAQModeration/Index"
+    },
+    {
+      "source": "/ExtNsFAQ/FAQPlugin/index.html",
+      "destination": "/ExtNsFAQ/FAQPlugin/Index"
+    },
+    {
+      "source": "/ExtNsFAQ/index.html",
+      "destination": "/ExtNsFAQ/Index"
+    },
+    {
+      "source": "/ExtNsFAQ/Installation/index.html",
+      "destination": "/ExtNsFAQ/Installation/Index"
+    },
+    {
+      "source": "/ExtNsFAQ/Introduction/index.html",
+      "destination": "/ExtNsFAQ/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsFAQ/NSFaqBackendModule/index.html",
+      "destination": "/ExtNsFAQ/NSFaqBackendModule/Index"
+    },
+    {
+      "source": "/ExtNsFAQ/SubmitFAQForm/index.html",
+      "destination": "/ExtNsFAQ/SubmitFAQForm/Index"
+    },
+    {
+      "source": "/ExtNsFAQ/UpdateVersion/index.html",
+      "destination": "/ExtNsFAQ/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsFacebookComment/Configuration/index.html",
+      "destination": "/ExtNsFacebookComment/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsFacebookComment/index.html",
+      "destination": "/ExtNsFacebookComment/Index"
+    },
+    {
+      "source": "/ExtNsFacebookComment/Installation/index.html",
+      "destination": "/ExtNsFacebookComment/Installation/Index"
+    },
+    {
+      "source": "/ExtNsFacebookComment/Introduction/index.html",
+      "destination": "/ExtNsFacebookComment/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsFacebookComment/UpdateVersion/index.html",
+      "destination": "/ExtNsFacebookComment/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsFeedback/index.html",
+      "destination": "/ExtNsFeedback/Index"
+    },
+    {
+      "source": "/ExtNsFeedback/Installation/index.html",
+      "destination": "/ExtNsFeedback/Installation/Index"
+    },
+    {
+      "source": "/ExtNsFeedback/Introduction/index.html",
+      "destination": "/ExtNsFeedback/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsFeedback/NSFeedbackModules/index.html",
+      "destination": "/ExtNsFeedback/NSFeedbackModules/Index"
+    },
+    {
+      "source": "/ExtNsFeedback/SetFeedbackFormForEntireSite/index.html",
+      "destination": "/ExtNsFeedback/SetFeedbackFormForEntireSite/Index"
+    },
+    {
+      "source": "/ExtNsFeedback/SetFeedbackFormOnIndividualPage/index.html",
+      "destination": "/ExtNsFeedback/SetFeedbackFormOnIndividualPage/Index"
+    },
+    {
+      "source": "/ExtNsFeedback/UpdateVersion/index.html",
+      "destination": "/ExtNsFeedback/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsFriendlyCaptcha/Configuration/index.html",
+      "destination": "/ExtNsFriendlyCaptcha/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsFriendlyCaptcha/CustomIntegration/index.html",
+      "destination": "/ExtNsFriendlyCaptcha/CustomIntegration/Index"
+    },
+    {
+      "source": "/ExtNsFriendlyCaptcha/index.html",
+      "destination": "/ExtNsFriendlyCaptcha/Index"
+    },
+    {
+      "source": "/ExtNsFriendlyCaptcha/Installation/index.html",
+      "destination": "/ExtNsFriendlyCaptcha/Installation/Index"
+    },
+    {
+      "source": "/ExtNsFriendlyCaptcha/Introduction/index.html",
+      "destination": "/ExtNsFriendlyCaptcha/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsFriendlyCaptcha/UpdateVersion/index.html",
+      "destination": "/ExtNsFriendlyCaptcha/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsGallery/AlbumView/index.html",
+      "destination": "/ExtNsGallery/AlbumView/Index"
+    },
+    {
+      "source": "/ExtNsGallery/GoogleSearchView/index.html",
+      "destination": "/ExtNsGallery/GoogleSearchView/Index"
+    },
+    {
+      "source": "/ExtNsGallery/HowToSetupAndDisplayGallery/index.html",
+      "destination": "/ExtNsGallery/HowToSetupAndDisplayGallery/Index"
+    },
+    {
+      "source": "/ExtNsGallery/index.html",
+      "destination": "/ExtNsGallery/Index"
+    },
+    {
+      "source": "/ExtNsGallery/Installation/index.html",
+      "destination": "/ExtNsGallery/Installation/Index"
+    },
+    {
+      "source": "/ExtNsGallery/Introduction/index.html",
+      "destination": "/ExtNsGallery/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsGallery/IsotopeView/index.html",
+      "destination": "/ExtNsGallery/IsotopeView/Index"
+    },
+    {
+      "source": "/ExtNsGallery/MasonryView/index.html",
+      "destination": "/ExtNsGallery/MasonryView/Index"
+    },
+    {
+      "source": "/ExtNsGallery/MosaicView/index.html",
+      "destination": "/ExtNsGallery/MosaicView/Index"
+    },
+    {
+      "source": "/ExtNsGallery/NSGalleryModule/index.html",
+      "destination": "/ExtNsGallery/NSGalleryModule/Index"
+    },
+    {
+      "source": "/ExtNsGallery/SliderView/index.html",
+      "destination": "/ExtNsGallery/SliderView/Index"
+    },
+    {
+      "source": "/ExtNsGallery/UpdateVersion/index.html",
+      "destination": "/ExtNsGallery/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsGallery/ZoomView/index.html",
+      "destination": "/ExtNsGallery/ZoomView/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/GoogleDocsConfiguration/index.html",
+      "destination": "/ExtNsGoogleDocs/GoogleDocsConfiguration/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/ImportGoogleDocToPage/index.html",
+      "destination": "/ExtNsGoogleDocs/ImportGoogleDocToPage/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/index.html",
+      "destination": "/ExtNsGoogleDocs/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/Installation/index.html",
+      "destination": "/ExtNsGoogleDocs/Installation/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/Introduction/index.html",
+      "destination": "/ExtNsGoogleDocs/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/NSGoogleDocsModule/index.html",
+      "destination": "/ExtNsGoogleDocs/NSGoogleDocsModule/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/PrepareGoogleDocWithMarkers/index.html",
+      "destination": "/ExtNsGoogleDocs/PrepareGoogleDocWithMarkers/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/UpdateVersion/index.html",
+      "destination": "/ExtNsGoogleDocs/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsGoogleMap/Configuration/AddGoogleMapPlugin/index.html",
+      "destination": "/ExtNsGoogleMap/Configuration/AddGoogleMapPlugin/Index"
+    },
+    {
+      "source": "/ExtNsGoogleMap/Configuration/AddMapAPI/index.html",
+      "destination": "/ExtNsGoogleMap/Configuration/AddMapAPI/Index"
+    },
+    {
+      "source": "/ExtNsGoogleMap/Configuration/AddMapLocations/index.html",
+      "destination": "/ExtNsGoogleMap/Configuration/AddMapLocations/Index"
+    },
+    {
+      "source": "/ExtNsGoogleMap/Configuration/index.html",
+      "destination": "/ExtNsGoogleMap/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsGoogleMap/index.html",
+      "destination": "/ExtNsGoogleMap/Index"
+    },
+    {
+      "source": "/ExtNsGoogleMap/Installation/index.html",
+      "destination": "/ExtNsGoogleMap/Installation/Index"
+    },
+    {
+      "source": "/ExtNsGoogleMap/Introduction/index.html",
+      "destination": "/ExtNsGoogleMap/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsGoogleMap/UpdateVersion/index.html",
+      "destination": "/ExtNsGoogleMap/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsGoogleSiteKit/GettingStarted/index.html",
+      "destination": "/ExtNsGoogleSiteKit/GettingStarted/Index"
+    },
+    {
+      "source": "/ExtNsGoogleSiteKit/GuidetoFreeVersion/index.html",
+      "destination": "/ExtNsGoogleSiteKit/GuidetoFreeVersion/Index"
+    },
+    {
+      "source": "/ExtNsGoogleSiteKit/HowToIntegrateGoogleSitekit/index.html",
+      "destination": "/ExtNsGoogleSiteKit/HowToIntegrateGoogleSitekit/Index"
+    },
+    {
+      "source": "/ExtNsGoogleSiteKit/index.html",
+      "destination": "/ExtNsGoogleSiteKit/Index"
+    },
+    {
+      "source": "/ExtNsGoogleSiteKit/Installation/index.html",
+      "destination": "/ExtNsGoogleSiteKit/Installation/Index"
+    },
+    {
+      "source": "/ExtNsGoogleSiteKit/Introduction/index.html",
+      "destination": "/ExtNsGoogleSiteKit/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsGoogleSiteKit/Troubleshooting/index.html",
+      "destination": "/ExtNsGoogleSiteKit/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsGoogleSiteKit/UpdateVersion/index.html",
+      "destination": "/ExtNsGoogleSiteKit/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsGoogleSiteKit/UsingSiteKit/index.html",
+      "destination": "/ExtNsGoogleSiteKit/UsingSiteKit/Index"
+    },
+    {
+      "source": "/ExtNsGridtoContainer/Configuration/index.html",
+      "destination": "/ExtNsGridtoContainer/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsGridtoContainer/index.html",
+      "destination": "/ExtNsGridtoContainer/Index"
+    },
+    {
+      "source": "/ExtNsGridtoContainer/Installation/index.html",
+      "destination": "/ExtNsGridtoContainer/Installation/Index"
+    },
+    {
+      "source": "/ExtNsGridtoContainer/Introduction/index.html",
+      "destination": "/ExtNsGridtoContainer/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsGridtoContainer/UpdateVersion/index.html",
+      "destination": "/ExtNsGridtoContainer/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsGuestbook/Configuration/index.html",
+      "destination": "/ExtNsGuestbook/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsGuestbook/index.html",
+      "destination": "/ExtNsGuestbook/Index"
+    },
+    {
+      "source": "/ExtNsGuestbook/Installation/index.html",
+      "destination": "/ExtNsGuestbook/Installation/Index"
+    },
+    {
+      "source": "/ExtNsGuestbook/Introduction/index.html",
+      "destination": "/ExtNsGuestbook/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsGuestbook/UpdateVersion/index.html",
+      "destination": "/ExtNsGuestbook/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsHelpDesk/CategoryStatus/index.html",
+      "destination": "/ExtNsHelpDesk/CategoryStatus/Index"
+    },
+    {
+      "source": "/ExtNsHelpDesk/CustomizeForm/index.html",
+      "destination": "/ExtNsHelpDesk/CustomizeForm/Index"
+    },
+    {
+      "source": "/ExtNsHelpDesk/FormSettings/index.html",
+      "destination": "/ExtNsHelpDesk/FormSettings/Index"
+    },
+    {
+      "source": "/ExtNsHelpDesk/GlobalSettings/index.html",
+      "destination": "/ExtNsHelpDesk/GlobalSettings/Index"
+    },
+    {
+      "source": "/ExtNsHelpDesk/index.html",
+      "destination": "/ExtNsHelpDesk/Index"
+    },
+    {
+      "source": "/ExtNsHelpDesk/Installation/index.html",
+      "destination": "/ExtNsHelpDesk/Installation/Index"
+    },
+    {
+      "source": "/ExtNsHelpDesk/Introduction/index.html",
+      "destination": "/ExtNsHelpDesk/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsHelpDesk/PluginConfigurations/index.html",
+      "destination": "/ExtNsHelpDesk/PluginConfigurations/Index"
+    },
+    {
+      "source": "/ExtNsHelpDesk/TicketStatus/index.html",
+      "destination": "/ExtNsHelpDesk/TicketStatus/Index"
+    },
+    {
+      "source": "/ExtNsHelpDesk/Tickets/index.html",
+      "destination": "/ExtNsHelpDesk/Tickets/Index"
+    },
+    {
+      "source": "/ExtNsHelpDesk/UpdateVersion/index.html",
+      "destination": "/ExtNsHelpDesk/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsHubspot/FreeVersionConfiguration/index.html",
+      "destination": "/ExtNsHubspot/FreeVersionConfiguration/Index"
+    },
+    {
+      "source": "/ExtNsHubspot/index.html",
+      "destination": "/ExtNsHubspot/Index"
+    },
+    {
+      "source": "/ExtNsHubspot/Installation/index.html",
+      "destination": "/ExtNsHubspot/Installation/Index"
+    },
+    {
+      "source": "/ExtNsHubspot/Introduction/index.html",
+      "destination": "/ExtNsHubspot/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsHubspot/PremiumVersionConfiguration/index.html",
+      "destination": "/ExtNsHubspot/PremiumVersionConfiguration/Index"
+    },
+    {
+      "source": "/ExtNsHubspot/UpdateVersion/index.html",
+      "destination": "/ExtNsHubspot/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsInstagram/Configuration/index.html",
+      "destination": "/ExtNsInstagram/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsInstagram/index.html",
+      "destination": "/ExtNsInstagram/Index"
+    },
+    {
+      "source": "/ExtNsInstagram/InstagramApiToken/index.html",
+      "destination": "/ExtNsInstagram/InstagramApiToken/Index"
+    },
+    {
+      "source": "/ExtNsInstagram/Installation/index.html",
+      "destination": "/ExtNsInstagram/Installation/Index"
+    },
+    {
+      "source": "/ExtNsInstagram/Introduction/index.html",
+      "destination": "/ExtNsInstagram/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsInstagram/UpdateVersion/index.html",
+      "destination": "/ExtNsInstagram/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsLazyload/Configuration/index.html",
+      "destination": "/ExtNsLazyload/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsLazyload/index.html",
+      "destination": "/ExtNsLazyload/Index"
+    },
+    {
+      "source": "/ExtNsLazyload/Installation/index.html",
+      "destination": "/ExtNsLazyload/Installation/Index"
+    },
+    {
+      "source": "/ExtNsLazyload/Introduction/index.html",
+      "destination": "/ExtNsLazyload/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsLazyload/UpdateVersion/index.html",
+      "destination": "/ExtNsLazyload/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsNewsAdvancedSearch/Configuration/AddNewsFormSystemPlugin/index.html",
+      "destination": "/ExtNsNewsAdvancedSearch/Configuration/AddNewsFormSystemPlugin/Index"
+    },
+    {
+      "source": "/ExtNsNewsAdvancedSearch/Configuration/AddNewsListPlugin/index.html",
+      "destination": "/ExtNsNewsAdvancedSearch/Configuration/AddNewsListPlugin/Index"
+    },
+    {
+      "source": "/ExtNsNewsAdvancedSearch/Configuration/index.html",
+      "destination": "/ExtNsNewsAdvancedSearch/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsNewsAdvancedSearch/index.html",
+      "destination": "/ExtNsNewsAdvancedSearch/Index"
+    },
+    {
+      "source": "/ExtNsNewsAdvancedSearch/Installation/index.html",
+      "destination": "/ExtNsNewsAdvancedSearch/Installation/Index"
+    },
+    {
+      "source": "/ExtNsNewsAdvancedSearch/Introduction/index.html",
+      "destination": "/ExtNsNewsAdvancedSearch/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsNewsAdvancedSearch/UpdateVersion/index.html",
+      "destination": "/ExtNsNewsAdvancedSearch/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsNewsComments/CommentModeration/index.html",
+      "destination": "/ExtNsNewsComments/CommentModeration/Index"
+    },
+    {
+      "source": "/ExtNsNewsComments/CommentPluginSettings/index.html",
+      "destination": "/ExtNsNewsComments/CommentPluginSettings/Index"
+    },
+    {
+      "source": "/ExtNsNewsComments/ForDevelopers/index.html",
+      "destination": "/ExtNsNewsComments/ForDevelopers/Index"
+    },
+    {
+      "source": "/ExtNsNewsComments/GlobalConfiguration/index.html",
+      "destination": "/ExtNsNewsComments/GlobalConfiguration/Index"
+    },
+    {
+      "source": "/ExtNsNewsComments/index.html",
+      "destination": "/ExtNsNewsComments/Index"
+    },
+    {
+      "source": "/ExtNsNewsComments/Installation/index.html",
+      "destination": "/ExtNsNewsComments/Installation/Index"
+    },
+    {
+      "source": "/ExtNsNewsComments/Introduction/index.html",
+      "destination": "/ExtNsNewsComments/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsNewsComments/NewsCommentModule/index.html",
+      "destination": "/ExtNsNewsComments/NewsCommentModule/Index"
+    },
+    {
+      "source": "/ExtNsNewsComments/UpdateVersion/index.html",
+      "destination": "/ExtNsNewsComments/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsNewsSlickSlider/Configuration/index.html",
+      "destination": "/ExtNsNewsSlickSlider/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsNewsSlickSlider/Configuration/SlickSliderConfiguration/index.html",
+      "destination": "/ExtNsNewsSlickSlider/Configuration/SlickSliderConfiguration/Index"
+    },
+    {
+      "source": "/ExtNsNewsSlickSlider/index.html",
+      "destination": "/ExtNsNewsSlickSlider/Index"
+    },
+    {
+      "source": "/ExtNsNewsSlickSlider/Installation/index.html",
+      "destination": "/ExtNsNewsSlickSlider/Installation/Index"
+    },
+    {
+      "source": "/ExtNsNewsSlickSlider/Introduction/index.html",
+      "destination": "/ExtNsNewsSlickSlider/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsNewsSlickSlider/UpdateVersion/index.html",
+      "destination": "/ExtNsNewsSlickSlider/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsNewsSlider/Configuration/AddNewsSliderPlugin/index.html",
+      "destination": "/ExtNsNewsSlider/Configuration/AddNewsSliderPlugin/Index"
+    },
+    {
+      "source": "/ExtNsNewsSlider/Configuration/index.html",
+      "destination": "/ExtNsNewsSlider/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsNewsSlider/Configuration/NivoSlider/index.html",
+      "destination": "/ExtNsNewsSlider/Configuration/NivoSlider/Index"
+    },
+    {
+      "source": "/ExtNsNewsSlider/Configuration/OwlcarouselSlider/index.html",
+      "destination": "/ExtNsNewsSlider/Configuration/OwlcarouselSlider/Index"
+    },
+    {
+      "source": "/ExtNsNewsSlider/Configuration/RoyalSlider/index.html",
+      "destination": "/ExtNsNewsSlider/Configuration/RoyalSlider/Index"
+    },
+    {
+      "source": "/ExtNsNewsSlider/Configuration/SlickSlider/index.html",
+      "destination": "/ExtNsNewsSlider/Configuration/SlickSlider/Index"
+    },
+    {
+      "source": "/ExtNsNewsSlider/index.html",
+      "destination": "/ExtNsNewsSlider/Index"
+    },
+    {
+      "source": "/ExtNsNewsSlider/Installation/index.html",
+      "destination": "/ExtNsNewsSlider/Installation/Index"
+    },
+    {
+      "source": "/ExtNsNewsSlider/Introduction/index.html",
+      "destination": "/ExtNsNewsSlider/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsNewsSlider/UpdateVersion/index.html",
+      "destination": "/ExtNsNewsSlider/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsOpenStreetMap/Configuration/AddMapLibrary/index.html",
+      "destination": "/ExtNsOpenStreetMap/Configuration/AddMapLibrary/Index"
+    },
+    {
+      "source": "/ExtNsOpenStreetMap/Configuration/AddMapLocations/index.html",
+      "destination": "/ExtNsOpenStreetMap/Configuration/AddMapLocations/Index"
+    },
+    {
+      "source": "/ExtNsOpenStreetMap/Configuration/AddOpenStreetMapPlugin/index.html",
+      "destination": "/ExtNsOpenStreetMap/Configuration/AddOpenStreetMapPlugin/Index"
+    },
+    {
+      "source": "/ExtNsOpenStreetMap/Configuration/index.html",
+      "destination": "/ExtNsOpenStreetMap/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsOpenStreetMap/index.html",
+      "destination": "/ExtNsOpenStreetMap/Index"
+    },
+    {
+      "source": "/ExtNsOpenStreetMap/Installation/index.html",
+      "destination": "/ExtNsOpenStreetMap/Installation/Index"
+    },
+    {
+      "source": "/ExtNsOpenStreetMap/Introduction/index.html",
+      "destination": "/ExtNsOpenStreetMap/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsOpenStreetMap/UpdateVersion/index.html",
+      "destination": "/ExtNsOpenStreetMap/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsPWA/Configuration/index.html",
+      "destination": "/ExtNsPWA/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsPWA/index.html",
+      "destination": "/ExtNsPWA/Index"
+    },
+    {
+      "source": "/ExtNsPWA/Installation/index.html",
+      "destination": "/ExtNsPWA/Installation/Index"
+    },
+    {
+      "source": "/ExtNsPWA/Introduction/index.html",
+      "destination": "/ExtNsPWA/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsPWA/UpdateVersion/index.html",
+      "destination": "/ExtNsPWA/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsPersonio/ConfigurationOfPlugins/index.html",
+      "destination": "/ExtNsPersonio/ConfigurationOfPlugins/Index"
+    },
+    {
+      "source": "/ExtNsPersonio/ConfigurePersonioAPIandScheduler/index.html",
+      "destination": "/ExtNsPersonio/ConfigurePersonioAPIandScheduler/Index"
+    },
+    {
+      "source": "/ExtNsPersonio/index.html",
+      "destination": "/ExtNsPersonio/Index"
+    },
+    {
+      "source": "/ExtNsPersonio/Installation/index.html",
+      "destination": "/ExtNsPersonio/Installation/Index"
+    },
+    {
+      "source": "/ExtNsPersonio/Introduction/index.html",
+      "destination": "/ExtNsPersonio/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsPersonio/UpdateVersion/index.html",
+      "destination": "/ExtNsPersonio/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsProtectSite/Configuration/index.html",
+      "destination": "/ExtNsProtectSite/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsProtectSite/index.html",
+      "destination": "/ExtNsProtectSite/Index"
+    },
+    {
+      "source": "/ExtNsProtectSite/Installation/index.html",
+      "destination": "/ExtNsProtectSite/Installation/Index"
+    },
+    {
+      "source": "/ExtNsProtectSite/Introduction/index.html",
+      "destination": "/ExtNsProtectSite/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsProtectSite/UpdateVersion/index.html",
+      "destination": "/ExtNsProtectSite/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsPublicationComment/ExtensionConfigurations/index.html",
+      "destination": "/ExtNsPublicationComment/ExtensionConfigurations/Index"
+    },
+    {
+      "source": "/ExtNsPublicationComment/index.html",
+      "destination": "/ExtNsPublicationComment/Index"
+    },
+    {
+      "source": "/ExtNsPublicationComment/Installation/index.html",
+      "destination": "/ExtNsPublicationComment/Installation/Index"
+    },
+    {
+      "source": "/ExtNsPublicationComment/Introduction/index.html",
+      "destination": "/ExtNsPublicationComment/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsPublicationComment/UpdateVersion/index.html",
+      "destination": "/ExtNsPublicationComment/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/index.html",
+      "destination": "/ExtNsRevolutionSlider/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/Introduction/index.html",
+      "destination": "/ExtNsRevolutionSlider/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/KnownIssues/index.html",
+      "destination": "/ExtNsRevolutionSlider/KnownIssues/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSlider1.0/Configuration/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSlider1.0/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSlider1.0/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSlider1.0/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSlider1.0/Installation/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSlider1.0/Installation/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSlider2.0/Configuration/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSlider2.0/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSlider2.0/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSlider2.0/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSlider2.0/Installation/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSlider2.0/Installation/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSlider2.0/MigrationFrom1to2/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSlider2.0/MigrationFrom1to2/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSlider3.0/Configuration/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSlider3.0/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSlider3.0/FAQ/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSlider3.0/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSlider3.0/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSlider3.0/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSlider3.0/Installation/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSlider3.0/Installation/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSlider3.0/MigrationFrom2to3/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSlider3.0/MigrationFrom2to3/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSlider3.0/SystemRequirements/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSlider3.0/SystemRequirements/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSliderLatest/Configuration/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSliderLatest/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSliderLatest/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSliderLatest/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSliderLatest/Installation/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSliderLatest/Installation/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSliderLatest/MigrationFrom3toLatest/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSliderLatest/MigrationFrom3toLatest/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/RevolutionSliderLatest/SystemRequirements/index.html",
+      "destination": "/ExtNsRevolutionSlider/RevolutionSliderLatest/SystemRequirements/Index"
+    },
+    {
+      "source": "/ExtNsRevolutionSlider/UpdateVersion/index.html",
+      "destination": "/ExtNsRevolutionSlider/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsSharethis/Configuration/index.html",
+      "destination": "/ExtNsSharethis/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsSharethis/index.html",
+      "destination": "/ExtNsSharethis/Index"
+    },
+    {
+      "source": "/ExtNsSharethis/Installation/index.html",
+      "destination": "/ExtNsSharethis/Installation/Index"
+    },
+    {
+      "source": "/ExtNsSharethis/Introduction/index.html",
+      "destination": "/ExtNsSharethis/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsSharethis/UpdateVersion/index.html",
+      "destination": "/ExtNsSharethis/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsSnow/Configuration/index.html",
+      "destination": "/ExtNsSnow/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsSnow/index.html",
+      "destination": "/ExtNsSnow/Index"
+    },
+    {
+      "source": "/ExtNsSnow/Installation/index.html",
+      "destination": "/ExtNsSnow/Installation/Index"
+    },
+    {
+      "source": "/ExtNsSnow/Introduction/index.html",
+      "destination": "/ExtNsSnow/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsSnow/UpdateVersion/index.html",
+      "destination": "/ExtNsSnow/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsSocialLogin/BeforeGettingStarted/index.html",
+      "destination": "/ExtNsSocialLogin/BeforeGettingStarted/Index"
+    },
+    {
+      "source": "/ExtNsSocialLogin/Configuration/index.html",
+      "destination": "/ExtNsSocialLogin/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsSocialLogin/FAQ/index.html",
+      "destination": "/ExtNsSocialLogin/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsSocialLogin/index.html",
+      "destination": "/ExtNsSocialLogin/Index"
+    },
+    {
+      "source": "/ExtNsSocialLogin/Installation/index.html",
+      "destination": "/ExtNsSocialLogin/Installation/Index"
+    },
+    {
+      "source": "/ExtNsSocialLogin/Introduction/index.html",
+      "destination": "/ExtNsSocialLogin/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsSocialLogin/Screenshots/index.html",
+      "destination": "/ExtNsSocialLogin/Screenshots/Index"
+    },
+    {
+      "source": "/ExtNsSocialLogin/SystemRequirements/index.html",
+      "destination": "/ExtNsSocialLogin/SystemRequirements/Index"
+    },
+    {
+      "source": "/ExtNsSocialLogin/UpdateVersion/index.html",
+      "destination": "/ExtNsSocialLogin/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsStatcounter/Configuration/index.html",
+      "destination": "/ExtNsStatcounter/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsStatcounter/index.html",
+      "destination": "/ExtNsStatcounter/Index"
+    },
+    {
+      "source": "/ExtNsStatcounter/Installation/index.html",
+      "destination": "/ExtNsStatcounter/Installation/Index"
+    },
+    {
+      "source": "/ExtNsStatcounter/Introduction/index.html",
+      "destination": "/ExtNsStatcounter/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsStatcounter/UpdateVersion/index.html",
+      "destination": "/ExtNsStatcounter/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/Configuration/index.html",
+      "destination": "/ExtNsT3AA/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/index.html",
+      "destination": "/ExtNsT3AA/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/Installation/index.html",
+      "destination": "/ExtNsT3AA/Installation/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/Introduction/index.html",
+      "destination": "/ExtNsT3AA/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/KnownProblems/index.html",
+      "destination": "/ExtNsT3AA/KnownProblems/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/Screenshots/index.html",
+      "destination": "/ExtNsT3AA/Screenshots/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/SystemRequirements/index.html",
+      "destination": "/ExtNsT3AA/SystemRequirements/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/UpdateGuide/index.html",
+      "destination": "/ExtNsT3AA/UpdateGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/UpdateVersion/index.html",
+      "destination": "/ExtNsT3AA/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/AIBuilder/index.html",
+      "destination": "/ExtNsT3AB/AIBuilder/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/AIContentBlock/index.html",
+      "destination": "/ExtNsT3AB/AIContentBlock/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/AIForm/index.html",
+      "destination": "/ExtNsT3AB/AIForm/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/Configuration/index.html",
+      "destination": "/ExtNsT3AB/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/Forms/index.html",
+      "destination": "/ExtNsT3AB/Forms/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/HowT3ABWorks/index.html",
+      "destination": "/ExtNsT3AB/HowT3ABWorks/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/index.html",
+      "destination": "/ExtNsT3AB/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/Installation/index.html",
+      "destination": "/ExtNsT3AB/Installation/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/Introduction/index.html",
+      "destination": "/ExtNsT3AB/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/Screenshots/index.html",
+      "destination": "/ExtNsT3AB/Screenshots/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/SystemRequirements/index.html",
+      "destination": "/ExtNsT3AB/SystemRequirements/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/T3ABAIBuilder/index.html",
+      "destination": "/ExtNsT3AB/T3ABAIBuilder/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/T3ABContentBlocks/index.html",
+      "destination": "/ExtNsT3AB/T3ABContentBlocks/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/UpdateGuide/index.html",
+      "destination": "/ExtNsT3AB/UpdateGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/UpdateVersion/index.html",
+      "destination": "/ExtNsT3AB/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/index.html",
+      "destination": "/ExtNsT3AC/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/CustomLLMSupport/index.html",
+      "destination": "/ExtNsT3AC/CustomLLMSupport/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/CustomLLMSupport/T3ACHostingPolicyforCustomLLM/index.html",
+      "destination": "/ExtNsT3AC/CustomLLMSupport/T3ACHostingPolicyforCustomLLM/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/index.html",
+      "destination": "/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/FeatureGuide/AILogs/index.html",
+      "destination": "/ExtNsT3AC/FeatureGuide/AILogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/FeatureGuide/AIStatistics/index.html",
+      "destination": "/ExtNsT3AC/FeatureGuide/AIStatistics/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/FeatureGuide/Chatbot/index.html",
+      "destination": "/ExtNsT3AC/FeatureGuide/Chatbot/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/FeatureGuide/Dashboard/index.html",
+      "destination": "/ExtNsT3AC/FeatureGuide/Dashboard/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/FeatureGuide/DataSource/index.html",
+      "destination": "/ExtNsT3AC/FeatureGuide/DataSource/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/FeatureGuide/index.html",
+      "destination": "/ExtNsT3AC/FeatureGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/FeatureGuide/TrainingCenter/index.html",
+      "destination": "/ExtNsT3AC/FeatureGuide/TrainingCenter/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/FeatureGuide/UsageAnalytics/index.html",
+      "destination": "/ExtNsT3AC/FeatureGuide/UsageAnalytics/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/index.html",
+      "destination": "/ExtNsT3AC/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Installation/index.html",
+      "destination": "/ExtNsT3AC/Installation/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Introduction/index.html",
+      "destination": "/ExtNsT3AC/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/KnownProblems/index.html",
+      "destination": "/ExtNsT3AC/KnownProblems/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Screenshots/index.html",
+      "destination": "/ExtNsT3AC/Screenshots/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/UpdateGuide/index.html",
+      "destination": "/ExtNsT3AC/UpdateGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/UpdateVersion/index.html",
+      "destination": "/ExtNsT3AC/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AISettings/index.html",
+      "destination": "/ExtNsT3AI/AISettings/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Appendix/index.html",
+      "destination": "/ExtNsT3AI/Appendix/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/index.html",
+      "destination": "/ExtNsT3AI/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Content/index.html",
+      "destination": "/ExtNsT3AI/Content/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/FAQ/index.html",
+      "destination": "/ExtNsT3AI/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/index.html",
+      "destination": "/ExtNsT3AI/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Installation/index.html",
+      "destination": "/ExtNsT3AI/Installation/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Introduction/index.html",
+      "destination": "/ExtNsT3AI/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/KnownProblems/index.html",
+      "destination": "/ExtNsT3AI/KnownProblems/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Media/index.html",
+      "destination": "/ExtNsT3AI/Media/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Pages/index.html",
+      "destination": "/ExtNsT3AI/Pages/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Prompts/index.html",
+      "destination": "/ExtNsT3AI/Prompts/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Releases/index.html",
+      "destination": "/ExtNsT3AI/Releases/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/SEO/index.html",
+      "destination": "/ExtNsT3AI/SEO/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Screenshots/index.html",
+      "destination": "/ExtNsT3AI/Screenshots/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/SystemRequirements/index.html",
+      "destination": "/ExtNsT3AI/SystemRequirements/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/index.html",
+      "destination": "/ExtNsT3AI/Translation/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/UpdateVersion/index.html",
+      "destination": "/ExtNsT3AI/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/UpgradeGuide/index.html",
+      "destination": "/ExtNsT3AI/UpgradeGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/VideoTutorials/index.html",
+      "destination": "/ExtNsT3AI/VideoTutorials/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/AILocalization/index.html",
+      "destination": "/ExtNsT3AL/AILocalization/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/AILocalizationLogs/index.html",
+      "destination": "/ExtNsT3AL/AILocalizationLogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/Configuration/index.html",
+      "destination": "/ExtNsT3AL/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/index.html",
+      "destination": "/ExtNsT3AL/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/Installation/index.html",
+      "destination": "/ExtNsT3AL/Installation/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/Introduction/index.html",
+      "destination": "/ExtNsT3AL/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/KnownProblems/index.html",
+      "destination": "/ExtNsT3AL/KnownProblems/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/Screenshots/index.html",
+      "destination": "/ExtNsT3AL/Screenshots/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/SeamlessXLIFFImportAndExport/index.html",
+      "destination": "/ExtNsT3AL/SeamlessXLIFFImportAndExport/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/StartManualLocalization/index.html",
+      "destination": "/ExtNsT3AL/StartManualLocalization/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/SystemRequirements/index.html",
+      "destination": "/ExtNsT3AL/SystemRequirements/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/T3ALTerms(Glossary)/index.html",
+      "destination": "/ExtNsT3AL/T3ALTerms(Glossary)/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/T3ALforEveryone/index.html",
+      "destination": "/ExtNsT3AL/T3ALforEveryone/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/UpdateGuide/index.html",
+      "destination": "/ExtNsT3AL/UpdateGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/UpdateVersion/index.html",
+      "destination": "/ExtNsT3AL/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/VideoTutorials/index.html",
+      "destination": "/ExtNsT3AL/VideoTutorials/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/index.html",
+      "destination": "/ExtNsT3AS/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/CustomLLMSupport/index.html",
+      "destination": "/ExtNsT3AS/CustomLLMSupport/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/CustomLLMSupport/T3ASHostingPolicyforCustomLLM/index.html",
+      "destination": "/ExtNsT3AS/CustomLLMSupport/T3ASHostingPolicyforCustomLLM/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/CustomLLMSupport/T3ASPrerequisitesAndSOWCustomLLM/index.html",
+      "destination": "/ExtNsT3AS/CustomLLMSupport/T3ASPrerequisitesAndSOWCustomLLM/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/DatabaseChunking/index.html",
+      "destination": "/ExtNsT3AS/DatabaseChunking/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/FrontendPlugin/index.html",
+      "destination": "/ExtNsT3AS/FrontendPlugin/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/index.html",
+      "destination": "/ExtNsT3AS/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Installation/index.html",
+      "destination": "/ExtNsT3AS/Installation/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Introduction/index.html",
+      "destination": "/ExtNsT3AS/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/KnownProblems/index.html",
+      "destination": "/ExtNsT3AS/KnownProblems/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/PerformanceConfiguration/index.html",
+      "destination": "/ExtNsT3AS/PerformanceConfiguration/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Screenshots/index.html",
+      "destination": "/ExtNsT3AS/Screenshots/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/T3ASHostingPolicyforCustomLLM/index.html",
+      "destination": "/ExtNsT3AS/T3ASHostingPolicyforCustomLLM/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/UpdateGuide/index.html",
+      "destination": "/ExtNsT3AS/UpdateGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/UpdateVersion/index.html",
+      "destination": "/ExtNsT3AS/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/VerifyIndexedData/index.html",
+      "destination": "/ExtNsT3AS/VerifyIndexedData/Index"
+    },
+    {
+      "source": "/ExtNsTimeLine/ExtensionConfigurations/index.html",
+      "destination": "/ExtNsTimeLine/ExtensionConfigurations/Index"
+    },
+    {
+      "source": "/ExtNsTimeLine/index.html",
+      "destination": "/ExtNsTimeLine/Index"
+    },
+    {
+      "source": "/ExtNsTimeLine/Installation/index.html",
+      "destination": "/ExtNsTimeLine/Installation/Index"
+    },
+    {
+      "source": "/ExtNsTimeLine/Introduction/index.html",
+      "destination": "/ExtNsTimeLine/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsTimeLine/UpdateVersion/index.html",
+      "destination": "/ExtNsTimeLine/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsTwitter/Configuration/index.html",
+      "destination": "/ExtNsTwitter/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsTwitter/index.html",
+      "destination": "/ExtNsTwitter/Index"
+    },
+    {
+      "source": "/ExtNsTwitter/Installation/index.html",
+      "destination": "/ExtNsTwitter/Installation/Index"
+    },
+    {
+      "source": "/ExtNsTwitter/Introduction/index.html",
+      "destination": "/ExtNsTwitter/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsTwitter/UpdateVersion/index.html",
+      "destination": "/ExtNsTwitter/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsWhatsapp/GlobalSettings/index.html",
+      "destination": "/ExtNsWhatsapp/GlobalSettings/Index"
+    },
+    {
+      "source": "/ExtNsWhatsapp/index.html",
+      "destination": "/ExtNsWhatsapp/Index"
+    },
+    {
+      "source": "/ExtNsWhatsapp/Installation/index.html",
+      "destination": "/ExtNsWhatsapp/Installation/Index"
+    },
+    {
+      "source": "/ExtNsWhatsapp/Introduction/index.html",
+      "destination": "/ExtNsWhatsapp/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsWhatsapp/UpdateVersion/index.html",
+      "destination": "/ExtNsWhatsapp/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsWpMigration/Configuration/index.html",
+      "destination": "/ExtNsWpMigration/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsWpMigration/index.html",
+      "destination": "/ExtNsWpMigration/Index"
+    },
+    {
+      "source": "/ExtNsWpMigration/Installation/index.html",
+      "destination": "/ExtNsWpMigration/Installation/Index"
+    },
+    {
+      "source": "/ExtNsWpMigration/Introduction/index.html",
+      "destination": "/ExtNsWpMigration/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsWpMigration/UpdateVersion/index.html",
+      "destination": "/ExtNsWpMigration/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsYoutube/Configuration/index.html",
+      "destination": "/ExtNsYoutube/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsYoutube/index.html",
+      "destination": "/ExtNsYoutube/Index"
+    },
+    {
+      "source": "/ExtNsYoutube/Installation/index.html",
+      "destination": "/ExtNsYoutube/Installation/Index"
+    },
+    {
+      "source": "/ExtNsYoutube/Introduction/index.html",
+      "destination": "/ExtNsYoutube/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsYoutube/UpdateVersion/index.html",
+      "destination": "/ExtNsYoutube/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtNsZoho/Configuration/index.html",
+      "destination": "/ExtNsZoho/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsZoho/index.html",
+      "destination": "/ExtNsZoho/Index"
+    },
+    {
+      "source": "/ExtNsZoho/Installation/index.html",
+      "destination": "/ExtNsZoho/Installation/Index"
+    },
+    {
+      "source": "/ExtNsZoho/Introduction/index.html",
+      "destination": "/ExtNsZoho/Introduction/Index"
+    },
+    {
+      "source": "/ExtNsZoho/UpdateVersion/index.html",
+      "destination": "/ExtNsZoho/UpdateVersion/Index"
+    },
+    {
+      "source": "/ExtRTECKEditorPack/AccessibilityFeatures/index.html",
+      "destination": "/ExtRTECKEditorPack/AccessibilityFeatures/Index"
+    },
+    {
+      "source": "/ExtRTECKEditorPack/CKEditorAI/index.html",
+      "destination": "/ExtRTECKEditorPack/CKEditorAI/Index"
+    },
+    {
+      "source": "/ExtRTECKEditorPack/Configurationsave/index.html",
+      "destination": "/ExtRTECKEditorPack/Configurationsave/Index"
+    },
+    {
+      "source": "/ExtRTECKEditorPack/ContentSecurityPolicy/index.html",
+      "destination": "/ExtRTECKEditorPack/ContentSecurityPolicy/Index"
+    },
+    {
+      "source": "/ExtRTECKEditorPack/HowPresetsWork/index.html",
+      "destination": "/ExtRTECKEditorPack/HowPresetsWork/Index"
+    },
+    {
+      "source": "/ExtRTECKEditorPack/index.html",
+      "destination": "/ExtRTECKEditorPack/Index"
+    },
+    {
+      "source": "/ExtRTECKEditorPack/Introduction/index.html",
+      "destination": "/ExtRTECKEditorPack/Introduction/Index"
+    },
+    {
+      "source": "/ExtRTECKEditorPack/PremiumFeatures/index.html",
+      "destination": "/ExtRTECKEditorPack/PremiumFeatures/Index"
+    },
+    {
+      "source": "/ExtRTECKEditorPack/PremiumPack/index.html",
+      "destination": "/ExtRTECKEditorPack/PremiumPack/Index"
+    },
+    {
+      "source": "/ExtRTECKEditorPack/QuickInstallation/index.html",
+      "destination": "/ExtRTECKEditorPack/QuickInstallation/Index"
+    },
+    {
+      "source": "/ExtRTECKEditorPack/RealTimeCollaborationRequirements/index.html",
+      "destination": "/ExtRTECKEditorPack/RealTimeCollaborationRequirements/Index"
+    },
+    {
+      "source": "/ExtRTECKEditorPack/SystemRequirements/index.html",
+      "destination": "/ExtRTECKEditorPack/SystemRequirements/Index"
+    },
+    {
+      "source": "/ExtRTECKEditorPack/Updating/index.html",
+      "destination": "/ExtRTECKEditorPack/Updating/Index"
+    },
+    {
+      "source": "/ExtThemes/CustomElements/index.html",
+      "destination": "/ExtThemes/CustomElements/Index"
+    },
+    {
+      "source": "/ExtThemes/Customization/index.html",
+      "destination": "/ExtThemes/Customization/Index"
+    },
+    {
+      "source": "/ExtThemes/DemoSite/index.html",
+      "destination": "/ExtThemes/DemoSite/Index"
+    },
+    {
+      "source": "/ExtThemes/FAQ/index.html",
+      "destination": "/ExtThemes/FAQ/Index"
+    },
+    {
+      "source": "/ExtThemes/FrontendBuild/index.html",
+      "destination": "/ExtThemes/FrontendBuild/Index"
+    },
+    {
+      "source": "/ExtThemes/GlobalSettingsConfiguration/index.html",
+      "destination": "/ExtThemes/GlobalSettingsConfiguration/Index"
+    },
+    {
+      "source": "/ExtThemes/HelpSupport/index.html",
+      "destination": "/ExtThemes/HelpSupport/Index"
+    },
+    {
+      "source": "/ExtThemes/index.html",
+      "destination": "/ExtThemes/Index"
+    },
+    {
+      "source": "/ExtThemes/Installation/index.html",
+      "destination": "/ExtThemes/Installation/Index"
+    },
+    {
+      "source": "/ExtThemes/Introduction/index.html",
+      "destination": "/ExtThemes/Introduction/Index"
+    },
+    {
+      "source": "/ExtThemes/Localization/index.html",
+      "destination": "/ExtThemes/Localization/Index"
+    },
+    {
+      "source": "/ExtThemes/SEO/index.html",
+      "destination": "/ExtThemes/SEO/Index"
+    },
+    {
+      "source": "/ExtThemes/SpeedPerformance/index.html",
+      "destination": "/ExtThemes/SpeedPerformance/Index"
+    },
+    {
+      "source": "/ExtThemes/TemplatesLayouts/index.html",
+      "destination": "/ExtThemes/TemplatesLayouts/Index"
+    },
+    {
+      "source": "/ExtThemes/UpgradeGuide/index.html",
+      "destination": "/ExtThemes/UpgradeGuide/Index"
+    },
+    {
+      "source": "/License/ExtendTrial/index.html",
+      "destination": "/License/ExtendTrial/Index"
+    },
+    {
+      "source": "/License/GenerateLicenseKey/index.html",
+      "destination": "/License/GenerateLicenseKey/Index"
+    },
+    {
+      "source": "/License/HelpSupport/index.html",
+      "destination": "/License/HelpSupport/Index"
+    },
+    {
+      "source": "/License/index.html",
+      "destination": "/License/Index"
+    },
+    {
+      "source": "/License/Introduction/index.html",
+      "destination": "/License/Introduction/Index"
+    },
+    {
+      "source": "/License/LicenseActivation/index.html",
+      "destination": "/License/LicenseActivation/Index"
+    },
+    {
+      "source": "/License/LicenseDeActivation/index.html",
+      "destination": "/License/LicenseDeActivation/Index"
+    },
+    {
+      "source": "/License/LicenseManager/index.html",
+      "destination": "/License/LicenseManager/Index"
+    },
+    {
+      "source": "/License/Migration/Composer/index.html",
+      "destination": "/License/Migration/Composer/Index"
+    },
+    {
+      "source": "/License/Migration/index.html",
+      "destination": "/License/Migration/Index"
+    },
+    {
+      "source": "/License/Migration/License/index.html",
+      "destination": "/License/Migration/License/Index"
+    },
+    {
+      "source": "/License/OtherProducts/index.html",
+      "destination": "/License/OtherProducts/Index"
+    },
+    {
+      "source": "/License/RegisterAndManageDomains/index.html",
+      "destination": "/License/RegisterAndManageDomains/Index"
+    },
+    {
+      "source": "/License/RenewPurchase/index.html",
+      "destination": "/License/RenewPurchase/Index"
+    },
+    {
+      "source": "/License/SiteSets/index.html",
+      "destination": "/License/SiteSets/Index"
+    },
+    {
+      "source": "/License/UpdateVersion/CheckNewVersion/index.html",
+      "destination": "/License/UpdateVersion/CheckNewVersion/Index"
+    },
+    {
+      "source": "/License/UpdateVersion/Composer/index.html",
+      "destination": "/License/UpdateVersion/Composer/Index"
+    },
+    {
+      "source": "/License/UpdateVersion/index.html",
+      "destination": "/License/UpdateVersion/Index"
+    },
+    {
+      "source": "/License/UpdateVersion/NonComposer/index.html",
+      "destination": "/License/UpdateVersion/NonComposer/Index"
+    },
+    {
+      "source": "/EXTKarma/ConfigureCaptcha/index.html",
+      "destination": "/EXTKarma/CaptchaConfiguration/Index"
+    },
+    {
+      "source": "/EXTKarma/CustomElements/index.html",
+      "destination": "/EXTKarma/ContentBlockElements/Index"
+    },
+    {
+      "source": "/EXTKarma/UpgradeGuide/index.html",
+      "destination": "/EXTKarma/UpgradeGuideForContainer/Index"
+    },
+    {
+      "source": "/AIFoundation/AIContext/index.html",
+      "destination": "/ExtNsT3AF/AIContext/Index"
+    },
+    {
+      "source": "/AIFoundation/AIFeatures/index.html",
+      "destination": "/ExtNsT3AF/AIFeatures/Index"
+    },
+    {
+      "source": "/AIFoundation/AIPrompts/index.html",
+      "destination": "/ExtNsT3AF/AIPrompts/Index"
+    },
+    {
+      "source": "/AIFoundation/AIProviders/index.html",
+      "destination": "/ExtNsT3AF/AIProviders/Index"
+    },
+    {
+      "source": "/AIFoundation/AIUsageAndLogs/index.html",
+      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/AIFoundation/Appendix/index.html",
+      "destination": "/ExtNsT3AF/Appendix/Index"
+    },
+    {
+      "source": "/AIFoundation/Configuration/index.html",
+      "destination": "/ExtNsT3AF/Configuration/Index"
+    },
+    {
+      "source": "/AIFoundation/Dashboard/index.html",
+      "destination": "/ExtNsT3AF/Dashboard/Index"
+    },
+    {
+      "source": "/AIFoundation/FAQ/index.html",
+      "destination": "/ExtNsT3AF/FAQ/Index"
+    },
+    {
+      "source": "/AIFoundation/GetThisExtension/index.html",
+      "destination": "/ExtNsT3AF/GetThisExtension/Index"
+    },
+    {
+      "source": "/AIFoundation/HelpfulLinks/index.html",
+      "destination": "/ExtNsT3AF/HelpfulLinks/Index"
+    },
+    {
+      "source": "/AIFoundation/Installation/index.html",
+      "destination": "/ExtNsT3AF/Installation/Index"
+    },
+    {
+      "source": "/AIFoundation/Introduction/index.html",
+      "destination": "/ExtNsT3AF/Introduction/Index"
+    },
+    {
+      "source": "/AIFoundation/KnownProblems/index.html",
+      "destination": "/ExtNsT3AF/KnownProblems/Index"
+    },
+    {
+      "source": "/AIFoundation/MCPServer/index.html",
+      "destination": "/ExtNsT3AF/MCPServer/Index"
+    },
+    {
+      "source": "/AIFoundation/MCPTools/index.html",
+      "destination": "/ExtNsT3AF/MCPTools/Index"
+    },
+    {
+      "source": "/AIFoundation/Screenshots/index.html",
+      "destination": "/ExtNsT3AF/Screenshots/Index"
+    },
+    {
+      "source": "/AIFoundation/SetupWizard/index.html",
+      "destination": "/ExtNsT3AF/SetupWizard/Index"
+    },
+    {
+      "source": "/AIFoundation/Support/index.html",
+      "destination": "/ExtNsT3AF/Support/Index"
+    },
+    {
+      "source": "/AIFoundation/SystemRequirements/index.html",
+      "destination": "/ExtNsT3AF/SystemRequirements/Index"
+    },
+    {
+      "source": "/AIFoundation/T3PlanetCredits/index.html",
+      "destination": "/ExtNsT3AF/T3PlanetCredits/Index"
+    },
+    {
+      "source": "/AIFoundation/UpdateVersion/index.html",
+      "destination": "/ExtNsT3AF/UpdateVersion/Index"
+    },
+    {
+      "source": "/AIFoundation/UpgradeGuide/index.html",
+      "destination": "/ExtNsT3AF/UpgradeGuide/Index"
+    },
+    {
+      "source": "/AIFoundation/VideoTutorials/index.html",
+      "destination": "/ExtNsT3AF/VideoTutorials/Index"
+    },
+    {
+      "source": "/AIFoundation/WhatDoesItDo/index.html",
+      "destination": "/ExtNsT3AF/WhatDoesItDo/Index"
+    },
+    {
+      "source": "/AIFoundation/GovernanceAndAccess/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/AIFoundation/Configuration/GovernanceAndAccess/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/AIFoundation/DPAandGDPR/index.html",
+      "destination": "/ExtNsT3AF/DPAandGDPR/Index"
+    },
+    {
+      "source": "/AIFoundation/index.html",
+      "destination": "/ExtNsT3AF/Index"
+    },
+    {
+      "source": "/de/AIFoundation/AIContext/index.html",
+      "destination": "/ExtNsT3AF/AIContext/Index"
+    },
+    {
+      "source": "/de/AIFoundation/AIFeatures/index.html",
+      "destination": "/ExtNsT3AF/AIFeatures/Index"
+    },
+    {
+      "source": "/de/AIFoundation/AIPrompts/index.html",
+      "destination": "/ExtNsT3AF/AIPrompts/Index"
+    },
+    {
+      "source": "/de/AIFoundation/AIProviders/index.html",
+      "destination": "/ExtNsT3AF/AIProviders/Index"
+    },
+    {
+      "source": "/de/AIFoundation/AIUsageAndLogs/index.html",
+      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/de/AIFoundation/Appendix/index.html",
+      "destination": "/ExtNsT3AF/Appendix/Index"
+    },
+    {
+      "source": "/de/AIFoundation/Configuration/index.html",
+      "destination": "/ExtNsT3AF/Configuration/Index"
+    },
+    {
+      "source": "/de/AIFoundation/Dashboard/index.html",
+      "destination": "/ExtNsT3AF/Dashboard/Index"
+    },
+    {
+      "source": "/de/AIFoundation/FAQ/index.html",
+      "destination": "/ExtNsT3AF/FAQ/Index"
+    },
+    {
+      "source": "/de/AIFoundation/GetThisExtension/index.html",
+      "destination": "/ExtNsT3AF/GetThisExtension/Index"
+    },
+    {
+      "source": "/de/AIFoundation/HelpfulLinks/index.html",
+      "destination": "/ExtNsT3AF/HelpfulLinks/Index"
+    },
+    {
+      "source": "/de/AIFoundation/index.html",
+      "destination": "/ExtNsT3AF/Index"
+    },
+    {
+      "source": "/de/AIFoundation/Installation/index.html",
+      "destination": "/ExtNsT3AF/Installation/Index"
+    },
+    {
+      "source": "/de/AIFoundation/Introduction/index.html",
+      "destination": "/ExtNsT3AF/Introduction/Index"
+    },
+    {
+      "source": "/de/AIFoundation/KnownProblems/index.html",
+      "destination": "/ExtNsT3AF/KnownProblems/Index"
+    },
+    {
+      "source": "/de/AIFoundation/MCPServer/index.html",
+      "destination": "/ExtNsT3AF/MCPServer/Index"
+    },
+    {
+      "source": "/de/AIFoundation/MCPTools/index.html",
+      "destination": "/ExtNsT3AF/MCPTools/Index"
+    },
+    {
+      "source": "/de/AIFoundation/Screenshots/index.html",
+      "destination": "/ExtNsT3AF/Screenshots/Index"
+    },
+    {
+      "source": "/de/AIFoundation/SetupWizard/index.html",
+      "destination": "/ExtNsT3AF/SetupWizard/Index"
+    },
+    {
+      "source": "/de/AIFoundation/Support/index.html",
+      "destination": "/ExtNsT3AF/Support/Index"
+    },
+    {
+      "source": "/de/AIFoundation/SystemRequirements/index.html",
+      "destination": "/ExtNsT3AF/SystemRequirements/Index"
+    },
+    {
+      "source": "/de/AIFoundation/T3PlanetCredits/index.html",
+      "destination": "/ExtNsT3AF/T3PlanetCredits/Index"
+    },
+    {
+      "source": "/de/AIFoundation/UpdateVersion/index.html",
+      "destination": "/ExtNsT3AF/UpdateVersion/Index"
+    },
+    {
+      "source": "/de/AIFoundation/UpgradeGuide/index.html",
+      "destination": "/ExtNsT3AF/UpgradeGuide/Index"
+    },
+    {
+      "source": "/de/AIFoundation/VideoTutorials/index.html",
+      "destination": "/ExtNsT3AF/VideoTutorials/Index"
+    },
+    {
+      "source": "/de/AIFoundation/WhatDoesItDo/index.html",
+      "destination": "/ExtNsT3AF/WhatDoesItDo/Index"
+    },
+    {
+      "source": "/de/AIFoundation/GovernanceAndAccess/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/de/AIFoundation/Configuration/GovernanceAndAccess/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/de/AIFoundation/DPAandGDPR/index.html",
+      "destination": "/ExtNsT3AF/DPAandGDPR/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/AIContext/index.html",
+      "destination": "/ExtNsT3AF/AIContext/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/AIFeatures/index.html",
+      "destination": "/ExtNsT3AF/AIFeatures/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/AIPrompts/index.html",
+      "destination": "/ExtNsT3AF/AIPrompts/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/AIProviders/index.html",
+      "destination": "/ExtNsT3AF/AIProviders/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/AIUsageAndLogs/index.html",
+      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/Appendix/index.html",
+      "destination": "/ExtNsT3AF/Appendix/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/Configuration/index.html",
+      "destination": "/ExtNsT3AF/Configuration/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/Dashboard/index.html",
+      "destination": "/ExtNsT3AF/Dashboard/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/FAQ/index.html",
+      "destination": "/ExtNsT3AF/FAQ/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/GetThisExtension/index.html",
+      "destination": "/ExtNsT3AF/GetThisExtension/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/HelpfulLinks/index.html",
+      "destination": "/ExtNsT3AF/HelpfulLinks/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/index.html",
+      "destination": "/ExtNsT3AF/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/Installation/index.html",
+      "destination": "/ExtNsT3AF/Installation/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/Introduction/index.html",
+      "destination": "/ExtNsT3AF/Introduction/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/KnownProblems/index.html",
+      "destination": "/ExtNsT3AF/KnownProblems/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/MCPServer/index.html",
+      "destination": "/ExtNsT3AF/MCPServer/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/MCPTools/index.html",
+      "destination": "/ExtNsT3AF/MCPTools/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/Screenshots/index.html",
+      "destination": "/ExtNsT3AF/Screenshots/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/SetupWizard/index.html",
+      "destination": "/ExtNsT3AF/SetupWizard/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/Support/index.html",
+      "destination": "/ExtNsT3AF/Support/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/SystemRequirements/index.html",
+      "destination": "/ExtNsT3AF/SystemRequirements/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/T3PlanetCredits/index.html",
+      "destination": "/ExtNsT3AF/T3PlanetCredits/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/UpdateVersion/index.html",
+      "destination": "/ExtNsT3AF/UpdateVersion/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/UpgradeGuide/index.html",
+      "destination": "/ExtNsT3AF/UpgradeGuide/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/VideoTutorials/index.html",
+      "destination": "/ExtNsT3AF/VideoTutorials/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/WhatDoesItDo/index.html",
+      "destination": "/ExtNsT3AF/WhatDoesItDo/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/GovernanceAndAccess/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/Configuration/GovernanceAndAccess/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/de/ExtNsT3AF/DPAandGDPR/index.html",
+      "destination": "/ExtNsT3AF/DPAandGDPR/Index"
+    },
+    {
+      "source": "/T3AF/AIContext/index.html",
+      "destination": "/ExtNsT3AF/AIContext/Index"
+    },
+    {
+      "source": "/T3AF/AIFeatures/index.html",
+      "destination": "/ExtNsT3AF/AIFeatures/Index"
+    },
+    {
+      "source": "/T3AF/AIPrompts/index.html",
+      "destination": "/ExtNsT3AF/AIPrompts/Index"
+    },
+    {
+      "source": "/T3AF/AIProviders/index.html",
+      "destination": "/ExtNsT3AF/AIProviders/Index"
+    },
+    {
+      "source": "/T3AF/AIUsageAndLogs/index.html",
+      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/T3AF/Appendix/index.html",
+      "destination": "/ExtNsT3AF/Appendix/Index"
+    },
+    {
+      "source": "/T3AF/Configuration/index.html",
+      "destination": "/ExtNsT3AF/Configuration/Index"
+    },
+    {
+      "source": "/T3AF/Dashboard/index.html",
+      "destination": "/ExtNsT3AF/Dashboard/Index"
+    },
+    {
+      "source": "/T3AF/FAQ/index.html",
+      "destination": "/ExtNsT3AF/FAQ/Index"
+    },
+    {
+      "source": "/T3AF/GetThisExtension/index.html",
+      "destination": "/ExtNsT3AF/GetThisExtension/Index"
+    },
+    {
+      "source": "/T3AF/HelpfulLinks/index.html",
+      "destination": "/ExtNsT3AF/HelpfulLinks/Index"
+    },
+    {
+      "source": "/T3AF/Installation/index.html",
+      "destination": "/ExtNsT3AF/Installation/Index"
+    },
+    {
+      "source": "/T3AF/Introduction/index.html",
+      "destination": "/ExtNsT3AF/Introduction/Index"
+    },
+    {
+      "source": "/T3AF/KnownProblems/index.html",
+      "destination": "/ExtNsT3AF/KnownProblems/Index"
+    },
+    {
+      "source": "/T3AF/MCPServer/index.html",
+      "destination": "/ExtNsT3AF/MCPServer/Index"
+    },
+    {
+      "source": "/T3AF/MCPTools/index.html",
+      "destination": "/ExtNsT3AF/MCPTools/Index"
+    },
+    {
+      "source": "/T3AF/Screenshots/index.html",
+      "destination": "/ExtNsT3AF/Screenshots/Index"
+    },
+    {
+      "source": "/T3AF/SetupWizard/index.html",
+      "destination": "/ExtNsT3AF/SetupWizard/Index"
+    },
+    {
+      "source": "/T3AF/Support/index.html",
+      "destination": "/ExtNsT3AF/Support/Index"
+    },
+    {
+      "source": "/T3AF/SystemRequirements/index.html",
+      "destination": "/ExtNsT3AF/SystemRequirements/Index"
+    },
+    {
+      "source": "/T3AF/T3PlanetCredits/index.html",
+      "destination": "/ExtNsT3AF/T3PlanetCredits/Index"
+    },
+    {
+      "source": "/T3AF/UpdateVersion/index.html",
+      "destination": "/ExtNsT3AF/UpdateVersion/Index"
+    },
+    {
+      "source": "/T3AF/UpgradeGuide/index.html",
+      "destination": "/ExtNsT3AF/UpgradeGuide/Index"
+    },
+    {
+      "source": "/T3AF/VideoTutorials/index.html",
+      "destination": "/ExtNsT3AF/VideoTutorials/Index"
+    },
+    {
+      "source": "/T3AF/WhatDoesItDo/index.html",
+      "destination": "/ExtNsT3AF/WhatDoesItDo/Index"
+    },
+    {
+      "source": "/T3AF/GovernanceAndAccess/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/T3AF/Configuration/GovernanceAndAccess/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/T3AF/DPAandGDPR/index.html",
+      "destination": "/ExtNsT3AF/DPAandGDPR/Index"
+    },
+    {
+      "source": "/T3AF/index.html",
+      "destination": "/ExtNsT3AF/Index"
+    },
+    {
+      "source": "/ExtNsFriendlyCaptcha/FAQ/index.html",
+      "destination": "/ExtNsFriendlyCaptcha/FAQ"
+    },
+    {
+      "source": "/ExtNsT3AC/DPAandGDPR/index.html",
+      "destination": "/ExtNsT3AC/DPAandGDPR/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/DPAandGDPR/index.html",
+      "destination": "/ExtNsT3AS/DPAandGDPR/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/DPAandGDPR/index.html",
+      "destination": "/ExtNsT3AA/DPAandGDPR/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/GovernanceAndAccess/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/GovernanceAndAccess/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DPAandGDPR/index.html",
+      "destination": "/ExtNsT3AF/DPAandGDPR/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/DPAandGDPR/index.html",
+      "destination": "/ExtNsT3AI/DPAandGDPR/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/AIFilemeta/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/AIAltText/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/AIAudioGenerator/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/AIAudio/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/T3AAVoiceover/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/AIVoiceover/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/SpeedCoreWebVitals/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Scans/Lighthouse/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/AccessibilityWidgets/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/AccessibilityWidgets/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/CkeditorAccessibilityChecker/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/CkeditorAccessibilityChecker/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/SimplifiedText/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/SimplifiedText/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/SeamlessXLIFFImport&Export/index.html",
+      "destination": "/ExtNsT3AL/SeamlessXLIFFImportAndExport/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisites&SOWCustomLLM/index.html",
+      "destination": "/ExtNsT3AC/CustomLLMSupport/T3ACPrerequisitesAndSOWCustomLLM/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/CustomLLMSupport/T3ASPrerequisites&SOWCustomLLM/index.html",
+      "destination": "/ExtNsT3AS/CustomLLMSupport/T3ASPrerequisitesAndSOWCustomLLM/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/InjectingAISearchResults/index.html",
+      "destination": "/ExtNsT3AS/InjectingAISearchResults/Index"
+    },
+    {
+      "source": "/TonicTypes/TypoTonicProfessional/index.html",
+      "destination": "/TonicTypes/Professional/Index"
+    },
+    {
+      "source": "/License/AllLicenses/index.html",
+      "destination": "/License/AllLicenses/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/Dashboard/index.html",
+      "destination": "/ExtNsT3AF/Configuration/Dashboard/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIProviders/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIProviders/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIContext/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIContext/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIPrompts/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPrompts/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIFeatures/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIFeatures/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AILabel/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AILabel/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIUsageAndLogs/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIPermissions/index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/index.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/Overview/index.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/Overview/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/Configuration/index.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/AIUsage/index.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/AIUsage/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/MCPIntegration/index.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/MCPIntegration/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/Troubleshooting/index.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/Dashboard/index.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/Dashboard/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Integrations/index.html",
+      "destination": "/ExtNsT3AF/Integrations/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Integrations/MCPServer/index.html",
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Integrations/MCPTools/index.html",
+      "destination": "/ExtNsT3AF/Integrations/MCPTools/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Integrations/MCPTesting/index.html",
+      "destination": "/ExtNsT3AF/Integrations/MCPTesting/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/UserGuide/index.html",
+      "destination": "/ExtNsT3AF/UserGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/UserGuide/RolesAndDailyUse/index.html",
+      "destination": "/ExtNsT3AF/UserGuide/RolesAndDailyUse/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/WhereOpens/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/WhereOpens/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AtAGlance/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AtAGlance/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/HowItWorks/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/HowItWorks/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/BeforeYouStart/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/BeforeYouStart/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/StepByStep/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/StepByStep/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/ExampleRequests/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/ExampleRequests/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/KeyboardShortcuts/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/KeyboardShortcuts/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/Conversations/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/Conversations/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/FeatureSettings/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/FeatureSettings/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/Troubleshooting/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Overview/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Overview/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/SeverityPolicy/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/SeverityPolicy/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Governance/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Governance/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Audit/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Audit/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/DemandSignals/index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/DemandSignals/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/Architecture/index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/Architecture/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/ExtensionIntegration/index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/ExtensionIntegration/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/CustomProviders/index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/CustomProviders/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/CustomPromptCatalogs/index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/CustomPromptCatalogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/CustomFeatureCards/index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/CustomFeatureCards/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/FeatureProviderOverrides/index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/FeatureProviderOverrides/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/CustomMcpTools/index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/CustomMcpTools/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/CustomAccessCatalogs/index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/CustomAccessCatalogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Troubleshooting/index.html",
+      "destination": "/ExtNsT3AF/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Troubleshooting/KnownProblems/index.html",
+      "destination": "/ExtNsT3AF/Troubleshooting/KnownProblems/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Troubleshooting/FAQ/index.html",
+      "destination": "/ExtNsT3AF/Troubleshooting/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/ReInstallEverything/index.html",
+      "destination": "/ExtNsT3AI/ReInstallEverything/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/OneClickPageTranslations/index.html",
+      "destination": "/ExtNsT3AI/Translation/OneClickPageTranslations/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/MassTranslation/index.html",
+      "destination": "/ExtNsT3AI/Translation/MassTranslation/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/RecursiveMassTranslate/index.html",
+      "destination": "/ExtNsT3AI/Translation/RecursiveMassTranslate/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/ReTranslatePages/index.html",
+      "destination": "/ExtNsT3AI/Translation/ReTranslatePages/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/AutoReTranslatePage/index.html",
+      "destination": "/ExtNsT3AI/Translation/AutoReTranslatePage/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/TranslateContentElements/index.html",
+      "destination": "/ExtNsT3AI/Translation/TranslateContentElements/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/NewsTranslation/index.html",
+      "destination": "/ExtNsT3AI/Translation/NewsTranslation/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/RecordsTranslation/index.html",
+      "destination": "/ExtNsT3AI/Translation/RecordsTranslation/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/ExtendRecordsTranslation/index.html",
+      "destination": "/ExtNsT3AI/Translation/ExtendRecordsTranslation/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/LanguageGlossary/index.html",
+      "destination": "/ExtNsT3AI/Translation/LanguageGlossary/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/DeepLOfficialGlossary/index.html",
+      "destination": "/ExtNsT3AI/Translation/DeepLOfficialGlossary/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/ActivateTranslatedContent/index.html",
+      "destination": "/ExtNsT3AI/Translation/ActivateTranslatedContent/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/Notes/index.html",
+      "destination": "/ExtNsT3AI/Translation/Notes/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/MassSEO/index.html",
+      "destination": "/ExtNsT3AI/MassSEO/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/UpdateGuide/index.html",
+      "destination": "/ExtNsT3AI/UpdateGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/ReInstallEverything/index.html",
+      "destination": "/ExtNsT3AC/ReInstallEverything/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/AIFeatures/index.html",
+      "destination": "/ExtNsT3AC/Configuration/AIFeatures/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/DisableChatbotOnPage/index.html",
+      "destination": "/ExtNsT3AC/Configuration/DisableChatbotOnPage/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/ExternalEmbed/index.html",
+      "destination": "/ExtNsT3AC/Configuration/ExternalEmbed/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/Permissions/index.html",
+      "destination": "/ExtNsT3AC/Configuration/Permissions/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/MCPTools/index.html",
+      "destination": "/ExtNsT3AC/Configuration/MCPTools/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/WhereToFindIt/index.html",
+      "destination": "/ExtNsT3AC/Configuration/WhereToFindIt/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/ForDevelopers/index.html",
+      "destination": "/ExtNsT3AC/Configuration/ForDevelopers/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/RetrievalConfidenceThreshold/index.html",
+      "destination": "/ExtNsT3AC/RetrievalConfidenceThreshold/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/FAQ/index.html",
+      "destination": "/ExtNsT3AC/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/ReInstallEverything/index.html",
+      "destination": "/ExtNsT3AS/ReInstallEverything/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/AIFeatures/index.html",
+      "destination": "/ExtNsT3AS/Configuration/AIFeatures/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/Dashboard/index.html",
+      "destination": "/ExtNsT3AS/Configuration/Dashboard/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/DataSource/index.html",
+      "destination": "/ExtNsT3AS/Configuration/DataSource/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/TrainingCenter/index.html",
+      "destination": "/ExtNsT3AS/Configuration/TrainingCenter/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/Search/index.html",
+      "destination": "/ExtNsT3AS/Configuration/Search/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/ExternalEmbed/index.html",
+      "destination": "/ExtNsT3AS/Configuration/ExternalEmbed/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/SearchExtensions/index.html",
+      "destination": "/ExtNsT3AS/Configuration/SearchExtensions/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/UsageAnalytics/index.html",
+      "destination": "/ExtNsT3AS/Configuration/UsageAnalytics/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/AIUsageAndLogs/index.html",
+      "destination": "/ExtNsT3AS/Configuration/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/Permissions/index.html",
+      "destination": "/ExtNsT3AS/Configuration/Permissions/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/MCPTools/index.html",
+      "destination": "/ExtNsT3AS/Configuration/MCPTools/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/WhereToFindIt/index.html",
+      "destination": "/ExtNsT3AS/Configuration/WhereToFindIt/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/ForDevelopers/index.html",
+      "destination": "/ExtNsT3AS/Configuration/ForDevelopers/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/BasicAuthentication/index.html",
+      "destination": "/ExtNsT3AS/BasicAuthentication/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/RetrievalConfidenceThreshold/index.html",
+      "destination": "/ExtNsT3AS/RetrievalConfidenceThreshold/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/FAQ/index.html",
+      "destination": "/ExtNsT3AS/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/ReInstallEverything/index.html",
+      "destination": "/ExtNsT3AA/ReInstallEverything/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Dashboard/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Dashboard/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/AIAltText/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/AIAltText/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/AccessibilityWidgets/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/AccessibilityWidgets/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Scans/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Scans/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Scans/Scanner/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Scans/Scanner/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Scans/BulkScans/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Scans/BulkScans/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Scans/Lighthouse/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Scans/Lighthouse/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/FixHub/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/FixHub/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Content/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Content/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/HumanExpertAudit/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/HumanExpertAudit/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/AIVoiceover/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/AIVoiceover/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/AIAudio/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/AIAudio/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/CkeditorAccessibilityChecker/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/CkeditorAccessibilityChecker/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/SimplifiedText/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/SimplifiedText/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FAQ/index.html",
+      "destination": "/ExtNsT3AA/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/FAQ/index.html",
+      "destination": "/ExtNsT3AL/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/FAQ/index.html",
+      "destination": "/ExtNsT3AB/FAQ/Index"
+    },
+    {
+      "source": "/EXTKarma/FAQ/index.html",
+      "destination": "/EXTKarma/FAQ/Index"
+    },
+    {
+      "source": "/EXTGuru/index.html",
+      "destination": "/EXTGuru/Index"
+    },
+    {
+      "source": "/EXTShri/index.html",
+      "destination": "/EXTShri/Index"
+    },
+    {
+      "source": "/TonicTypes/index.html",
+      "destination": "/TonicTypes/Index"
+    },
+    {
+      "source": "/TonicTypes/Introduction/index.html",
+      "destination": "/TonicTypes/Introduction/Index"
+    },
+    {
+      "source": "/TonicTypes/Installation/index.html",
+      "destination": "/TonicTypes/Installation/Index"
+    },
+    {
+      "source": "/TonicTypes/Professional/index.html",
+      "destination": "/TonicTypes/Professional/Index"
+    },
+    {
+      "source": "/TonicTypes/GettingStarted/CreatingAField/index.html",
+      "destination": "/TonicTypes/GettingStarted/CreatingAField/Index"
+    },
+    {
+      "source": "/TonicTypes/GettingStarted/CreatingADatatype/index.html",
+      "destination": "/TonicTypes/GettingStarted/CreatingADatatype/Index"
+    },
+    {
+      "source": "/TonicTypes/GettingStarted/CreatingATemplateVariable/index.html",
+      "destination": "/TonicTypes/GettingStarted/CreatingATemplateVariable/Index"
+    },
+    {
+      "source": "/TonicTypes/GettingStarted/Templating/index.html",
+      "destination": "/TonicTypes/GettingStarted/Templating/Index"
+    },
+    {
+      "source": "/TonicTypes/GettingStarted/index.html",
+      "destination": "/TonicTypes/GettingStarted/Index"
+    },
+    {
+      "source": "/TonicTypes/FrontendPlugins/DisplayRecordsPlugin/index.html",
+      "destination": "/TonicTypes/FrontendPlugins/DisplayRecordsPlugin/Index"
+    },
+    {
+      "source": "/TonicTypes/FrontendPlugins/index.html",
+      "destination": "/TonicTypes/FrontendPlugins/Index"
+    },
+    {
+      "source": "/TonicTypes/ExportImport/index.html",
+      "destination": "/TonicTypes/ExportImport/Index"
+    },
+    {
+      "source": "/TonicTypes/ViewHelpers/index.html",
+      "destination": "/TonicTypes/ViewHelpers/Index"
+    },
+    {
+      "source": "/TonicTypes/Screenshots/index.html",
+      "destination": "/TonicTypes/Screenshots/Index"
+    },
+    {
+      "source": "/TonicTypes/FAQ/index.html",
+      "destination": "/TonicTypes/FAQ/Index"
+    },
+    {
+      "source": "/TonicTypes/Support/index.html",
+      "destination": "/TonicTypes/Support/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/Screenshots/index.html",
+      "destination": "/ExtNsGoogleDocs/Screenshots/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/Reformation/index.html",
+      "destination": "/ExtNsGoogleDocs/Reformation/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/Troubleshooting/index.html",
+      "destination": "/ExtNsGoogleDocs/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/GoodToKnow/index.html",
+      "destination": "/ExtNsGoogleDocs/GoodToKnow/Index"
+    },
     {
       "source": "/FAQ/Index",
       "destination": "/License/Index"
@@ -9245,6 +13060,1214 @@
     {
       "source": "/TonicTypes/TypoTonicProfessional/Index.html",
       "destination": "/TonicTypes/Professional/Index"
+    },
+    {
+      "source": "/index.html",
+      "destination": "/"
+    },
+    {
+      "source": "/License/AllLicenses/Index.html",
+      "destination": "/License/AllLicenses/Index"
+    },
+    {
+      "source": "/License/AllLicenses.html",
+      "destination": "/License/AllLicenses/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/Dashboard/Index.html",
+      "destination": "/ExtNsT3AF/Configuration/Dashboard/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/Dashboard.html",
+      "destination": "/ExtNsT3AF/Configuration/Dashboard/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIProviders/Index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIProviders/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIProviders.html",
+      "destination": "/ExtNsT3AF/Configuration/AIProviders/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIContext/Index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIContext/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIContext.html",
+      "destination": "/ExtNsT3AF/Configuration/AIContext/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIPrompts/Index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPrompts/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIPrompts.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPrompts/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIFeatures/Index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIFeatures/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIFeatures.html",
+      "destination": "/ExtNsT3AF/Configuration/AIFeatures/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AILabel/Index.html",
+      "destination": "/ExtNsT3AF/Configuration/AILabel/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AILabel.html",
+      "destination": "/ExtNsT3AF/Configuration/AILabel/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIUsageAndLogs.html",
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIPermissions/Index.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Configuration/AIPermissions.html",
+      "destination": "/ExtNsT3AF/Configuration/AIPermissions/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/Index.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/Overview/Index.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/Overview/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/Overview.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/Overview/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/Configuration/Index.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/Configuration.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/Configuration/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/AIUsage/Index.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/AIUsage/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/AIUsage.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/AIUsage/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/MCPIntegration/Index.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/MCPIntegration/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/MCPIntegration.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/MCPIntegration/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/Troubleshooting/Index.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/Troubleshooting.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/Dashboard/Index.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/Dashboard/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/Dashboard.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/Dashboard/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Integrations/Index.html",
+      "destination": "/ExtNsT3AF/Integrations/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Integrations.html",
+      "destination": "/ExtNsT3AF/Integrations/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Integrations/MCPServer/Index.html",
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Integrations/MCPServer.html",
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Integrations/MCPTools/Index.html",
+      "destination": "/ExtNsT3AF/Integrations/MCPTools/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Integrations/MCPTools.html",
+      "destination": "/ExtNsT3AF/Integrations/MCPTools/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Integrations/MCPTesting/Index.html",
+      "destination": "/ExtNsT3AF/Integrations/MCPTesting/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Integrations/MCPTesting.html",
+      "destination": "/ExtNsT3AF/Integrations/MCPTesting/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/UserGuide/Index.html",
+      "destination": "/ExtNsT3AF/UserGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/UserGuide.html",
+      "destination": "/ExtNsT3AF/UserGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/UserGuide/RolesAndDailyUse/Index.html",
+      "destination": "/ExtNsT3AF/UserGuide/RolesAndDailyUse/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/UserGuide/RolesAndDailyUse.html",
+      "destination": "/ExtNsT3AF/UserGuide/RolesAndDailyUse/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent",
+      "destination": "/ExtNsT3AF/AskAiAgent/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/WhereOpens/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/WhereOpens/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/WhereOpens.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/WhereOpens/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/WhereOpens",
+      "destination": "/ExtNsT3AF/AskAiAgent/WhereOpens/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AtAGlance/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AtAGlance/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AtAGlance.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AtAGlance/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AtAGlance",
+      "destination": "/ExtNsT3AF/AskAiAgent/AtAGlance/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/HowItWorks/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/HowItWorks/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/HowItWorks.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/HowItWorks/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/HowItWorks",
+      "destination": "/ExtNsT3AF/AskAiAgent/HowItWorks/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/BeforeYouStart/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/BeforeYouStart/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/BeforeYouStart.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/BeforeYouStart/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/BeforeYouStart",
+      "destination": "/ExtNsT3AF/AskAiAgent/BeforeYouStart/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/StepByStep/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/StepByStep/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/StepByStep.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/StepByStep/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/StepByStep",
+      "destination": "/ExtNsT3AF/AskAiAgent/StepByStep/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/ExampleRequests/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/ExampleRequests/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/ExampleRequests.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/ExampleRequests/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/ExampleRequests",
+      "destination": "/ExtNsT3AF/AskAiAgent/ExampleRequests/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/KeyboardShortcuts/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/KeyboardShortcuts/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/KeyboardShortcuts.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/KeyboardShortcuts/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/KeyboardShortcuts",
+      "destination": "/ExtNsT3AF/AskAiAgent/KeyboardShortcuts/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/Conversations/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/Conversations/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/Conversations.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/Conversations/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/Conversations",
+      "destination": "/ExtNsT3AF/AskAiAgent/Conversations/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/FeatureSettings/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/FeatureSettings/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/FeatureSettings.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/FeatureSettings/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/FeatureSettings",
+      "destination": "/ExtNsT3AF/AskAiAgent/FeatureSettings/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/Troubleshooting/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/Troubleshooting.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/Troubleshooting",
+      "destination": "/ExtNsT3AF/AskAiAgent/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Overview/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Overview/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Overview.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Overview/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Overview",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Overview/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/TabsOverview.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Overview/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/TabsOverview",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Overview/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/SeverityPolicy/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/SeverityPolicy/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/SeverityPolicy.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/SeverityPolicy/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/SeverityPolicy",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/SeverityPolicy/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/TabsSeverity.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/SeverityPolicy/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/TabsSeverity",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/SeverityPolicy/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Governance/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Governance/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Governance.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Governance/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Governance",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Governance/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/TabsGovernance.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Governance/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/TabsGovernance",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Governance/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Audit/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Audit/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Audit.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Audit/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Audit",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Audit/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/TabsAudit.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Audit/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/TabsAudit",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/Audit/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/DemandSignals/Index.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/DemandSignals/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/DemandSignals.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/DemandSignals/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/AiAgentModule/DemandSignals",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/DemandSignals/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/TabsDemand.html",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/DemandSignals/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AskAiAgent/TabsDemand",
+      "destination": "/ExtNsT3AF/AskAiAgent/AiAgentModule/DemandSignals/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/Index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/Architecture/Index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/Architecture/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/Architecture.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/Architecture/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/ExtensionIntegration/Index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/ExtensionIntegration/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/ExtensionIntegration.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/ExtensionIntegration/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/CustomProviders/Index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/CustomProviders/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/CustomProviders.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/CustomProviders/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/CustomPromptCatalogs/Index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/CustomPromptCatalogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/CustomPromptCatalogs.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/CustomPromptCatalogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/CustomFeatureCards/Index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/CustomFeatureCards/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/CustomFeatureCards.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/CustomFeatureCards/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/FeatureProviderOverrides/Index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/FeatureProviderOverrides/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/FeatureProviderOverrides.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/FeatureProviderOverrides/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/CustomMcpTools/Index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/CustomMcpTools/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/CustomMcpTools.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/CustomMcpTools/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/CustomAccessCatalogs/Index.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/CustomAccessCatalogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/DeveloperGuide/CustomAccessCatalogs.html",
+      "destination": "/ExtNsT3AF/DeveloperGuide/CustomAccessCatalogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Troubleshooting/Index.html",
+      "destination": "/ExtNsT3AF/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Troubleshooting.html",
+      "destination": "/ExtNsT3AF/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Troubleshooting/KnownProblems/Index.html",
+      "destination": "/ExtNsT3AF/Troubleshooting/KnownProblems/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Troubleshooting/KnownProblems.html",
+      "destination": "/ExtNsT3AF/Troubleshooting/KnownProblems/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Troubleshooting/FAQ/Index.html",
+      "destination": "/ExtNsT3AF/Troubleshooting/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/Troubleshooting/FAQ.html",
+      "destination": "/ExtNsT3AF/Troubleshooting/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/ReInstallEverything/Index.html",
+      "destination": "/ExtNsT3AI/ReInstallEverything/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/ReInstallEverything.html",
+      "destination": "/ExtNsT3AI/ReInstallEverything/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/OneClickPageTranslations/Index.html",
+      "destination": "/ExtNsT3AI/Translation/OneClickPageTranslations/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/OneClickPageTranslations.html",
+      "destination": "/ExtNsT3AI/Translation/OneClickPageTranslations/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/MassTranslation/Index.html",
+      "destination": "/ExtNsT3AI/Translation/MassTranslation/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/MassTranslation.html",
+      "destination": "/ExtNsT3AI/Translation/MassTranslation/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/RecursiveMassTranslate/Index.html",
+      "destination": "/ExtNsT3AI/Translation/RecursiveMassTranslate/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/RecursiveMassTranslate.html",
+      "destination": "/ExtNsT3AI/Translation/RecursiveMassTranslate/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/ReTranslatePages/Index.html",
+      "destination": "/ExtNsT3AI/Translation/ReTranslatePages/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/ReTranslatePages.html",
+      "destination": "/ExtNsT3AI/Translation/ReTranslatePages/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/AutoReTranslatePage/Index.html",
+      "destination": "/ExtNsT3AI/Translation/AutoReTranslatePage/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/AutoReTranslatePage.html",
+      "destination": "/ExtNsT3AI/Translation/AutoReTranslatePage/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/TranslateContentElements/Index.html",
+      "destination": "/ExtNsT3AI/Translation/TranslateContentElements/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/TranslateContentElements.html",
+      "destination": "/ExtNsT3AI/Translation/TranslateContentElements/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/NewsTranslation/Index.html",
+      "destination": "/ExtNsT3AI/Translation/NewsTranslation/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/NewsTranslation.html",
+      "destination": "/ExtNsT3AI/Translation/NewsTranslation/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/RecordsTranslation/Index.html",
+      "destination": "/ExtNsT3AI/Translation/RecordsTranslation/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/RecordsTranslation.html",
+      "destination": "/ExtNsT3AI/Translation/RecordsTranslation/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/ExtendRecordsTranslation/Index.html",
+      "destination": "/ExtNsT3AI/Translation/ExtendRecordsTranslation/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/ExtendRecordsTranslation.html",
+      "destination": "/ExtNsT3AI/Translation/ExtendRecordsTranslation/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/LanguageGlossary/Index.html",
+      "destination": "/ExtNsT3AI/Translation/LanguageGlossary/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/LanguageGlossary.html",
+      "destination": "/ExtNsT3AI/Translation/LanguageGlossary/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/DeepLOfficialGlossary/Index.html",
+      "destination": "/ExtNsT3AI/Translation/DeepLOfficialGlossary/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/DeepLOfficialGlossary.html",
+      "destination": "/ExtNsT3AI/Translation/DeepLOfficialGlossary/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/ActivateTranslatedContent/Index.html",
+      "destination": "/ExtNsT3AI/Translation/ActivateTranslatedContent/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/ActivateTranslatedContent.html",
+      "destination": "/ExtNsT3AI/Translation/ActivateTranslatedContent/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/Notes/Index.html",
+      "destination": "/ExtNsT3AI/Translation/Notes/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Translation/Notes.html",
+      "destination": "/ExtNsT3AI/Translation/Notes/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/MassSEO/Index.html",
+      "destination": "/ExtNsT3AI/MassSEO/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/MassSEO.html",
+      "destination": "/ExtNsT3AI/MassSEO/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/UpdateGuide/Index.html",
+      "destination": "/ExtNsT3AI/UpdateGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/UpdateGuide.html",
+      "destination": "/ExtNsT3AI/UpdateGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/ReInstallEverything/Index.html",
+      "destination": "/ExtNsT3AC/ReInstallEverything/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/ReInstallEverything.html",
+      "destination": "/ExtNsT3AC/ReInstallEverything/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/AIFeatures/Index.html",
+      "destination": "/ExtNsT3AC/Configuration/AIFeatures/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/AIFeatures.html",
+      "destination": "/ExtNsT3AC/Configuration/AIFeatures/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/DisableChatbotOnPage/Index.html",
+      "destination": "/ExtNsT3AC/Configuration/DisableChatbotOnPage/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/DisableChatbotOnPage.html",
+      "destination": "/ExtNsT3AC/Configuration/DisableChatbotOnPage/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/ExternalEmbed/Index.html",
+      "destination": "/ExtNsT3AC/Configuration/ExternalEmbed/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/ExternalEmbed.html",
+      "destination": "/ExtNsT3AC/Configuration/ExternalEmbed/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/Permissions/Index.html",
+      "destination": "/ExtNsT3AC/Configuration/Permissions/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/Permissions.html",
+      "destination": "/ExtNsT3AC/Configuration/Permissions/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/MCPTools/Index.html",
+      "destination": "/ExtNsT3AC/Configuration/MCPTools/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/MCPTools.html",
+      "destination": "/ExtNsT3AC/Configuration/MCPTools/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/WhereToFindIt/Index.html",
+      "destination": "/ExtNsT3AC/Configuration/WhereToFindIt/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/WhereToFindIt.html",
+      "destination": "/ExtNsT3AC/Configuration/WhereToFindIt/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/ForDevelopers/Index.html",
+      "destination": "/ExtNsT3AC/Configuration/ForDevelopers/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/Configuration/ForDevelopers.html",
+      "destination": "/ExtNsT3AC/Configuration/ForDevelopers/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/RetrievalConfidenceThreshold/Index.html",
+      "destination": "/ExtNsT3AC/RetrievalConfidenceThreshold/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/RetrievalConfidenceThreshold.html",
+      "destination": "/ExtNsT3AC/RetrievalConfidenceThreshold/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/FAQ/Index.html",
+      "destination": "/ExtNsT3AC/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AC/FAQ.html",
+      "destination": "/ExtNsT3AC/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/ReInstallEverything/Index.html",
+      "destination": "/ExtNsT3AS/ReInstallEverything/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/ReInstallEverything.html",
+      "destination": "/ExtNsT3AS/ReInstallEverything/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/AIFeatures/Index.html",
+      "destination": "/ExtNsT3AS/Configuration/AIFeatures/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/AIFeatures.html",
+      "destination": "/ExtNsT3AS/Configuration/AIFeatures/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/Dashboard/Index.html",
+      "destination": "/ExtNsT3AS/Configuration/Dashboard/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/Dashboard.html",
+      "destination": "/ExtNsT3AS/Configuration/Dashboard/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/DataSource/Index.html",
+      "destination": "/ExtNsT3AS/Configuration/DataSource/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/DataSource.html",
+      "destination": "/ExtNsT3AS/Configuration/DataSource/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/TrainingCenter/Index.html",
+      "destination": "/ExtNsT3AS/Configuration/TrainingCenter/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/TrainingCenter.html",
+      "destination": "/ExtNsT3AS/Configuration/TrainingCenter/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/Search/Index.html",
+      "destination": "/ExtNsT3AS/Configuration/Search/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/Search.html",
+      "destination": "/ExtNsT3AS/Configuration/Search/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/ExternalEmbed/Index.html",
+      "destination": "/ExtNsT3AS/Configuration/ExternalEmbed/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/ExternalEmbed.html",
+      "destination": "/ExtNsT3AS/Configuration/ExternalEmbed/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/SearchExtensions/Index.html",
+      "destination": "/ExtNsT3AS/Configuration/SearchExtensions/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/SearchExtensions.html",
+      "destination": "/ExtNsT3AS/Configuration/SearchExtensions/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/UsageAnalytics/Index.html",
+      "destination": "/ExtNsT3AS/Configuration/UsageAnalytics/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/UsageAnalytics.html",
+      "destination": "/ExtNsT3AS/Configuration/UsageAnalytics/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/AIUsageAndLogs/Index.html",
+      "destination": "/ExtNsT3AS/Configuration/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/AIUsageAndLogs.html",
+      "destination": "/ExtNsT3AS/Configuration/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/Permissions/Index.html",
+      "destination": "/ExtNsT3AS/Configuration/Permissions/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/Permissions.html",
+      "destination": "/ExtNsT3AS/Configuration/Permissions/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/MCPTools/Index.html",
+      "destination": "/ExtNsT3AS/Configuration/MCPTools/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/MCPTools.html",
+      "destination": "/ExtNsT3AS/Configuration/MCPTools/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/WhereToFindIt/Index.html",
+      "destination": "/ExtNsT3AS/Configuration/WhereToFindIt/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/WhereToFindIt.html",
+      "destination": "/ExtNsT3AS/Configuration/WhereToFindIt/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/ForDevelopers/Index.html",
+      "destination": "/ExtNsT3AS/Configuration/ForDevelopers/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/Configuration/ForDevelopers.html",
+      "destination": "/ExtNsT3AS/Configuration/ForDevelopers/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/BasicAuthentication/Index.html",
+      "destination": "/ExtNsT3AS/BasicAuthentication/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/BasicAuthentication.html",
+      "destination": "/ExtNsT3AS/BasicAuthentication/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/InjectingAISearchResults.html",
+      "destination": "/ExtNsT3AS/InjectingAISearchResults/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/RetrievalConfidenceThreshold/Index.html",
+      "destination": "/ExtNsT3AS/RetrievalConfidenceThreshold/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/RetrievalConfidenceThreshold.html",
+      "destination": "/ExtNsT3AS/RetrievalConfidenceThreshold/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/FAQ/Index.html",
+      "destination": "/ExtNsT3AS/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AS/FAQ.html",
+      "destination": "/ExtNsT3AS/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/ReInstallEverything/Index.html",
+      "destination": "/ExtNsT3AA/ReInstallEverything/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/ReInstallEverything.html",
+      "destination": "/ExtNsT3AA/ReInstallEverything/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Dashboard/Index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Dashboard/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Dashboard.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Dashboard/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/AIAltText/Index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/AIAltText/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/AIAltText.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/AIAltText/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/AccessibilityWidgets/Index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/AccessibilityWidgets/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/AccessibilityWidgets.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/AccessibilityWidgets/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Scans/Index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Scans/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Scans.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Scans/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Scans/Scanner/Index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Scans/Scanner/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Scans/Scanner.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Scans/Scanner/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Scans/BulkScans/Index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Scans/BulkScans/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Scans/BulkScans.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Scans/BulkScans/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Scans/Lighthouse/Index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Scans/Lighthouse/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Scans/Lighthouse.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Scans/Lighthouse/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/FixHub/Index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/FixHub/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/FixHub.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/FixHub/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Content/Index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Content/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/Content.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/Content/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/HumanExpertAudit/Index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/HumanExpertAudit/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/HumanExpertAudit.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/HumanExpertAudit/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/AIVoiceover/Index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/AIVoiceover/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/AIVoiceover.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/AIVoiceover/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/AIAudio/Index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/AIAudio/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/AIAudio.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/AIAudio/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/CkeditorAccessibilityChecker/Index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/CkeditorAccessibilityChecker/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/CkeditorAccessibilityChecker.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/CkeditorAccessibilityChecker/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/SimplifiedText/Index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/SimplifiedText/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/SimplifiedText.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/SimplifiedText/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FAQ/Index.html",
+      "destination": "/ExtNsT3AA/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FAQ.html",
+      "destination": "/ExtNsT3AA/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/FAQ/Index.html",
+      "destination": "/ExtNsT3AL/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AL/FAQ.html",
+      "destination": "/ExtNsT3AL/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/FAQ/Index.html",
+      "destination": "/ExtNsT3AB/FAQ/Index"
+    },
+    {
+      "source": "/ExtNsT3AB/FAQ.html",
+      "destination": "/ExtNsT3AB/FAQ/Index"
+    },
+    {
+      "source": "/EXTKarma/FAQ/Index.html",
+      "destination": "/EXTKarma/FAQ/Index"
+    },
+    {
+      "source": "/EXTKarma/FAQ.html",
+      "destination": "/EXTKarma/FAQ/Index"
+    },
+    {
+      "source": "/EXTGuru/Index.html",
+      "destination": "/EXTGuru/Index"
+    },
+    {
+      "source": "/EXTGuru.html",
+      "destination": "/EXTGuru/Index"
+    },
+    {
+      "source": "/EXTShri/Index.html",
+      "destination": "/EXTShri/Index"
+    },
+    {
+      "source": "/EXTShri.html",
+      "destination": "/EXTShri/Index"
+    },
+    {
+      "source": "/TonicTypes/Index.html",
+      "destination": "/TonicTypes/Index"
+    },
+    {
+      "source": "/TonicTypes.html",
+      "destination": "/TonicTypes/Index"
+    },
+    {
+      "source": "/TonicTypes/Introduction/Index.html",
+      "destination": "/TonicTypes/Introduction/Index"
+    },
+    {
+      "source": "/TonicTypes/Introduction.html",
+      "destination": "/TonicTypes/Introduction/Index"
+    },
+    {
+      "source": "/TonicTypes/Installation/Index.html",
+      "destination": "/TonicTypes/Installation/Index"
+    },
+    {
+      "source": "/TonicTypes/Installation.html",
+      "destination": "/TonicTypes/Installation/Index"
+    },
+    {
+      "source": "/TonicTypes/Professional/Index.html",
+      "destination": "/TonicTypes/Professional/Index"
+    },
+    {
+      "source": "/TonicTypes/Professional.html",
+      "destination": "/TonicTypes/Professional/Index"
+    },
+    {
+      "source": "/TonicTypes/GettingStarted/CreatingAField/Index.html",
+      "destination": "/TonicTypes/GettingStarted/CreatingAField/Index"
+    },
+    {
+      "source": "/TonicTypes/GettingStarted/CreatingAField.html",
+      "destination": "/TonicTypes/GettingStarted/CreatingAField/Index"
+    },
+    {
+      "source": "/TonicTypes/GettingStarted/CreatingADatatype/Index.html",
+      "destination": "/TonicTypes/GettingStarted/CreatingADatatype/Index"
+    },
+    {
+      "source": "/TonicTypes/GettingStarted/CreatingADatatype.html",
+      "destination": "/TonicTypes/GettingStarted/CreatingADatatype/Index"
+    },
+    {
+      "source": "/TonicTypes/GettingStarted/CreatingATemplateVariable/Index.html",
+      "destination": "/TonicTypes/GettingStarted/CreatingATemplateVariable/Index"
+    },
+    {
+      "source": "/TonicTypes/GettingStarted/CreatingATemplateVariable.html",
+      "destination": "/TonicTypes/GettingStarted/CreatingATemplateVariable/Index"
+    },
+    {
+      "source": "/TonicTypes/GettingStarted/Templating/Index.html",
+      "destination": "/TonicTypes/GettingStarted/Templating/Index"
+    },
+    {
+      "source": "/TonicTypes/GettingStarted/Templating.html",
+      "destination": "/TonicTypes/GettingStarted/Templating/Index"
+    },
+    {
+      "source": "/TonicTypes/GettingStarted/Index.html",
+      "destination": "/TonicTypes/GettingStarted/Index"
+    },
+    {
+      "source": "/TonicTypes/GettingStarted.html",
+      "destination": "/TonicTypes/GettingStarted/Index"
+    },
+    {
+      "source": "/TonicTypes/FrontendPlugins/DisplayRecordsPlugin/Index.html",
+      "destination": "/TonicTypes/FrontendPlugins/DisplayRecordsPlugin/Index"
+    },
+    {
+      "source": "/TonicTypes/FrontendPlugins/DisplayRecordsPlugin.html",
+      "destination": "/TonicTypes/FrontendPlugins/DisplayRecordsPlugin/Index"
+    },
+    {
+      "source": "/TonicTypes/FrontendPlugins/Index.html",
+      "destination": "/TonicTypes/FrontendPlugins/Index"
+    },
+    {
+      "source": "/TonicTypes/FrontendPlugins.html",
+      "destination": "/TonicTypes/FrontendPlugins/Index"
+    },
+    {
+      "source": "/TonicTypes/ExportImport/Index.html",
+      "destination": "/TonicTypes/ExportImport/Index"
+    },
+    {
+      "source": "/TonicTypes/ExportImport.html",
+      "destination": "/TonicTypes/ExportImport/Index"
+    },
+    {
+      "source": "/TonicTypes/ViewHelpers/Index.html",
+      "destination": "/TonicTypes/ViewHelpers/Index"
+    },
+    {
+      "source": "/TonicTypes/ViewHelpers.html",
+      "destination": "/TonicTypes/ViewHelpers/Index"
+    },
+    {
+      "source": "/TonicTypes/Screenshots/Index.html",
+      "destination": "/TonicTypes/Screenshots/Index"
+    },
+    {
+      "source": "/TonicTypes/Screenshots.html",
+      "destination": "/TonicTypes/Screenshots/Index"
+    },
+    {
+      "source": "/TonicTypes/FAQ/Index.html",
+      "destination": "/TonicTypes/FAQ/Index"
+    },
+    {
+      "source": "/TonicTypes/FAQ.html",
+      "destination": "/TonicTypes/FAQ/Index"
+    },
+    {
+      "source": "/TonicTypes/Support/Index.html",
+      "destination": "/TonicTypes/Support/Index"
+    },
+    {
+      "source": "/TonicTypes/Support.html",
+      "destination": "/TonicTypes/Support/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/Screenshots/Index.html",
+      "destination": "/ExtNsGoogleDocs/Screenshots/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/Screenshots.html",
+      "destination": "/ExtNsGoogleDocs/Screenshots/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/Reformation/Index.html",
+      "destination": "/ExtNsGoogleDocs/Reformation/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/Reformation.html",
+      "destination": "/ExtNsGoogleDocs/Reformation/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/Troubleshooting/Index.html",
+      "destination": "/ExtNsGoogleDocs/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/Troubleshooting.html",
+      "destination": "/ExtNsGoogleDocs/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/GoodToKnow/Index.html",
+      "destination": "/ExtNsGoogleDocs/GoodToKnow/Index"
+    },
+    {
+      "source": "/ExtNsGoogleDocs/GoodToKnow.html",
+      "destination": "/ExtNsGoogleDocs/GoodToKnow/Index"
+    },
+    {
+      "source": "/ExtNsFriendlyCaptcha/FAQ.html",
+      "destination": "/ExtNsFriendlyCaptcha/FAQ"
     }
   ],
   "description": "Official T3Planet documentation for TYPO3 extensions, templates, AI solutions, licensing, and installation guides.",

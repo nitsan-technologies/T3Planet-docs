@@ -3132,8 +3132,15 @@
     var p = currentPath();
     if (!p.endsWith(".html")) return;
     var clean = p.slice(0, -5);
-    if (clean === "/index") clean = "/";
-    history.replaceState(null, "", clean + location.search + location.hash);
+    if (/(^|\/)index$/.test(clean)) clean = clean.slice(0, -5) || "/";
+    // Mintlify serves no ".html" pages, so this render is the 404 page:
+    // load the clean URL instead of only rewriting the address bar.
+    var target = clean + location.search + location.hash;
+    if (target !== location.pathname + location.search + location.hash) {
+      location.replace(target);
+      return;
+    }
+    history.replaceState(null, "", target);
     routePath = clean;
   }
 
