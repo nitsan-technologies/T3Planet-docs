@@ -1,5 +1,5 @@
 ---
-title: "Tab: Overview"
+title: "Overview"
 description: "The Overview tab of AI Foundation > AI Agent: tool counters, keyboard shortcut, availability, and tools by owning extension."
 keywords:
   - "TYPO3"

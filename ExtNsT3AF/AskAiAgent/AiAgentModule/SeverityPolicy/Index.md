@@ -1,5 +1,5 @@
 ---
-title: "Tab: Severity policy"
+title: "Severity policy"
 description: "The Severity policy tab of AI Foundation > AI Agent: how read, write, destructive, and unclassified tools behave in the AI agent."
 keywords:
   - "TYPO3"
@@ -25,7 +25,7 @@ sidebarTitle: "Severity policy"
 
 Below the table, one card per severity lists the tools and the extension that provides them.
 
-**What you do here:** check which tools can change data before you grant the AI agent to editors. To block individual tools, use the settings described in [Tab: Governance](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/Governance/Index).
+**What you do here:** check which tools can change data before you grant the AI agent to editors. To block individual tools, use the settings described in [Governance](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/Governance/Index).
 
 <Info>
 Write and destructive tools never write on their own. The AI agent always shows a change card and waits for your explicit approval.

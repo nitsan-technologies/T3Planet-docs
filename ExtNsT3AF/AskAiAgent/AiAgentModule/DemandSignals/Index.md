@@ -1,5 +1,5 @@
 ---
-title: "Tab: Demand signals"
+title: "Demand signals"
 description: "The Demand signals tab of AI Foundation > AI Agent: how often editors tried to use locked tools, and how to unlock a tool."
 keywords:
   - "TYPO3"

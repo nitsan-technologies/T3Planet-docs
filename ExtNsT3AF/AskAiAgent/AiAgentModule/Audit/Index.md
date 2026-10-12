@@ -1,5 +1,5 @@
 ---
-title: "Tab: Audit"
+title: "Audit"
 description: "The Audit tab of AI Foundation > AI Agent: what the AI agent records and the most recent agent tool invocations with correlation IDs."
 keywords:
   - "TYPO3"

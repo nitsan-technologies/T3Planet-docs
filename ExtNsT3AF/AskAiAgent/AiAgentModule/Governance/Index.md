@@ -1,5 +1,5 @@
 ---
-title: "Tab: Governance"
+title: "Governance"
 description: "The Governance tab of AI Foundation > AI Agent: credit and request caps, provider allowlist, model override, PII masking, turn guard, and blocked tools."
 keywords:
   - "TYPO3"

@@ -22,19 +22,19 @@ The **AI Agent** module shows how the AI agent is configured on this installatio
 
 <Tabs>
   <Tab title="Overview">
-    The current state of the AI agent: tool counters (**Registered tools**, **Executable now**, **Locked**, **Contributing extensions**), the **Keyboard shortcut** setting, **Availability**, **How tools register**, and **Tools by owning extension**. See [Tab: Overview](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/Overview/Index).
+    The current state of the AI agent: tool counters (**Registered tools**, **Executable now**, **Locked**, **Contributing extensions**), the **Keyboard shortcut** setting, **Availability**, **How tools register**, and **Tools by owning extension**. See [Overview](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/Overview/Index).
   </Tab>
   <Tab title="Severity policy">
-    How the AI agent treats **read**, **write**, **destructive**, and **unclassified** tools, and one list of tools per severity. See [Tab: Severity policy](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/SeverityPolicy/Index).
+    How the AI agent treats **read**, **write**, **destructive**, and **unclassified** tools, and one list of tools per severity. See [Severity policy](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/SeverityPolicy/Index).
   </Tab>
   <Tab title="Governance">
-    The **control matrix**: monthly credit cap, daily request cap, provider allowlist, model override, PII masking, and turn guard, with the source of each limit and its effect on AI agent turns. See [Tab: Governance](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/Governance/Index).
+    The **control matrix**: monthly credit cap, daily request cap, provider allowlist, model override, PII masking, and turn guard, with the source of each limit and its effect on AI agent turns. See [Governance](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/Governance/Index).
   </Tab>
   <Tab title="Audit">
-    **What is recorded** and the **recent agent tool invocations** (time, tool, result, correlation, arguments hash). See [Tab: Audit](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/Audit/Index).
+    **What is recorded** and the **recent agent tool invocations** (time, tool, result, correlation, arguments hash). See [Audit](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/Audit/Index).
   </Tab>
   <Tab title="Demand signals">
-    **Locked tool activation signals** per extension and tool. Sharing with T3Planet is disabled; counts stay on this installation. See [Tab: Demand signals](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/DemandSignals/Index).
+    **Locked tool activation signals** per extension and tool. Sharing with T3Planet is disabled; counts stay on this installation. See [Demand signals](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/DemandSignals/Index).
   </Tab>
 </Tabs>
 
@@ -44,8 +44,8 @@ The AI agent **settings** (limits per turn, conversation retention, and the conv
 
 ## Tab pages
 
-- [Tab: Overview](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/Overview/Index)
-- [Tab: Severity policy](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/SeverityPolicy/Index)
-- [Tab: Governance](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/Governance/Index)
-- [Tab: Audit](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/Audit/Index)
-- [Tab: Demand signals](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/DemandSignals/Index)
+- [Overview](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/Overview/Index)
+- [Severity policy](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/SeverityPolicy/Index)
+- [Governance](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/Governance/Index)
+- [Audit](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/Audit/Index)
+- [Demand signals](/en/latest/ExtNsT3AF/AskAiAgent/AiAgentModule/DemandSignals/Index)
