@@ -1,13 +1,13 @@
 ---
-title: "T3Planet Credits"
-description: "T3Planet Credits — managed AI access for AI Foundation without storing your own vendor API keys."
+title: "AI Credits"
+description: "AI Credits — managed AI access for AI Foundation without storing your own vendor API keys."
 keywords:
   - "TYPO3"
   - "T3Planet"
   - "ExtNsT3AF"
   - "Credits"
   - "BYOK"
-sidebarTitle: "T3Planet Credits"
+sidebarTitle: "AI Credits"
 ---
 
 **AI Credits** lets you use AI without your own account at OpenAI, Anthropic or another AI service. You buy credits from T3Planet, and T3Planet runs the AI requests for you. You don't need to manage any API keys.
