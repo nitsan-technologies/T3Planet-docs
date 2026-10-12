@@ -163,3 +163,13 @@ Append one entry per production release.
 - Mintlify: GitHub check "Mintlify Deployment" completed/success on `150e6cd` (org repo)
 - QA: `mintlify validate` pass; 17/17 new pages 200 with content markers on docs.t3planet.de and t3planet.mintlify.app; first visit to `/ExtNsT3AF/DeveloperGuide/Index.html` and `/index.html` opens Developer Guide (no 404); legacy `AskAiAgent/WhereOpens.html` and `TabsOverview.html` redirect correctly; WhereOpens 9/9 images, 5 tabs, 0 page errors; mobile dark no overflow; homepage 840; banner preserved; sitemap 17/17; `_llms` T3AF index 17/17; regression pages (Karma, T3AC, TonicTypes, T3AI) 200
 - Final status: PASS
+
+### 2026-10-12 — Previous/Next pagination fix (77 groups), "Tab:" prefix removed in AI Agent module pages
+- Authorization: operator said `Start the deployment process`
+- Commit: `8e97c09` by Nitsan `<sanjay@nitsantech.com>` (9 files; `caa1ff1..8e97c09`)
+- Scope: `docs.json` — group root page removed from its own `pages` list in 77 groups (root listed twice made Mintlify Next/Previous point at the current page, e.g. `ExtNsT3AF/AskAiAgent/Index`, `ExtNsT3AF/UserGuide/Index`, product `UpdateVersion` groups); `ExtNsT3AF/AskAiAgent/AiAgentModule` — "Tab:" prefix removed from 5 page titles and links; `_static/t3-stats*` timestamp only (840 pages / 70 products)
+- Excluded: `docs-master/`, `workshops/`, `backup/`, `scripts/**` QA artifacts, `TonicTypes/ExportImport/Images/dashboard_import.jpg` (unreferenced)
+- Push remote: `origin` → `nitsan-technologies/T3Planet-docs` (`master`), no force; local and origin in sync before commit (0/0)
+- Mintlify: GitHub check "Mintlify Deployment" completed/success on `8e97c09` (org repo)
+- QA: `mintlify validate` pass; 77/77 group root pages on docs.t3planet.de have Previous/Next with no self-link (2 pages briefly served stale edge cache, correct on origin and live on re-check); live click test desktop + mobile: Ask AI Agent Next → Where it opens, Previous → Ask AI Agent, AI Agent module tabs Next → Overview; module page has 0 "Tab:"; Overview title "Overview"; homepage 200 with valid certificate
+- Final status: PASS
