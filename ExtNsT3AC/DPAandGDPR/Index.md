@@ -64,7 +64,7 @@ Write down in your privacy documentation:
 - that the spam protection (rate limiting) uses a hashed IP, even when history is off
 - how long you keep conversations and how you delete them
 - what is sent to your AI service (messages, matching website content, instructions)
-- whether you use your own AI key or T3Planet Credits – see [T3Planet Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index)
+- whether you use your own AI key or AI Credits – see [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index)
 - your AI service's own DPA (for example, whether it trains on your data)
 - the email transcript feature, if you use it
 

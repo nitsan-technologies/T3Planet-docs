@@ -44,7 +44,7 @@ For the shared module overview, see [AI Foundation AI Features](/en/latest/ExtNs
 Provider credentials and shared model setup belong to AI Foundation, not to T3AA.
 Before testing T3AA, confirm that the required provider is already configured in the parent extension.
 This includes ElevenLabs: add it as a provider (adapter type **ElevenLabs**)
-with your own ElevenLabs API key. ElevenLabs is not available in T3Planet
+with your own ElevenLabs API key. ElevenLabs is not available in AI
 Credits mode.
 
 Common provider-related references:
@@ -80,7 +80,7 @@ See [AI Audio](/en/latest/ExtNsT3AA/FeatureGuide/AIAudio/Index) and
 | --- | --- |
 | **Activate Feature Ai-Metadata for Images** | Turns on AI file metadata for images, including the **Generate file meta with T3AA** button in the file metadata form. |
 | **Only alternative text generation** | Generates alternative text only. Title and description are not generated. |
-| **Default Ai-Filemeta generate Model** | Default generator for file metadata with your own API keys: `vision-ai` (Vision via your AI provider) or `altText-ai` (AltText.ai). In AI Credits mode this setting is ignored: T3AA always uses Vision through T3Planet Credits. |
+| **Default Ai-Filemeta generate Model** | Default generator for file metadata with your own API keys: `vision-ai` (Vision via your AI provider) or `altText-ai` (AltText.ai). In AI Credits mode this setting is ignored: T3AA always uses Vision through AI Credits. |
 | **Enable AI file metadata generation when uploading files with TYPO3 Core.** | Generates metadata automatically when a new file is added through TYPO3 Core (for example an upload in the File List). It uses the **Default Ai-Filemeta generate Model**. |
 | **Alternative Text Length** | **short** (default) for brief alt text, **long** for detailed alt text. |
 | **Select Default File Metadata Feature** | Prompts used for file metadata: **Default AI Prompt for File Alt Text Short**, **Default AI Prompt for File Alt Text Long** and **Default AI Prompt for File Meta Title Description**. Keep **Default (built-in)** or choose a prompt from [AI Prompts](/en/latest/ExtNsT3AF/AIPrompts/Index). |
@@ -99,7 +99,7 @@ If a T3AA feature does not run, first check the shared provider setup in **AI Fo
 
 T3AA works with both provider modes in **AI Foundation → AI Providers**:
 
-- **AI Credits** — no API keys needed. T3AA sends its AI requests to T3Planet, and each request reduces your credit balance. In T3AA dialogs, **Select AI Provider** shows only **T3Planet Credits**.
+- **AI Credits** — no API keys needed. T3AA sends its AI requests to T3Planet, and each request reduces your credit balance. In T3AA dialogs, **Select AI Provider** shows only **AI Credits**.
 - **Your Own API Keys** — T3AA uses the providers you add in AI Foundation. Your AI vendor bills you directly.
 
 See [AI Credits](/ExtNsT3AF/T3Planet-Credit-System/Index).

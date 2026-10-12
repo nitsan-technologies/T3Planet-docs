@@ -33,7 +33,7 @@ call AI.
 
 | Mode | Generator |
 | --- | --- |
-| **AI Credits** | Always **Vision** through T3Planet Credits. AltText.ai is not used, and **Select AI Provider** shows only **T3Planet Credits**. Credits are charged for the alternative text and for title and description (see [What uses AI credits](/ExtNsT3AA/Configuration/Index#what-uses-ai-credits)). |
+| **AI Credits** | Always **Vision** through AI Credits. AltText.ai is not used, and **Select AI Provider** shows only **AI Credits**. Credits are charged for the alternative text and for title and description (see [What uses AI credits](/ExtNsT3AA/Configuration/Index#what-uses-ai-credits)). |
 | **Your Own API Keys** | **Vision** via your AI provider, or **AltText.ai** if you add an AltText.ai provider in AI Foundation. The default is set in **Default Ai-Filemeta generate Model**. If AltText.ai runs out of credits or hits its quota or rate limit, T3AA falls back to Vision with your default AI provider (for example OpenAI), if one is configured. |
 
 <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmu29ippl0kqlqmrxl4pixxby?utm_source=link" loading="lazy" title="T3AA AI Alt Text Feature Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
@@ -103,7 +103,7 @@ Edit (TYPO3 file record).
    **Activate Feature Ai-Metadata for Images** is enabled.
 4. In the **Generate file meta with T3AA** dialog, choose the provider in
    **Select AI Provider**, then click **Generate AI Metadata**. In AI Credits
-   mode, the only option is **T3Planet Credits**.
+   mode, the only option is **AI Credits**.
 5. Review or edit **Alter Text**, **Title** and **Description** in the dialog.
 6. Click **Save** to write the values to the file metadata.
 

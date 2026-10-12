@@ -24,7 +24,7 @@ AI Foundation is free and open source (GPL-2.0-or-later). Activate it with a fre
 ### Key capabilities
 
 - **AI Providers** – connect your AI service. Your API keys (passwords for the AI service) are stored encrypted.
-- **T3Planet Credits** – optional: use AI without your own AI account.
+- **AI Credits** – optional: use AI without your own AI account.
 - **AI Context** – describe your brand voice once, so all AI texts sound like you.
 - **AI Prompts & Features** – ready-made instructions for the AI, and a choice of AI service per feature.
 - **Usage & Logs** – see how much AI was used and what it cost.
@@ -37,7 +37,7 @@ AI Foundation is free and open source (GPL-2.0-or-later). Activate it with a fre
 You find these in the TYPO3 backend under **AI Universe → AI Foundation**, in this order:
 
 - [Dashboard](/en/latest/ExtNsT3AF/Configuration/Dashboard/Index) – setup progress, provider status and costs at a glance.
-- [AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index) – connect AI services with your own API keys, or use [T3Planet Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index).
+- [AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index) – connect AI services with your own API keys, or use [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index).
 - [AI Context](/en/latest/ExtNsT3AF/Configuration/AIContext/Index) – your brand profile (voice and tone).
 - [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index) – connect AI assistants such as Cursor or Claude Desktop.
 - [MCP Tools](/en/latest/ExtNsT3AF/Integrations/MCPTools/Index) – what AI assistants may do, and which tools are switched on.

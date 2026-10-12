@@ -14,7 +14,7 @@ An **AI provider** is the AI service your website uses, for example OpenAI (Chat
 **Path:** **AI Universe → AI Foundation → AI Providers**
 
 <Tip>
-No account with an AI service? Use [T3Planet Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index) instead. Then you don't need your own API key. Using your own API keys stays the default.
+No account with an AI service? Use [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index) instead. Then you don't need your own API key. Using your own API keys stays the default.
 </Tip>
 
 ![AI Providers with AI Provider Mode and the list of configured providers](./images/ai-providers-list.webp)

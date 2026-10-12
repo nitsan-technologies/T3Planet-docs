@@ -24,7 +24,7 @@ which creates standalone audio files from a script.
    You can also open the page properties and click **Voiceover with T3AA** in
    the top button bar.
 2. In the **Create a page voiceover** dialog, set:
-   * **Select AI Provider** — for example T3Planet Credits or your own
+   * **Select AI Provider** — for example AI Credits or your own
      provider from AI Foundation
    * **Choose model variant** — for example **TTS-1** or **TTS-1 HD**
    * **Different Voices** — the voice, for example **Alloy**, **Echo**,
@@ -38,7 +38,7 @@ which creates standalone audio files from a script.
    the audio on the website (see below).
 
 The model and voice options depend on the selected provider. OpenAI voices are
-available with T3Planet Credits and with your own OpenAI key. ElevenLabs works
+available with AI Credits and with your own OpenAI key. ElevenLabs works
 with your own ElevenLabs API key only.
 
 <Note>
