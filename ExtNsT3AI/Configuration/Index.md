@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-description: "Before using the extensions, you need to configure them."
+description: "Set up T3AI step by step in AI Foundation: AI provider and API keys, the T3AI AI Features cards, permissions, AI Usage and Logs, Scheduler and CLI, and the AI agent."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -9,55 +9,41 @@ keywords:
 sidebarTitle: "Configuration"
 ---
 
-Before using the extensions, you need to configure them. Please follow the settings below to start your T3AI journey.
+T3AI has no extension configuration of its own. **Admin Tools > Settings > Configure extensions** no longer lists `ns_t3ai`. Everything is configured in **AI Universe > AI Foundation**, and the features are used in **AI Universe > AI Assistant**.
 
-## Setup Default AI Model
+**The basic idea in 4 steps**
 
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfqfbb6z0tt0130u29fwj54f?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen ></iframe></div>
+1. **Connect an AI provider** in AI Foundation > AI Providers ([AI provider & API keys](/en/latest/ExtNsT3AI/Configuration/AIProviders/Index)).
+2. **Set the T3AI defaults** on the six AI Assistant cards in AI Foundation > AI Features ([AI Features cards](/en/latest/ExtNsT3AI/Configuration/AIFeatures/Index)).
+3. **Give editors access** in AI Foundation > AI Permissions ([Permissions](/en/latest/ExtNsT3AI/Configuration/Permissions/Index)).
+4. **Check the setup** on the **AI Foundation** tab of the AI Assistant module. The **AI Foundation Setup Checklist** shows done, warning, and open steps, with links to each.
 
-To set up the API for your AI models, follow these steps:
+**Follow the pages in this order.** Pages 1–3 are the basic setup. The others are optional or for later.
 
-- Go to Admin Tools > Settings > Click on "Configure extensions"
-- Click on "AI Engine" and setup your default AI-Models
-- Click "Save ns_t3ai configuration" button
-
-![T3AI_Configuration](./images/Configurations.webp)
-
-![T3AI_Configuration1](./images/Configurations_1.webp)
-
-## Configure APIs of AI Model
-
-Next, set up API keys and other information for your desired AI model:
-
-- Go to Admin Tools > Settings > Click on "Configure extensions"
-- Click on your choosen AI Model e.g., ChatGPT
-- Enter API keys and other informaiton of that AI model
-- Click "Save ns_t3ai configuration" button
-
-## API Key Generation Links for T3AI
-
-Below are the links for generating API keys for various AI models used in T3AI. Please follow the respective links to create and obtain your API keys
-
-- [ChatGPT](https://platform.openai.com/docs/api-reference/introduction)
-- [Deepl](https://support.deepl.com/hc/en-us/articles/360020695820-API-Key-for-DeepL-s-API)
-- [Google Translate](https://cloud.google.com/docs/authentication/api-keys)
-- [Gemini](https://ai.google.dev/gemini-api/docs/api-key)
-- [Claude](https://docs.anthropic.com/en/api/getting-started#accessing-the-api)
-- [Azure](https://learn.microsoft.com/en-us/azure/search/search-security-api-keys)
-- [Unsplash](https://help.unsplash.com/en/articles/2511245-unsplash-api-guidelines)
-- [Openverse](https://api.openverse.org/v1/)
-- [Pixabay](https://pixabay.com/api/docs/)
-- [MidJourney](https://docs.midjourney.com/)
-- [Stability AI](https://platform.stability.ai/docs/api-referenc)
-- [ElevenLabs](https://elevenlabs.io/docs/api-reference/text-to-speech)
-
-## Basic Auth Compatibility
+<CardGroup cols={2}>
+  <Card title="1. AI provider & API keys" icon="plug" href="/en/latest/ExtNsT3AI/Configuration/AIProviders/Index">
+    Provider mode, providers for text, translation, and images, and the default provider.
+  </Card>
+  <Card title="2. AI Features cards" icon="sliders-horizontal" href="/en/latest/ExtNsT3AI/Configuration/AIFeatures/Index">
+    General Settings, AI SEO, AI Pages, AI Content, AI Translation, AI Media, and Basic Auth.
+  </Card>
+  <Card title="3. Permissions" icon="shield" href="/en/latest/ExtNsT3AI/Configuration/Permissions/Index">
+    Module, feature, and record access per backend user group.
+  </Card>
+  <Card title="4. AI Usage & AI Logs" icon="scroll-text" href="/en/latest/ExtNsT3AI/Configuration/AIUsageAndLogs/Index">
+    T3AI requests, tokens, costs, and error messages.
+  </Card>
+  <Card title="5. Scheduler & CLI" icon="terminal" href="/en/latest/ExtNsT3AI/Configuration/SchedulerAndCLI/Index">
+    Process the Mass Translation and Mass SEO queues, and console commands.
+  </Card>
+  <Card title="6. Ask AI agent & MCP" icon="bot" href="/en/latest/ExtNsT3AI/Configuration/AgentAndMCP/Index">
+    The 33 T3AI tools in the AI agent and the MCP server.
+  </Card>
+  <Card title="7. Where your old settings moved" icon="map" href="/en/latest/ExtNsT3AI/Configuration/WhereToFindIt/Index">
+    Only after an upgrade: where each old `ns_t3ai` setting is now.
+  </Card>
+</CardGroup>
 
 <Note>
-
-T3AI is now fully compatible with websites protected by Basic Authentication
-(`.htaccess`).
-You can seamlessly use all T3AI features even when the site requires
-authentication credentials.
-
+Sites protected by HTTP Basic Authentication need the Basic Auth username and password in **AI Features > Access & Notifications**. See [AI Features cards](/en/latest/ExtNsT3AI/Configuration/AIFeatures/Index#access-and-notifications).
 </Note>

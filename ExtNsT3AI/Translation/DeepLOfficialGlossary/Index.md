@@ -30,3 +30,5 @@ It is not applied when you translate with other AI providers (for example, ChatG
 7. Optionally open the saved mapping (eye icon) to review the details.
 
 When you localize a page and choose **Translate with DeepL**, the mapped DeepL glossary is used for that language.
+
+**Related:** [AI Translation card](/en/latest/ExtNsT3AI/Configuration/AIFeatures/Index#ai-translation) (Use DeepL Official Glossary) · [AI provider & API keys](/en/latest/ExtNsT3AI/Configuration/AIProviders/Index)

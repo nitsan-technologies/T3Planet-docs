@@ -34,3 +34,4 @@ When you translate a page with an AI provider (for example, ChatGPT), matching t
 
 - Set glossary terms per language so translations automatically use the correct replacement.
 
+**Related:** [Permissions](/en/latest/ExtNsT3AI/Configuration/Permissions/Index) (Translation Glossary) · [Agent: glossary tools](/en/latest/ExtNsT3AI/AskAiAgent/Tools/Index#glossary) · [Scheduler & CLI](/en/latest/ExtNsT3AI/Configuration/SchedulerAndCLI/Index) (`t3af:glossary:list`)

@@ -27,7 +27,7 @@ sidebarTitle: "Home"
       </button>
     </div>
 
-    <div className="t3-stats-bar"><div className="t3-stat-card"><span className="t3-stat-value" data-t3-stat="pages">840</span><span className="t3-stat-label">Documentation pages</span></div><div className="t3-stat-card"><span className="t3-stat-value" data-t3-stat="products">70</span><span className="t3-stat-label">Products</span></div></div>
+    <div className="t3-stats-bar"><div className="t3-stat-card"><span className="t3-stat-value" data-t3-stat="pages">852</span><span className="t3-stat-label">Documentation pages</span></div><div className="t3-stat-card"><span className="t3-stat-value" data-t3-stat="products">70</span><span className="t3-stat-label">Products</span></div></div>
   </div>
 
   <CardGroup cols={2}>
@@ -141,7 +141,7 @@ sidebarTitle: "Home"
       <a className="t3-recent-item" href="/en/latest/License/UpdateVersion/Index"><span className="t3-recent-icon">↻</span>Update version</a>
       <a className="t3-recent-item" href="/en/latest/License/Migration/Index"><span className="t3-recent-icon">⇄</span>Migration guide</a>
       <a className="t3-recent-item" href="/en/latest/License/RegisterAndManageDomains/Index"><span className="t3-recent-icon">🌐</span>Manage domains</a>
-      <a className="t3-recent-item" href="/en/latest/ExtNsT3AI/UpdateVersion/Index"><span className="t3-recent-icon">✦</span>AI Assistant updates</a>
+      <a className="t3-recent-item" href="/en/latest/ExtNsT3AI/UpgradeGuide/Index"><span className="t3-recent-icon">✦</span>AI Assistant updates</a>
       <a className="t3-recent-item" href="/en/latest/ExtNsT3AC/UpdateVersion/Index"><span className="t3-recent-icon">💬</span>AI Chatbot updates</a>
       <a className="t3-recent-item" href="/en/latest/ExtNsT3AS/UpdateGuide/Index"><span className="t3-recent-icon">🔍</span>AI Search update guide</a>
       <a className="t3-recent-item" href="/en/latest/EXTKarma/UpdateVersion/Index"><span className="t3-recent-icon">🎨</span>Karma updates</a>

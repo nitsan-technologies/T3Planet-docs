@@ -1,5 +1,6 @@
 ---
 title: "Known Problems"
+description: "Known problems with T3AI (EXT:ns_t3ai) and how to solve them, for example new default prompts that are missing after an update."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -8,27 +9,18 @@ keywords:
 sidebarTitle: "Known Problems"
 ---
 
-## Synchronize AI Prompts
+## New default prompts are missing after an update
 
-We continuously improve AI prompts, refining existing ones or adding new ones with each update. To ensure smooth operation, follow the steps below to synchronize AI prompts
+The default prompts (type **System** in [AI Prompts](/en/latest/ExtNsT3AI/Prompts/Index)) are delivered with T3AI and AI Foundation, so an update brings new default prompts automatically. If a T3AI window or the AI Prompts list still shows the old set:
 
-![AI Synchronize](./images/AI_Synchronize.webp)
+1. Check that AI Foundation (`EXT:ns_t3af`) was updated together with T3AI.
+2. Go to **Admin Tools > Maintenance** and click **Flush TYPO3 and PHP Cache**.
+3. Reload the backend.
 
-<Warning>
-Before updating, back up your database to ensure its safety.
-</Warning>
+Your custom prompts are kept.
 
-- **Step 1:** Go to Extension Module
-- **Step 2:** In installed extension > search “T3Ai”
-- **Step 3:** Click on Import DB Button
-- **Step 4:** Click on Button **Re-import data**
+## Report problems
 
-<Warning>
-Please be aware that any custom prompts you create will be overwritten during synchronization. After the process is complete, you must manually recreate your custom AI prompts.
-</Warning>
+For other issues, open a ticket at [t3planet.de/support](https://t3planet.de/support) with your TYPO3, PHP, and T3AI versions and the exact error text.
 
-Test the updated T3AI features to ensure everything is working properly.
-
-## Report Problems
-
-If you encounter issues beyond the prompt synchronization workflow above, please report them to us at [https://t3planet.de/support](https://t3planet.de/support)
+**Related:** [FAQ](/en/latest/ExtNsT3AI/FAQ/Index) · [Prompts](/en/latest/ExtNsT3AI/Prompts/Index)

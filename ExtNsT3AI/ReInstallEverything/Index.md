@@ -1,6 +1,6 @@
 ---
 title: "Reinstall After Upgrading to Extension v14.x.x"
-description: "The steps below are required only when upgrading to Extension v14.x.x from an earlier version."
+description: "Required only when upgrading T3AI to v14.x.x from v13.7.0 or earlier: remove the old version, install T3AI 14 with AI Foundation, update the database, set up AI Foundation, and check the result."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -10,92 +10,82 @@ sidebarTitle: "Reinstall After Upgrading to Extension v14.x.x"
 ---
 
 <Info>
-This upgrade introduces major breaking changes.
-
-The steps below are required **only when upgrading to Extension v14.x.x** from an earlier version.
-
-Before starting the reinstallation process, ensure that you review and complete every step in the order provided.
-
-Skipping or changing the sequence of these steps may result in configuration issues, missing functionality, or data inconsistencies.
-
-If you are performing a fresh installation or upgrade extension, please follow the instructions in the [Installation](/en/latest/ExtNsT3AI/Installation/Index) section.
+These steps are required **only when upgrading to T3AI v14.x.x** from v13.7.0 or earlier. For a fresh installation, follow [Installation](/en/latest/ExtNsT3AI/Installation/Index). For updates within v14, see [Update & Upgrade](/en/latest/ExtNsT3AI/UpgradeGuide/Index).
 </Info>
 
-## Overview
+<Warning>
+Back up the database, `fileadmin`, and the project files first, and test the upgrade on a staging system.
+</Warning>
 
-T3AI now runs as a child extension of AI Foundation (`ns_t3af`).
-If you used T3AI before the new architecture, this guide helps you move your existing setup to the shared AI Foundation model.
+T3AI 14 is a breaking release. T3AI now runs as a child extension of **AI Foundation** (`EXT:ns_t3af`). Providers, API keys, feature settings, prompts, permissions, and logs moved from T3AI to AI Foundation. T3AI keeps the editor tools.
 
-## Previous Version
+Do the steps in this order. Skipping or reordering them can leave missing settings or broken modules.
 
-Earlier T3AI projects usually followed a simpler setup:
+## Before you start
 
-1. Install T3AI directly
-2. Configure the provider inside the child-extension flow
-3. Start using page, content, SEO, translation, or media features
+- Check that your TYPO3 and PHP versions are supported: [System Requirements](/en/latest/ExtNsT3AI/SystemRequirements/Index).
+- Have the API keys of your AI providers ready. You enter them again in AI Foundation.
+- If you use T3AI with `EXT:news`, update `EXT:news` to the latest version as well.
 
-## New Architecture
+## Step 1: Remove the current T3AI
 
-T3AI now depends on AI Foundation for shared providers, authentication, AI features, prompts, and core services.
-T3AI continues to provide the editor-facing workflows, but the shared AI setup now belongs to the parent extension.
+Uninstall `EXT:ns_t3ai`. With Composer, remove the package from the project.
 
-## Before Updating
+## Step 2: Update the T3Planet Shop
 
-Before you update, make sure you:
+Install the latest version of `EXT:ns_license` before you download the new T3AI version.
 
-- back up your files and database
-- test the update on staging first
-- check that your TYPO3 and PHP versions are still supported
-- install or update AI Foundation
-- prepare access to the AI provider credentials used by your project
+## Step 3: Install T3AI 14 and AI Foundation
 
-Review these pages before you start:
+**Non-Composer**
 
-- [AI Foundation Installation](/en/latest/ExtNsT3AF/Installation/Index)
-- [AI Foundation Configuration](/en/latest/ExtNsT3AF/Configuration/Index)
-- [AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index)
+1. Open **Admin Tools > T3Planet Shop** (TYPO3 v14: **System > T3Planet Shop**).
+2. Remove the existing T3AI license key, enter it again, and activate it. The new version is downloaded.
+3. If AI Foundation is not installed yet, install `ns_t3af` from **Admin Tools > Extensions > Get Extensions** ([TER page](https://extensions.typo3.org/extension/ns_t3af)).
 
-## Migration Steps
+**Composer**
 
-1. Back up the TYPO3 project.
-2. Install or update AI Foundation (`ns_t3af`).
-3. Configure the provider and model setup in AI Foundation.
-4. Verify that AI Foundation is active and can complete one test request.
-5. Install or update T3AI.
-6. Run the Database Analyzer and apply pending changes.
-7. Clear TYPO3 caches.
-8. Review T3AI prompts and feature settings if your project uses custom output rules.
-9. Test one workflow from each important area you use, such as page generation, SEO, translation, or media.
+1. In the T3Planet repository entry of your `composer.json`, make sure the `only` parameter contains T3AI:
 
-## What to do after updating
+```json
+"only": [
+  "nitsan/ns-t3ai"
+]
+```
 
-After the update, confirm that:
+2. Install T3AI and AI Foundation:
 
-- T3AI opens correctly in the TYPO3 backend
-- the shared provider from AI Foundation is available
-- prompts still produce the expected writing style
-- page, SEO, translation, or media workflows still return usable results
-- logs do not show unexpected provider or request errors
+```bash
+composer require nitsan/ns-t3ai nitsan/ns-t3af
+```
 
-## Recommended Post-Update Checks
+Details: [License Activation](/en/latest/License/LicenseActivation/Index).
 
-- Run one page or content generation test
-- Test one SEO action if your project uses SEO automation
-- Test one translation or media action if those modules are in use
-- Review [AI Logs](/en/latest/ExtNsT3AI/AISettings/Index#ai-logs) for failures
-- Re-check [AI Prompts](/en/latest/ExtNsT3AI/Prompts/Index) if the wording changed after migration
+## Step 4: Update the database
 
-## Common Migration Issues
+Go to **Admin Tools > Maintenance > Analyze Database Structure**, apply all changes, and flush all caches.
 
-- **AI Foundation is missing**: install `ns_t3af` before updating T3AI.
-- **No provider is available**: complete the shared provider setup in AI Foundation.
-- **Generated results look different**: review prompt rules and feature settings after the migration.
-- **Modules open but requests fail**: clear caches and check the provider credentials again.
+## Step 5: Set up AI Foundation
 
-## Related Documentation
+1. Add your providers in **AI Foundation > AI Providers** and check that they show **Connected**. See [AI provider & API keys](/en/latest/ExtNsT3AI/Configuration/AIProviders/Index).
+2. Open each T3AI card in **AI Foundation > AI Features**, check the values, and click **Save Changes**. Where each old setting is now: [Where your old settings moved](/en/latest/ExtNsT3AI/Configuration/WhereToFindIt/Index).
+3. Review your editor groups in **AI Foundation > AI Permissions**, and check that the access set in older versions is still correct. See [Permissions](/en/latest/ExtNsT3AI/Configuration/Permissions/Index).
+4. Check your prompts in **AI Foundation > AI Prompts**. The default prompts are delivered with the extensions; see [Prompts](/en/latest/ExtNsT3AI/Prompts/Index).
 
-- [Installation](/en/latest/ExtNsT3AI/Installation/Index)
-- [System Requirements](/en/latest/ExtNsT3AI/SystemRequirements/Index)
-- [Upgrade Guide](/en/latest/ExtNsT3AI/UpgradeGuide/Index)
-- [AI Foundation Installation](/en/latest/ExtNsT3AF/Installation/Index)
-- [AI Foundation Configuration](/en/latest/ExtNsT3AF/Configuration/Index)
+## Step 6: Check the result
+
+- The **AI Foundation** tab of the **AI Assistant** module shows no open setup steps.
+- One test per area you use works, for example page generation, SEO, translation, or media.
+- [AI Usage & AI Logs](/en/latest/ExtNsT3AI/Configuration/AIUsageAndLogs/Index) show no provider or request errors.
+- Results still match your writing style. If not, review the [Prompts](/en/latest/ExtNsT3AI/Prompts/Index).
+
+## Common problems after the upgrade
+
+| Problem | Solution |
+|---|---|
+| T3AI modules are missing | Install AI Foundation, then apply the database changes and flush caches. |
+| No provider is available | Add a provider in AI Foundation > AI Providers. |
+| Modules open but requests fail | Check the provider credentials and the **Connection** column, then flush caches. |
+| Results look different | Check the T3AI cards in AI Features and your custom prompts. |
+
+**Related:** [Where your old settings moved](/en/latest/ExtNsT3AI/Configuration/WhereToFindIt/Index) · [Installation](/en/latest/ExtNsT3AI/Installation/Index) · [Update & Upgrade](/en/latest/ExtNsT3AI/UpgradeGuide/Index)

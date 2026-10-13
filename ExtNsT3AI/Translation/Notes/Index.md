@@ -76,4 +76,6 @@ Enter a comma-separated list of FlexForm field keys that should be ignored durin
 
 
 
-Related setup for custom TCA tables: [Extend Records Translation](/ExtNsT3AI/Translation/ExtendRecordsTranslation/Index).
+Related setup for custom TCA tables: [Extend Records Translation](/en/latest/ExtNsT3AI/Translation/ExtendRecordsTranslation/Index).
+
+**Related:** [AI Translation card](/en/latest/ExtNsT3AI/Configuration/AIFeatures/Index#ai-translation) (FlexForm field keys to skip)

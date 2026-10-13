@@ -1,6 +1,6 @@
 ---
 title: "Activate Translated Content"
-description: "Activate hidden translated content elements and control auto-activation after translation."
+description: "Make AI-translated content elements visible in one click with Activate Translated Content, and show a review hint for translations nobody has checked yet."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -9,9 +9,47 @@ keywords:
 sidebarTitle: "Activate Translated Content"
 ---
 
+T3AI creates translated content elements as **hidden**, so you can review them first. When the translation is fine, you activate all of them in one click.
+
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmran84i811r1qmhxkpvvp2rw?embed_v=2&utm_source=embed" loading="lazy" title="Activate Translated Content" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+
+## Activate translated content
+
+1. Open the **Page** module, select the page, and set the display mode to **Languages** (TYPO3 v14: **Language Comparison**).
+2. In the column of the language, click **Activate Translated Content**.
+
+**Result:** The hidden translated content elements of this page and language become visible.
+
+### Auto Activate All Content Elements
+
+The page option **Activate All Content Elements?** decides which elements the button activates:
+
+- **Enabled** (default): all hidden translated elements.
+- **Disabled**: only elements whose original in the default language is visible. Elements that are hidden in the default language stay hidden.
+
+### How to Enable
+
+1. Edit the page properties and open the **AI Assistant** tab.
+2. Enable or disable **Activate All Content Elements?** and save.
+
+![The AI Assistant tab in the page properties with Activate All Content Elements?](../images/t3ai-page-ai-assistant-tab.webp)
+
 ## Preview tagging for translated pages
 
-**To enable tagging for automatically translated pages and content, the process of activating translated pages was updated to include a control option. This information is passed to the Page Context Fluid template, where it can be used to customize the page's appearance. You can also use this feature easily in the extension's Partial.**
+For every AI translation, T3AI sets two page fields:
+
+- `tx_nst3ai_content_not_checked`: **AI Assistant Translated Content has not been checked.**
+- `tx_nst3ai_translated_time`: **Last AI Assistant Translated Date**
+
+When an editor previews a hidden page translated by T3AI, a T3AI badge appears next to the **Preview** badge in the frontend.
+
+![Backend: translation flags on the page](../images/Backend_Image.webp)
+
+![Frontend preview with the T3AI badge](../images/Frontend_with_Preview.webp)
+
+![Frontend without preview mode](../images/Frontend_without_Preview.webp)
+
+Integrators can show the same hint in the frontend. Both fields are available as `data` in the page Fluid template:
 
 ```html
 <f:if condition="{data.tx_nst3ai_content_not_checked}" >
@@ -24,70 +62,8 @@ sidebarTitle: "Activate Translated Content"
 </f:if>
 ```
 
-**Backend Image**
+### Earlier walkthrough
 
-![AI log](../images/Backend_Image.webp)
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfpid1c3048o130uzzi54lbw?embed_v=2&utm_source=embed" loading="lazy" title="Activate Translated Content" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
-**Frontend image without preview mode**
-
-![Frontend image without preview](../images/Frontend_without_Preview.webp)
-
-
-
-During each translation, the fields are automatically updated. The fields "Last translation date" and "T3AI Translated Content has not been checked" are transferred to the page object and can be used in Fluid templates.
-
-This allows you to control information and notes in the Fluid template if needed, but a TYPO3 administrator or developer must add this feature to the template first.
-
-When an editor previews a hidden page translated by T3AI, a T3AI badge will appear alongside the "Preview" badge in the upper right corner.
-
-**Backend Image**
-
-![Backend image](../images/Backend_Image.webp)
-
-**Preview mode image**
-
-![Preview mode image](../images/Frontend_with_Preview.webp)
-
-**Frontend image without preview mode**
-
-![Frontend image without preview](../images/Frontend_without_Preview.webp)
-
-
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmran84i811r1qmhxkpvvp2rw?embed_v=2&utm_source=embed" loading="lazy" title="Activate Translated Content" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfpid1c3048o130uzzi54lbw?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Tired of spending time manually enabling or disabling translated content on your TYPO3 pages? T3AI makes it easy and quick! By default, translated content is turned off, but with just one click on the “Activate Translated Content” button, you can instantly enable it. Save time and let T3AI handle the work for you!
-
-**Step 1**: Open your TYPO3 backend.
-
-**Step 2**: Go to the Page module and select a page from your page tree.
-
-**Step 3**: On your TYPO3 page, choose the language layout.
-
-**Step 4**: Translate your page with T3AI.
-
-**Step 5**: Click the “Translate with T3AI” button.
-
-**Step 6**: Once the page is translated, simply click the “Activate Translated Content” button.
-
-With one click, all your disabled content and elements will be activated.
-
-### Auto Activate All Content Elements
-
-After translation, this feature controls how hidden content elements are handled.
-
-- **Enabled:** All hidden content elements are automatically activated in every language after translation.
-- **Disabled:** Only those content elements that were active in the main language before translation are activated afterward.
-
-### How to Enable
-
-Follow below steps to enable this feature.
-
-![AI log](../images/activate.webp)
-
-1. Open the desired **Page** in TYPO3.
-2. Click **Edit Page Properties**.
-3. Navigate to the **T3AI** tab.
-4. Enable the **Activate All Content Elements** option.
+**Related:** [AI Translation card](/en/latest/ExtNsT3AI/Configuration/AIFeatures/Index#ai-translation) · [Permissions](/en/latest/ExtNsT3AI/Configuration/Permissions/Index)

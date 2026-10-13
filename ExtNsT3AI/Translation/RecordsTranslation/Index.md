@@ -1,6 +1,6 @@
 ---
 title: "Records Translation"
-description: "Translate TCA records and data into different languages with Translate with T3AI."
+description: "Translate TYPO3 records such as news, categories, or your own TCA tables with the Translate with T3AI button in the record form."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -9,27 +9,25 @@ keywords:
 sidebarTitle: "Records Translation"
 ---
 
-Looking for a quick solution to transform your data and language? This T3AI feature lets you easily translate your records and data into different languages using a user-friendly tool.
-
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfqgjyt10v3v130usjypjaae?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+Translates any TCA record, for example categories, news, or records of your own extensions. Only fields with `l10n_mode` `prefixLangTitle` are translated, see [Extend Records Translation](/en/latest/ExtNsT3AI/Translation/ExtendRecordsTranslation/Index).
 
 <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmral3lv90xpgqmhxzmi2p048?embed_v=2&utm_source=embed" loading="lazy" title="Records TCA Translation" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-**Note: We recommend using GPT-4.0 for better results.**
 
-**Step 1** : Open your TYPO3 backend and go to the List module.
+## Translate a record
 
-**Step 2** : Select the page from the page tree.
+1. Open the **List** module and select the folder or page with the records.
+2. Create the translation of the record with the TYPO3 localization.
+3. In the form of the translated record, click **Translate with T3AI** and choose the provider.
+4. Check the translated fields and save.
 
-**Step 3** : Click on **“Translate with T3AI.”**
+The dropdown lists the providers enabled for translation, for example **Deepl**, **Google**, **ChatGPT**, **Gemini**, **Claude**, **Mistral**, or **Translate with T3Planet Credits**.
 
-- Choose the model for translating your TYPO3 TCA records.
-- Click the “Translate” button.
+<Tip>
+In the **List** module, the selector above the record list creates the translation of the page or folder itself with T3AI.
+</Tip>
 
-**Step 4** : Click on the “Translated Page.”
+### Earlier walkthrough
 
-- Edit the translated page.
-- On the top bar, click the “Translate with T3AI” button.
-- Click the “Translate” button.
-- Save your translated records.
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfqgjyt10v3v130usjypjaae?embed_v=2&utm_source=embed" loading="lazy" title="Records Translation" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
+**Related:** [AI Translation card](/en/latest/ExtNsT3AI/Configuration/AIFeatures/Index#ai-translation) · [Permissions](/en/latest/ExtNsT3AI/Configuration/Permissions/Index) · [Agent: Translate a record](/en/latest/ExtNsT3AI/AskAiAgent/Tools/Index#translation)

@@ -26,7 +26,21 @@ sidebarTitle: "AI Assistant"
   <Card title="System Requirements" icon="server" href="/en/latest/ExtNsT3AI/SystemRequirements/Index" />
   <Card title="Installation" icon="download" href="/en/latest/ExtNsT3AI/Installation/Index" />
   <Card title="Configuration" icon="settings" href="/en/latest/ExtNsT3AI/Configuration/Index" />
-  <Card title="Reinstall After Upgrade" icon="wrench" href="/en/latest/ExtNsT3AI/ReInstallEverything/Index" />
+  <Card title="Reinstall After Upgrading to Extension v14.x.x" icon="wrench" href="/en/latest/ExtNsT3AI/ReInstallEverything/Index" />
+  </CardGroup>
+</section>
+
+<section className="t3-landing-section">
+  <p className="t3-landing-eyebrow">Configuration</p>
+  <h2 className="t3-landing-section-title">Settings, access & logs</h2>
+  <CardGroup cols={2}>
+  <Card title="AI provider & API keys" icon="plug" href="/en/latest/ExtNsT3AI/Configuration/AIProviders/Index" />
+  <Card title="AI Features cards" icon="sliders-horizontal" href="/en/latest/ExtNsT3AI/Configuration/AIFeatures/Index" />
+  <Card title="Permissions" icon="shield" href="/en/latest/ExtNsT3AI/Configuration/Permissions/Index" />
+  <Card title="AI Usage & AI Logs" icon="scroll-text" href="/en/latest/ExtNsT3AI/Configuration/AIUsageAndLogs/Index" />
+  <Card title="Scheduler & CLI" icon="terminal" href="/en/latest/ExtNsT3AI/Configuration/SchedulerAndCLI/Index" />
+  <Card title="Ask AI agent & MCP" icon="bot" href="/en/latest/ExtNsT3AI/Configuration/AgentAndMCP/Index" />
+  <Card title="Where your old settings moved" icon="map" href="/en/latest/ExtNsT3AI/Configuration/WhereToFindIt/Index" />
   </CardGroup>
 </section>
 
@@ -39,9 +53,10 @@ sidebarTitle: "AI Assistant"
   <Card title="SEO" icon="search" href="/en/latest/ExtNsT3AI/SEO/Index" />
   <Card title="Mass SEO" icon="list-checks" href="/en/latest/ExtNsT3AI/MassSEO/Index" />
   <Card title="Content" icon="pen-line" href="/en/latest/ExtNsT3AI/Content/Index" />
-  <Card title="Media" icon="image" href="/en/latest/ExtNsT3AI/Media/Index" />
+  <Card title="T3AI Media" icon="image" href="/en/latest/ExtNsT3AI/Media/Index" />
   <Card title="Prompts" icon="message-square" href="/en/latest/ExtNsT3AI/Prompts/Index" />
-  <Card title="T3AI Features" icon="sliders-horizontal" href="/en/latest/ExtNsT3AI/AISettings/Index" />
+  <Card title="Ask AI agent" icon="bot" href="/en/latest/ExtNsT3AI/AskAiAgent/Index" />
+  <Card title="More T3AI tools" icon="wrench" href="/en/latest/ExtNsT3AI/AISettings/Index" />
   </CardGroup>
 </section>
 
@@ -50,15 +65,13 @@ sidebarTitle: "AI Assistant"
   <h2 className="t3-landing-section-title">Updates & support</h2>
   <CardGroup cols={2}>
   <Card title="DPA & GDPR" icon="shield" href="/en/latest/ExtNsT3AI/DPAandGDPR/Index" />
-  <Card title="Upgrade Guide" icon="arrow-up-right" href="/en/latest/ExtNsT3AI/UpgradeGuide/Index" />
-  <Card title="Update Guide" icon="arrow-up" href="/en/latest/ExtNsT3AI/UpdateGuide/Index" />
-  <Card title="Update Version" icon="refresh-cw" href="/en/latest/ExtNsT3AI/UpdateVersion/Index" />
+  <Card title="Update & Upgrade" icon="arrow-up" href="/en/latest/ExtNsT3AI/UpgradeGuide/Index" />
   <Card title="FAQ" icon="circle-question-mark" href="/en/latest/ExtNsT3AI/FAQ/Index" />
   <Card title="Known Problems" icon="triangle-alert" href="/en/latest/ExtNsT3AI/KnownProblems/Index" />
   <Card title="Appendix" icon="book" href="/en/latest/ExtNsT3AI/Appendix/Index" />
   <Card title="Releases" icon="tag" href="/en/latest/ExtNsT3AI/Releases/Index" />
   <Card title="Support" icon="life-buoy" href="/en/latest/ExtNsT3AI/Support" />
-  <Card title="Get Extension" icon="shopping-cart" href="/en/latest/ExtNsT3AI/BuyNow" />
+  <Card title="Get This Extension" icon="shopping-cart" href="/en/latest/ExtNsT3AI/BuyNow" />
   <Card title="AI Foundation" icon="layers" href="/en/latest/ExtNsT3AF/Introduction/Index" />
   </CardGroup>
 </section>

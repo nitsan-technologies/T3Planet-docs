@@ -23,11 +23,13 @@ Otherwise, you can check whether a new update is available for your purchased TY
 
 ## Screenshots
 
-![New version available](images/NewVersionUpdate.webp)
+T3Planet also sends an email when a new version of your product is released:
 
-![Up to date version](images/UptoDateVersion.webp)
+![New version available email](images/NewVersionUpdate.webp)
 
-![Get latest version](images/GetLatestVersion.webp)
+In T3Planet Shop, click **Get Updates** to check all your licensed products:
+
+![T3Planet Shop with the Get Updates button highlighted](images/t3planet-shop-get-updates.webp)
 
 <Steps>
   <Step title="Step 1">

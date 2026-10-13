@@ -39,13 +39,13 @@ T3AI. It translates your pages and content. AI Localization (T3AL) only translat
 
 ### Which AI model does T3AI use, and where does the data go?
 
-The provider you set up in AI Foundation. With your own API keys (the default), requests go from your server to that provider, with no T3Planet server in between. With the optional [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index), requests are routed through T3Planet to the AI providers. Details: [DPA & GDPR](/en/latest/ExtNsT3AI/DPAandGDPR/Index).
+The provider you set up in AI Foundation. With your own API keys (the default), requests go from your server to that provider, with no T3Planet server in between. With the optional [T3Planet Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index), requests are routed through T3Planet to the AI providers. Details: [DPA & GDPR](/en/latest/ExtNsT3AI/DPAandGDPR/Index).
 
 ## Troubleshooting
 
 ### New prompts from an update do not show up
 
-Synchronize the AI prompts after the update. Back up your database first: the sync overwrites custom prompts, so note them down and add them again afterwards. Steps: [Known Problems](/en/latest/ExtNsT3AI/KnownProblems/Index).
+Default prompts are delivered with the extensions. Update AI Foundation together with T3AI, then flush the TYPO3 and PHP caches in **Admin Tools > Maintenance**. Your custom prompts are kept. See [Known Problems](/en/latest/ExtNsT3AI/KnownProblems/Index).
 
 ### Something else is not working
 

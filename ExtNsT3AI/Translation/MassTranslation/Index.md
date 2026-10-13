@@ -1,6 +1,6 @@
 ---
 title: "Mass Translation"
-description: "Queue, configure, and run mass translation tasks for multiple pages, including scheduler and CLI."
+description: "Translate many TYPO3 pages at once: queue pages in Manage Mass Translation or from the page tree, then let the Scheduler or CLI process the queue."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -9,24 +9,18 @@ keywords:
 sidebarTitle: "Mass Translation"
 ---
 
+Mass Translation translates many pages in the background. You put pages in a **queue**, and a Scheduler task translates them one batch at a time. This avoids long waits in the browser and works for whole sites.
+
 ## Mass Translation
 
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfpei6sj2kta1d3n7mns6mnh?embed_v=2&utm_source=embed" loading="lazy" title="Mass Translation" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfpei6sj2kta1d3n7mns6mnh?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+There are two ways to fill the queue:
 
-The **Mass Translate** module is designed to manage and schedule translation tasks for multiple pages.
-With this feature, you can select or deselect languages, or delete scheduled translation tasks.
-
-**Key Features:**
-
-- Manage a list of scheduled translation tasks.
-- Change target languages for mass translation.
-- Automate translation for multiple pages at once, saving time and effort.
+- **Manage Mass Translation** module: pick pages and languages in one place. No page settings needed.
+- **Page tree context menu**: queue single pages or page trees. The pages need **Allow Mass-Translate?** enabled.
 
 ## Manage Mass Translation
-
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmrakc1xg0vwcqmhxzehlh60d?embed_v=2&utm_source=embed" loading="lazy" title="Manage Mass Translation" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-
 
 <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmttyv0zu149lqmgz7dxycp3b?embed_v=2&utm_source=embed" loading="lazy" title="Manage Mass Translation Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
@@ -45,64 +39,77 @@ Open it from **AI Assistant → Translation → Manage Mass Translation**.
 - Add pages to the queue by page ID and choose the target language.
 - Run the related Scheduler task to process queued translations.
 
-**How to manage mass translations:**
+### Add pages to the queue
 
-1. Open **AI Assistant** and go to the **Translation** tab.
-2. Click **Manage Mass Translation**.
-3. Select the pages you want to translate (or use **Add pages to queue** and enter a page ID).
-4. Open the language configuration, select the target languages, and click **Save**.
-5. Review queue tabs (**Pending**, **Completed**, **Failed**, **All**) as needed.
-6. Use **Re-queue failed** if any jobs failed and should be retried.
-7. Open **Scheduler** and run the mass translation task to process the queue.
+1. Click **Add pages to queue**.
+2. Choose the **Site root** and click **Continue**. The page tree of that site loads.
+3. Tick the pages under **Select pages**, or use **Select all**. For a single page, tick **Include all subpages** to add the whole branch.
+4. Optionally tick **Re-translate mode (re-translate queue)** to replace existing translations instead of creating new ones.
+5. Select the target languages, or **Select all languages**.
+6. Click **Add to queue**.
 
-**Scheduler settings for Manage Mass Translation:**
+### Work with the queue
 
-Use the schedulable command:
+![Manage Mass Translation with the status summary, status tabs, and queue actions](../images/t3ai-mass-translation-queue.webp)
 
-`t3af:bulk:translate` — *Translate pages from bulk translation queue*
-
-Configure these command options in the Scheduler task settings:
-
-- **batch-size** — Number of pages processed per batch within one run.
-- **limit** — Cap one run at N pending queue pages; the rest stay for the next scheduler tick. `0` = unlimited.
-
-![Scheduler options batch-size and limit for Manage Mass Translation](../images/mass_translation_scheduler_limit.webp)
-
-Example: set **batch-size** to `10` and **limit** to `10` so each scheduler run processes up to 10 pending pages in batches of 10. Remaining pending pages stay in the queue for the next tick.
+- The summary bar counts **Pending**, **Processing**, **Completed**, and **Failed** entries. Filter with the tabs **All**, **Pending**, **Completed**, and **Failed**, and by **Site root**.
+- The table shows the page, site, language, **Status**, **Mode** (Translate or Re-translate), **Allowed Languages**, and **Last processed**.
+- **Re-queue failed** sends all failed pages back to Pending. **Re-queue Selected (n)** does this for the ticked pages.
+- **Clear completed** removes finished entries. **Delete selected (n)** removes the ticked entries.
 
 ## Mass Pages Translation
 
 <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmralcltn0ycwqmhx52pq7pre?embed_v=2&utm_source=embed" loading="lazy" title="Mass Translate Pages" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
+Queue pages directly from the page tree.
 
-Update numerous translated pages simultaneously. Refresh your website content using precise, current AI-driven translations.
+1. Edit the page properties, open the **AI Assistant** tab, enable **Allow Mass-Translate?**, and save.
+2. Right-click the page in the page tree and choose **Mass Translation > Add this page to the scheduler queue**.
+
+![The AI Assistant tab in the page properties](../images/t3ai-page-ai-assistant-tab.webp)
+
+Other entries in the same submenu:
+
+- **Recursively add this page to the scheduler queue**: the page and its subpages. See [Recursive Mass Translate](/en/latest/ExtNsT3AI/Translation/RecursiveMassTranslate/Index).
+- **Add this page to the auto-renew translation queue in the scheduler**: re-translate the page in the next run.
+
+## Process the queue
+
+On TYPO3 v14, create these Scheduler tasks:
+
+- **T3AF: Bulk Translate (queue)** for new translations
+- **T3AF: Bulk Re-translate (queue)** for entries in Re-translate mode
+
+Both have **Batch size** (pages per batch, default 10) and **Pages per run** (0 = whole queue).
+
+On TYPO3 v13, create an **Execute console commands** task with `t3af:bulk:translate` (or `t3af:bulk:retranslate`) and set the options `batch-size` and `limit`:
+
+![Scheduler options batch-size and limit on TYPO3 v13](../images/mass_translation_scheduler_limit.webp)
+
+Example: **batch-size** `10` and **limit** `10` processes up to 10 pending pages per run. The rest stay in the queue for the next run.
 
 <Note>
-For Mass page translation, in all pages Allow Mass translation option should be enabled and if you add new pages do not forgot to perform step 5.
+The Scheduler only runs when a cron job on the server triggers it. Without cron, run the task manually in the **Scheduler** module or use the CLI below.
 </Note>
-
-you can translate multiple pages and their content from the default language to various other languages efficiently,follow below steps to use this feature.
-
-- **Step 1** - go to page module
-- **Step 2** - Select the page & Click on edit page properties
-- **Step 3** - go to tab T3 AI
-- **Step 4** - Enable option Allow mass translation
-- **Step 5** - click on drop Down T3AI> Go to Mass translation> Click on **Add this page to scheduler queries**
-
-Whenever the Scheduler will run successfully, all the pages will translate
 
 ## Run Mass Translation: From TYPO3-CLI
 
+Composer:
 
-**T3AI Mass Translation feature** allows users to efficiently translate multiple elements or entire pages into different languages simultaneously.This is typically useful in multilingual websites where translating individual elements manually would be time-consuming.
-
-To run a mass translation from the CLI (Command Line Interface), follow these general steps
-
-- **Step 1:** Go to your command line/Terminal.
-- **Step 2:** Run the following command
-
-```Python
-Syntax: <php-path> <typo3-bin-path> scheduler:run --task=<id> -f
-
-Example: /usr/bin/php typo3/sysext/core/bin/typo3 scheduler:run --task=2 -f
+```bash
+vendor/bin/typo3 t3af:bulk:translate --batch-size=10 --limit=10
+vendor/bin/typo3 t3af:bulk:retranslate --batch-size=10 --limit=10
+vendor/bin/typo3 scheduler:run --task=<taskUid> -f
 ```
+
+Non-Composer:
+
+```bash
+php typo3/sysext/core/bin/typo3 t3af:bulk:translate --batch-size=10 --limit=10
+php typo3/sysext/core/bin/typo3 t3af:bulk:retranslate --batch-size=10 --limit=10
+php typo3/sysext/core/bin/typo3 scheduler:run --task=<taskUid> -f
+```
+
+Replace `<taskUid>` with the task UID from the Scheduler module. All options: [Scheduler & CLI](/en/latest/ExtNsT3AI/Configuration/SchedulerAndCLI/Index).
+
+**Related:** [AI Translation card](/en/latest/ExtNsT3AI/Configuration/AIFeatures/Index#ai-translation) · [Permissions](/en/latest/ExtNsT3AI/Configuration/Permissions/Index) · [Agent: queue tools](/en/latest/ExtNsT3AI/AskAiAgent/Tools/Index#mass-translation-queue) · [Scheduler & CLI](/en/latest/ExtNsT3AI/Configuration/SchedulerAndCLI/Index) · [AI Usage & AI Logs](/en/latest/ExtNsT3AI/Configuration/AIUsageAndLogs/Index)

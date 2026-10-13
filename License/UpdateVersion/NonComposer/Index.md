@@ -24,11 +24,13 @@ What's minor version update? It means, if you want to update product with securi
 
 ### Step 2. System Update & Flush Cache
 
-- Go to Admin Tools > Maintenance > Analyze Database (if any)
-- Go to Admin Tools > Maintenance > Dump Autoload
-- Go to Admin Tools > Maintenance > Flush Cache
+Open **System → Maintenance** (TYPO3 v12/v13: Admin Tools → Maintenance):
 
-![Steps After Update Non Composer](./images/Steps_After_Update_Non_Composer.webp)
+- **Analyze database** (if any changes are listed)
+- **Dump autoload**
+- **Flush cache**
+
+![Maintenance module with Flush cache, Analyze database, and Dump autoload highlighted](./images/maintenance-after-update.webp)
 
 ## Major Version Updates
 
@@ -36,7 +38,7 @@ What's major version update? It means, if you want to update product with major 
 
 ### Step 1. Temporary De-Activate Extension
 
-Go to Admin Tools > Extensions > De-Activate the extension.
+Go to **System → Extensions** (TYPO3 v12/v13: Admin Tools → Extensions) and deactivate the extension.
 
 ### Step 2. Update New Version
 
@@ -50,12 +52,14 @@ Go to Extensions Manager and Update all third party dependent TYPO3 extensions t
 
 ### Step 4. Activate Extension
 
-Go to Admin Tools > Extensions > Activate the extension.
+Go to **System → Extensions** (TYPO3 v12/v13: Admin Tools → Extensions) and activate the extension.
 
 ### Step 5. System Update & Flush Cache
 
-- Go to Admin Tools > Maintenance > Analyze Database (if any)
-- Go to Admin Tools > Maintenance > Dump Autoload
-- Go to Admin Tools > Maintenance > Flush Cache
+Open **System → Maintenance** (TYPO3 v12/v13: Admin Tools → Maintenance):
 
-![Steps After Update Non Composer](./images/Steps_After_Update_Non_Composer.webp)
+- **Analyze database** (if any changes are listed)
+- **Dump autoload**
+- **Flush cache**
+
+![Maintenance module with Flush cache, Analyze database, and Dump autoload highlighted](./images/maintenance-after-update.webp)

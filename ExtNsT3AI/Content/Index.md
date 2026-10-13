@@ -1,6 +1,6 @@
 ---
 title: "Content"
-description: "This feature adds an AI copilot to the TYPO3 Rich Text Editor (RTE), making it easier for users to add and update content. The copilot offers helpful suggestions and simplifies editing and formatting, improving the overall user experience."
+description: "Write, rewrite, and translate TYPO3 content with T3AI: AI tools in the rich text editor, the Content Rewriter for pages, news, and blogs, and AI buttons in the content element form."
 keywords:
   - "TYPO3"
   - "T3Planet"
@@ -9,251 +9,155 @@ keywords:
 sidebarTitle: "Content"
 ---
 
+The **Content** tab of the AI Assistant module groups the T3AI tools for writing text. Some tools open a window from the tab. Others live where you edit content: in the rich text editor (RTE) and in the content element form.
+
+Settings, permissions, AI agent tools, and logs for this feature are listed in [Settings, access and logs](#settings-access-and-logs).
+
+| Tool | Where you use it |
+|---|---|
+| [RTE AI Copilot](#rte-ai-copilot) | Toolbar of the rich text editor |
+| [Content Rewriter](#content-rewriter), [News](#news-content-rewriter), [Blog](#blog-content-rewriter) | **AI Assistant > Content**, button **Build AI Rewriter** |
+| [Content Elements (Create)](#content-elements-create) and [(Edit)](#content-elements-edit) | Header of the content element form |
+| [Content Translate](#content-translate) | Header of the content element form |
+| [Content Fields](#content-fields) | **T3AI** button next to the fields of a content element |
+
+<Note>
+For the tools that live in the editor or the content element form, the card button in the Content tab opens a short demo, not the tool itself.
+</Note>
+
 ## RTE AI Copilot
 
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfparfqb2e1z1d3nuc7u27hg?embed_v=2&utm_source=embed" loading="lazy" title="RTE AI Copilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfparfqb2e1z1d3nuc7u27hg?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-This feature adds an AI copilot to the TYPO3 Rich Text Editor (RTE), making it easier for users to add and update content. The copilot offers helpful suggestions and simplifies editing and formatting, improving the overall user experience.
+T3AI adds three buttons to the CKEditor toolbar: **T3AI Prompts**, **T3AI Translator**, and the AI Assistant Copilot.
 
-Follow below Step to Use this feature,
+### Enable the T3AI RTE preset
 
-- **Step 1** - goto page module and Select the page
-- **Step 2** - click on edit Page property
-- **Step 3** - go to Tab Resources
-- **Step 4** - include **Ns T3Ai :: Config RTE Preset (ns_t3ai)** in Include static Page TSconfig and Save the configuration
+1. Edit the root page properties and open the **Resources** tab.
+2. Under **Include static Page TSconfig**, add **Ns T3Ai :: Config RTE Preset (ns_t3ai)** and save.
 
-![Manage glossary](./images/new_rte.webp)
+![Include the T3AI RTE preset in the page properties](./images/new_rte.webp)
 
-Now add RTE in into page and you can see AI-copilot in RTE
+The preset sets `RTE.default.preset = nst3ai`. If you use your own RTE preset, copy the T3AI `importModules` and the toolbar items `t3aicommands`, `t3aitranslator`, and `t3aiassistance` from `EXT:ns_t3ai/Configuration/RTE/Plugin.yaml` into it.
 
-## T3AI Prompts
+### T3AI Prompts
 
-This feature helps optimize your inserted content using prompts.
+Select text in the editor, click **T3AI Prompts**, and choose an action:
 
-![Manage glossary](./images/T3AI_Prompts.webp)
+- **Optimize Content**: Improve Content, Shorten Content, Expand Content, Simplify Language, Spelling & Grammar
+- **Adjust Content**: Summarize, Rewrite, Bulletize
+- **Tone of Content**: Business, Legal, Journal, Friendly, Poetic
 
-## T3AI Transalator
+Use **Search T3AI Prompts** to find an action quickly.
 
-This feature allows you to translate selected content into your chosen language.
+![T3AI Prompts in the RTE toolbar](./images/Co_Prompts.webp)
 
-![Manage glossary](./images/T3AI_Translation.webp)
+### T3AI Translator
 
-## T3AI Prompts
+Select text, click **T3AI Translator**, and choose the target language. The list shows default and custom languages.
 
-This feature helps optimize your inserted content using prompts.
+![T3AI Translator in the RTE toolbar](./images/co_Translate.webp)
 
-![Manage glossary](./images/Co_Prompts.webp)
+### AI Assistant Copilot
 
-## T3AI Transalator
-
-This feature allows you to translate selected content into your chosen language.
-
-![Manage glossary](./images/co_Translate.webp)
+Click the sparkle icon to open the **AI Assistant Copilot**. Describe what you need, set **Writing Style**, **Writing Tone**, **Temperature** (higher is more creative), and **Number of results**, then insert the text you like.
 
 ## Content Rewriter
 
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfo05vp51bih1d3nx2mm01pa?step=1" loading="lazy" title="Content Rewriter" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfo05vp51bih1d3nx2mm01pa?step=1" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Stop spending hours rewriting content by hand. T3AI Content Writer lets you generate fresh and unique content quickly and easily. Whether you need blog posts, news articles, or website content, T3AI Content Writer has you covered. Generate tailored content in seconds.
+Rewrites existing content in a new style. Card **Content Rewriter**, button **Build AI Rewriter**.
 
-**Note: Please select the Storage folder from the page tree. We recommend using GPT-4.0 for better results.**
+1. Select the page or storage folder in the page tree and click **Build AI Rewriter**.
+2. Select the **AI Provider**.
+3. Under **Rewriter AI**, choose the source:
+   - **Internal**: a TYPO3 record. Choose the **Selected Page** with **Navigate to a Page**, or a **News Record**.
+   - **External**: one or more web addresses under **URLS**. T3AI fetches the content from there.
+   - **Text**: paste the text.
+4. Choose the **Record Type** (Pages, News, Blog) and enter the **Topic**.
+5. Choose the **Writing Style**: Casual, Approachable, Easy Readability, or **Others** for your own style.
+6. Set the **Word Count**. Optionally add an **Additional Instruction**, **Background Context**, and **Autolink** with **Autolink Text** to link a phrase.
+7. Click **Generate AI**, then choose the outline and the element types and edit the texts.
+8. Click **Save**.
 
-**Step 1:** Navigate to the **‘T3AI’** Module, click **‘Content,’** tab and then choose” **Content Rewriter”.**
+**Result:** The rewritten content as content elements of the selected page, or as a news or blog record in the storage folder.
 
-**Step 2:** Open the ‘Content Rewriter’’ tab.
-
-![Generate AI](./images/dasebord-38.webp)
-
-- Choose the AI model and its version.
-- Select a prompt and customize it if needed.
-- Add your **“Select Record Page,”** **“Topic,” “Writing Style,” “Word Count,” “Additional Instructions,”** and **“Auto Link.”**
-- Click the **“Generate AI”** button.
-
-**Record type -**
-
-- Blog: Refresh your blog content quickly with just a few clicks.
-- News: Update your news articles instantly with our easy-to-use tool
-
-**Writing Style -**
-
-**Casual** - Keep it light and friendly for a more relaxed feel.
-
-**Approachable** - Make your content welcoming and easy to connect with users.
-
-**Easy readability** - this style Ensures your content is clear and simple for everyone to understand.
-
-**Rewrite in Different Styles -**
-
-**Internal**:Choose a news page from the Page Tree and rewrite it in your preferred style.
-
-**External**: Add an external news URL, fill in the required fields, and click “Generate AI.” The system will fetch content from the provided news website and generate rewritten news content accordingly.
-
-**Text**:Enter your news content in the text box, select the content type, and click “Generate AI.” The system will rewrite the news content based on the text entered in the fields.
-
-**Step 3:**
-
-- Select the content outline
-- Click the “Generate Content” button to create the news content.
-- Click the “Save News Records” button.
-
-**Step 4:** Edit Your Content
-
-- Edit the news headline, URL, t easer, and RTE text.
-- Edit the keywords and meta description.
-- If you need more content ideas, click on “Get AI Suggestions.”
-- Once you’re done, click “Close Page.” Your news will be saved to your storage!
-
-**Step 5:** Go to the List module
-
-- 1.Click on your respective storage folder.
-- 2.Click and view the generated news.
+<Tip>
+External sources work with providers that can fetch web pages. If T3AI shows "content cannot be fetched from external URLs", paste the text with **Text** instead.
+</Tip>
 
 ## News Content Rewriter
 
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfqja3b60yda130uutqwjfwr?embed_v=2&utm_source=embed" loading="lazy" title="News Content Rewriter" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfqja3b60yda130uutqwjfwr?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-No more manual rewriting! T3AI Content Writer helps you create fresh content quickly and easily. Use our AI tool to generate original articles in seconds. Our online AI tool helps you generate original articles in just a few seconds.
+Same window as Content Rewriter, opened from the **News Content Rewriter** card. Select the news storage folder first. With **Internal**, choose the **News Record** to rewrite.
 
-**Note: Please select the Storage folder from the page tree. We recommend using GPT-4.0 for better results.**
-
-**Step 1:** Navigate to the **‘T3AI’** Module, click **‘Content,’** tab and then choose” **News Content Rewriter”.**
-
-**Step 2:** Open the ‘Content Rewriter’’ tab.
-
-- Choose the AI model and its version.
-- Select a prompt and customize it if needed.
-- Add your **“Select Record Page,” “Topic,” “Writing Style,” “Word Count,” “Additional Instructions,”** and **“Auto Link.”**
-- Choose **“Generate News Records”**  from the Storage Folder.
-- Click the **“Generate AI”** button.
-
-**Record type -**
-
-- Blog: Refresh your blog content quickly with just a few clicks.
-- News: Update your news articles instantly with our easy-to-use tool
-
-**Writing Style -**
-
-**Casual** - Keep it light and friendly for a more relaxed feel.
-
-**Approachable** - Make your content welcoming and easy to connect with users.
-
-**Easy readability** - this style Ensures your content is clear and simple for everyone to understand.
-
-**Rewrite in Different Styles -**
-
-**Internal**: Choose a page from the Page Tree and rewrite it in your preferred style.
-
-**External**: Add an external URL, fill in the required fields, and click “Generate AI.” The system will fetch content from the provided website URL and generate rewritten content accordingly.
-
-**Text**: Enter your content in the text box, choose the content type, and click “Generate AI.” The system will rewrite the content based on the text entered in the fields.
-
-**Step 3:** Choose the element type and edit the content.
-
-- Click the “Save” button.
-- Your news is now rewritten!
-
-**Step 4:** Your Rewritten content is stored in your elements !
-
-**Step 5:**
-
-- Go to the List module
-- Select your storage folder.
-- Edit & View your News by Select “ News records”.
+**Result:** A news record in the storage folder. Edit it in the **List** module or **News Administration**.
 
 ## Blog Content Rewriter
 
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfqj657f0y6c130ud3zh0goi?embed_v=2&utm_source=embed" loading="lazy" title="Blog Content Rewriter" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfqj657f0y6c130ud3zh0goi?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Generate fresh and unique content in seconds with our T3AI rewriting tool.Create original articles and contents with the assistance of our online AI content rewriting tool in just a few seconds.
+Same window as Content Rewriter, opened from the **Blog Content Rewriter** card, with **Blog** as record type. Select the blog page or folder first.
 
-**Note: Please select the Storage folder from the page tree. We recommend using GPT-4.0 for better results.**
-
-**Step 1:** Navigate to the **‘T3AI’** Module, click **‘Content,’** tab and then choose” **Blog Content Rewriter”.**
-
-**Step 2:** Open the ‘Blog Content Rewriter’ tab.
-
-- Select the AI model and its version.
-- Choose the rewriter type: Internal, External, or Text.
-- Enter the blog topic and select the record type.
-- Choose your preferred writing style.
-- Set the word count and add any additional instructions, including Auto Link and Text.
-- Click the ‘Generate AI’ button
-
-**Types of Blog Rewriter AI -**
-
-**Internal Blog Rewriter** – Select a blog from the page list and rewrite its content instantly with a single click using T3AI.
-
-**External Blog Rewriter AI** - Simply provide the URL of an external blog and follow the same steps. T3AI can rewrite the blog in just a few clicks!
-
-**Text** - Enter your content manually or add text from an external source. T3AI will rewrite the blog content quickly and efficiently.
-
-**Step 3:** Edit and choose the elements you want to rewrite in your blog content.
-
-- T3AI lets you select different element types.
-- Edit the content of each element as needed.
-- You can also delete and regenerate content if needed.
-- Click the ‘Save’ button when you’re done.
-
-**Step 4:** Your Rewritten content is stored in your elements !
-
-**Step 5:**
-
-- Go to the List module
-- Select your storage folder.
-- Edit & View your News by Select “ Blog records”.
+**Result:** A blog post with the rewritten content elements.
 
 ## Content Elements (Create)
 
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfqip70w0xi6130um9g1ndwf?embed_v=2&utm_source=embed" loading="lazy" title="Content Elements (Create)" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfqip70w0xi6130um9g1ndwf?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Create AI-powered content elements effortlessly. With advanced AI, you can easily generate TYPO3 core elements, along with custom content elements and blocks that match your design. This feature allows you to quickly build and customize content, saving you time and making your work more efficient.
+Fills a new content element with AI text and images. Works for TYPO3 core elements and custom elements.
 
-**Step 1:** Go to the Page module and select the page where you want to create an element.
-
-**Step 2:** Add content elements by selecting ‘Create Element with T3AI’ from the top bar.
-
-**Step 3:** Create the element using T3AI.
-
-- Enter your content element prompt and choose the text fields (headers, sub-headers, text).
-- Add an AI image prompt, choose the AI image settings, and select the AI image models.
-- Click the ‘Generate AI’ button.
-
-**Step 4:** your Regenerate Content is stored in your selected Element filed.
+1. In the **Page** module, create a content element and choose its type.
+2. In the form header, click **Generate Content with T3AI**.
+3. Enter what the element should say and choose which text fields to fill.
+4. Optionally add an AI image: enter the **Prompt for Image Generation**, choose **Style** and **Size**, and click **Generate Images**.
+5. Check the **Element Content**, then click **Save**.
 
 ## Content Elements (Edit)
 
 ### Guidance
 
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfqju3jw0yyq130uvav5h5r1" loading="lazy" title="Content Elements (Edit)" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfqju3jw0yyq130uvav5h5r1" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-Didn’t get the information you wanted? T3AI lets you edit and regenerate elements in seconds, saving you time and effort. Easily edit AI-generated TYPO3 core components, as well as custom content elements and blocks you’ve created.
+Regenerates an existing content element.
 
-**Note - Follow the steps outlined above under -**
-
-**Step 1:** Go to the Page module and select the page where you want to create an element.
+1. Edit the content element.
+2. In the form header, click **Re-Generate Content with T3AI**.
+3. Change the prompt or click **Re-generate**, review the text, and click **Save**.
 
 ## Content Translate
 
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfpdagob2ias1d3n5w7nptm0?embed_v=2&utm_source=embed" loading="lazy" title="Content Translate" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfpdagob2ias1d3n5w7nptm0?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
-With this T3AI feature, you can easily translate your page content elements with just one click! It simplifies the translation process, saving you time and effort. No more manual copying and pasting—just select the content, choose your language, and let T3AI handle the rest
+Translates one content element.
 
-- **Step 1** - Go to your T3AI module and select the **‘Page’** module.
-  - Choose the page from your page tree and navigate to it.
-- **Step 2** - Edit Your Content Element and Select Transalte with the T3AI button.
-- **Step 3** - Select your AI model and language.
-  - Click on the **‘Translate Record’** button.
-  - Your content element will be translated.
+1. Edit the content element in the default language.
+2. In the form header, click **Translate with T3AI**.
+3. Select the **AI Provider** and the target language, then click **Translate Record**.
+
+**Result:** A translated copy of the element in the target language. To translate whole pages, see [Translation](/en/latest/ExtNsT3AI/Translation/Index).
 
 ## Content Fields
 
-<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfqju3jw0yyq130uvav5h5r1?embed_v=2&utm_source=embed" loading="lazy" title="AI Co pilot" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
+<div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmfqju3jw0yyq130uvav5h5r1" loading="lazy" title="Content Fields" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
 
-The **Content Field** feature allows you to generate AI-powered content for all fields using a single prompt.
-This helps streamline content creation by automatically filling multiple fields with relevant, high-quality text.
+Fills single fields with AI. Text fields such as header and subheader have a **T3AI** button next to them.
 
-**How it works:**
+1. Click **T3AI** next to the field.
+2. Enter a prompt describing the content.
+3. Choose one of the suggestions and click **Save**.
 
-1. Enter a prompt describing the content you want.
-2. The AI generates content for all configured fields simultaneously.
-3. Select the Content and click **Save**.
+Which fields get the **T3AI** button is set under TCA record fields in the [General Settings card](/en/latest/ExtNsT3AI/Configuration/AIFeatures/Index#general-settings).
+
+## Settings, access and logs
+
+| Topic | Where |
+|---|---|
+| Opens in | **AI Assistant > Content**: RTE AI Copilot, Content Rewriter, News Content Rewriter, Blog Content Rewriter, Content Elements (Create), Content Elements (Edit), Content Translate, Content Fields |
+| Settings | [AI Content card](/en/latest/ExtNsT3AI/Configuration/AIFeatures/Index#ai-content); TCA record fields and RTE history in the [General Settings card](/en/latest/ExtNsT3AI/Configuration/AIFeatures/Index#general-settings) |
+| Permissions | **Content Generation**, **Page Content Elements**, **RTE AI Commands**. See [Permissions](/en/latest/ExtNsT3AI/Configuration/Permissions/Index) |
+| Ask AI agent | Creates or updates header and text content elements on request. See [T3AI tools](/en/latest/ExtNsT3AI/AskAiAgent/Tools/Index#pages-news-and-blogs) |
+| Logs | AI Logs channel **AI Assistant Content**. See [AI Usage & AI Logs](/en/latest/ExtNsT3AI/Configuration/AIUsageAndLogs/Index) |
+
+**Related:** [Prompts](/en/latest/ExtNsT3AI/Prompts/Index) · [SEO](/en/latest/ExtNsT3AI/SEO/Index) · [Configuration](/en/latest/ExtNsT3AI/Configuration/Index)

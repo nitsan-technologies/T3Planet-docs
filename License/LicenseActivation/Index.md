@@ -23,23 +23,19 @@ For trial and purchase from the backend, see [Generating a License Key](/en/late
 
 Get **T3Planet Shop** (`ns_license`) from the TYPO3 Extension Repository (TER): [https://extensions.typo3.org/extension/ns_license](https://extensions.typo3.org/extension/ns_license)
 
-**Step 1.** Go to the Extension module and select "Get extensions" from the drop-down at the top. Click the Update Now button to refresh the Extension Repository.
+**Step 1.** Open the **Extensions** module (**System → Extensions** in TYPO3 v14, **Admin Tools → Extensions** in v12 and v13) and select **Get Extensions** from the drop-down at the top. Click **Update now** to refresh the extension list from TER.
 
-![Update Extension Repository](./images/update-ext-repository.webp)
+**Step 2.** Search for `ns_license` (T3Planet Shop), then click the download icon to download and install it.
 
-**Step 2.** Search for `ns_license` (T3Planet Shop), then download and install it from TER.
+![Get Extensions with ns_license (T3Planet Shop) in the search result, Update now and the download icon highlighted](./images/get-extensions-ns-license.webp)
 
-![DownloadExtension](./images/DownloadExtension.webp)
+**Step 3.** Open **T3Planet Shop**. Paste your license key and click **Activate License & Download Extension**, or start a free trial or purchase with **Get New License**. Activated extensions appear under **Premium Extensions** with their license status.
 
-**Step 3.** Open **T3Planet Shop**. Start a free trial, purchase, or add your license key.
+![T3Planet Shop with the Activate License & Download Extension field and an activated T3AI license card](./images/t3planet-shop-activate-license.webp)
 
-![License Management](images/LicenseModule.webp)
+**Step 4.** In the **Extensions** module, activate your purchased extension with the **A/D** icon if T3Planet Shop has not already activated it.
 
-![License Activated](./images/LicenseActivated.webp)
-
-**Step 4.** Go to Admin Tools > Extensions > Activate Your Purchased Extension (if not already activated via T3Planet Shop).
-
-![Install Extension](./images/InstallExtension.webp)
+![Installed Extensions with T3AI (ns_t3ai) and the A/D icon highlighted](./images/installed-extensions-activate.webp)
 
 ## Create and Get your License Key (Interactive Demo)
 
@@ -85,7 +81,7 @@ After you receive your license key, you can activate the extension in TYPO3:
 
 **Step 12.** Open **T3Planet Shop** and paste your key into the `License Key` field.
 
-**Step 13.** Click `Activate License & Download Extension` and then activate the purchased extension in Admin Tools > Extensions.
+**Step 13.** Click `Activate License & Download Extension` and then activate the purchased extension in the **Extensions** module.
 
 ## Install via Composer
 
@@ -99,9 +95,7 @@ vendor/bin/typo3 extension:setup
 
 **Step 2.** Open **T3Planet Shop** in the TYPO3 backend. Start a free trial, purchase, browse products, or add your license key.
 
-![License Management](images/LicenseModule.webp)
-
-![License Activated](./images/LicenseActivated.webp)
+![T3Planet Shop with the Activate License & Download Extension field and an activated T3AI license card](./images/t3planet-shop-activate-license.webp)
 
 **Step 3.** Run the Composer commands
 

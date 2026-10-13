@@ -212,7 +212,20 @@
               "ExtNsT3AI/SystemRequirements/Index",
               "ExtNsT3AI/Installation/Index",
               "ExtNsT3AI/ReInstallEverything/Index",
-              "ExtNsT3AI/Configuration/Index",
+              {
+                "group": "Configuration",
+                "root": "ExtNsT3AI/Configuration/Index",
+                "expanded": false,
+                "pages": [
+                  "ExtNsT3AI/Configuration/AIProviders/Index",
+                  "ExtNsT3AI/Configuration/AIFeatures/Index",
+                  "ExtNsT3AI/Configuration/Permissions/Index",
+                  "ExtNsT3AI/Configuration/AIUsageAndLogs/Index",
+                  "ExtNsT3AI/Configuration/SchedulerAndCLI/Index",
+                  "ExtNsT3AI/Configuration/AgentAndMCP/Index",
+                  "ExtNsT3AI/Configuration/WhereToFindIt/Index"
+                ]
+              },
               "ExtNsT3AI/Pages/Index",
               {
                 "group": "Translation",
@@ -239,22 +252,28 @@
               "ExtNsT3AI/Content/Index",
               "ExtNsT3AI/Media/Index",
               "ExtNsT3AI/Prompts/Index",
+              {
+                "group": "Ask AI agent",
+                "root": "ExtNsT3AI/AskAiAgent/Index",
+                "expanded": false,
+                "pages": [
+                  "ExtNsT3AI/AskAiAgent/WhereOpens/Index",
+                  "ExtNsT3AI/AskAiAgent/HowItWorks/Index",
+                  "ExtNsT3AI/AskAiAgent/StepByStep/Index",
+                  "ExtNsT3AI/AskAiAgent/Tools/Index",
+                  "ExtNsT3AI/AskAiAgent/ExampleRequests/Index",
+                  "ExtNsT3AI/AskAiAgent/Troubleshooting/Index"
+                ]
+              },
               "ExtNsT3AI/AISettings/Index",
               "ExtNsT3AI/DPAandGDPR/Index",
               "ExtNsT3AI/UpgradeGuide/Index",
-              "ExtNsT3AI/UpdateGuide/Index",
               "ExtNsT3AI/FAQ/Index",
               "ExtNsT3AI/KnownProblems/Index",
               "ExtNsT3AI/Appendix/Index",
               "ExtNsT3AI/Support",
               "ExtNsT3AI/BuyNow",
-              "ExtNsT3AI/Releases/Index",
-              {
-                "group": "Updates",
-                "expanded": false,
-                "pages": [],
-                "root": "ExtNsT3AI/UpdateVersion/Index"
-              }
+              "ExtNsT3AI/Releases/Index"
             ]
           },
           {
@@ -4018,7 +4037,7 @@
     },
     {
       "source": "/ExtNsT3AI/UpdateVersion/index.html",
-      "destination": "/ExtNsT3AI/UpdateVersion/Index"
+      "destination": "/ExtNsT3AI/UpgradeGuide/Index"
     },
     {
       "source": "/ExtNsT3AI/UpgradeGuide/index.html",
@@ -5286,7 +5305,7 @@
     },
     {
       "source": "/ExtNsT3AI/UpdateGuide/index.html",
-      "destination": "/ExtNsT3AI/UpdateGuide/Index"
+      "destination": "/ExtNsT3AI/UpgradeGuide/Index"
     },
     {
       "source": "/ExtNsT3AC/ReInstallEverything/index.html",
@@ -10581,14 +10600,6 @@
       "destination": "/ExtNsT3AI/Translation/Index"
     },
     {
-      "source": "/ExtNsT3AI/UpdateVersion/Index.html",
-      "destination": "/ExtNsT3AI/UpdateVersion/Index"
-    },
-    {
-      "source": "/ExtNsT3AI/UpdateVersion.html",
-      "destination": "/ExtNsT3AI/UpdateVersion/Index"
-    },
-    {
       "source": "/ExtNsT3AI/UpgradeGuide/Index.html",
       "destination": "/ExtNsT3AI/UpgradeGuide/Index"
     },
@@ -13441,14 +13452,6 @@
       "destination": "/ExtNsT3AF/Troubleshooting/FAQ/Index"
     },
     {
-      "source": "/ExtNsT3AI/ReInstallEverything/Index.html",
-      "destination": "/ExtNsT3AI/ReInstallEverything/Index"
-    },
-    {
-      "source": "/ExtNsT3AI/ReInstallEverything.html",
-      "destination": "/ExtNsT3AI/ReInstallEverything/Index"
-    },
-    {
       "source": "/ExtNsT3AI/Translation/OneClickPageTranslations/Index.html",
       "destination": "/ExtNsT3AI/Translation/OneClickPageTranslations/Index"
     },
@@ -13559,14 +13562,6 @@
     {
       "source": "/ExtNsT3AI/MassSEO.html",
       "destination": "/ExtNsT3AI/MassSEO/Index"
-    },
-    {
-      "source": "/ExtNsT3AI/UpdateGuide/Index.html",
-      "destination": "/ExtNsT3AI/UpdateGuide/Index"
-    },
-    {
-      "source": "/ExtNsT3AI/UpdateGuide.html",
-      "destination": "/ExtNsT3AI/UpdateGuide/Index"
     },
     {
       "source": "/ExtNsT3AC/ReInstallEverything/Index.html",
@@ -14127,6 +14122,214 @@
     {
       "source": "/ExtNsFriendlyCaptcha/FAQ.html",
       "destination": "/ExtNsFriendlyCaptcha/FAQ"
+    },
+    {
+      "source": "/ExtNsT3AI/ReInstallEverything/Index.html",
+      "destination": "/ExtNsT3AI/ReInstallEverything/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/ReInstallEverything.html",
+      "destination": "/ExtNsT3AI/ReInstallEverything/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/UpdateGuide/Index",
+      "destination": "/ExtNsT3AI/UpgradeGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/UpdateGuide",
+      "destination": "/ExtNsT3AI/UpgradeGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/UpdateGuide/Index.html",
+      "destination": "/ExtNsT3AI/UpgradeGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/UpdateGuide.html",
+      "destination": "/ExtNsT3AI/UpgradeGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/UpdateVersion/Index",
+      "destination": "/ExtNsT3AI/UpgradeGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/UpdateVersion",
+      "destination": "/ExtNsT3AI/UpgradeGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/UpdateVersion/Index.html",
+      "destination": "/ExtNsT3AI/UpgradeGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/UpdateVersion.html",
+      "destination": "/ExtNsT3AI/UpgradeGuide/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/AIProviders.html",
+      "destination": "/ExtNsT3AI/Configuration/AIProviders/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/AIProviders/Index.html",
+      "destination": "/ExtNsT3AI/Configuration/AIProviders/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/AIProviders/index.html",
+      "destination": "/ExtNsT3AI/Configuration/AIProviders/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/AIFeatures.html",
+      "destination": "/ExtNsT3AI/Configuration/AIFeatures/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/AIFeatures/Index.html",
+      "destination": "/ExtNsT3AI/Configuration/AIFeatures/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/AIFeatures/index.html",
+      "destination": "/ExtNsT3AI/Configuration/AIFeatures/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/Permissions.html",
+      "destination": "/ExtNsT3AI/Configuration/Permissions/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/Permissions/Index.html",
+      "destination": "/ExtNsT3AI/Configuration/Permissions/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/Permissions/index.html",
+      "destination": "/ExtNsT3AI/Configuration/Permissions/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/AIUsageAndLogs.html",
+      "destination": "/ExtNsT3AI/Configuration/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/AIUsageAndLogs/Index.html",
+      "destination": "/ExtNsT3AI/Configuration/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/AIUsageAndLogs/index.html",
+      "destination": "/ExtNsT3AI/Configuration/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/SchedulerAndCLI.html",
+      "destination": "/ExtNsT3AI/Configuration/SchedulerAndCLI/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/SchedulerAndCLI/Index.html",
+      "destination": "/ExtNsT3AI/Configuration/SchedulerAndCLI/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/SchedulerAndCLI/index.html",
+      "destination": "/ExtNsT3AI/Configuration/SchedulerAndCLI/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/AgentAndMCP.html",
+      "destination": "/ExtNsT3AI/Configuration/AgentAndMCP/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/AgentAndMCP/Index.html",
+      "destination": "/ExtNsT3AI/Configuration/AgentAndMCP/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/AgentAndMCP/index.html",
+      "destination": "/ExtNsT3AI/Configuration/AgentAndMCP/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/WhereToFindIt.html",
+      "destination": "/ExtNsT3AI/Configuration/WhereToFindIt/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/WhereToFindIt/Index.html",
+      "destination": "/ExtNsT3AI/Configuration/WhereToFindIt/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/Configuration/WhereToFindIt/index.html",
+      "destination": "/ExtNsT3AI/Configuration/WhereToFindIt/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/Index.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/index.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/WhereOpens.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/WhereOpens/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/WhereOpens/Index.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/WhereOpens/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/WhereOpens/index.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/WhereOpens/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/HowItWorks.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/HowItWorks/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/HowItWorks/Index.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/HowItWorks/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/HowItWorks/index.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/HowItWorks/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/StepByStep.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/StepByStep/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/StepByStep/Index.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/StepByStep/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/StepByStep/index.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/StepByStep/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/Tools.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/Tools/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/Tools/Index.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/Tools/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/Tools/index.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/Tools/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/ExampleRequests.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/ExampleRequests/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/ExampleRequests/Index.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/ExampleRequests/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/ExampleRequests/index.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/ExampleRequests/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/Troubleshooting.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/Troubleshooting/Index.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsT3AI/AskAiAgent/Troubleshooting/index.html",
+      "destination": "/ExtNsT3AI/AskAiAgent/Troubleshooting/Index"
     }
   ],
   "description": "Official T3Planet documentation for TYPO3 extensions, templates, AI solutions, licensing, and installation guides.",

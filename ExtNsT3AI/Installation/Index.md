@@ -48,13 +48,13 @@ The T3Planet Shop controls access to T3Planet Premium packages and is required t
 
 ## Step 2 — Activate the License
 
-Pick the path that matches your project.
+Pick the path that matches your project. For screenshots and all details, see [License Activation](/en/latest/License/LicenseActivation/Index).
 
 ### Non-Composer Installation
 
-Use this workflow when your project installs T3Planet extensions from the TYPO3 backend:
+Use this workflow when your project installs T3Planet extensions from the TYPO3 backend. Details: [License Activation — Install via Extension Manager](/en/latest/License/LicenseActivation/Index#install-via-extension-manager).
 
-1. Open **Admin tools** → **T3Planet Shop**.
+1. Open **System** → **T3Planet Shop** (TYPO3 v12/v13: **Admin Tools** → **T3Planet Shop**).
 2. Enter your T3AI license key.
 3. Activate the license.
 4. Confirm that the latest T3AI package is downloaded.
@@ -62,7 +62,7 @@ Use this workflow when your project installs T3Planet extensions from the TYPO3 
 
 ### Composer Installation
 
-Use this workflow when your TYPO3 project is managed with Composer:
+Use this workflow when your TYPO3 project is managed with Composer. Details: [License Activation — Install via Composer](/en/latest/License/LicenseActivation/Index#install-via-composer).
 
 1. Check the T3Planet Composer repository configuration.
 2. Update the `only` parameter so the project can download T3AI:
@@ -82,8 +82,7 @@ composer require nitsan/ns-t3ai
 4. Verify that the installation completed successfully.
 5. Confirm that AI Foundation (`nitsan/ns-t3af` / `EXT:ns_t3af`) is installed. If it is missing, install it using **Step 3 — Install AI Foundation**.
 
-Full license activation details:
-[https://docs.t3planet.de/en/latest/License/LicenseActivation/Index.html](/en/latest/License/LicenseActivation/Index)
+Full license activation details: [License Activation](/en/latest/License/LicenseActivation/Index)
 
 ## Step 3 — Install AI Foundation
 
@@ -109,13 +108,13 @@ Use this mode when you want to connect your own AI vendor accounts. You store
 and manage your API keys (for example OpenAI, Anthropic, Gemini) in AI
 Foundation and run AI features through those providers.
 
-**AI Credits**
+**T3Planet Credits**
 
-**AI Credits** is T3Planet’s managed AI access for AI Foundation. It lets
+**T3Planet Credits** is T3Planet’s managed AI access for AI Foundation. It lets
 your TYPO3 site use AI features **without storing or managing your own vendor
-API keys**. Your Own API Keys remains the default mode, and AI Credits pay for usage only.
+API keys**. Your Own API Keys remains the default mode; with T3Planet Credits you pay for usage only.
 
-**Link for AI Credits:** [AI Credits Documentation](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index)
+See [T3Planet Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index).
 
 ### Option 1 — Extension Manager (TER)
 
@@ -140,7 +139,7 @@ Helpful AI Foundation references:
 - [AI Foundation Installation](/en/latest/ExtNsT3AF/Installation/Index)
 - [AI Foundation Configuration](/en/latest/ExtNsT3AF/Configuration/Index)
 - [AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index)
-- [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index)
+- [T3Planet Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index)
 
 ## Step 4 — Run Database Analyzer
 
@@ -157,12 +156,11 @@ Run this before using T3AI modules in the TYPO3 backend.
 
 After installation:
 
-1. Open **AI Foundation** in the TYPO3 backend.
-2. Configure your preferred AI provider.
-3. Save the provider and model configuration.
-4. Verify the AI connection with a test request.
+1. Open **AI Universe > AI Foundation > AI Providers**.
+2. Choose the **AI Provider Mode** and add your provider.
+3. Save the provider and check that it shows **Connected**.
 
-T3AI will not function correctly until AI Foundation has a working AI provider configuration.
+T3AI will not function correctly until AI Foundation has a working AI provider configuration. Step by step: [AI provider & API keys](/en/latest/ExtNsT3AI/Configuration/AIProviders/Index).
 
 ## Step 6 — Verify the Installation
 
@@ -176,9 +174,13 @@ Before handing the system to editors, verify that:
 - TYPO3 caches are cleared.
 - T3AI backend modules load without errors.
 
-If all items above are true, installation is complete and you can start using T3AI.
+If all items above are true, installation is complete.
+
+## Next steps
+
+1. Set up T3AI in the order shown on [Configuration](/en/latest/ExtNsT3AI/Configuration/Index): provider, AI Features cards, and permissions.
+2. Try a first feature, for example [SEO](/en/latest/ExtNsT3AI/SEO/Index) or [Translation](/en/latest/ExtNsT3AI/Translation/Index).
 
 ## 30-day trial and license activation
 
-For license activation and premium installation details, see:
-[https://docs.t3planet.de/en/latest/License/Index.html](/en/latest/License/Index)
+For license activation and premium installation details, see [License](/en/latest/License/Index).
