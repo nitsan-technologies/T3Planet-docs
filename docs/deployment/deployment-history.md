@@ -173,3 +173,15 @@ Append one entry per production release.
 - Mintlify: GitHub check "Mintlify Deployment" completed/success on `8e97c09` (org repo)
 - QA: `mintlify validate` pass; 77/77 group root pages on docs.t3planet.de have Previous/Next with no self-link (2 pages briefly served stale edge cache, correct on origin and live on re-check); live click test desktop + mobile: Ask AI Agent Next → Where it opens, Previous → Ask AI Agent, AI Agent module tabs Next → Overview; module page has 0 "Tab:"; Overview title "Overview"; homepage 200 with valid certificate
 - Final status: PASS
+
+### 2026-10-13 — T3AI restructure (Ask AI agent, Configuration section), License screenshot refresh
+- Authorization: operator said `Start the deployment process`
+- Commit: `a7a7e13` by Nitsan `<sanjay@nitsantech.com>` (109 files; `396f203..a7a7e13`)
+- Scope: content from the reviewed `T3Planet-docs 01` copy (synced into the workspace by the operator): new `ExtNsT3AI/AskAiAgent` section (7 pages, 10 WebP images); `ExtNsT3AI/Configuration` rebuilt as a group with 7 subpages and 5 images; `ExtNsT3AI/UpdateGuide` and `UpdateVersion` removed and redirected to `UpgradeGuide`; 30 rewritten T3AI pages; License activation / update pages with new WebP screenshots (16 old JPEG/WebP removed); `docs.json` nav + 45 redirects; homepage "AI Assistant updates" link → UpgradeGuide; stats 839/840 → 852 pages / 70 products
+- Excluded: `docs-master/`, `workshops/`, `backup/`, `scripts/**` QA artifacts
+- Backup: `backup/pre-deployment-20261013-193919/`
+- Push remote: `origin` → `nitsan-technologies/T3Planet-docs` (`master`), no force; local and origin in sync before commit (0/0)
+- Mintlify: GitHub check "Mintlify Deployment" completed/success on `a7a7e13` (org repo)
+- QA: `mintlify validate` pass; 0 missing nav files, 0 broken internal links/images (3,486 refs); all 825 previously live URLs resolve (page or redirect); 76/76 Supademos on changed pages load; content markers on docs.t3planet.de and t3planet.mintlify.app; old UpdateGuide/UpdateVersion and `.html` URLs redirect correctly; 71/71 T3AI + License pages 200; sitemap 899 URLs incl. 7 AskAiAgent + 8 Configuration, UpdateGuide gone; `_llms` T3AI index 51 pages; live browser QA 51 changed pages × (desktop light/dark, mobile light, tablet dark) = 204 runs, 0 problems; search finds "Ask AI agent"; homepage 852
+- Warnings: `License/UpdateVersion/CheckNewVersion/Index.md` has no frontmatter `description` (pre-existing on live); T3AI Pages and several Translation pages again contain older 2025 Supademos next to the newer TSR demos (content based on the previous live version, not on the 2026-10-12 local Supademo cleanup)
+- Final status: PASS WITH NON-BLOCKING WARNINGS
