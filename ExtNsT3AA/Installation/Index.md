@@ -161,7 +161,7 @@ In **AI Foundation → AI Providers**, choose one mode:
 1. Choose **AI Credits**.
 2. Complete **Activate** if shown.
 
-T3AA then sends all AI requests through T3Planet. You do not need your own API keys. In T3AA dialogs, **Select AI Provider** shows only **T3Planet Credits**.
+T3AA then sends all AI requests through T3Planet. You do not need your own API keys. In T3AA dialogs, **Select AI Provider** shows only **AI Credits**.
 
 **Your Own API Keys**
 

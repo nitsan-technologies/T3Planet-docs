@@ -8,7 +8,7 @@ keywords:
 sidebarTitle: "Configuration"
 ---
 
-Switch on T3Planet Credits, set limits per editor group and buy more credits.
+Switch on AI Credits, set limits per editor group and buy more credits.
 
 **Path:** **AI Universe → AI Foundation → AI Providers**
 
@@ -21,18 +21,18 @@ Switch on T3Planet Credits, set limits per editor group and buy more credits.
 ## Activate Credits
 
 1. Go to **AI Universe → AI Foundation → AI Providers**.
-2. Choose **T3Planet Credits**.
+2. Choose **AI Credits**.
 3. Confirm if asked.
 4. Click **Activate** if it is shown.
 5. Wait for the success message. The page reloads.
 
-![AI Providers with T3Planet Credits selected and Activate button](images/t3planet-credits-activate.webp)
+![AI Providers with AI Credits selected and Activate button](images/t3planet-credits-activate.webp)
 
-Select T3Planet Credits, then click Activate.
+Select AI Credits, then click Activate.
 
-![AI Providers with T3Planet Credits active and credit balance panel](images/t3planet-credits-providers.webp)
+![AI Providers with AI Credits active and credit balance panel](images/t3planet-credits-providers.webp)
 
-After activation — T3Planet Credits active, balance panel, and
+After activation — AI Credits active, balance panel, and
 Buy more credits.
 
 <Note>

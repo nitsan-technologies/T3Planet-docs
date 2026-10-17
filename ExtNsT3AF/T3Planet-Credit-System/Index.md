@@ -1,31 +1,31 @@
 ---
-title: "T3Planet Credits"
-description: "T3Planet Credits — managed AI access for AI Foundation without storing your own vendor API keys."
+title: "AI Credits"
+description: "AI Credits — managed AI access for AI Foundation without storing your own vendor API keys."
 keywords:
   - "TYPO3"
   - "T3Planet"
   - "ExtNsT3AF"
   - "Credits"
   - "BYOK"
-sidebarTitle: "T3Planet Credits"
+sidebarTitle: "AI Credits"
 ---
 
-**T3Planet Credits** lets you use AI without your own account at OpenAI, Anthropic or another AI service. You buy credits from T3Planet, and T3Planet runs the AI requests for you. You don't need to manage any API keys.
+**AI Credits** lets you use AI without your own account at OpenAI, Anthropic or another AI service. You buy credits from T3Planet, and T3Planet runs the AI requests for you. You don't need to manage any API keys.
 
 **Path:** **AI Universe → AI Foundation → AI Providers**
 
 <Note>
-On **AI Providers** you choose between **Your Own API Keys** (the default) and **T3Planet Credits**.
+On **AI Providers** you choose between **Your Own API Keys** (the default) and **AI Credits**.
 </Note>
 
-![AI Foundation Dashboard in T3Planet Credits mode with balance, credit burn, and spend by extension](images/t3planet-credits-dashboard.webp)
+![AI Foundation Dashboard in AI Credits mode with balance, credit burn, and spend by extension](images/t3planet-credits-dashboard.webp)
 
-*Dashboard — **T3Planet Credits** mode with remaining balance, credit burn over time, and spend by extension.*
+*Dashboard — **AI Credits** mode with remaining balance, credit burn over time, and spend by extension.*
 
 ## Where to configure it
 
 1. Go to **AI Universe → AI Foundation → AI Providers**.
-2. Choose **T3Planet Credits**.
+2. Choose **AI Credits**.
 3. Click **Activate** if it is shown.
 
 Until you do this, **Your Own API Keys** stays the default. Full steps: [Configuration](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Configuration/Index).
@@ -45,10 +45,10 @@ Until you do this, **Your Own API Keys** stays the default. Full steps: [Configu
 - Not required when you use your own API keys
 - Not a license for AI Foundation
 
-## BYOK vs T3Planet Credits
+## BYOK vs AI Credits
 
 - **Your Own API Keys** (BYOK, "bring your own key" – the default) – your server sends requests directly to the AI service you set up.
-- **T3Planet Credits** (optional) – T3Planet sends your requests to AI services for you. Credits pay for the use.
+- **AI Credits** (optional) – T3Planet sends your requests to AI services for you. Credits pay for the use.
 
 Your own providers stay saved while Credits is on. They come back when you switch back to **Your Own API Keys**.
 
@@ -56,7 +56,7 @@ Your own providers stay saved while Credits is on. They come back when you switc
 
 - AI Foundation is 100% OSS (GPL-2.0-or-later)
 - Activate the OSS license key via **T3Planet Shop** > **AI Universe** > **AI Foundation** > **Start**
-- T3Planet Credits covers AI usage only
+- AI Credits covers AI usage only
 - Credits never replace the OSS license key
 - Plan credits never roll over
 

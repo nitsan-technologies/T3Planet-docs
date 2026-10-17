@@ -27,7 +27,7 @@ You need:
 
 - An administrator login for the TYPO3 backend.
 - Your **AI Chatbot license key** from T3Planet.
-- An account with an AI service (for example OpenAI) and its **API key** (a password for the AI service). No account? You can use **T3Planet Credits** instead.
+- An account with an AI service (for example OpenAI) and its **API key** (a password for the AI service). No account? You can use **AI Credits** instead.
 
 ## Step 1 — Install the License Manager
 
@@ -152,7 +152,7 @@ Connect AI Chatbot to your AI service.
 7. Test the connection (see [Testing a connection](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index#testing-a-connection)).
 
 <Tip>
-No own API key? Use **T3Planet Credits** instead. See [T3Planet Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index). For a guided setup, use **Quick Setup** in AI Foundation ([AI Foundation installation](/en/latest/ExtNsT3AF/Installation/Index#quick-start)).
+No own API key? Use **AI Credits** instead. See [AI Credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Index). For a guided setup, use **Quick Setup** in AI Foundation ([AI Foundation installation](/en/latest/ExtNsT3AF/Installation/Index#quick-start)).
 </Tip>
 
 {/* 1. Open **AI Foundation** in the TYPO3 backend.
