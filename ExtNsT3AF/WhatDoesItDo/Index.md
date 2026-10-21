@@ -50,7 +50,7 @@ Expose TYPO3 to external AI assistants via the Model Context Protocol.
 
 Core tools: read pages, list content, read/write database records (with permissions).
 
-See [MCP Server](/en/latest/ExtNsT3AF/MCPServer/Index).
+See [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index).
 
 ## 3. AI Context
 
@@ -84,7 +84,7 @@ See [AI Features](/en/latest/ExtNsT3AF/AIFeatures/Index).
 - **AI Logs** — per-request detail for audits
 - **Scheduler & CLI** — background jobs
 
-See [AI Usage & Logs](/en/latest/ExtNsT3AF/AIUsageAndLogs/Index).
+See [AI Usage & Logs](/en/latest/ExtNsT3AF/Configuration/AIUsageAndLogs/Index).
 
 ## 7. AI Permissions
 
@@ -123,9 +123,9 @@ Full reference: [Developer Guide](/en/latest/ExtNsT3AF/DeveloperGuide/Index)
 1. Install extension → [Installation](/en/latest/ExtNsT3AF/Installation/Index)
 2. Add provider and run **Test connection** → [AI Providers](/en/latest/ExtNsT3AF/AIProviders/Index)
 3. Run Quick Setup → [Quick Setup](/en/latest/ExtNsT3AF/SetupWizard/Index)
-4. (Optional) Enable MCP → [MCP Server](/en/latest/ExtNsT3AF/MCPServer/Index)
+4. (Optional) Enable MCP → [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index)
 5. (Optional) Set governance rules → [AI Permissions](/en/latest/ExtNsT3AF/Configuration/AIPermissions/Index)
-6. Monitor usage weekly → [AI Usage & Logs](/en/latest/ExtNsT3AF/AIUsageAndLogs/Index)
+6. Monitor usage weekly → [AI Usage & Logs](/en/latest/ExtNsT3AF/Configuration/AIUsageAndLogs/Index)
 
 ## Requirements at a glance
 

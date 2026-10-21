@@ -22,7 +22,7 @@ sidebarTitle: "Providers & MCP Tools"
 Only give MCP access to people who may change these settings.
 </Note>
 
-{/* - [MCP Server ](/en/latest/ExtNsT3AF/MCPServer/Index)
+{/* - [MCP Server ](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index)
 - [MCP Tools ](/en/latest/ExtNsT3AF/MCPTools/Index) */}
 
 {/* ## 10. Providers & MCP Tools */}

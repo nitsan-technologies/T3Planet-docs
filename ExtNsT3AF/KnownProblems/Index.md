@@ -70,7 +70,7 @@ vendor/bin/typo3 cache:flush
 
 ## High token usage spike
 
-Check [AI Usage & Logs](/en/latest/ExtNsT3AF/AIUsageAndLogs/Index) for repeating feature names. May be a script loop. Apply rate limits in [AI Permissions](/en/latest/ExtNsT3AF/Configuration/AIPermissions/Index).
+Check [AI Usage & Logs](/en/latest/ExtNsT3AF/Configuration/AIUsageAndLogs/Index) for repeating feature names. May be a script loop. Apply rate limits in [AI Permissions](/en/latest/ExtNsT3AF/Configuration/AIPermissions/Index).
 
 ## Report issues
 

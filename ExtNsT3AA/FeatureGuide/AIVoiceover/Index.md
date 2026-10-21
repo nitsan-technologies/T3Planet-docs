@@ -31,9 +31,12 @@ which creates standalone audio files from a script.
      **Fable**, **Onyx**, **Nova**
    * **Choose the speed of the generated audio** — default **1.00**
    * **Select output format file** — **mp3**, **flac** or **wav**
-3. Click **Generate Audio**.
+3. Click **Generate**. If the page already has a voiceover, the button says
+   **Regenerate** (see below).
 4. The file is saved to the page: **Page Properties** → **AI Accessibility**
-   tab → **Voiceovers** field. One voiceover file per page is stored there.
+   tab → **Voiceovers** field. Only one voiceover file is linked to the
+   page; with **Keep current file**, the old file stays in the file list,
+   but it is no longer linked to the page.
 5. Add the **AI Accessibility-Voiceover** content element to the page to play
    the audio on the website (see below).
 
@@ -45,6 +48,19 @@ with your own ElevenLabs API key only.
 The voiceover is not shown on the website automatically. Add the
 **AI Accessibility-Voiceover** content element to the page.
 </Note>
+
+## If the page already has a voiceover
+
+When the page already has a voiceover, the dialog shows a **Voiceover
+already exists** box with links to the current files, and the button says
+**Regenerate**.
+
+Clicking **Regenerate** asks what to do with the current file:
+
+- **Keep current file** — the current file stays in the file list, but it is
+  no longer linked to the page. The new file becomes the page's voiceover.
+- **Delete current file** — the current file is deleted, unless another
+  record still uses it. The new file becomes the page's voiceover.
 
 ## OpenAI Voiceover
 
@@ -63,7 +79,8 @@ work the same way as standard pages:
    choose the blog post page (or click **Voiceover with T3AA** in its page
    properties).
 2. Select the provider, model, voice, speed and format.
-3. Click **Generate Audio**.
+3. Click **Generate** (or **Regenerate** if the blog post already has a
+   voiceover).
 4. The file is saved in **Page Properties** → **AI Accessibility** tab →
    **Voiceovers**.
 5. Add the **AI Accessibility-Voiceover** content element to the blog post and
@@ -80,3 +97,11 @@ the voiceover of the current page.
 2. In the plugin settings, adjust the player if needed: play button layout and
    offsets, colors, and player size.
 3. Save and check the page on the website.
+
+## Troubleshooting
+
+### The generation fails with "Could not fetch content from page with ID (%s)."
+
+The page has no readable text (for example, it has no content elements), so
+no voiceover can be created. Add content to the page and generate the
+voiceover again.

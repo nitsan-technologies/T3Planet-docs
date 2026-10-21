@@ -28,7 +28,7 @@ The Dashboard is your **control center** for AI health on this TYPO3 instance. O
 1. Open Dashboard
 2. Confirm provider status is **green**
 3. Check credit balance if you use AI Credits
-4. Skim **AI Logs** if usage looks unusual — see [AI Usage & Logs](/en/latest/ExtNsT3AF/AIUsageAndLogs/Index)
+4. Skim **AI Logs** if usage looks unusual — see [AI Usage & Logs](/en/latest/ExtNsT3AF/Configuration/AIUsageAndLogs/Index)
 
 ## Status meanings
 
@@ -39,9 +39,9 @@ The Dashboard is your **control center** for AI health on this TYPO3 instance. O
 ## Quick links from the dashboard
 
 - **AI Providers** → [AI Providers](/en/latest/ExtNsT3AF/AIProviders/Index)
-- **MCP Server** → [MCP Server](/en/latest/ExtNsT3AF/MCPServer/Index)
+- **MCP Server** → [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index)
 - **Quick Setup** → [Quick Setup](/en/latest/ExtNsT3AF/SetupWizard/Index)
-- **View Logs** → [AI Usage & Logs](/en/latest/ExtNsT3AF/AIUsageAndLogs/Index)
+- **View Logs** → [AI Usage & Logs](/en/latest/ExtNsT3AF/Configuration/AIUsageAndLogs/Index)
 
 ## Tips
 
@@ -55,5 +55,5 @@ The Dashboard is your **control center** for AI health on this TYPO3 instance. O
 1. Open [AI Providers](/en/latest/ExtNsT3AF/AIProviders/Index) → run **Test connection**
 2. Check vendor status page (OpenAI, Anthropic, etc.)
 3. Verify firewall allows outbound HTTPS
-4. Check [AI Logs](/en/latest/ExtNsT3AF/AIUsageAndLogs/Index) for the exact error message
+4. Check [AI Logs](/en/latest/ExtNsT3AF/Configuration/AIUsageAndLogs/Index) for the exact error message
 5. See [Known Problems](/en/latest/ExtNsT3AF/KnownProblems/Index) if the issue persists

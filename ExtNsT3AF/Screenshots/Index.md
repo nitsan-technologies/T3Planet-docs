@@ -31,7 +31,7 @@ See [AI Providers](/en/latest/ExtNsT3AF/AIProviders/Index).
 
 Server status, workspace selector, MCP mode, and Connect / Security / Analytics tabs.
 
-See [MCP Server](/en/latest/ExtNsT3AF/MCPServer/Index).
+See [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index).
 
 ## MCP Tools
 

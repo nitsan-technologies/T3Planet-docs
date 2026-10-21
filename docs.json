@@ -424,6 +424,7 @@
                   "ExtNsT3AA/FeatureGuide/Content/Index",
                   "ExtNsT3AA/FeatureGuide/HumanExpertAudit/Index",
                   "ExtNsT3AA/FeatureGuide/AIVoiceover/Index",
+                  "ExtNsT3AA/FeatureGuide/MassVoiceover/Index",
                   "ExtNsT3AA/FeatureGuide/AIAudio/Index",
                   "ExtNsT3AA/FeatureGuide/CkeditorAccessibilityChecker/Index",
                   "ExtNsT3AA/FeatureGuide/SimplifiedText/Index"
@@ -1833,7 +1834,7 @@
     },
     {
       "source": "/AIUniverse/AIUsageAndLogs/index.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/AIUniverse/Appendix/index.html",
@@ -1877,7 +1878,7 @@
     },
     {
       "source": "/AIUniverse/MCPServer/index.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/AIUniverse/MCPTools/index.html",
@@ -1953,7 +1954,7 @@
     },
     {
       "source": "/de/AIUniverse/AIUsageAndLogs/index.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/de/AIUniverse/Appendix/index.html",
@@ -1997,7 +1998,7 @@
     },
     {
       "source": "/de/AIUniverse/MCPServer/index.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/de/AIUniverse/MCPTools/index.html",
@@ -2069,7 +2070,7 @@
     },
     {
       "source": "/ExtNsT3AF/AIUsageAndLogs/index.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/ExtNsT3AF/Appendix/index.html",
@@ -2113,7 +2114,7 @@
     },
     {
       "source": "/ExtNsT3AF/MCPServer/index.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/ExtNsT3AF/MCPTools/index.html",
@@ -4513,7 +4514,7 @@
     },
     {
       "source": "/AIFoundation/AIUsageAndLogs/index.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/AIFoundation/Appendix/index.html",
@@ -4553,7 +4554,7 @@
     },
     {
       "source": "/AIFoundation/MCPServer/index.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/AIFoundation/MCPTools/index.html",
@@ -4629,7 +4630,7 @@
     },
     {
       "source": "/de/AIFoundation/AIUsageAndLogs/index.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/de/AIFoundation/Appendix/index.html",
@@ -4673,7 +4674,7 @@
     },
     {
       "source": "/de/AIFoundation/MCPServer/index.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/de/AIFoundation/MCPTools/index.html",
@@ -4745,7 +4746,7 @@
     },
     {
       "source": "/de/ExtNsT3AF/AIUsageAndLogs/index.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/de/ExtNsT3AF/Appendix/index.html",
@@ -4789,7 +4790,7 @@
     },
     {
       "source": "/de/ExtNsT3AF/MCPServer/index.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/de/ExtNsT3AF/MCPTools/index.html",
@@ -4861,7 +4862,7 @@
     },
     {
       "source": "/T3AF/AIUsageAndLogs/index.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/T3AF/Appendix/index.html",
@@ -4901,7 +4902,7 @@
     },
     {
       "source": "/T3AF/MCPServer/index.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/T3AF/MCPTools/index.html",
@@ -5737,11 +5738,11 @@
     },
     {
       "source": "/AIUniverse/AIUsageAndLogs/Index.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/AIUniverse/AIUsageAndLogs.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/AIUniverse/Appendix/Index.html",
@@ -5821,11 +5822,11 @@
     },
     {
       "source": "/AIUniverse/MCPServer/Index.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/AIUniverse/MCPServer.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/AIUniverse/MCPTools/Index.html",
@@ -6009,11 +6010,11 @@
     },
     {
       "source": "/de/AIUniverse/AIUsageAndLogs/Index.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/de/AIUniverse/AIUsageAndLogs.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/de/AIUniverse/Appendix/Index.html",
@@ -6093,11 +6094,11 @@
     },
     {
       "source": "/de/AIUniverse/MCPServer/Index.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/de/AIUniverse/MCPServer.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/de/AIUniverse/MCPTools/Index.html",
@@ -6281,11 +6282,11 @@
     },
     {
       "source": "/ExtNsT3AF/AIUsageAndLogs/Index.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/ExtNsT3AF/AIUsageAndLogs.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/ExtNsT3AF/Appendix/Index.html",
@@ -6369,11 +6370,11 @@
     },
     {
       "source": "/ExtNsT3AF/MCPServer/Index.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/ExtNsT3AF/MCPServer.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/ExtNsT3AF/MCPTools/Index.html",
@@ -11673,11 +11674,11 @@
     },
     {
       "source": "/AIFoundation/AIUsageAndLogs/Index.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/AIFoundation/AIUsageAndLogs.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/AIFoundation/Appendix/Index.html",
@@ -11753,11 +11754,11 @@
     },
     {
       "source": "/AIFoundation/MCPServer/Index.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/AIFoundation/MCPServer.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/AIFoundation/MCPTools/Index.html",
@@ -11933,11 +11934,11 @@
     },
     {
       "source": "/de/AIFoundation/AIUsageAndLogs/Index.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/de/AIFoundation/AIUsageAndLogs.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/de/AIFoundation/Appendix/Index.html",
@@ -12017,11 +12018,11 @@
     },
     {
       "source": "/de/AIFoundation/MCPServer/Index.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/de/AIFoundation/MCPServer.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/de/AIFoundation/MCPTools/Index.html",
@@ -12197,11 +12198,11 @@
     },
     {
       "source": "/de/ExtNsT3AF/AIUsageAndLogs/Index.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/de/ExtNsT3AF/AIUsageAndLogs.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/de/ExtNsT3AF/Appendix/Index.html",
@@ -12281,11 +12282,11 @@
     },
     {
       "source": "/de/ExtNsT3AF/MCPServer/Index.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/de/ExtNsT3AF/MCPServer.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/de/ExtNsT3AF/MCPTools/Index.html",
@@ -12485,11 +12486,11 @@
     },
     {
       "source": "/T3AF/AIUsageAndLogs/Index.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/T3AF/AIUsageAndLogs.html",
-      "destination": "/ExtNsT3AF/AIUsageAndLogs/Index"
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
     },
     {
       "source": "/T3AF/Appendix/Index.html",
@@ -12565,11 +12566,11 @@
     },
     {
       "source": "/T3AF/MCPServer/Index.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/T3AF/MCPServer.html",
-      "destination": "/ExtNsT3AF/MCPServer/Index"
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
     },
     {
       "source": "/T3AF/MCPTools/Index.html",
@@ -14330,6 +14331,34 @@
     {
       "source": "/ExtNsT3AI/AskAiAgent/Troubleshooting/index.html",
       "destination": "/ExtNsT3AI/AskAiAgent/Troubleshooting/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AIUsageAndLogs/Index",
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/MCPServer/Index",
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/AIUsageAndLogs",
+      "destination": "/ExtNsT3AF/Configuration/AIUsageAndLogs/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/MCPServer",
+      "destination": "/ExtNsT3AF/Integrations/MCPServer/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/MassVoiceover/index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/MassVoiceover/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/MassVoiceover/Index.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/MassVoiceover/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/FeatureGuide/MassVoiceover.html",
+      "destination": "/ExtNsT3AA/FeatureGuide/MassVoiceover/Index"
     }
   ],
   "description": "Official T3Planet documentation for TYPO3 extensions, templates, AI solutions, licensing, and installation guides.",

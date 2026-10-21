@@ -65,7 +65,7 @@ Top up your AI Credits. You can check the balance on the [Dashboard](/en/latest/
 
 ### What is MCP?
 
-The Model Context Protocol, a standard that lets AI tools such as Cursor or Claude Desktop connect to TYPO3. T3AF ships 100+ MCP tools. See [MCP Server](/en/latest/ExtNsT3AF/MCPServer/Index).
+The Model Context Protocol, a standard that lets AI tools such as Cursor or Claude Desktop connect to TYPO3. T3AF ships 100+ MCP tools. See [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index).
 
 ### How do I keep MCP access under control?
 
@@ -73,7 +73,7 @@ Use HTTPS and OAuth, limit which backend users may authorize agents, and test wr
 
 ### Cursor will not connect
 
-Check that MCP is enabled, the site uses HTTPS, and the OAuth metadata URLs return HTTP 200. See the health check in [MCP Server](/en/latest/ExtNsT3AF/MCPServer/Index).
+Check that MCP is enabled, the site uses HTTPS, and the OAuth metadata URLs return HTTP 200. See the health check in [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index).
 
 ## Privacy
 

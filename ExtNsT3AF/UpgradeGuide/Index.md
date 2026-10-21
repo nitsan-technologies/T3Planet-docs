@@ -64,7 +64,7 @@ Always after `composer update nitsan/ns-t3af`. TYPO3 may register new database f
 If MCP was enabled before upgrade:
 
 1. Flush all caches
-2. Re-run health check from [MCP Server](/en/latest/ExtNsT3AF/MCPServer/Index)
+2. Re-run health check from [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index)
 3. Re-authorize OAuth clients if token lifetime changed
 
 See also [Update Version](/en/latest/ExtNsT3AF/UpdateVersion/Index) for routine updates.

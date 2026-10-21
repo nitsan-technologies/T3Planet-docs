@@ -19,9 +19,9 @@ Video guides help admins and managers learn **T3AF** setup and daily operation. 
 2. **Install and activate** — Admins. Pair with [Installation](/en/latest/ExtNsT3AF/Installation/Index).
 3. **Configure AI providers** — Admins. Pair with [AI Providers](/en/latest/ExtNsT3AF/AIProviders/Index).
 4. **AI Credits vs Your Own API Keys** — Admins. Pair with [AI Credits](/en/latest/ExtNsT3AF/T3PlanetCredits/Index).
-5. **MCP Server — connect Cursor** — Admins and developers. Pair with [MCP Server](/en/latest/ExtNsT3AF/MCPServer/Index).
+5. **MCP Server — connect Cursor** — Admins and developers. Pair with [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index).
 6. **AI Permissions** — Admins. Pair with [AI Permissions](/en/latest/ExtNsT3AF/Configuration/AIPermissions/Index).
-7. **Usage logs and cost control** — Admins and managers. Pair with [AI Usage & Logs](/en/latest/ExtNsT3AF/AIUsageAndLogs/Index).
+7. **Usage logs and cost control** — Admins and managers. Pair with [AI Usage & Logs](/en/latest/ExtNsT3AF/Configuration/AIUsageAndLogs/Index).
 
 ## Where to find videos
 
@@ -41,7 +41,7 @@ Enable **English subtitles** on YouTube if needed. Simple English is used in mos
 
 **Thursday** — Set governance rules for editor backend groups.
 
-**Friday** — Review [AI Usage & Logs](/en/latest/ExtNsT3AF/AIUsageAndLogs/Index) with your team. Discuss budget and privacy settings.
+**Friday** — Review [AI Usage & Logs](/en/latest/ExtNsT3AF/Configuration/AIUsageAndLogs/Index) with your team. Discuss budget and privacy settings.
 
 ## When to use videos vs written docs
 

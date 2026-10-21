@@ -57,7 +57,7 @@ Use these follow-up tasks after the wizard completes:
 - **Brand context** — [AI Context](/en/latest/ExtNsT3AF/AIContext/Index)
 - **Tune prompts** — [AI Prompts](/en/latest/ExtNsT3AF/AIPrompts/Index)
 - **Enable governance** — [AI Permissions](/en/latest/ExtNsT3AF/Configuration/AIPermissions/Index)
-- **Connect MCP** — [MCP Server](/en/latest/ExtNsT3AF/MCPServer/Index)
+- **Connect MCP** — [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index)
 - **Daily health check** — [Dashboard](/en/latest/ExtNsT3AF/Dashboard/Index)
 
 ## Scenario: agency onboarding a new client

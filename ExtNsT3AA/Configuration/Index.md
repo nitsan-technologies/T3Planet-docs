@@ -17,7 +17,7 @@ Helpful AI Foundation references:
 - [AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index)
 - [AI Features](/en/latest/ExtNsT3AF/Configuration/AIFeatures/Index)
 - [AI Prompts](/en/latest/ExtNsT3AF/AIPrompts/Index)
-- [AI Usage and Logs](/en/latest/ExtNsT3AF/AIUsageAndLogs/Index)
+- [AI Usage and Logs](/en/latest/ExtNsT3AF/Configuration/AIUsageAndLogs/Index)
 
 ## Step 1: Open AI Features in AI Foundation
 
@@ -192,7 +192,7 @@ Use this area to confirm the correct AI provider is available and to review any 
 See also:
 
 - [AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index)
-- [MCP Server](/en/latest/ExtNsT3AF/MCPServer/Index)
+- [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index)
 - [MCP Tools](/en/latest/ExtNsT3AF/MCPTools/Index)
 
 <div className="t3-embed"><iframe src="https://app.supademo.com/embed/cmral5ln50xu7qmhx0cqoj5mu?utm_source=link" loading="lazy" title="T3AA Providers and MCP Tools Demo" allow="clipboard-write; fullscreen" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>

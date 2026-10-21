@@ -41,7 +41,7 @@ If you plan to use the MCP server:
 - **HTTPS** — Required for OAuth in production
 - **mcp/sdk** — Bundled with T3AF
 
-See [MCP Server](/en/latest/ExtNsT3AF/MCPServer/Index).
+See [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index).
 
 ## Server resources
 

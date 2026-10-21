@@ -54,6 +54,13 @@ listen. The provider is selected inside the modal, not on the card.
 
 See [AI Voiceover](/en/latest/ExtNsT3AA/FeatureGuide/AIVoiceover/Index).
 
+## Mass Voiceover
+
+Queue many pages and generate their voiceovers with one Scheduler task.
+Click **Manage Mass Voiceover** on the card to open the queue.
+
+See [Mass Voiceover](/en/latest/ExtNsT3AA/FeatureGuide/MassVoiceover/Index).
+
 ## Simplify text into plain language
 
 Rewrite page content into simpler language for readers with cognitive or reading

@@ -55,7 +55,7 @@ Without per-feature settings, every task uses the most expensive default. Routin
 2. For each feature row, select a provider (or leave empty for global default)
 3. Save
 4. Test one request per feature type from a connected extension
-5. Review token usage in [AI Usage & Logs](/en/latest/ExtNsT3AF/AIUsageAndLogs/Index)
+5. Review token usage in [AI Usage & Logs](/en/latest/ExtNsT3AF/Configuration/AIUsageAndLogs/Index)
 
 ## Scenario: agency with dev and live keys
 
