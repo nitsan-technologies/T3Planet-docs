@@ -45,6 +45,19 @@ Append one entry per production release.
 
 <!-- entries below -->
 
+### 2026-10-21 — Mass Voiceover guide, AI Voiceover corrections, T3AF DPA link repair
+- **Status:** PASS
+- **Commit:** `68aabd4` — docs: add Mass Voiceover guide, fix AI Voiceover details, repair T3AF DPA links
+- **Author:** Nitsan <sanjay@nitsantech.com>
+- **Remote:** origin → nitsan-technologies/T3Planet-docs (`master`)
+- **Mintlify:** Git source `nitsan-technologies/t3planet-docs` · `master`; deployment_status live for `68aabd4` (started 10:55:45Z, ended 10:56:45Z)
+- **Included:** Mass Voiceover page + images + nav/redirects; AI Voiceover corrections; T3AF orphan AIUsageAndLogs/MCPServer removed with canonical link/redirect updates across T3AA/T3AF/T3AS; hub stats 852→853
+- **Excluded:** docs-master/, workshops/, backup/
+- **Validate:** mintlify validate PASS (Node 20); compute_doc_stats → 853 pages
+- **Live QA:** Mass Voiceover 200 on docs.t3planet.de + origin with markers (loads straight away, Supademo, troubleshooting); AI Voiceover Generate/Regenerate + existing-file section; DPA canonical links; old orphan paths 308→canonical; homepage 853; sitemap 898 with MassVoiceover; images 200; Feature Guide hub card present
+- **Notes:** Cursor workspace path `MintilifyDoc` is a near-empty stub; production worktree used was `Ai Universe/Mintilify Doc`
+
+
 ### 2026-09-24 — Media / TonicTypes / footer / deploy SOP
 - Commit tip: `36cf8f0` (content `105c568`, SOP `0f3974d`, gitignore `018a601`/`58ec5b0`)
 - Push remote: `origin` → `nitsan-technologies/T3Planet-docs` (`master`)
