@@ -15,8 +15,8 @@ This page lists what your server and TYPO3 instance need before you install **EX
 
 ## Core requirements
 
-- **TYPO3 CMS** — 12.4 LTS, 13.4 LTS, or 14.x
-- **PHP** — 8.2 or higher (8.3 recommended)
+- **TYPO3 CMS** — 13.4 LTS or 14.3+ (TYPO3 12 is no longer supported since 2.0.0)
+- **PHP** — 8.2 to 8.5 (8.3 recommended)
 - **Database** — MySQL 8.0+ or MariaDB 10.3+
 - **Web server** — Apache or Nginx with HTTPS on production
 
@@ -59,7 +59,7 @@ You need at least one of these before AI features work:
 
 ## Pre-install checklist
 
-- TYPO3 12.4+ (Composer or TER installation)
+- TYPO3 13.4+ (Composer or TER installation)
 - PHP 8.2+ with extensions `mbstring`, `json`, `openssl`, `curl`
 - HTTPS on production
 - Scheduler cron active (every minute)

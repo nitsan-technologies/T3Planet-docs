@@ -22,7 +22,7 @@ This page helps you answer data protection (GDPR) questions about AI Chatbot: wh
 
 1. Go to **AI Universe → AI Chatbot/Search**.
 2. Click the **Chatbot** tab.
-3. On **Configuration**, turn **Save chatbot history** on or off.
+3. On **General**, in **Visitor features**, turn **Save chatbot history** on or off.
 4. Click **Save Configuration**.
 
 {/* 1. Open **AI Chatbot** in the TYPO3 backend.

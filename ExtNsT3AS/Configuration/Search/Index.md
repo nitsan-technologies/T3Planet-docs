@@ -29,10 +29,12 @@ These settings apply to the whole website. To use other settings on one page, ad
 
 - **Enable AI Search Globally** – switches AI Search on for your website.
 - **Enable Voiceover** – visitors can listen to the answer.
-- **Save search history** – keeps what visitors searched, so you can see it in [Usage Analytics](/en/latest/ExtNsT3AS/Configuration/UsageAnalytics/Index).
+- **Save search history** – keeps what visitors searched, so you can see it in [Usage Analytics](/en/latest/ExtNsT3AS/Configuration/UsageAnalytics/Index) and visitors see recent searches. Applies to the widget and the AI Search plugin. Switch off for stricter privacy.
 - **Enable Reference Links** – shows links to the pages or files the answer comes from.
+- **Maximum source links** – how many links an answer may show (1–10). Weak matches are left out, so an answer can show fewer.
 - **Enable Search Feedback** – visitors can rate answers with thumbs up or down.
-- **Enable Chatbot Mode** – visitors can ask follow-up questions.
+- **Enable Chatbot Mode** – visitors can ask follow-up questions below the AI answer. Follow-ups are based on that answer and the indexed content.
+- **Answer in the visitor's language** – AI Search answers in the language the visitor writes in, also when the website is in another language. Product names and titles stay as written on the website. Switch off to always answer in the site language.
 - **Result Style** – **Summarize** (short summary), **Short Answer** (a few sentences) or **Long Answer** (detailed).
 - **Search Class** – only needed if you show AI answers in another search extension (see [AI answers in other search extensions](/en/latest/ExtNsT3AS/Configuration/SearchExtensions/Index#inject-ai-search-results)).
 - **Instructions** – tell the AI how to write, for example "Answer in a friendly tone".

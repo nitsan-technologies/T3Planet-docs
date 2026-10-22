@@ -32,7 +32,7 @@ Quick Setup wizard — guided first-time configuration in the AI Foundation modu
 
 Your developer or hosting provider can check these:
 
-- **TYPO3** 12.4 LTS, 13.4 LTS or 14.x
+- **TYPO3** 13.4 LTS or 14.3+ (TYPO3 12 is no longer supported since 2.0.0)
 - **PHP** 8.2 or higher (8.3 recommended), with the `sodium` extension
 - **Database** MySQL 8.0+ or MariaDB 10.3+
 - **Internet access** from the server to your AI service (HTTPS)
@@ -138,8 +138,8 @@ day-to-day module setup.
 
 Ensure your system meets these requirements:
 
-- **TYPO3** — 12.4 LTS, 13.4 LTS, or 14.x
-- **PHP** — 8.2 or higher (8.3 recommended), including `ext-sodium`
+- **TYPO3** — 13.4 LTS or 14.3+ (TYPO3 12 is no longer supported since 2.0.0)
+- **PHP** — 8.2 to 8.5 (8.3 recommended), including `ext-sodium`
 - **Composer** — 2.x
 - **Database** — MySQL 8.0+ or MariaDB 10.3+
 - **Network** — Outbound HTTPS for AI provider API calls

@@ -57,7 +57,7 @@ Set `hidden=0` after create, or adjust permissions. Test in draft workspace `1` 
 
 **Old docs mention TYPO3 11 or PHP 7.4**
 
-Incorrect for current `ns_t3af`. Use TYPO3 12.4+ and PHP 8.2+. See [System Requirements](/en/latest/ExtNsT3AF/SystemRequirements/Index).
+Incorrect for current `ns_t3af`. Use TYPO3 13.4+ and PHP 8.2+. See [System Requirements](/en/latest/ExtNsT3AF/SystemRequirements/Index).
 
 ## Backend module not visible
 

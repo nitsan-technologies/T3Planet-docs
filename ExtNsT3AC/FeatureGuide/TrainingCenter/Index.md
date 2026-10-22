@@ -88,6 +88,11 @@ The task learns all **Pending** items and removes old **Failed** items after the
 - Afterwards the item is **Completed**, or **Failed** if there was an error.
 - How often training runs depends on the **Sync Interval** of your data sources – and the Scheduler must be running on your server.
 
+
+## Training settings
+
+How content is split, embedded and searched is set on the shared **Training** card (**AI Features > Training card** in the AI Foundation backend module, badge **AI Chatbot/Search**). It applies to both AI Chatbot and AI Search, including the new **Retriever** (hybrid or legacy), **Repeated blocks**, **Query analysis** and **Keyword search** options. All settings and defaults: [Settings used by training](/en/latest/ExtNsT3AC/FeatureGuide/DataSource/Index#settings-used-by-training).
+
 ## Related
 
 - [Data Source](/en/latest/ExtNsT3AC/FeatureGuide/DataSource/Index) – add or sync the content that is trained

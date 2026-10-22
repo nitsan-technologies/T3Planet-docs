@@ -65,7 +65,7 @@ Make sure your CSS files are available inside the public directory, and the path
 
 **Step 3:** Enable the chatbot, then configure feedback, **Save chatbot history**, messages, and instructions. */}
 
-### Settings {#t3ac-save-chatbot-history}
+### Settings
 
 {/* - **Enable AI Chatbot** — Activates the chatbot on your site
 - **Chatbot Feedback** — Shows thumbs up/down on responses; ratings appear in **Usage Analytics**
@@ -78,16 +78,16 @@ Make sure your CSS files are available inside the public directory, and the path
 - **Chatbot Instructions** — Custom rules for how the chatbot should answer */}
 
 - **Enable AI Chatbot** – switches the chatbot on or off for this website and language. (The label currently reads "Enable AI Chatbot Chatbot".)
-- **Enable chatbot feedback** – thumbs up / down under answers. You see the ratings in **Usage Analytics**.
-- **Enable email transcript** – visitors can email themselves a copy of the chat. See [Email transcript](#email-transcript).
-- **Transcript From email** / **Transcript From name** – the sender of these emails. Leave empty to use the default.
-- **Save chatbot history** – saves conversations, so you can read them in **Usage Analytics** and visitors can reopen past chats. Switch off for stricter privacy.
-- **Language** – which language you are editing. **Default (site default language)** is your main language. See [Multilanguage](#multilanguage).
+- **Answer in the visitor's language** – on by default. The chatbot answers in the language the visitor writes in (for example German, French, Dutch, Spanish, Italian or English), also when the website is in another language. Product names and titles stay as written on the website. Switch off to always answer in the site language.
+- **Language** – which language you are editing. **Default (site default language)** is your main language. Title, short description, bubble message, welcome message, instructions and source links are saved per language; appearance, pages, domains, history and feedback are shared. See [Multilanguage](#multilanguage).
 - **Chatbot Title** – the name at the top of the chat window.
 - **Short Description** – a short line under the title.
 - **Bubble Message** – the small speech bubble next to the chat button, for example "Hey there, how can I help you?"
 - **Welcome Message** – the first message visitors see.
 - **Chatbot Instructions** – rules for the answers, for example "Answer friendly and in max. 3 sentences".
+- **Reply when no answer is found (optional)** – the text visitors see when the website has no answer. Leave it empty to use the translated standard reply. Your text is shown as written, in the language you write it in.
+
+Feedback, chat history, **Clear chat** and the email transcript are on the **General** sub-tab. See [Visitor features](#visitor-features).
 
 ### Email transcript {#email-transcript}
 
@@ -95,8 +95,8 @@ Visitors can email themselves a copy of the chat, for example to keep opening ho
 
 **Turn it on**
 
-1. Go to **AI Universe → AI Chatbot/Search → Chatbot → Configuration**.
-2. Turn on **Enable email transcript**.
+1. Go to **AI Universe → AI Chatbot/Search → Chatbot → General**.
+2. In **Visitor features**, turn on **Enable email transcript**.
 3. Optional: enter a **Transcript From email** and **Transcript From name**.
 4. Click **Save Configuration**.
 
@@ -162,13 +162,13 @@ To put the chatbot in another corner or side (for desktop and mobile separately)
 
 ## General
 
-On the **General** tab you choose on which pages the chatbot appears, source links, [quick replies](#quick-replies) and the exact position.
+On the **General** tab you choose on which pages the chatbot appears, source links, [visitor features](#visitor-features), [quick replies](#quick-replies) and the exact position.
 
 <Note>
 These settings used to be in the site configuration. See [Upgrading? Where your old settings moved](/en/latest/ExtNsT3AC/Configuration/WhereToFindIt/Index)
 </Note>
 
-![Chatbot tab, General sub-tab with Page Visibility, Sources Links, Quick replies and Custom Styling](./images/chatbot-general.webp)
+![Chatbot tab, General sub-tab with Page Visibility, Sources Links, Visitor features, Quick replies and Custom Styling](./images/chatbot-general.webp)
 
 ### Page Visibility
 
@@ -205,6 +205,18 @@ Use Custom Styling to match the chatbot design with your website style.
 ### Custom Internal CSS
 
 Use this field when you want to apply CSS directly inside the chatbot widget. */}
+
+<a id="t3ac-save-chatbot-history"></a>
+
+### Visitor features {#visitor-features}
+
+These switches control what visitors can do in the chat widget. They are shared by all languages, except **Enable chatbot feedback**, which you set per language.
+
+- **Enable chatbot feedback** – thumbs up / down under answers. You see the ratings in **Usage Analytics**.
+- **Save chatbot history** – saves conversations, so you can read them in **Usage Analytics** and visitors can reopen past chats. Switch off for stricter privacy; the live chat still works for the current visit.
+- **Allow visitors to clear the chat** – on by default. Adds **Clear chat** to the chat menu. The visitor starts a fresh conversation, and earlier messages are no longer used for answers. With chat history on, earlier chats stay saved for Usage Analytics.
+- **Enable email transcript** – visitors can email themselves a copy of the chat. See [Email transcript](#email-transcript).
+- **Transcript From email** / **Transcript From name** – the sender of these emails. Leave empty to use the TYPO3 default sender (or the chatbot title as name).
 
 ### Quick replies
 

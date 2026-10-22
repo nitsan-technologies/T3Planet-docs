@@ -23,7 +23,7 @@ No. AI Foundation is a backend foundation layer. Visitors see AI through child e
 
 **Which TYPO3 and PHP versions are supported?**
 
-TYPO3 12.4–14.x with PHP 8.2 or higher. See [System Requirements](/en/latest/ExtNsT3AF/Installation/Index).
+TYPO3 13.4 and 14.3+ with PHP 8.2–8.5. TYPO3 12 is no longer supported since 2.0.0. See [System Requirements](/en/latest/ExtNsT3AF/Installation/Index).
 
 ## Installation
 

@@ -197,6 +197,16 @@
                 ],
                 "root": "ExtNsT3AF/Troubleshooting/Index"
               },
+              {
+                "group": "Release Notes",
+                "expanded": false,
+                "pages": [
+                  "ExtNsT3AF/ReleaseNotes/2.0.1/Index",
+                  "ExtNsT3AF/ReleaseNotes/2.0.0/Index",
+                  "ExtNsT3AF/ReleaseNotes/1.0.0/Index"
+                ],
+                "root": "ExtNsT3AF/ReleaseNotes/Index"
+              },
               "ExtNsT3AF/HelpfulLinks/Index",
               "ExtNsT3AF/Support/Index"
             ]

@@ -129,8 +129,8 @@ Full reference: [Developer Guide](/en/latest/ExtNsT3AF/DeveloperGuide/Index)
 
 ## Requirements at a glance
 
-- **TYPO3** — 12.4 LTS, 13.4 LTS, or 14.x
-- **PHP** — 8.2 or higher (8.3 recommended)
+- **TYPO3** — 13.4 LTS or 14.3+ (TYPO3 12 is no longer supported since 2.0.0)
+- **PHP** — 8.2 to 8.5 (8.3 recommended)
 - **System extensions** — `workspaces` and `scheduler`
 - **Billing** — API key or AI Credits (at least one)
 - **Composer** — Recommended for TYPO3 installs

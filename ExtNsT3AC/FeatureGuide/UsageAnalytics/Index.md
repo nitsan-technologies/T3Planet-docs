@@ -36,7 +36,7 @@ The visitor's IP address is not stored in plain text. It is saved as a hash (a o
 </Note>
 
 <Note>
-Conversations only appear here if **Save chatbot history** is on (**Chatbot → Configuration**). Searches only appear if **Save search history** is on (**Search → Settings**).
+Conversations only appear here if **Save chatbot history** is on (**Chatbot → General → Visitor features**). Searches only appear if **Save search history** is on (**Search → Settings**).
 </Note>
 
 {/* Enable **Save chatbot history** in **Chatbot → Settings** so conversations appear in this log. Enable **Save search history** in **T3AS → Search → Settings** so search queries and answers appear here. */}
