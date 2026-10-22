@@ -45,6 +45,19 @@ Append one entry per production release.
 
 <!-- entries below -->
 
+### 2026-10-22 — T3AF 2.0 release notes + T3AC/T3AS hybrid retriever docs
+- **Status:** PASS
+- **Commit:** `7c70f93` — docs: T3AF 2.0 release notes and hybrid retriever guides for T3AC/T3AS
+- **Author:** Nitsan <sanjay@nitsantech.com>
+- **Remote:** origin → nitsan-technologies/T3Planet-docs (`master`)
+- **Mintlify:** Git source `nitsan-technologies/t3planet-docs` · `master`; deployment_status live for `7c70f93` (started 14:52:53Z, ended 14:54:33Z)
+- **Included:** ExtNsT3AC / ExtNsT3AF / ExtNsT3AS content + screenshots; new T3AF Release Notes 2.0.0 & 2.0.1; docs.json nav; hub stats 853→857
+- **Excluded:** docs-master/, workshops/, backup/
+- **Validate:** mintlify validate PASS (Node 20); compute_doc_stats → 857 pages
+- **Live QA:** Release Notes 2.0.0/2.0.1 200; System Requirements drops TYPO3 12; DataSource/TrainingCenter hybrid Retriever markers; Chatbot/Search visitor-language updates; training-settings-drawer images 200; homepage 857; sitemap includes 2.0.0/2.0.1
+- **Worktree:** `/Users/nitsan/www/T3Planet-docs`
+
+
 ### 2026-10-21 — Mass Voiceover guide, AI Voiceover corrections, T3AF DPA link repair
 - **Status:** PASS
 - **Commit:** `68aabd4` — docs: add Mass Voiceover guide, fix AI Voiceover details, repair T3AF DPA links
