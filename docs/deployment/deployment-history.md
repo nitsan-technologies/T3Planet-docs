@@ -45,6 +45,19 @@ Append one entry per production release.
 
 <!-- entries below -->
 
+### 2026-10-23 — T3AC privacy policy + simplified T3AC/T3AS training settings
+- **Status:** PASS
+- **Commit:** `c0ba04e` — docs: T3AC privacy policy and simplified T3AC/T3AS training settings
+- **Author:** Nitsan <sanjay@nitsantech.com>
+- **Remote:** origin → nitsan-technologies/T3Planet-docs (`master`)
+- **Mintlify:** Git source `nitsan-technologies/t3planet-docs` · `master`; deployment_status live for `c0ba04e` (started 11:32:38Z, ended 11:33:20Z)
+- **Included:** ExtNsT3AC Index/Chatbot/DataSource/TrainingCenter (+ drawer image); ExtNsT3AS TrainingCenter/ForDevelopers; stats timestamp refresh
+- **Excluded:** docs-master/, workshops/, backup/
+- **Validate:** mintlify validate PASS (Node 20); pages remain 857
+- **Live QA:** Chatbot Privacy Policy section present; hub Privacy Policy card; Training options explained on AC DataSource + AS TrainingCenter; TrainingCenter drawer image 200; homepage 857
+- **Source of pending edits:** `/Users/nitsan/www/ExtNsT3AC` and `/Users/nitsan/www/ExtNsT3AS` copied into worktree before commit
+
+
 ### 2026-10-22 — T3AF 2.0 release notes + T3AC/T3AS hybrid retriever docs
 - **Status:** PASS
 - **Commit:** `7c70f93` — docs: T3AF 2.0 release notes and hybrid retriever guides for T3AC/T3AS
