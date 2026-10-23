@@ -104,17 +104,10 @@ ddev typo3 t3af:history:cleanup 90
 | Chunk Size | 1000 | How many records are read from the database at a time. Lower it if your server runs out of memory. |
 | Batch Size | 100 | How many items are sent to the AI provider in one go. |
 | Retention Days | 30 | After how many days old **Failed** queue items are archived or deleted. Completed (trained) items are kept. |
-| Retrieval confidence threshold | 0.62 | How well the best match must fit (0.40–0.90) before the AI answers with your content. Higher = stricter. |
 | Embedding cache lifetime | 2592000 | How long (in seconds) search and chat questions are cached. 2592000 = 30 days. |
-| Retrieval shortlist size | 300 | How many likely matches are first picked by keyword search and then compared with the AI data. |
-| Retrieval vector scan cap | – | **Deprecated, ignored.** Every stored item is now scored. |
-| Minimum shortlist top score | – | **Deprecated, ignored.** The keyword shortlist no longer limits the vector search. |
-| Retriever | hybrid | **hybrid** combines keyword and AI (vector) search and merges the rankings. It is used once the new index is built for the site; until then the previous search answers. **legacy** keeps the previous search. |
 | Repeated blocks | 0.5 | A block (banner, shared box) that appears on more than this share of a site's pages or of one URL folder is removed from the pages and kept once (0.2–0.9). Lower removes more repeated text; higher keeps content shared on purpose. Applies at the next sync. |
-| Query analysis | history_or_complex | Hybrid only. Rewrites follow-up questions, and questions whose first search is weak, into one search query with a short AI call. **history_or_complex** also splits long and comparison questions ("A vs B") up front (one extra AI call on those questions). **history** is fastest. **always** or **off** are also possible. |
 | Query analysis time limit | 4 | Seconds (0 = provider default). If the AI call takes longer, the question is searched as typed. |
-| AI Search (result list) | on | Hybrid only. AI Search shows a numbered result list (one entry per page, with highlighted snippets) before the AI summary; the summary cites the entries. |
-| Keyword search of the hybrid retriever | auto | **auto** ranks Solr data sources with Solr (needs the EXT:solr connection in the site configuration) and everything else with the database. **database** never asks Solr. |
+| AI Search (result list) | on | AI Search shows a numbered result list (one entry per page, with highlighted snippets) before the AI summary; the summary cites the entries. |
 | Maximum Requests per Minute | 10 | How many search or chat requests one visitor may send per minute. |
 | Suspicious Pattern Threshold | 3 | How many suspicious requests are allowed before a visitor is blocked. |
 | Cache Lifetime (seconds) | 60 | How long the rate limit counter is kept. |

@@ -205,66 +205,42 @@ These **T3CS / AI Chatbot & Search** settings are applied when the scheduler tas
 
 Most websites can keep the defaults. You find them in **AI Universe → AI Foundation → AI Features**, on the **Training** and **Rate Limiting** cards (badge **AI Chatbot/Search**). The **Training** card is shared: the same values apply to AI Chatbot and [AI Search](/en/latest/ExtNsT3AS/Configuration/TrainingCenter/Index#training-settings).
 
-New since the hybrid retriever: **Retriever**, **Repeated blocks**, **Query analysis**, **Query analysis time limit**, **AI Search** result list and **Keyword search of the hybrid retriever**. Run a sync after changing **Retriever** or **Repeated blocks**.
+![AI Foundation, AI Features: Training drawer with chunk size, batch size, retention, embedding cache, repeated blocks, query analysis time limit and AI Search result list](./images/training-settings-drawer.webp)
 
-![AI Foundation, AI Features: Training drawer with chunk, batch, retrieval and hybrid retriever settings](./images/training-settings-drawer.webp)
+#### Training options explained {#retrieval-options}
 
-#### Retrieval options explained {#retrieval-options}
+**Chunk Size** – default: `1000`
 
-These options change how the AI finds content for an answer. They apply to AI Chatbot **and** AI Search (same settings: [AI Search: Retrieval options](/en/latest/ExtNsT3AS/Configuration/TrainingCenter/Index#retrieval-options)). Most websites can keep the defaults.
+How many records are read from the database at a time while the content is prepared for training. When to change: lower it if the training stops because the server runs out of memory; raise it on strong servers to train large sites faster.
 
-**Retriever** – default: `hybrid`
+**Batch Size** – default: `100`
 
-Decides which search finds the content for an answer.
+How many items are sent to the AI provider in one request when the embeddings are created. Also used by the `--batch-size` option of the training command. When to change: lower it if your AI provider reports rate limits or time-outs; raise it to train faster when your provider allows larger requests.
 
-- `hybrid` – runs a keyword search and an AI (vector) search at the same time and merges both rankings. Exact words (product names, article numbers) and similar meanings are both found. A site only uses it after its data sources were synced and trained with the new index; until then it keeps answering with the previous search, so nothing breaks while you switch.
-- `legacy` – keeps the previous search only.
+**Retention Days** – default: `30`
 
-When to change: stay on `hybrid`. Choose `legacy` only as a temporary fallback, for example if answers got worse after an update, while you report the problem.
+After how many days old **Failed** queue items are archived (CSV in `var/log/t3cs`) or deleted by the cleanup step. Completed (trained) items are always kept. When to change: raise it if you want to look into failed items for longer; lower it to keep the queue table small.
+
+**Embedding cache lifetime (seconds)** – default: `2592000` (30 days)
+
+How long the embeddings of visitor questions in search and chat are cached. A question that was asked before is answered without a new embedding call, which is faster and saves AI credits. When to change: lower it if you often switch the embedding provider or model; shorter values mean more AI calls.
 
 **Repeated blocks** – default: `0.5` (allowed `0.2`–`0.9`)
 
-Removes text that repeats on many pages, such as promo banners, "shop the video" boxes, call-to-action boxes or legal notes. Such a block is kept once instead of on every page, so it does not push real content out of answers. A block counts as repeated when it appears on more than this share of the pages – across the whole site or within one URL folder (for example all `/products/` pages) – and on at least 5 pages. Headings are never removed. Sites or folders with fewer than 10 pages are left alone. Empty or invalid values use `0.5`.
+Removes text that repeats on many pages, such as promo banners, "shop the video" boxes, call-to-action boxes or legal notes. Such a block is kept once instead of on every page, so it does not push real content out of answers. A block counts as repeated when it appears on more than this share of the pages – across the whole site or within one URL folder (for example all `/products/` pages). Empty or invalid values use `0.5`.
 
 - Lower (for example `0.3`) – removes more repeated text.
 - Higher (for example `0.7`) – keeps content that is shared on purpose, for example the same product card in several collections.
 
 When to change: lower it if answers keep quoting banners; raise it if shared content is missing in answers. It applies at the next sync, so run **Sync** and the training afterwards.
 
-**Query analysis** – default: `history_or_complex` (only with the `hybrid` retriever)
-
-Decides when a short extra AI call turns the visitor's question into a better search query. Follow-up questions such as "and how much is it?" are rewritten into a standalone question; comparison questions ("A vs B") are split into one search per item.
-
-- `history_or_complex` – analyses follow-up questions, and also long or complex questions up front (more than 12 words, or with comparison, negation or "and/or" words). Costs one extra AI call (a few seconds) on those questions only.
-- `history` – fastest. A question without earlier messages is searched as typed. Follow-ups that depend on the conversation are analysed, and a question is rewritten once when the first search finds little.
-- `always` – every question is analysed. Most accurate, but slower and uses more AI credits.
-- `off` – never analysed; every question is searched as typed. Follow-up questions may then find the wrong content.
-
-Unreadable input (keyboard mash) is never analysed; the chatbot asks the visitor to rephrase. When to change: choose `history` if answers must be faster, `always` if visitors ask many comparison questions.
-
 **Query analysis time limit** – default: `4` seconds
 
-How long the extra AI call of **Query analysis** may take. If it takes longer, the question is searched as typed, so a slow AI service cannot block the answer. `0` uses the time limit of the AI provider. When to change: raise it if your AI provider is often slow and follow-up answers miss; lower it if answers must start faster.
+Follow-up questions (for example "and how much is it?") are turned into a standalone search query with a short AI call. This setting is how long that call may take. If it takes longer, the question is searched as typed, so a slow AI service cannot block the answer. `0` uses the time limit of the AI provider. When to change: raise it if your AI provider is often slow and follow-up answers miss; lower it if answers must start faster.
 
-**AI Search (result list)** – default: on (only with the `hybrid` retriever)
+**AI Search (result list)** – default: on
 
 AI Search shows a numbered result list – one entry per page, with highlighted snippets – before the AI summary. The summary refers to these entries. Switch it off to show only the AI summary. It does not affect the chatbot.
-
-**Keyword search of the hybrid retriever** – default: `auto`
-
-Decides which engine runs the keyword part of the `hybrid` search.
-
-- `auto` – content of Solr data sources is ranked by Solr; everything else by the database. Needs the EXT:solr connection in the site configuration. Sites without a Solr data source are not affected.
-- `database` – the database is always used; Solr is never asked.
-
-When to change: choose `database` if Solr is slow, not reachable or not set up on this server.
-
-**Deprecated options (ignored)**
-
-- **Retrieval vector scan cap** – no longer used. Every stored item is now compared, so no item can be missed because of a limit.
-- **Minimum shortlist top score** – no longer used. The keyword shortlist no longer decides whether the AI (vector) search runs.
-
-You can leave both fields as they are; changing them has no effect.
 
 <Accordion title="All training settings and their defaults">
 
@@ -273,27 +249,14 @@ You can leave both fields as they are; changing them has no effect.
 | Chunk Size | 1000 | How many records are read from the database at a time. Lower it if your server runs out of memory. |
 | Batch Size | 100 | How many items are sent to the AI provider in one go. |
 | Retention Days | 30 | After how many days old **Failed** queue items are archived or deleted. Completed (trained) items are kept. |
-| Retrieval confidence threshold | 0.62 | How well the best match must fit (0.40–0.90) before the AI answers with your content. Higher = stricter. |
 | Embedding cache lifetime | 2592000 | How long (in seconds) search and chat questions are cached. 2592000 = 30 days. |
-| Retrieval shortlist size | 300 | How many likely matches are first picked by keyword search and then compared with the AI data. |
-| Retrieval vector scan cap | – | **Deprecated, ignored.** Every stored item is now scored. |
-| Minimum shortlist top score | – | **Deprecated, ignored.** The keyword shortlist no longer limits the vector search. |
-| Retriever | hybrid | **hybrid** combines keyword and AI (vector) search and merges the rankings. It is used once the new index is built for the site; until then the previous search answers. **legacy** keeps the previous search. |
-| Repeated blocks | 0.5 | A block (banner, shared box) that appears on more than this share of a site's pages or of one URL folder is removed from the pages and kept once (0.2–0.9). Lower removes more repeated text; higher keeps content shared on purpose. Applies at the next sync. |
-| Query analysis | history_or_complex | Hybrid only. Rewrites follow-up questions, and questions whose first search is weak, into one search query with a short AI call. **history_or_complex** also splits long and comparison questions ("A vs B") up front (one extra AI call on those questions). **history** is fastest. **always** or **off** are also possible. |
-| Query analysis time limit | 4 | Seconds (0 = provider default). If the AI call takes longer, the question is searched as typed. |
-| AI Search (result list) | on | Hybrid only. AI Search shows a numbered result list (one entry per page, with highlighted snippets) before the AI summary; the summary cites the entries. |
-| Keyword search of the hybrid retriever | auto | **auto** ranks Solr data sources with Solr (needs the EXT:solr connection in the site configuration) and everything else with the database. **database** never asks Solr. |
-| Maximum Requests per Minute | 10 | How many search or chat requests one visitor may send per minute. |
-| Suspicious Pattern Threshold | 3 | How many suspicious requests are allowed before a visitor is blocked. |
-| Cache Lifetime (seconds) | 60 | How long the rate limit counter is kept. |
-| Maximum Links to Crawl | 30 | How many links are read per sitemap or web page source in one run. |
-
-**Batch Size** and **Retention Days** are also written to the Scheduler task as `--batch-size` and `--retention-days`.
-
-<Note>
-The archive folder for cleanup CSV files is `var/log/t3cs` by default. There is no backend field for it.
-</Note>
+| Repeated blocks | 0.5 | A block (banner, shared box) that appears on more than this share of a site's pages or of one URL folder is removed from the pages and kept once (0.2–0.9). Applies at the next sync. |
+| Query analysis time limit | 4 | Seconds (0 = provider default). If the AI call for a follow-up question takes longer, the question is searched as typed. |
+| AI Search (result list) | on | AI Search shows a numbered result list (one entry per page, with highlighted snippets) before the AI summary. |
+| Maximum Requests per Minute | 10 | **Rate Limiting** card. How many search or chat requests one visitor may send per minute. |
+| Suspicious Pattern Threshold | 3 | **Rate Limiting** card. How many suspicious requests are allowed before a visitor is blocked. |
+| Cache Lifetime (seconds) | 60 | **Rate Limiting** card. How long the rate limit counter is kept. |
+| Maximum Links to Crawl | 30 | **Rate Limiting** card. How many links are read per sitemap or web page source in one run. |
 
 </Accordion>
 
@@ -341,7 +304,7 @@ vendor/bin/typo3 scheduler:run --task=12 -f
 
 **Compound words – `t3cs:keyword:compounds`**
 
-Adds the parts of compound words (for example "Sonnen" and "schutz" from "Sonnenschutz") to the keyword index of already trained content, so the keyword search of the hybrid retriever also finds the single words. No AI calls, no new embeddings. Run it after a training on sites with compound words, for example German.
+Adds the parts of compound words (for example "Sonnen" and "schutz" from "Sonnenschutz") to the keyword index of already trained content, so the keyword search also finds the single words. No AI calls, no new embeddings. Run it after a training on sites with compound words, for example German.
 
 | Option | What it does |
 |---|---|

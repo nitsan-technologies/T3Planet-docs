@@ -218,6 +218,25 @@ These switches control what visitors can do in the chat widget. They are shared 
 - **Enable email transcript** – visitors can email themselves a copy of the chat. See [Email transcript](#email-transcript).
 - **Transcript From email** / **Transcript From name** – the sender of these emails. Leave empty to use the TYPO3 default sender (or the chatbot title as name).
 
+### Privacy Policy {#privacy-policy}
+
+Show a **Privacy Policy** link in the chat window, so visitors can read how their chat data is handled. The link is shown in the footer of the open chat window, after the line that says the AI can make mistakes (for example "AI can make mistakes | Privacy Policy"). It opens in a new tab. The label **Privacy Policy** is translated into the language of the page.
+
+1. Go to **AI Universe → AI Chatbot/Search → Chatbot → General**.
+2. Choose the language in the language switch at the top.
+3. Switch on **Show privacy policy notice**.
+4. Enter the **Privacy policy URL**.
+5. Click **Save**.
+
+- **Show privacy policy notice** – off by default. Adds the **Privacy Policy** link to the chat window footer.
+- **Privacy policy URL** – the page the link opens. Use a full address (`https://example.com/privacy-policy`) or a path on your site (`/privacy-policy`). It is saved per language, so each language can link to its own privacy page. The link stays hidden until a URL is set, even when the switch is on.
+
+<Tip>
+Also see [Save chatbot history](#visitor-features) and [DPA & GDPR](/en/latest/ExtNsT3AC/DPAandGDPR/Index) for the other privacy settings.
+</Tip>
+
+{/* SCREENSHOT NEEDED: General tab with Show privacy policy notice + Privacy policy URL, and the footer link in the Live Preview (backend login not available at time of writing) */}
+
 ### Quick replies
 
 **Quick replies** are buttons that visitors see under the welcome message, for example "Opening hours" or "Shipping costs". When a visitor clicks one, the chatbot shows the answer you prepared. No AI is used, so the answer comes at once and costs nothing.
@@ -313,7 +332,6 @@ Show the chatbot on another website, for example your shop. All steps, the allow
 
 ![Chatbot External Embed tab with the embed code, External Embedding Settings and Apache Configuration](./images/chatbot-external-embed.webp)
 
-AI Search has the same feature: [AI Search External Embed](/en/latest/ExtNsT3AS/Configuration/ExternalEmbed/Index).
 
 {/* Short steps before the 8 Oct 2026 Configuration split (full steps are now on Configuration → External Embed):
 
@@ -360,8 +378,8 @@ Configure **Chunk Size**, **Batch Size**, and **Retention Days** under **T3AF �
 
 ## Crawling protected websites and large data
 
-- **Pages behind a browser login?** Go to **AI Universe → AI Foundation → AI Features → Access & Notifications**. See [Basic authentication](/en/latest/ExtNsT3AS/BasicAuthentication/Index).
-- **Very large website?** Open the **Training** card in **AI Features** and change **Chunk Size** (default 1000). See [Database chunking](/en/latest/ExtNsT3AS/DatabaseChunking/Index).
+- **Pages behind a browser login?** Go to **AI Universe → AI Foundation → AI Features → Access & Notifications**. See [Crawling protected websites](#crawling-protected-websites-and-large-data).
+- **Very large website?** Open the **Training** card in **AI Features** and change **Chunk Size** (default 1000). See [Database chunking](#configurable-database-chunking-for-various-types-of-dataset-processing).
 
 ![Access & Notifications drawer in AI Foundation with Enable Basic Authentication Support](./images/access-notifications-basic-auth.webp)
 
@@ -370,7 +388,6 @@ Configure **Chunk Size**, **Batch Size**, and **Retention Days** under **T3AF �
 - [Hide the chatbot on a page](/en/latest/ExtNsT3AC/Configuration/DisableChatbotOnPage/Index)
 - [Permissions](/en/latest/ExtNsT3AC/Configuration/Permissions/Index) and [MCP tools](/en/latest/ExtNsT3AC/Configuration/MCPTools/Index)
 - [AI Prompts in AI Foundation](/en/latest/ExtNsT3AF/Configuration/AIPrompts/Index)
-- [AI Search widget](/en/latest/ExtNsT3AS/Configuration/Search/Index#search-widget) and [AI Search plugin](/en/latest/ExtNsT3AS/FrontendPlugin/Index), if you also want an AI search box
 
 {/* Original text before the 8 Oct 2026 simplification (kept for reference):
 

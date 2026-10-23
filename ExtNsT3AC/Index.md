@@ -59,7 +59,7 @@ sidebarTitle: "AI Chatbot"
   <Card title="Multilanguage" icon="languages" href="/ExtNsT3AC/FeatureGuide/Chatbot/Index#multilanguage" />
   <Card title="Permissions" icon="shield" href="/ExtNsT3AC/Configuration/Permissions/Index" />
   <Card title="MCP tools" icon="wrench" href="/ExtNsT3AC/Configuration/MCPTools/Index" />
-  <Card title="AI Search (shares data and training)" icon="search" href="/ExtNsT3AS/Index" />
+  <Card title="Privacy Policy" icon="lock" href="/ExtNsT3AC/FeatureGuide/Chatbot/Index#privacy-policy" />
   <Card title="All features at a glance" icon="list" href="/ExtNsT3AC/Introduction/Index#feature-overview" />
   </CardGroup>
 </section>
