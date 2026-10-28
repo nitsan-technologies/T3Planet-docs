@@ -45,6 +45,17 @@ Append one entry per production release.
 
 <!-- entries below -->
 
+### 2026-10-28 — strip Mintlify heading zero-width characters
+- **Status:** PASS
+- **Commit:** `95d5051` — docs: strip Mintlify zero-width chars from heading anchors
+- **Author:** Nitsan <sanjay@nitsantech.com>
+- **Remote:** origin → nitsan-technologies/T3Planet-docs (`master`)
+- **Mintlify:** deployment_status live for `95d5051` (started 11:20:10Z, ended 11:22:26Z)
+- **Included:** `_static/strip-heading-zw.js`; `docs.json` scripts entry
+- **Excluded:** docs-master/, workshops/, backup/
+- **Live QA:** Ask AI Agent Index loads script via `/_mintlify/custom/.../_static/strip-heading-zw.js` (200); browser evaluate headingZw=0 articleZw=0; `__t3StripHeadingZw` bound
+- **Note:** Bare `https://docs.t3planet.de/_static/strip-heading-zw.js` 404s the same as other `_static` JS — Mintlify serves hashed `/_mintlify/custom/...` URLs; page config still lists `/_static/strip-heading-zw.js`
+
 ### 2026-10-28 — T3AA Ask AI Agent accessibility guides
 - **Status:** PASS
 - **Commit:** `51df8fe` — docs: add T3AA Ask AI Agent accessibility guides
