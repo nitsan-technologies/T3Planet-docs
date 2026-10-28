@@ -45,6 +45,18 @@ Append one entry per production release.
 
 <!-- entries below -->
 
+### 2026-10-28 — T3AF Credit System Buy Credits + Claim Code
+- **Status:** PASS
+- **Commit:** `440fbee` — docs: add T3AF Credit System Buy Credits and Claim Code guides
+- **Author:** Nitsan <sanjay@nitsantech.com>
+- **Remote:** origin → nitsan-technologies/T3Planet-docs (`master`)
+- **Mintlify:** Git source `nitsan-technologies/t3planet-docs` · `master`; deployment_status live for `440fbee` (started 09:58:42Z, ended 09:59:23Z); SSL active on `docs.t3planet.de`
+- **Included:** new `BuyCredits/` + `ClaimCode/` pages and images; updates to Credit System hub/Overview/Configuration/AIUsage/Troubleshooting; AIUsage cost/usage WebPs; `docs.json` nav + 2 redirects; hub stats 857→859 pages / 70 products
+- **Excluded:** docs-master/, workshops/, backup/
+- **Validate:** mintlify validate PASS; compute_doc_stats → 859 pages
+- **Live QA:** BuyCredits + ClaimCode 200 with titles and image markers on docs.t3planet.de and t3planet.mintlify.app; hub links BuyCredits/ClaimCode; AIUsage credits-costs/recent-usage images present; Configuration/Overview/Troubleshooting 200
+- **Source of pending edits:** MintilifyDoc `ExtNsT3AF/T3Planet-Credit-System` + surgically patched `docs.json` into `/tmp/t3planet-deploy`
+
 ### 2026-10-23 — T3AC privacy policy + simplified T3AC/T3AS training settings
 - **Status:** PASS
 - **Commit:** `c0ba04e` — docs: T3AC privacy policy and simplified T3AC/T3AS training settings
