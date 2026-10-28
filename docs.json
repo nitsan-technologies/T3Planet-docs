@@ -14438,7 +14438,8 @@
   },
   "scripts": [
     "/_static/t3-stats-inline.js",
-    "/_static/t3-docs.min.js"
+    "/_static/t3-docs.min.js",
+    "/_static/strip-heading-zw.js"
   ],
   "icons": {
     "library": "lucide"
