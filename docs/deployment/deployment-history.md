@@ -45,6 +45,18 @@ Append one entry per production release.
 
 <!-- entries below -->
 
+### 2026-10-28 — T3AA Ask AI Agent accessibility guides
+- **Status:** PASS
+- **Commit:** `51df8fe` — docs: add T3AA Ask AI Agent accessibility guides
+- **Author:** Nitsan <sanjay@nitsantech.com>
+- **Remote:** origin → nitsan-technologies/T3Planet-docs (`master`)
+- **Mintlify:** Git source `nitsan-technologies/t3planet-docs` · `master`; deployment_status live for `51df8fe` (started 10:40:02Z, ended 10:40:49Z)
+- **Included:** new `ExtNsT3AA/AskAiAgent/` (7 pages + 9 WebP images); `docs.json` Ask AI agent nav group under AI Accessibility + 7 index.html redirects; hub stats 859→866 pages / 70 products
+- **Excluded:** docs-master/, workshops/, backup/, AskAiAgent/images-backup*
+- **Validate:** mintlify validate PASS (Node 20); compute_doc_stats → 866 pages
+- **Live QA:** AskAiAgent Index/WhereOpens/HowItWorks/StepByStep/Tools/ExampleRequests/Troubleshooting 200 with content markers on docs.t3planet.de; origin mintlify.app also 200
+- **Source:** `/Users/nitsan/www/AI Agents/Mintilify Doc/ExtNsT3AA/AskAiAgent` + surgically patched `docs.json` into `/tmp/t3planet-deploy`
+
 ### 2026-10-28 — T3AF Credit System Buy Credits + Claim Code
 - **Status:** PASS
 - **Commit:** `440fbee` — docs: add T3AF Credit System Buy Credits and Claim Code guides
