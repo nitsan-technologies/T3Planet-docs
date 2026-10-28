@@ -119,6 +119,8 @@
                 "pages": [
                   "ExtNsT3AF/T3Planet-Credit-System/Overview/Index",
                   "ExtNsT3AF/T3Planet-Credit-System/Configuration/Index",
+                  "ExtNsT3AF/T3Planet-Credit-System/BuyCredits/Index",
+                  "ExtNsT3AF/T3Planet-Credit-System/ClaimCode/Index",
                   "ExtNsT3AF/T3Planet-Credit-System/AIUsage/Index",
                   "ExtNsT3AF/T3Planet-Credit-System/MCPIntegration/Index",
                   "ExtNsT3AF/T3Planet-Credit-System/Troubleshooting/Index",
@@ -14369,6 +14371,14 @@
     {
       "source": "/ExtNsT3AA/FeatureGuide/MassVoiceover.html",
       "destination": "/ExtNsT3AA/FeatureGuide/MassVoiceover/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/BuyCredits/index.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/BuyCredits/Index"
+    },
+    {
+      "source": "/ExtNsT3AF/T3Planet-Credit-System/ClaimCode/index.html",
+      "destination": "/ExtNsT3AF/T3Planet-Credit-System/ClaimCode/Index"
     }
   ],
   "description": "Official T3Planet documentation for TYPO3 extensions, templates, AI solutions, licensing, and installation guides.",

@@ -8,15 +8,19 @@ keywords:
 sidebarTitle: "Configuration"
 ---
 
-Switch on T3Planet Credits, set limits per editor group and buy more credits.
+Switch on T3Planet Credits, set limits per editor group and add credits.
 
 **Path:** **AI Universe → AI Foundation → AI Providers**
 
 ## Before you start
 
 - AI Foundation is installed and active.
-- Your free AI Foundation license key is active (in the **T3Planet Shop**).
 - Your server can connect to the T3Planet service (ask your hosting provider if unsure).
+
+## Two ways to connect
+
+- **Start free** — follow **Activate Credits** below. You get free trial credits. Each public server IP can start one trial.
+- **You already bought credits** — skip **Activate** and use a [claim code](/en/latest/ExtNsT3AF/T3Planet-Credit-System/ClaimCode/Index).
 
 ## Activate Credits
 
@@ -36,7 +40,7 @@ After activation — T3Planet Credits active, balance panel, and
 Buy more credits.
 
 <Note>
-**Activate** failed? Check that your license key is valid and that your server can reach the T3Planet service, then try again. See [Troubleshooting → Activation failed](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Troubleshooting/Index#activation-failed).
+**Activate** failed? Check that your server can reach the T3Planet service, then try again. If TYPO3 says the server IP already belongs to a paying account, use a [claim code](/en/latest/ExtNsT3AF/T3Planet-Credit-System/ClaimCode/Index) instead. See [Troubleshooting → Activation failed](/en/latest/ExtNsT3AF/T3Planet-Credit-System/Troubleshooting/Index#activation-failed).
 </Note>
 
 ## After activation
@@ -62,10 +66,7 @@ Administrators have no limits.
 
 ## Buy more credits
 
-1. Click **Buy more credits** on the Credits panel or the **Dashboard**.
-2. Complete the purchase on the T3Planet checkout page.
-
-Your invoices are in your T3Planet account.
+Click **Buy more credits** in the **Credit Balance** panel, pick a bundle and pay on the T3Planet checkout page. Invoices are in your T3Planet account. Steps, including buying on the website: [Buy credits](/en/latest/ExtNsT3AF/T3Planet-Credit-System/BuyCredits/Index).
 
 <Warning>
 If T3Planet returns a rate-limit message, wait for the shown cooldown before
