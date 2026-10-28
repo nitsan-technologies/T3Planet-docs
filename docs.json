@@ -416,6 +416,19 @@
               "ExtNsT3AA/ReInstallEverything/Index",
               "ExtNsT3AA/Configuration/Index",
               {
+                "group": "Ask AI agent",
+                "root": "ExtNsT3AA/AskAiAgent/Index",
+                "expanded": false,
+                "pages": [
+                  "ExtNsT3AA/AskAiAgent/WhereOpens/Index",
+                  "ExtNsT3AA/AskAiAgent/HowItWorks/Index",
+                  "ExtNsT3AA/AskAiAgent/StepByStep/Index",
+                  "ExtNsT3AA/AskAiAgent/Tools/Index",
+                  "ExtNsT3AA/AskAiAgent/ExampleRequests/Index",
+                  "ExtNsT3AA/AskAiAgent/Troubleshooting/Index"
+                ]
+              },
+              {
                 "group": "Feature Guide",
                 "expanded": true,
                 "pages": [
@@ -14379,6 +14392,34 @@
     {
       "source": "/ExtNsT3AF/T3Planet-Credit-System/ClaimCode/index.html",
       "destination": "/ExtNsT3AF/T3Planet-Credit-System/ClaimCode/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/AskAiAgent/index.html",
+      "destination": "/ExtNsT3AA/AskAiAgent/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/AskAiAgent/WhereOpens/index.html",
+      "destination": "/ExtNsT3AA/AskAiAgent/WhereOpens/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/AskAiAgent/HowItWorks/index.html",
+      "destination": "/ExtNsT3AA/AskAiAgent/HowItWorks/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/AskAiAgent/StepByStep/index.html",
+      "destination": "/ExtNsT3AA/AskAiAgent/StepByStep/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/AskAiAgent/Tools/index.html",
+      "destination": "/ExtNsT3AA/AskAiAgent/Tools/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/AskAiAgent/ExampleRequests/index.html",
+      "destination": "/ExtNsT3AA/AskAiAgent/ExampleRequests/Index"
+    },
+    {
+      "source": "/ExtNsT3AA/AskAiAgent/Troubleshooting/index.html",
+      "destination": "/ExtNsT3AA/AskAiAgent/Troubleshooting/Index"
     }
   ],
   "description": "Official T3Planet documentation for TYPO3 extensions, templates, AI solutions, licensing, and installation guides.",
