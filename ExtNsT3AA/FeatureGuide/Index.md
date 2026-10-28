@@ -10,7 +10,10 @@ sidebarTitle: "Feature Guide"
 
 Day-to-day workflows for the **AI Accessibility** module in T3AA (`EXT:ns_t3aa`), opened from **AI Accessibility**.
 
+For plain-language accessibility tasks on the current page (missing alt text, scans, Fix Hub suggestions, PageSpeed, voice-over), use the [Ask AI agent](/ExtNsT3AA/AskAiAgent/Index) chat from the backend top bar. The Feature Guide below covers the standalone module tabs.
+
 <CardGroup cols={2}>
+  <Card title="Ask AI agent" icon="bot" href="/ExtNsT3AA/AskAiAgent/Index" />
   <Card title="Dashboard" icon="layout-dashboard" href="/ExtNsT3AA/FeatureGuide/Dashboard/Index" />
   <Card title="AI Alt Text" icon="image" href="/ExtNsT3AA/FeatureGuide/AIAltText/Index" />
   <Card title="Accessibility Widgets" icon="sliders-horizontal" href="/ExtNsT3AA/FeatureGuide/AccessibilityWidgets/Index" />
