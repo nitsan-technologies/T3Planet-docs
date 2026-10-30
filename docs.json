@@ -297,6 +297,7 @@
               "ExtNsT3AC/Screenshots/Index",
               "ExtNsT3AC/Installation/Index",
               "ExtNsT3AC/ReInstallEverything/Index",
+              "ExtNsT3AC/AIAgent/Index",
               {
                 "group": "Configuration",
                 "root": "ExtNsT3AC/Configuration/Index",
@@ -338,6 +339,7 @@
               "ExtNsT3AC/DPAandGDPR/Index",
               "ExtNsT3AC/UpdateVersion/Index",
               "ExtNsT3AC/UpdateGuide/Index",
+              "ExtNsT3AC/Changelog/Index",
               "ExtNsT3AC/KnownProblems/Index",
               "ExtNsT3AC/FAQ/Index",
               "ExtNsT3AC/Support",
@@ -353,6 +355,7 @@
               "ExtNsT3AS/Screenshots/Index",
               "ExtNsT3AS/Installation/Index",
               "ExtNsT3AS/ReInstallEverything/Index",
+              "ExtNsT3AS/AIAgent/Index",
               {
                 "group": "Configuration",
                 "root": "ExtNsT3AS/Configuration/Index",
@@ -381,6 +384,7 @@
               "ExtNsT3AS/DatabaseChunking/Index",
               "ExtNsT3AS/PerformanceConfiguration/Index",
               "ExtNsT3AS/UpdateGuide/Index",
+              "ExtNsT3AS/Changelog/Index",
               "ExtNsT3AS/KnownProblems/Index",
               "ExtNsT3AS/Support",
               "ExtNsT3AS/BuyNow",

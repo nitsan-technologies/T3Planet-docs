@@ -22,7 +22,7 @@ Do the steps below in the given order. Skipping a step can cause missing setting
 ## Before Updating
 
 - Test the upgrade on a copy of your website (staging) first.
-- Check that your server meets the requirements: TYPO3 v12, v13 or v14 and PHP 8.2 – 8.5 (see [TYPO3 v12, v13 and v14](/en/latest/ExtNsT3AC/Introduction/Index#typo3-versions)).
+- Check that your server meets the requirements: TYPO3 v13 or v14 (from 14.5.0) and PHP 8.2 – 8.5 (see [TYPO3 v13 and v14](/en/latest/ExtNsT3AC/Introduction/Index#typo3-versions)).
 - Have the API keys of your AI service ready. You will enter them again in AI Foundation.
 
 ## Migration Steps

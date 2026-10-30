@@ -26,3 +26,5 @@ Only give MCP access to people who may change these settings.
 - [MCP Tools ](/en/latest/ExtNsT3AF/MCPTools/Index) */}
 
 {/* ## 10. Providers & MCP Tools */}
+
+**AI Agent (new in 14.5.0):** to configure AI Search from a chat in the TYPO3 backend, see [AI Agent](/en/latest/ExtNsT3AS/AIAgent/Index).

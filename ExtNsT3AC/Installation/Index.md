@@ -18,7 +18,7 @@ Upgrading from an older version (before v14)? Follow [Reinstall After Upgrading]
 </Info>
 
 <Note>
-AI Chatbot works with **TYPO3 v12, v13 and v14**. On TYPO3 v14, **Admin Tools** is called **System**. See [TYPO3 v12, v13 and v14](/en/latest/ExtNsT3AC/Introduction/Index#typo3-versions).
+From version **14.5.0**, AI Chatbot supports only **TYPO3 v14 and v13**. Running TYPO3 v12? Stay on AI Chatbot **14.4.0**. It keeps receiving bugfixes and security updates. On TYPO3 v14, **Admin Tools** is called **System**. See [TYPO3 v13 and v14](/en/latest/ExtNsT3AC/Introduction/Index#typo3-versions).
 </Note>
 
 ## Before you start
@@ -119,7 +119,7 @@ A **site set** is a package of settings you switch on for your website.
 
 {/* SUPADEMO NEEDED: Load AI Chatbot TypoScript with the site set (TYPO3 v13/v14) */}
 
-**Option B – Static templates (TYPO3 v12, or if you don't use site sets)**
+**Option B – Static templates (if you don't use site sets)**
 
 1. Go to **Site Management → TypoScript** (on TYPO3 v14: **Sites → TypoScript**).
 2. Select the start page of your website.

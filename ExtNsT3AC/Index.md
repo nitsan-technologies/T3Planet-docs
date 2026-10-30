@@ -25,7 +25,7 @@ sidebarTitle: "AI Chatbot"
   <Card title="Screenshots" icon="image" href="/ExtNsT3AC/Screenshots/Index" />
   <Card title="Installation" icon="download" href="/ExtNsT3AC/Installation/Index" />
   <Card title="Configuration" icon="settings" href="/ExtNsT3AC/Configuration/Index" />
-  <Card title="TYPO3 v12, v13 & v14" icon="layers" href="/en/latest/ExtNsT3AC/Introduction/Index#typo3-versions" />
+  <Card title="TYPO3 v13 & v14" icon="layers" href="/en/latest/ExtNsT3AC/Introduction/Index#typo3-versions" />
   <Card title="Upgrading? Where your old settings moved" icon="map" href="/en/latest/ExtNsT3AC/Configuration/WhereToFindIt/Index" />
   </CardGroup>
 </section>

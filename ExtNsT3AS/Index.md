@@ -27,7 +27,7 @@ sidebarTitle: "AI Search"
   <Card title="Configuration" icon="settings" href="/en/latest/ExtNsT3AS/Configuration/Index" />
   <Card title="Reinstall After Upgrade" icon="wrench" href="/en/latest/ExtNsT3AS/ReInstallEverything/Index" />
   <Card title="Basic Authentication" icon="lock" href="/en/latest/ExtNsT3AS/BasicAuthentication/Index" />
-  <Card title="TYPO3 v12, v13 & v14" icon="layers" href="/en/latest/ExtNsT3AS/Introduction/Index#typo3-versions" />
+  <Card title="TYPO3 v13 & v14" icon="layers" href="/en/latest/ExtNsT3AS/Introduction/Index#typo3-versions" />
   <Card title="Upgrading? Where your old settings moved" icon="map" href="/en/latest/ExtNsT3AS/Configuration/WhereToFindIt/Index" />
   </CardGroup>
 </section>

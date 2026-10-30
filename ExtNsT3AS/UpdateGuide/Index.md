@@ -9,6 +9,16 @@ keywords:
 sidebarTitle: "Update Guide"
 ---
 
+<Tip>
+**What's new in 14.5.0**
+
+- The **AI agent** from AI Foundation (T3AF) is now available in the TYPO3 backend (**Ask AI Agent** in the top bar).
+- The AI Chatbot (`t3ac_*`), AI Search (`t3as_*`) and AI Chatbot & Search (`t3cs_*`) tools all work inside it.
+- Only **TYPO3 v13 and v14** are supported. If you run TYPO3 v12, stay on **14.4.0**.
+
+[T3AF AI Agent docs](/en/latest/ExtNsT3AF/AskAiAgent/Index) · [Read about the AI Agent](/en/latest/ExtNsT3AS/AIAgent/Index)
+</Tip>
+
 This page shows you how to update AI Search to a new version. For general information about updates, see [Update a T3Planet extension](/en/latest/License/UpdateVersion/Index).
 
 <Warning>
@@ -16,7 +26,7 @@ Make a full backup of your database and files before you update. Then you can go
 </Warning>
 
 <Note>
-AI Search works with **TYPO3 v12, v13 and v14**. On TYPO3 v14, **Admin Tools** is called **System**. See [TYPO3 v12, v13 and v14](/en/latest/ExtNsT3AS/Introduction/Index#typo3-versions).
+From version **14.5.0**, AI Search supports only **TYPO3 v14 and v13**. Running TYPO3 v12? Stay on AI Search **14.4.0**. It keeps receiving bugfixes and security updates. On TYPO3 v14, **Admin Tools** is called **System**. See [TYPO3 v13 and v14](/en/latest/ExtNsT3AS/Introduction/Index#typo3-versions).
 </Note>
 
 ## Update step by step

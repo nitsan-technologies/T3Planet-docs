@@ -9,6 +9,10 @@ keywords:
 sidebarTitle: "T3AS - TYPO3 AI Search Extension"
 ---
 
+<Tip>
+**New in 14.5.0: AI Agent.** You can now change AI Search settings from a chat in the TYPO3 backend, using the AI agent from AI Foundation (T3AF): click **Ask AI Agent** in the backend top bar. See the [T3AF AI Agent docs](/en/latest/ExtNsT3AF/AskAiAgent/Index) · [Learn how to start](/en/latest/ExtNsT3AS/AIAgent/Index)
+</Tip>
+
 ## EXT:ns_t3as
 
 ![Extension Banner](images/T3AS.webp)
@@ -66,7 +70,7 @@ AI Search and [AI Chatbot](/en/latest/ExtNsT3AC/Introduction/Index) share the sa
 
 {/* ### System Requirements
 
-- TYPO3 v12 – v13
+- TYPO3 v13 – v14
 - PHP v8.2 – v8.4
 
 **Required extensions:**
@@ -86,8 +90,11 @@ See also:
 
 ### System Requirements
 
-- TYPO3 v12, v13 or v14
+- TYPO3 v13.4 or v14.3 (from version 14.5.0)
 - PHP 8.2 – 8.5
+- AI Foundation (`ns_t3af`) 2.0.5 or newer
+
+Running TYPO3 v12? Stay on AI Search **14.4.0**. It keeps receiving bugfixes and security updates.
 
 **What else you need**
 
@@ -105,25 +112,25 @@ See also: [AI Foundation installation](/en/latest/ExtNsT3AF/Installation/Index).
 {/* - TYPO3 v12.4 – v14
 - PHP 8.2 – 8.5 */}
 
-### TYPO3 v12, v13 and v14
+### TYPO3 v13 and v14
 
 <Note>
-AI Search works the same on **TYPO3 v12, v13 and v14** (12.4 LTS, 13.4 LTS, 14.3 or newer). Only some menu names differ: on TYPO3 v14, **Admin Tools** is called **System**, the site configuration is under **Sites → Setup**, and the page module is **Content → Layout**. On TYPO3 v12 you load the settings with static templates; on v13 and v14 you can use a site set. See [Installation, Step 5](/en/latest/ExtNsT3AS/Installation/Index#load-typoscript).
+From version **14.5.0**, AI Search supports only **TYPO3 v14 and v13** (13.4 LTS, 14.3 or newer). TYPO3 v12 is no longer supported; stay on 14.4.0 if you still run TYPO3 v12. Only some menu names differ: on TYPO3 v14, **Admin Tools** is called **System**, the site configuration is under **Sites → Setup**, and the page module is **Content → Layout**. On v13 and v14 you can load the settings with a site set or static templates. See [Installation, Step 5](/en/latest/ExtNsT3AS/Installation/Index#load-typoscript).
 </Note>
 
 <Accordion title="All menu names per TYPO3 version">
 
-| What | TYPO3 v12 | TYPO3 v13 | TYPO3 v14 |
-|---|---|---|---|
-| AI Search backend module | **AI Universe → AI Chatbot/Search** | **AI Universe → AI Chatbot/Search** | **AI Universe → AI Chatbot/Search** |
-| T3Planet Shop, Extensions, Maintenance, Upgrade | **Admin Tools** | **Admin Tools** | **System** |
-| Site configuration | **Site Management → Sites** | **Site Management → Sites** | **Sites → Setup** |
-| TypoScript module | **Site Management → TypoScript** | **Site Management → TypoScript** | **Sites → TypoScript** |
-| Load the TypoScript | Static templates | Site set (recommended) or static templates | Site set (recommended) or static templates |
-| Page module | **Web → Page** | **Web → Page** | **Content → Layout** |
-| Scheduler | **System → Scheduler** | **System → Scheduler** | **Administration → Scheduler** |
-| Plugin page ID (**Plugin PID**) | TypoScript constant | **Edit site settings → Ns AI Search** (with the site set) or TypoScript constant | Same as v13 |
-| AI Search plugin | Plugin content element | Own content type (TYPO3 13.4) | Own content type |
+| What | TYPO3 v13 | TYPO3 v14 |
+|---|---|---|
+| AI Search backend module | **AI Universe → AI Chatbot/Search** | **AI Universe → AI Chatbot/Search** |
+| T3Planet Shop, Extensions, Maintenance, Upgrade | **Admin Tools** | **System** |
+| Site configuration | **Site Management → Sites** | **Sites → Setup** |
+| TypoScript module | **Site Management → TypoScript** | **Sites → TypoScript** |
+| Load the TypoScript | Site set (recommended) or static templates | Site set (recommended) or static templates |
+| Page module | **Web → Page** | **Content → Layout** |
+| Scheduler | **System → Scheduler** | **Administration → Scheduler** |
+| Plugin page ID (**Plugin PID**) | **Edit site settings → Ns AI Search** (with the site set) or TypoScript constant | Same as v13 |
+| AI Search plugin | Own content type (TYPO3 13.4) | Own content type |
 
 </Accordion>
 

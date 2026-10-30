@@ -38,3 +38,5 @@ MCP tools are for backend users. Give access only to people who may change these
 </Accordion>
 
 See also: [AI Providers](/en/latest/ExtNsT3AF/Configuration/AIProviders/Index) · [MCP Server](/en/latest/ExtNsT3AF/Integrations/MCPServer/Index) · [MCP Tools](/en/latest/ExtNsT3AF/Integrations/MCPTools/Index)
+
+**AI Agent (new in 14.5.0):** to configure AI Chatbot from a chat in the TYPO3 backend, see [AI Agent](/en/latest/ExtNsT3AC/AIAgent/Index).
