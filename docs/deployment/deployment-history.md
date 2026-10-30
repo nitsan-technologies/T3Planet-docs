@@ -45,6 +45,18 @@ Append one entry per production release.
 
 <!-- entries below -->
 
+### 2026-10-30 — T3AC/T3AS AI Agent and Changelog (14.5.0)
+- **Status:** PASS
+- **Commit:** `2da4ecd` — docs: add T3AC/T3AS AI Agent and Changelog for 14.5.0
+- **Author:** Nitsan <sanjay@nitsantech.com>
+- **Remote:** origin → nitsan-technologies/T3Planet-docs (`master`)
+- **Mintlify:** deployment_status live for `2da4ecd` (started 15:14:31Z, ended 15:15:21Z)
+- **Included:** ExtNsT3AC/AS AIAgent + Changelog pages; related Index/Introduction/Installation/ReInstall/UpdateGuide/MCPTools/FAQ updates; docs.json nav (4 entries); stats 866→870
+- **Excluded:** docs-master/, workshops/, backup/; preserved T3AA AskAiAgent nav and strip-heading-zw.js
+- **Validate:** mintlify validate PASS (Node 20)
+- **Live QA:** AC/AS AIAgent + Changelog 200 with 14.5.0 / Ask AI Agent markers; Introduction tips present
+- **Source:** `/Users/nitsan/www/ExtNsT3AC` + `ExtNsT3AS` + surgical docs.json nav into Mintilify Doc
+
 ### 2026-10-28 — strip Mintlify heading zero-width characters
 - **Status:** PASS
 - **Commit:** `95d5051` — docs: strip Mintlify zero-width chars from heading anchors
